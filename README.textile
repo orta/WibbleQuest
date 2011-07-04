@@ -1,0 +1,15 @@
+h1. Orta's example iPhone applications
+
+these babies are designed to give you a bunch of projects to jump off and between, the rough ordering so far is 
+
+My Flippy App
+Buttons McButtons
+NoisyBot
+WebbyBoy
+AnotherImageGallery57
+SedgwickPong
+ILikeSpring
+MagicSwipe
+GemClock
+
+In reality though, you should just look at "http://orta.github.com/iphone"
