@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60B5616313C1467A004A69ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B5616213C1467A004A69ED /* UIKit.framework */; };
+		60B5616513C1467A004A69ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B5616413C1467A004A69ED /* Foundation.framework */; };
+		60B5616713C1467A004A69ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B5616613C1467A004A69ED /* CoreGraphics.framework */; };
+		60B5616D13C1467A004A69ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60B5616B13C1467A004A69ED /* InfoPlist.strings */; };
+		60B5616F13C1467A004A69ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B5616E13C1467A004A69ED /* main.m */; };
+		60B5617313C1467A004A69ED /* GemClockAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B5617213C1467A004A69ED /* GemClockAppDelegate.m */; };
+		60B5617513C1467A004A69ED /* GemClockViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 60B5617413C1467A004A69ED /* GemClockViewController.h */; };
+		60B5617713C1467A004A69ED /* GemClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B5617613C1467A004A69ED /* GemClockViewController.m */; };
+		60B5617A13C1467A004A69ED /* GemClockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B5617813C1467A004A69ED /* GemClockViewController.xib */; };
+		60B5618613C14AAF004A69ED /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60B5618513C14AAF004A69ED /* grass.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		60B5615E13C1467A004A69ED /* GemClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GemClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60B5616213C1467A004A69ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		60B5616413C1467A004A69ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		60B5616613C1467A004A69ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		60B5616A13C1467A004A69ED /* GemClock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GemClock-Info.plist"; sourceTree = "<group>"; };
+		60B5616C13C1467A004A69ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		60B5616E13C1467A004A69ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60B5617013C1467A004A69ED /* GemClock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GemClock-Prefix.pch"; sourceTree = "<group>"; };
+		60B5617113C1467A004A69ED /* GemClockAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GemClockAppDelegate.h; sourceTree = "<group>"; };
+		60B5617213C1467A004A69ED /* GemClockAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GemClockAppDelegate.m; sourceTree = "<group>"; };
+		60B5617413C1467A004A69ED /* GemClockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GemClockViewController.h; sourceTree = "<group>"; };
+		60B5617613C1467A004A69ED /* GemClockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GemClockViewController.m; sourceTree = "<group>"; };
+		60B5617913C1467A004A69ED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GemClockViewController.xib; sourceTree = "<group>"; };
+		60B5618513C14AAF004A69ED /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60B5615B13C1467A004A69ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60B5616313C1467A004A69ED /* UIKit.framework in Frameworks */,
+				60B5616513C1467A004A69ED /* Foundation.framework in Frameworks */,
+				60B5616713C1467A004A69ED /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60B5615313C1467A004A69ED = {
+			isa = PBXGroup;
+			children = (
+				60B5616813C1467A004A69ED /* GemClock */,
+				60B5616113C1467A004A69ED /* Frameworks */,
+				60B5615F13C1467A004A69ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60B5615F13C1467A004A69ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60B5615E13C1467A004A69ED /* GemClock.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60B5616113C1467A004A69ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60B5616213C1467A004A69ED /* UIKit.framework */,
+				60B5616413C1467A004A69ED /* Foundation.framework */,
+				60B5616613C1467A004A69ED /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60B5616813C1467A004A69ED /* GemClock */ = {
+			isa = PBXGroup;
+			children = (
+				60B5617113C1467A004A69ED /* GemClockAppDelegate.h */,
+				60B5617213C1467A004A69ED /* GemClockAppDelegate.m */,
+				60B5617413C1467A004A69ED /* GemClockViewController.h */,
+				60B5617613C1467A004A69ED /* GemClockViewController.m */,
+				60B5617813C1467A004A69ED /* GemClockViewController.xib */,
+				60B5616913C1467A004A69ED /* Supporting Files */,
+			);
+			path = GemClock;
+			sourceTree = "<group>";
+		};
+		60B5616913C1467A004A69ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				60B5618513C14AAF004A69ED /* grass.jpg */,
+				60B5616A13C1467A004A69ED /* GemClock-Info.plist */,
+				60B5616B13C1467A004A69ED /* InfoPlist.strings */,
+				60B5616E13C1467A004A69ED /* main.m */,
+				60B5617013C1467A004A69ED /* GemClock-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60B5615D13C1467A004A69ED /* GemClock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60B5617D13C1467A004A69ED /* Build configuration list for PBXNativeTarget "GemClock" */;
+			buildPhases = (
+				60B5615A13C1467A004A69ED /* Sources */,
+				60B5615B13C1467A004A69ED /* Frameworks */,
+				60B5615C13C1467A004A69ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GemClock;
+			productName = GemClock;
+			productReference = 60B5615E13C1467A004A69ED /* GemClock.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60B5615513C1467A004A69ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "http://ortatherox.com";
+			};
+			buildConfigurationList = 60B5615813C1467A004A69ED /* Build configuration list for PBXProject "GemClock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 60B5615313C1467A004A69ED;
+			productRefGroup = 60B5615F13C1467A004A69ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60B5615D13C1467A004A69ED /* GemClock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60B5615C13C1467A004A69ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60B5616D13C1467A004A69ED /* InfoPlist.strings in Resources */,
+				60B5617513C1467A004A69ED /* GemClockViewController.h in Resources */,
+				60B5617A13C1467A004A69ED /* GemClockViewController.xib in Resources */,
+				60B5618613C14AAF004A69ED /* grass.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60B5615A13C1467A004A69ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60B5616F13C1467A004A69ED /* main.m in Sources */,
+				60B5617313C1467A004A69ED /* GemClockAppDelegate.m in Sources */,
+				60B5617713C1467A004A69ED /* GemClockViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		60B5616B13C1467A004A69ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60B5616C13C1467A004A69ED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		60B5617813C1467A004A69ED /* GemClockViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60B5617913C1467A004A69ED /* en */,
+			);
+			name = GemClockViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		60B5617B13C1467A004A69ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		60B5617C13C1467A004A69ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60B5617E13C1467A004A69ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GemClock/GemClock-Prefix.pch";
+				INFOPLIST_FILE = "GemClock/GemClock-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		60B5617F13C1467A004A69ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GemClock/GemClock-Prefix.pch";
+				INFOPLIST_FILE = "GemClock/GemClock-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60B5615813C1467A004A69ED /* Build configuration list for PBXProject "GemClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60B5617B13C1467A004A69ED /* Debug */,
+				60B5617C13C1467A004A69ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60B5617D13C1467A004A69ED /* Build configuration list for PBXNativeTarget "GemClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60B5617E13C1467A004A69ED /* Debug */,
+				60B5617F13C1467A004A69ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 60B5615513C1467A004A69ED /* Project object */;
+}

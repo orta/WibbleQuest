@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6096FEA713BC8A5300D7E7B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6096FEA613BC8A5300D7E7B5 /* UIKit.framework */; };
+		6096FEA913BC8A5300D7E7B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6096FEA813BC8A5300D7E7B5 /* Foundation.framework */; };
+		6096FEAB13BC8A5300D7E7B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6096FEAA13BC8A5300D7E7B5 /* CoreGraphics.framework */; };
+		6096FEB113BC8A5300D7E7B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6096FEAF13BC8A5300D7E7B5 /* InfoPlist.strings */; };
+		6096FEB313BC8A5300D7E7B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6096FEB213BC8A5300D7E7B5 /* main.m */; };
+		6096FEB713BC8A5300D7E7B5 /* NoisyBotAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6096FEB613BC8A5300D7E7B5 /* NoisyBotAppDelegate.m */; };
+		6096FEB913BC8A5300D7E7B5 /* NoisyBotViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 6096FEB813BC8A5300D7E7B5 /* NoisyBotViewController.h */; };
+		6096FEBB13BC8A5300D7E7B5 /* NoisyBotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6096FEBA13BC8A5300D7E7B5 /* NoisyBotViewController.m */; };
+		6096FEBE13BC8A5300D7E7B5 /* NoisyBotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6096FEBC13BC8A5300D7E7B5 /* NoisyBotViewController.xib */; };
+		6096FEC513BC8B2200D7E7B5 /* flower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6096FEC413BC8B2200D7E7B5 /* flower.jpg */; };
+		6096FEC713BC8C0900D7E7B5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6096FEC613BC8C0900D7E7B5 /* AVFoundation.framework */; };
+		6096FEC913BC8D4800D7E7B5 /* boxxy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6096FEC813BC8D4800D7E7B5 /* boxxy.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6096FEA213BC8A5300D7E7B5 /* NoisyBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoisyBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6096FEA613BC8A5300D7E7B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6096FEA813BC8A5300D7E7B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6096FEAA13BC8A5300D7E7B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6096FEAE13BC8A5300D7E7B5 /* NoisyBot-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NoisyBot-Info.plist"; sourceTree = "<group>"; };
+		6096FEB013BC8A5300D7E7B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6096FEB213BC8A5300D7E7B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6096FEB413BC8A5300D7E7B5 /* NoisyBot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoisyBot-Prefix.pch"; sourceTree = "<group>"; };
+		6096FEB513BC8A5300D7E7B5 /* NoisyBotAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoisyBotAppDelegate.h; sourceTree = "<group>"; };
+		6096FEB613BC8A5300D7E7B5 /* NoisyBotAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoisyBotAppDelegate.m; sourceTree = "<group>"; };
+		6096FEB813BC8A5300D7E7B5 /* NoisyBotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoisyBotViewController.h; sourceTree = "<group>"; };
+		6096FEBA13BC8A5300D7E7B5 /* NoisyBotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoisyBotViewController.m; sourceTree = "<group>"; };
+		6096FEBD13BC8A5300D7E7B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NoisyBotViewController.xib; sourceTree = "<group>"; };
+		6096FEC413BC8B2200D7E7B5 /* flower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flower.jpg; sourceTree = "<group>"; };
+		6096FEC613BC8C0900D7E7B5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6096FEC813BC8D4800D7E7B5 /* boxxy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = boxxy.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6096FE9F13BC8A5300D7E7B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6096FEC713BC8C0900D7E7B5 /* AVFoundation.framework in Frameworks */,
+				6096FEA713BC8A5300D7E7B5 /* UIKit.framework in Frameworks */,
+				6096FEA913BC8A5300D7E7B5 /* Foundation.framework in Frameworks */,
+				6096FEAB13BC8A5300D7E7B5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6096FE9713BC8A5300D7E7B5 = {
+			isa = PBXGroup;
+			children = (
+				6096FEAC13BC8A5300D7E7B5 /* NoisyBot */,
+				6096FEA513BC8A5300D7E7B5 /* Frameworks */,
+				6096FEA313BC8A5300D7E7B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6096FEA313BC8A5300D7E7B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6096FEA213BC8A5300D7E7B5 /* NoisyBot.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6096FEA513BC8A5300D7E7B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6096FEC613BC8C0900D7E7B5 /* AVFoundation.framework */,
+				6096FEA613BC8A5300D7E7B5 /* UIKit.framework */,
+				6096FEA813BC8A5300D7E7B5 /* Foundation.framework */,
+				6096FEAA13BC8A5300D7E7B5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6096FEAC13BC8A5300D7E7B5 /* NoisyBot */ = {
+			isa = PBXGroup;
+			children = (
+				6096FEC813BC8D4800D7E7B5 /* boxxy.mp3 */,
+				6096FEC413BC8B2200D7E7B5 /* flower.jpg */,
+				6096FEB513BC8A5300D7E7B5 /* NoisyBotAppDelegate.h */,
+				6096FEB613BC8A5300D7E7B5 /* NoisyBotAppDelegate.m */,
+				6096FEB813BC8A5300D7E7B5 /* NoisyBotViewController.h */,
+				6096FEBA13BC8A5300D7E7B5 /* NoisyBotViewController.m */,
+				6096FEBC13BC8A5300D7E7B5 /* NoisyBotViewController.xib */,
+				6096FEAD13BC8A5300D7E7B5 /* Supporting Files */,
+			);
+			path = NoisyBot;
+			sourceTree = "<group>";
+		};
+		6096FEAD13BC8A5300D7E7B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6096FEAE13BC8A5300D7E7B5 /* NoisyBot-Info.plist */,
+				6096FEAF13BC8A5300D7E7B5 /* InfoPlist.strings */,
+				6096FEB213BC8A5300D7E7B5 /* main.m */,
+				6096FEB413BC8A5300D7E7B5 /* NoisyBot-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6096FEA113BC8A5300D7E7B5 /* NoisyBot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6096FEC113BC8A5300D7E7B5 /* Build configuration list for PBXNativeTarget "NoisyBot" */;
+			buildPhases = (
+				6096FE9E13BC8A5300D7E7B5 /* Sources */,
+				6096FE9F13BC8A5300D7E7B5 /* Frameworks */,
+				6096FEA013BC8A5300D7E7B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NoisyBot;
+			productName = NoisyBot;
+			productReference = 6096FEA213BC8A5300D7E7B5 /* NoisyBot.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6096FE9913BC8A5300D7E7B5 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 6096FE9C13BC8A5300D7E7B5 /* Build configuration list for PBXProject "NoisyBot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6096FE9713BC8A5300D7E7B5;
+			productRefGroup = 6096FEA313BC8A5300D7E7B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6096FEA113BC8A5300D7E7B5 /* NoisyBot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6096FEA013BC8A5300D7E7B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6096FEB113BC8A5300D7E7B5 /* InfoPlist.strings in Resources */,
+				6096FEB913BC8A5300D7E7B5 /* NoisyBotViewController.h in Resources */,
+				6096FEBE13BC8A5300D7E7B5 /* NoisyBotViewController.xib in Resources */,
+				6096FEC513BC8B2200D7E7B5 /* flower.jpg in Resources */,
+				6096FEC913BC8D4800D7E7B5 /* boxxy.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6096FE9E13BC8A5300D7E7B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6096FEB313BC8A5300D7E7B5 /* main.m in Sources */,
+				6096FEB713BC8A5300D7E7B5 /* NoisyBotAppDelegate.m in Sources */,
+				6096FEBB13BC8A5300D7E7B5 /* NoisyBotViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6096FEAF13BC8A5300D7E7B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6096FEB013BC8A5300D7E7B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6096FEBC13BC8A5300D7E7B5 /* NoisyBotViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6096FEBD13BC8A5300D7E7B5 /* en */,
+			);
+			name = NoisyBotViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6096FEBF13BC8A5300D7E7B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6096FEC013BC8A5300D7E7B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6096FEC213BC8A5300D7E7B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NoisyBot/NoisyBot-Prefix.pch";
+				INFOPLIST_FILE = "NoisyBot/NoisyBot-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6096FEC313BC8A5300D7E7B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NoisyBot/NoisyBot-Prefix.pch";
+				INFOPLIST_FILE = "NoisyBot/NoisyBot-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6096FE9C13BC8A5300D7E7B5 /* Build configuration list for PBXProject "NoisyBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6096FEBF13BC8A5300D7E7B5 /* Debug */,
+				6096FEC013BC8A5300D7E7B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6096FEC113BC8A5300D7E7B5 /* Build configuration list for PBXNativeTarget "NoisyBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6096FEC213BC8A5300D7E7B5 /* Debug */,
+				6096FEC313BC8A5300D7E7B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6096FE9913BC8A5300D7E7B5 /* Project object */;
+}
