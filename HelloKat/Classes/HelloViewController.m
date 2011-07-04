@@ -11,6 +11,7 @@
 @implementation HelloViewController
 
 -(void)viewDidLoad{
+  // Hide these when we load the app.
   [label setHidden:YES];
   [speechBubbleImage setHidden:YES];
 }
