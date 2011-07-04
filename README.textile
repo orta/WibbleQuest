@@ -12,4 +12,4 @@ ILikeSpring
 MagicSwipe
 GemClock
 
-In reality though, you should just look at "http://orta.github.com/iphone"
+In reality though, you should just look at "http://orta.github.com/iphone":http://orta.github.com/iphone
