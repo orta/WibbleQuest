@@ -16,14 +16,15 @@
   [speechBubbleImage setHidden:YES];
 }
 
--(IBAction)changeText:(id)sender{
+- (BOOL)textFieldShouldReturn:(UITextField *)inTextField {
   [speechBubbleImage setHidden:NO];
   [label setHidden:NO];
 
   // Hide keyboard
-	[sender resignFirstResponder];
+	[inTextField resignFirstResponder];
   // Set label text
-	label.text = [NSString stringWithFormat:@"Hello %@",textField.text];
+	label.text = [NSString stringWithFormat:@"Hello %@", inTextField.text];
+  return YES;
 }
 
 @end
