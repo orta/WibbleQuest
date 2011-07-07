@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60C1C21313C289FE00BE2482 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C1C21213C289FE00BE2482 /* UIKit.framework */; };
+		60C1C21513C289FE00BE2482 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C1C21413C289FE00BE2482 /* Foundation.framework */; };
+		60C1C21713C289FE00BE2482 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C1C21613C289FE00BE2482 /* CoreGraphics.framework */; };
+		60C1C21D13C289FE00BE2482 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60C1C21B13C289FE00BE2482 /* InfoPlist.strings */; };
+		60C1C21F13C289FE00BE2482 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C21E13C289FE00BE2482 /* main.m */; };
+		60C1C22313C289FE00BE2482 /* PingPongAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C22213C289FE00BE2482 /* PingPongAppDelegate.m */; };
+		60C1C22513C289FE00BE2482 /* PingPongViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 60C1C22413C289FE00BE2482 /* PingPongViewController.h */; };
+		60C1C22713C289FE00BE2482 /* PingPongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C22613C289FE00BE2482 /* PingPongViewController.m */; };
+		60C1C22A13C289FE00BE2482 /* PingPongViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C1C22813C289FE00BE2482 /* PingPongViewController_iPhone.xib */; };
+		60C1C22D13C289FE00BE2482 /* PingPongViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C1C22B13C289FE00BE2482 /* PingPongViewController_iPad.xib */; };
+		60C1C23513C28B8300BE2482 /* GameKitConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C23413C28B8300BE2482 /* GameKitConnector.m */; };
+		60C1C23713C28B9A00BE2482 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C1C23613C28B9A00BE2482 /* GameKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		60C1C20E13C289FE00BE2482 /* PingPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60C1C21213C289FE00BE2482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		60C1C21413C289FE00BE2482 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		60C1C21613C289FE00BE2482 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		60C1C21A13C289FE00BE2482 /* PingPong-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PingPong-Info.plist"; sourceTree = "<group>"; };
+		60C1C21C13C289FE00BE2482 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		60C1C21E13C289FE00BE2482 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60C1C22013C289FE00BE2482 /* PingPong-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PingPong-Prefix.pch"; sourceTree = "<group>"; };
+		60C1C22113C289FE00BE2482 /* PingPongAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PingPongAppDelegate.h; sourceTree = "<group>"; };
+		60C1C22213C289FE00BE2482 /* PingPongAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PingPongAppDelegate.m; sourceTree = "<group>"; };
+		60C1C22413C289FE00BE2482 /* PingPongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PingPongViewController.h; sourceTree = "<group>"; };
+		60C1C22613C289FE00BE2482 /* PingPongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PingPongViewController.m; sourceTree = "<group>"; };
+		60C1C22913C289FE00BE2482 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PingPongViewController_iPhone.xib; sourceTree = "<group>"; };
+		60C1C22C13C289FE00BE2482 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PingPongViewController_iPad.xib; sourceTree = "<group>"; };
+		60C1C23313C28B8200BE2482 /* GameKitConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitConnector.h; sourceTree = "<group>"; };
+		60C1C23413C28B8300BE2482 /* GameKitConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitConnector.m; sourceTree = "<group>"; };
+		60C1C23613C28B9A00BE2482 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		60C1C23B13C28DBE00BE2482 /* ORLocalNetworkProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORLocalNetworkProtocol.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60C1C20B13C289FE00BE2482 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60C1C23713C28B9A00BE2482 /* GameKit.framework in Frameworks */,
+				60C1C21313C289FE00BE2482 /* UIKit.framework in Frameworks */,
+				60C1C21513C289FE00BE2482 /* Foundation.framework in Frameworks */,
+				60C1C21713C289FE00BE2482 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60C1C20313C289FD00BE2482 = {
+			isa = PBXGroup;
+			children = (
+				60C1C21813C289FE00BE2482 /* PingPong */,
+				60C1C21113C289FE00BE2482 /* Frameworks */,
+				60C1C20F13C289FE00BE2482 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60C1C20F13C289FE00BE2482 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60C1C20E13C289FE00BE2482 /* PingPong.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60C1C21113C289FE00BE2482 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60C1C23613C28B9A00BE2482 /* GameKit.framework */,
+				60C1C21213C289FE00BE2482 /* UIKit.framework */,
+				60C1C21413C289FE00BE2482 /* Foundation.framework */,
+				60C1C21613C289FE00BE2482 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60C1C21813C289FE00BE2482 /* PingPong */ = {
+			isa = PBXGroup;
+			children = (
+				60C1C22113C289FE00BE2482 /* PingPongAppDelegate.h */,
+				60C1C22213C289FE00BE2482 /* PingPongAppDelegate.m */,
+				60C1C22413C289FE00BE2482 /* PingPongViewController.h */,
+				60C1C22613C289FE00BE2482 /* PingPongViewController.m */,
+				60C1C22813C289FE00BE2482 /* PingPongViewController_iPhone.xib */,
+				60C1C22B13C289FE00BE2482 /* PingPongViewController_iPad.xib */,
+				60C1C21913C289FE00BE2482 /* Supporting Files */,
+				60C1C23313C28B8200BE2482 /* GameKitConnector.h */,
+				60C1C23413C28B8300BE2482 /* GameKitConnector.m */,
+			);
+			path = PingPong;
+			sourceTree = "<group>";
+		};
+		60C1C21913C289FE00BE2482 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				60C1C21A13C289FE00BE2482 /* PingPong-Info.plist */,
+				60C1C21B13C289FE00BE2482 /* InfoPlist.strings */,
+				60C1C21E13C289FE00BE2482 /* main.m */,
+				60C1C22013C289FE00BE2482 /* PingPong-Prefix.pch */,
+				60C1C23B13C28DBE00BE2482 /* ORLocalNetworkProtocol.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60C1C20D13C289FE00BE2482 /* PingPong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60C1C23013C289FE00BE2482 /* Build configuration list for PBXNativeTarget "PingPong" */;
+			buildPhases = (
+				60C1C20A13C289FE00BE2482 /* Sources */,
+				60C1C20B13C289FE00BE2482 /* Frameworks */,
+				60C1C20C13C289FE00BE2482 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PingPong;
+			productName = PingPong;
+			productReference = 60C1C20E13C289FE00BE2482 /* PingPong.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60C1C20513C289FD00BE2482 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "http://ortatherox.com";
+			};
+			buildConfigurationList = 60C1C20813C289FD00BE2482 /* Build configuration list for PBXProject "PingPong" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 60C1C20313C289FD00BE2482;
+			productRefGroup = 60C1C20F13C289FE00BE2482 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60C1C20D13C289FE00BE2482 /* PingPong */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60C1C20C13C289FE00BE2482 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60C1C21D13C289FE00BE2482 /* InfoPlist.strings in Resources */,
+				60C1C22513C289FE00BE2482 /* PingPongViewController.h in Resources */,
+				60C1C22A13C289FE00BE2482 /* PingPongViewController_iPhone.xib in Resources */,
+				60C1C22D13C289FE00BE2482 /* PingPongViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60C1C20A13C289FE00BE2482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60C1C21F13C289FE00BE2482 /* main.m in Sources */,
+				60C1C22313C289FE00BE2482 /* PingPongAppDelegate.m in Sources */,
+				60C1C22713C289FE00BE2482 /* PingPongViewController.m in Sources */,
+				60C1C23513C28B8300BE2482 /* GameKitConnector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		60C1C21B13C289FE00BE2482 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60C1C21C13C289FE00BE2482 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		60C1C22813C289FE00BE2482 /* PingPongViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60C1C22913C289FE00BE2482 /* en */,
+			);
+			name = PingPongViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		60C1C22B13C289FE00BE2482 /* PingPongViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60C1C22C13C289FE00BE2482 /* en */,
+			);
+			name = PingPongViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		60C1C22E13C289FE00BE2482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		60C1C22F13C289FE00BE2482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60C1C23113C289FE00BE2482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PingPong/PingPong-Prefix.pch";
+				INFOPLIST_FILE = "PingPong/PingPong-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		60C1C23213C289FE00BE2482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PingPong/PingPong-Prefix.pch";
+				INFOPLIST_FILE = "PingPong/PingPong-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60C1C20813C289FD00BE2482 /* Build configuration list for PBXProject "PingPong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60C1C22E13C289FE00BE2482 /* Debug */,
+				60C1C22F13C289FE00BE2482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60C1C23013C289FE00BE2482 /* Build configuration list for PBXNativeTarget "PingPong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60C1C23113C289FE00BE2482 /* Debug */,
+				60C1C23213C289FE00BE2482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 60C1C20513C289FD00BE2482 /* Project object */;
+}

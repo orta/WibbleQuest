@@ -14,7 +14,7 @@
 -(id) init {
 	if( (self=[super init])) {
     self.isTouchEnabled = YES;
-    [self schedule: @selector(step:)];
+//    [self schedule: @selector(step:)];
     iPad = ( [[CCDirector sharedDirector] winSize].width > 500 );
   }
   return self;
@@ -37,6 +37,7 @@
     location = [[CCDirector sharedDirector] convertToGL:location];
     if (iPad) {
       direction = [TouchControls iPadTouchToDirection:location];
+      NSLog(@"direction = %d", direction);
     } else {
       // not working on this yet, har har
       direction = [TouchControls iPhoneTouchToDirection:location];
