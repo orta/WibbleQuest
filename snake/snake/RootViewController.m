@@ -67,11 +67,9 @@
 	//
 	// Sample: Autorotate only in landscape mode
 	//
-	if( interfaceOrientation == UIInterfaceOrientationLandscapeLeft ) {
-		[[CCDirector sharedDirector] setDeviceOrientation: kCCDeviceOrientationLandscapeRight];
-	} else if( interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
-		[[CCDirector sharedDirector] setDeviceOrientation: kCCDeviceOrientationLandscapeLeft];
-	}
+
+		[[CCDirector sharedDirector] setDeviceOrientation: interfaceOrientation];
+
 	
 	// Since this method should return YES in at least 1 orientation, 
 	// we return YES only in the Portrait orientation
@@ -84,7 +82,7 @@
 	// Sample: Autorotate only in landscpe mode
 	//
 	// return YES for the supported orientations
-	
+
 	return ( UIInterfaceOrientationIsLandscape( interfaceOrientation ) );
 	
 #else
@@ -111,6 +109,8 @@
 	CGRect rect = CGRectZero;
 
 	
+  	NSLog(@"HI");
+  
 	if(toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)		
 		rect = screenRect;
 	

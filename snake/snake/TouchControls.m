@@ -39,8 +39,18 @@
       return [self directionInRect:controlBoxRight withPoint:point];
     }
   
+  }else{
+    CGRect controlBoxLeft = CGRectMake(12, 60, 185, 240);
+    CGRect controlBoxRight = CGRectMake(768-12-240, 60, 185, 240);
+    
+    if (CGRectContainsPoint(controlBoxLeft, point)) {
+      return [self directionInRect:controlBoxLeft withPoint:point];
+    }
+    
+    if (CGRectContainsPoint(controlBoxRight, point)) {
+      return [self directionInRect:controlBoxRight withPoint:point];
+    }
   }
-  
   return NO_TOUCH;
 }
 
