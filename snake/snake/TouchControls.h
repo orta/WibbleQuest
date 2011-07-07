@@ -12,4 +12,6 @@
 
 + (int) iPadTouchToDirection:(CGPoint)point;
 + (int) iPhoneTouchToDirection:(CGPoint)point;
+
++ (int) directionInRect:(CGRect)rect withPoint:(CGPoint)point;
 @end

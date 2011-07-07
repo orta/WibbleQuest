@@ -9,23 +9,17 @@
 #ifndef __GAME_CONFIG_H
 #define __GAME_CONFIG_H
 
-//
-// Supported Autorotations:
-//		None,
-//		UIViewController,
-//		CCDirector
-//
 #define kGameAutorotationNone 0
 #define kGameAutorotationCCDirector 1
 #define kGameAutorotationUIViewController 2
 
-//
-// Define here the type of autorotation that you want for your game
-//
+#define TOUCH_UP    1
+#define TOUCH_DOWN  2
+#define TOUCH_LEFT  3
+#define TOUCH_RIGHT 4
+#define NO_TOUCH -1
 
-// 3rd generation and newer devices: Rotate using UIViewController. Rotation should be supported on iPad apps.
-// TIP:
-// To improve the performance, you should set this value to "kGameAutorotationNone" or "kGameAutorotationCCDirector"
+
 #if defined(__ARM_NEON__) || TARGET_IPHONE_SIMULATOR
 #define GAME_AUTOROTATION kGameAutorotationUIViewController
 
