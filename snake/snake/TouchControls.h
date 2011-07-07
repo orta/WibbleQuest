@@ -1,5 +1,5 @@
 //
-//  SnakeLayer.h
+//  TouchControls.h
 //  snake
 //
 //  Created by orta therox on 06/07/2011.
@@ -7,12 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "cocos2d.h"
 
-@interface SnakeLayer : CCLayer {
-  BOOL iPad; 
-}
+@interface TouchControls : NSObject
 
-+(CCScene *) scene;
-
++ (int) iPadTouchToDirection:(CGPoint)point;
++ (int) iPhoneTouchToDirection:(CGPoint)point;
 @end
