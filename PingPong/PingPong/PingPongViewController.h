@@ -10,8 +10,10 @@
 #import "ORLocalNetworkProtocol.h"
 #import "GameKitConnector.h"
 
-@interface PingPongViewController : UIViewController <ORLocalNetworkProtocol>{
+@interface PingPongViewController : UIViewController <ORLocalNetworkProtocol, UITextFieldDelegate>{
   GameKitConnector * connection;
+
+    
 }
 
 // these have to be included to become a delegate 

@@ -47,7 +47,6 @@
 
 - (GKSession *)peerPickerController:(GKPeerPickerController *)picker sessionForConnectionType:(GKPeerPickerConnectionType)type {  
 	session = [[GKSession alloc] initWithSessionID:@"or_network" displayName:nil sessionMode:GKSessionModePeer];
-  [session autorelease];
   return session;
 }
 
@@ -87,10 +86,10 @@
   
   NSError *error;
   NSData * stringData = [string dataUsingEncoding: NSASCIIStringEncoding];
-  
+    NSLog(@"String Created: %@",string);
   [self.session sendDataToAllPeers:stringData withDataMode:GKSendDataReliable error:&error];
   if(error){
-    NSLog(@"ERROR sending string over network %@", [error localizedDescription]);
+  //  NSLog(@"ERROR sending string over network %@", [error localizedDescription]);
   }
 }
 

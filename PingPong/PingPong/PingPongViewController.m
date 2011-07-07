@@ -16,7 +16,9 @@
   connection.delegate = self;
   [connection showPlayerPicker];
 }
-
+-(IBAction)sendMessage2:(id)sender{
+    [connection sendString:[sender text]];
+}
 
 -(void) connected {
   NSLog(@"connected");
@@ -31,7 +33,11 @@
   NSLog(@"disconnected");
 }
 
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    NSLog(@"Return");
+    [connection sendString:textField.text];
+    return YES;
+}
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
