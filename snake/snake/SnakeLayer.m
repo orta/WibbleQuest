@@ -11,4 +11,14 @@
 
 @implementation SnakeLayer
 
++(CCScene *) scene {
+	CCScene *scene = [CCScene node];
+	SnakeLayer *layer = [SnakeLayer node];
+	[scene addChild: layer];
+	return scene;
+}
+
+
+
+
 @end

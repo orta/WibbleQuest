@@ -121,7 +121,6 @@
 		600D7D1713C53497002D25A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 600D7D1613C53497002D25A5 /* main.m */; };
 		600D7D1A13C53497002D25A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 600D7D1913C53497002D25A5 /* AppDelegate.m */; };
 		600D7D1D13C53497002D25A5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600D7D1C13C53497002D25A5 /* RootViewController.m */; };
-		600D7D2013C53497002D25A5 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 600D7D1F13C53497002D25A5 /* HelloWorldLayer.m */; };
 		600D7D2913C534E3002D25A5 /* SnakeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 600D7D2813C534E3002D25A5 /* SnakeLayer.m */; };
 /* End PBXBuildFile section */
 
@@ -358,8 +357,6 @@
 		600D7D1913C53497002D25A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		600D7D1B13C53497002D25A5 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		600D7D1C13C53497002D25A5 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		600D7D1E13C53497002D25A5 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		600D7D1F13C53497002D25A5 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		600D7D2113C53497002D25A5 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		600D7D2713C534E3002D25A5 /* SnakeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnakeLayer.h; sourceTree = "<group>"; };
 		600D7D2813C534E3002D25A5 /* SnakeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnakeLayer.m; sourceTree = "<group>"; };
@@ -425,8 +422,6 @@
 				600D7D1C13C53497002D25A5 /* RootViewController.m */,
 				600D7D2713C534E3002D25A5 /* SnakeLayer.h */,
 				600D7D2813C534E3002D25A5 /* SnakeLayer.m */,
-				600D7D1E13C53497002D25A5 /* HelloWorldLayer.h */,
-				600D7D1F13C53497002D25A5 /* HelloWorldLayer.m */,
 				600D7D2113C53497002D25A5 /* GameConfig.h */,
 				600D7BC713C53494002D25A5 /* Resources */,
 				600D7BDB13C53494002D25A5 /* libs */,
@@ -929,7 +924,6 @@
 				600D7D1713C53497002D25A5 /* main.m in Sources */,
 				600D7D1A13C53497002D25A5 /* AppDelegate.m in Sources */,
 				600D7D1D13C53497002D25A5 /* RootViewController.m in Sources */,
-				600D7D2013C53497002D25A5 /* HelloWorldLayer.m in Sources */,
 				600D7D2913C534E3002D25A5 /* SnakeLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
