@@ -83,21 +83,17 @@
 
 -(void) sendString:(NSString*) string {
   NSLog(@"DID SEND DATA");
-  
   NSError *error;
   NSData * stringData = [string dataUsingEncoding: NSASCIIStringEncoding];
-    NSLog(@"String Created: %@",string);
   [self.session sendDataToAllPeers:stringData withDataMode:GKSendDataReliable error:&error];
   if(error){
   //  NSLog(@"ERROR sending string over network %@", [error localizedDescription]);
   }
 }
 
-- (void) receiveData:(NSData *)data fromPeer:(NSString *)peer inSession: (GKSession *)session context:(void *)context {
-  
-  
+- (void) receiveData:(NSData *)data fromPeer:(NSString *)peer inSession: (GKSession *)session context:(void *)context{
+    
   NSString* response = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-    NSLog(@"DID REVIEVED DATA %@", response);
   [delegate recievedString:response];
 }
 
