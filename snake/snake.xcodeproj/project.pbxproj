@@ -419,10 +419,8 @@
 		600D7BC613C53494002D25A5 /* snake */ = {
 			isa = PBXGroup;
 			children = (
-				600D7D1813C53497002D25A5 /* AppDelegate.h */,
-				600D7D1913C53497002D25A5 /* AppDelegate.m */,
-				600D7D1B13C53497002D25A5 /* RootViewController.h */,
-				600D7D1C13C53497002D25A5 /* RootViewController.m */,
+				600D7D3213C53FDE002D25A5 /* Framework */,
+				600D7D3113C53FD3002D25A5 /* Helpers */,
 				600D7D2713C534E3002D25A5 /* SnakeLayer.h */,
 				600D7D2813C534E3002D25A5 /* SnakeLayer.m */,
 				6FE6B8D713C5384300E89669 /* SnakeBody.h */,
@@ -761,6 +759,26 @@
 				600D7D1613C53497002D25A5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		600D7D3113C53FD3002D25A5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				600D7D2E13C53DEB002D25A5 /* TouchControls.h */,
+				600D7D2F13C53DEB002D25A5 /* TouchControls.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		600D7D3213C53FDE002D25A5 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				600D7D1813C53497002D25A5 /* AppDelegate.h */,
+				600D7D1913C53497002D25A5 /* AppDelegate.m */,
+				600D7D1B13C53497002D25A5 /* RootViewController.h */,
+				600D7D1C13C53497002D25A5 /* RootViewController.m */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
