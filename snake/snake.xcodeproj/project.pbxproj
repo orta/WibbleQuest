@@ -122,6 +122,7 @@
 		600D7D1A13C53497002D25A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 600D7D1913C53497002D25A5 /* AppDelegate.m */; };
 		600D7D1D13C53497002D25A5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600D7D1C13C53497002D25A5 /* RootViewController.m */; };
 		600D7D2913C534E3002D25A5 /* SnakeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 600D7D2813C534E3002D25A5 /* SnakeLayer.m */; };
+		6FE6B8D913C5384300E89669 /* SnakeBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE6B8D813C5384300E89669 /* SnakeBody.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -360,6 +361,8 @@
 		600D7D2113C53497002D25A5 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		600D7D2713C534E3002D25A5 /* SnakeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnakeLayer.h; sourceTree = "<group>"; };
 		600D7D2813C534E3002D25A5 /* SnakeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnakeLayer.m; sourceTree = "<group>"; };
+		6FE6B8D713C5384300E89669 /* SnakeBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnakeBody.h; sourceTree = "<group>"; };
+		6FE6B8D813C5384300E89669 /* SnakeBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnakeBody.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,6 +425,8 @@
 				600D7D1C13C53497002D25A5 /* RootViewController.m */,
 				600D7D2713C534E3002D25A5 /* SnakeLayer.h */,
 				600D7D2813C534E3002D25A5 /* SnakeLayer.m */,
+				6FE6B8D713C5384300E89669 /* SnakeBody.h */,
+				6FE6B8D813C5384300E89669 /* SnakeBody.m */,
 				600D7D2113C53497002D25A5 /* GameConfig.h */,
 				600D7BC713C53494002D25A5 /* Resources */,
 				600D7BDB13C53494002D25A5 /* libs */,
@@ -925,6 +930,7 @@
 				600D7D1A13C53497002D25A5 /* AppDelegate.m in Sources */,
 				600D7D1D13C53497002D25A5 /* RootViewController.m in Sources */,
 				600D7D2913C534E3002D25A5 /* SnakeLayer.m in Sources */,
+				6FE6B8D913C5384300E89669 /* SnakeBody.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,6 +1024,7 @@
 				600D7D2613C53497002D25A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
