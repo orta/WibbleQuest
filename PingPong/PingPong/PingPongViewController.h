@@ -8,18 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "ORLocalNetworkProtocol.h"
-#import "GameKitConnector.h"
 
-@interface PingPongViewController : UIViewController <ORLocalNetworkProtocol, UITextFieldDelegate>{
+@class GameKitConnector;
+
+@interface PingPongViewController : UIViewController <ORLocalNetworkProtocol, UITextFieldDelegate> {
   GameKitConnector * connection;
-
+  IBOutlet UITextView * textView;
     
 }
 
 // these have to be included to become a delegate 
 // of the GameKitConnector
 -(void) connected;
--(void) recievedString:(NSString*)response;
--(IBAction)sendMessage2:(id)sender;
--(IBAction)sendMessage:(id)sender;
+-(void)recievedCommand:(NSString *)command withArgument:(NSString *)argument;
+
+-(void) connectionCancelled;
+-(void) addConversationString:(NSString *)string;
+
 @end

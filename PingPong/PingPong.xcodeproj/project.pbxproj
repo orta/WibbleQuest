@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		609B9F9113C8CF3E00888A6E /* GameKitConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9F8F13C8CF3E00888A6E /* GameKitConnector.m */; };
+		609B9F9613C8D8C100888A6E /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 609B9F9413C8D8C100888A6E /* bg.jpg */; };
+		609B9F9813C8DAEF00888A6E /* ipad-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 609B9F9713C8DAEF00888A6E /* ipad-bg.jpg */; };
 		60C1C21313C289FE00BE2482 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C1C21213C289FE00BE2482 /* UIKit.framework */; };
 		60C1C21513C289FE00BE2482 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C1C21413C289FE00BE2482 /* Foundation.framework */; };
 		60C1C21713C289FE00BE2482 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C1C21613C289FE00BE2482 /* CoreGraphics.framework */; };
@@ -17,11 +20,15 @@
 		60C1C22713C289FE00BE2482 /* PingPongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C22613C289FE00BE2482 /* PingPongViewController.m */; };
 		60C1C22A13C289FE00BE2482 /* PingPongViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C1C22813C289FE00BE2482 /* PingPongViewController_iPhone.xib */; };
 		60C1C22D13C289FE00BE2482 /* PingPongViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C1C22B13C289FE00BE2482 /* PingPongViewController_iPad.xib */; };
-		60C1C23513C28B8300BE2482 /* GameKitConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C23413C28B8300BE2482 /* GameKitConnector.m */; };
 		60C1C23713C28B9A00BE2482 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C1C23613C28B9A00BE2482 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		609B9F8E13C8CF3E00888A6E /* ORLocalNetworkProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORLocalNetworkProtocol.h; sourceTree = "<group>"; };
+		609B9F8F13C8CF3E00888A6E /* GameKitConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitConnector.m; sourceTree = "<group>"; };
+		609B9F9013C8CF3E00888A6E /* GameKitConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitConnector.h; sourceTree = "<group>"; };
+		609B9F9413C8D8C100888A6E /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		609B9F9713C8DAEF00888A6E /* ipad-bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ipad-bg.jpg"; sourceTree = "<group>"; };
 		60C1C20E13C289FE00BE2482 /* PingPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C1C21213C289FE00BE2482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60C1C21413C289FE00BE2482 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -36,10 +43,7 @@
 		60C1C22613C289FE00BE2482 /* PingPongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PingPongViewController.m; sourceTree = "<group>"; };
 		60C1C22913C289FE00BE2482 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PingPongViewController_iPhone.xib; sourceTree = "<group>"; };
 		60C1C22C13C289FE00BE2482 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PingPongViewController_iPad.xib; sourceTree = "<group>"; };
-		60C1C23313C28B8200BE2482 /* GameKitConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitConnector.h; sourceTree = "<group>"; };
-		60C1C23413C28B8300BE2482 /* GameKitConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitConnector.m; sourceTree = "<group>"; };
 		60C1C23613C28B9A00BE2482 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		60C1C23B13C28DBE00BE2482 /* ORLocalNetworkProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORLocalNetworkProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		609B9F9213C8CF4100888A6E /* GameKitConnector */ = {
+			isa = PBXGroup;
+			children = (
+				609B9F8E13C8CF3E00888A6E /* ORLocalNetworkProtocol.h */,
+				609B9F8F13C8CF3E00888A6E /* GameKitConnector.m */,
+				609B9F9013C8CF3E00888A6E /* GameKitConnector.h */,
+			);
+			name = GameKitConnector;
+			sourceTree = "<group>";
+		};
 		60C1C20313C289FD00BE2482 = {
 			isa = PBXGroup;
 			children = (
@@ -88,15 +102,12 @@
 		60C1C21813C289FE00BE2482 /* PingPong */ = {
 			isa = PBXGroup;
 			children = (
-				60C1C22113C289FE00BE2482 /* PingPongAppDelegate.h */,
-				60C1C22213C289FE00BE2482 /* PingPongAppDelegate.m */,
+				609B9F9213C8CF4100888A6E /* GameKitConnector */,
 				60C1C22413C289FE00BE2482 /* PingPongViewController.h */,
 				60C1C22613C289FE00BE2482 /* PingPongViewController.m */,
 				60C1C22813C289FE00BE2482 /* PingPongViewController_iPhone.xib */,
 				60C1C22B13C289FE00BE2482 /* PingPongViewController_iPad.xib */,
 				60C1C21913C289FE00BE2482 /* Supporting Files */,
-				60C1C23313C28B8200BE2482 /* GameKitConnector.h */,
-				60C1C23413C28B8300BE2482 /* GameKitConnector.m */,
 			);
 			path = PingPong;
 			sourceTree = "<group>";
@@ -104,11 +115,14 @@
 		60C1C21913C289FE00BE2482 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				609B9F9713C8DAEF00888A6E /* ipad-bg.jpg */,
+				609B9F9413C8D8C100888A6E /* bg.jpg */,
+				60C1C22113C289FE00BE2482 /* PingPongAppDelegate.h */,
+				60C1C22213C289FE00BE2482 /* PingPongAppDelegate.m */,
 				60C1C21A13C289FE00BE2482 /* PingPong-Info.plist */,
 				60C1C21B13C289FE00BE2482 /* InfoPlist.strings */,
 				60C1C21E13C289FE00BE2482 /* main.m */,
 				60C1C22013C289FE00BE2482 /* PingPong-Prefix.pch */,
-				60C1C23B13C28DBE00BE2482 /* ORLocalNetworkProtocol.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -167,6 +181,8 @@
 				60C1C22513C289FE00BE2482 /* PingPongViewController.h in Resources */,
 				60C1C22A13C289FE00BE2482 /* PingPongViewController_iPhone.xib in Resources */,
 				60C1C22D13C289FE00BE2482 /* PingPongViewController_iPad.xib in Resources */,
+				609B9F9613C8D8C100888A6E /* bg.jpg in Resources */,
+				609B9F9813C8DAEF00888A6E /* ipad-bg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +196,7 @@
 				60C1C21F13C289FE00BE2482 /* main.m in Sources */,
 				60C1C22313C289FE00BE2482 /* PingPongAppDelegate.m in Sources */,
 				60C1C22713C289FE00BE2482 /* PingPongViewController.m in Sources */,
-				60C1C23513C28B8300BE2482 /* GameKitConnector.m in Sources */,
+				609B9F9113C8CF3E00888A6E /* GameKitConnector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,17 @@
 //  Copyright 2011 http://ortatherox.com. All rights reserved.
 //
 
+
+
 #import "GameKitConnector.h"
+
+// private non-API related methods
+@interface GameKitConnector() 
+- (void)decideHost;
+@end 
+
+
+
 
 @implementation GameKitConnector
 @synthesize delegate, peerPicker, session;
@@ -22,23 +32,18 @@
     return self;
 }
 
--(void)showPlayerPicker {
+-(void)startPeerToPeer {
   //Show the connector
 	[peerPicker show];
 }
 
+-(void)startHostServer {
+  isHostServer = YES;
+  [peerPicker show];
+}
 
 
 #pragma mark PeerPickerControllerDelegate stuff
-
-- (void)peerPickerController:(GKPeerPickerController *)picker didSelectConnectionType:(GKPeerPickerConnectionType)type{
-	if (type == GKPeerPickerConnectionTypeOnline) {
-    picker.delegate = nil;
-    [picker dismiss];
-    [picker autorelease];
-  }
-}
-
 - (void)peerPickerControllerDidCancel:(GKPeerPickerController *)picker {
   if([delegate respondsToSelector:@selector(connectionCancelled)]){
     [delegate connectionCancelled];
@@ -54,7 +59,6 @@
  */
 - (void)peerPickerController:(GKPeerPickerController *)picker didConnectPeer:(NSString *)peerID toSession:(GKSession *)newSession {
   
-  NSLog(@"DID CONNECT TO PEER");
 	// Use a retaining property to take ownership of the session.
   self.session = newSession;
 	// Assumes our object will also become the session's delegate.
@@ -66,42 +70,62 @@
   [picker dismiss];
   [picker autorelease];
 	// Start your game.
-  [delegate connected];
-}
-
-- (void)session:(GKSession *)session peer:(NSString *)peerID didChangeState:(GKPeerConnectionState)state {
-	switch ((int) state) {
-    case GKPeerStateConnected:
-			NSLog( @"Connected to %@", peerID);
-			break;
-		
-    case GKPeerStateDisconnected:
-			
-			break;
+  
+  if (isHostServer) {
+      // when emulating host / server over a p2p network
+      // there needs to be a way to detemine host / client
+      // I do this by a small game of Rock Paper Scissors
+    [self decideHost];
+  }else{
+    [delegate connected];
   }
 }
 
--(void) sendString:(NSString*) string {
-  NSLog(@"DID SEND DATA");
-  
+-(void) sendCommand:(NSString*)command {
+  [self sendCommand:command withArgument:@""];
+} 
+
+
+-(void) sendCommand:(NSString*)command withFloat:(float)argument{
+  [self sendCommand:command withArgument:[NSString stringWithFormat:@"%f", argument]];
+} 
+
+-(void) sendCommand:(NSString*)command withInt:(int)argument{
+  [self sendCommand:command withArgument:[NSString stringWithFormat:@"%d", argument]];
+} 
+
+-(void) sendCommand:(NSString*)command withArgument:(NSString*)argument{
   NSError *error;
-  NSData * stringData = [string dataUsingEncoding: NSASCIIStringEncoding];
-    NSLog(@"String Created: %@",string);
-  [self.session sendDataToAllPeers:stringData withDataMode:GKSendDataReliable error:&error];
-  if(error){
-  //  NSLog(@"ERROR sending string over network %@", [error localizedDescription]);
-  }
+  NSData *data = [NSKeyedArchiver archivedDataWithRootObject:[NSArray arrayWithObjects:command, argument, nil]];
+  [self.session sendDataToAllPeers:data withDataMode:GKSendDataReliable error:&error];
 }
 
-- (void) receiveData:(NSData *)data fromPeer:(NSString *)peer inSession: (GKSession *)session context:(void *)context {
-  
-  
-  NSString* response = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-    NSLog(@"DID REVIEVED DATA %@", response);
-  [delegate recievedString:response];
+- (void) receiveData:(NSData *)data fromPeer:(NSString *)peer inSession: (GKSession *)session context:(void *)context{
+    NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    if([array count] == 2){
+      
+      if([@"_HOST_SERVER" isEqualToString:[array objectAtIndex:0]]){
+        NSString * theirNumber = [array objectAtIndex:1];
+        if ( _hostGuess > [theirNumber intValue]) {
+          [delegate isHost];
+        }else if(_hostGuess==[theirNumber intValue]){
+            [self decideHost];
+        }
+        else{
+          [delegate isClient];
+        }
+        return;
+      }
+      
+      [delegate recievedCommand:[array objectAtIndex:0] withArgument:[array objectAtIndex:1]];
+    }
 }
 
-
+-(void) decideHost {
+  _hostGuess =  arc4random() % 10;
+  NSString * guess = [NSString stringWithFormat:@"%d", _hostGuess];
+  [self sendCommand:@"_HOST_SERVER" withArgument:guess];
+}
 
 
 @end

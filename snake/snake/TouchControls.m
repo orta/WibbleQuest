@@ -26,7 +26,6 @@
 }
 
 + (int) iPadTouchToDirection:(CGPoint)point{
-
   if( UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation]) ){    
     CGRect controlBoxLeft = CGRectMake(70, 50, 300, 300);
     CGRect controlBoxRight = CGRectMake(1024-70-300, 50, 300, 300);

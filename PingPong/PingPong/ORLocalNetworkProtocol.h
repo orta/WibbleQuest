@@ -10,11 +10,20 @@
 
 @protocol ORLocalNetworkProtocol <NSObject>
 
+-(void) connected;
+-(void) recievedCommand:(NSString *)command withArgument:(NSString *)argument;
+
+@optional
+
+-(void) recievedCommand:(NSString*)command;
+
+
+// just because you might want this
 -(void) connectionCancelled;
 
-@required
-
--(void) connected;
--(void) recievedString:(NSString*)response;
+// you'll need these if you're going
+// to use a host / client architecture
+-(void) isHost;
+-(void) isClient;
 
 @end
