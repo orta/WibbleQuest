@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MyBootsGame : NSObject
+@interface MyBootsGame : NSObject <WibbleQuestGameDelegate>
 
 @property (retain, nonatomic) IBOutlet WibbleQuest *wq;
+
+-(void)ready;
 
 @end

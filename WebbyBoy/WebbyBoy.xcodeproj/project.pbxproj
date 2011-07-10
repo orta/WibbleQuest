@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6006218113BE77C200262B12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6006218013BE77C200262B12 /* UIKit.framework */; };
+		6006218313BE77C200262B12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6006218213BE77C200262B12 /* Foundation.framework */; };
+		6006218513BE77C200262B12 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6006218413BE77C200262B12 /* CoreGraphics.framework */; };
+		6006218B13BE77C200262B12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6006218913BE77C200262B12 /* InfoPlist.strings */; };
+		6006218D13BE77C200262B12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6006218C13BE77C200262B12 /* main.m */; };
+		6006219113BE77C200262B12 /* WebbyBoyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6006219013BE77C200262B12 /* WebbyBoyAppDelegate.m */; };
+		6006219313BE77C200262B12 /* WebbyBoyViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 6006219213BE77C200262B12 /* WebbyBoyViewController.h */; };
+		6006219513BE77C200262B12 /* WebbyBoyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6006219413BE77C200262B12 /* WebbyBoyViewController.m */; };
+		6006219813BE77C200262B12 /* WebbyBoyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6006219613BE77C200262B12 /* WebbyBoyViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6006217C13BE77C200262B12 /* WebbyBoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebbyBoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6006218013BE77C200262B12 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6006218213BE77C200262B12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6006218413BE77C200262B12 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6006218813BE77C200262B12 /* WebbyBoy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebbyBoy-Info.plist"; sourceTree = "<group>"; };
+		6006218A13BE77C200262B12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6006218C13BE77C200262B12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6006218E13BE77C200262B12 /* WebbyBoy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebbyBoy-Prefix.pch"; sourceTree = "<group>"; };
+		6006218F13BE77C200262B12 /* WebbyBoyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebbyBoyAppDelegate.h; sourceTree = "<group>"; };
+		6006219013BE77C200262B12 /* WebbyBoyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebbyBoyAppDelegate.m; sourceTree = "<group>"; };
+		6006219213BE77C200262B12 /* WebbyBoyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebbyBoyViewController.h; sourceTree = "<group>"; };
+		6006219413BE77C200262B12 /* WebbyBoyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebbyBoyViewController.m; sourceTree = "<group>"; };
+		6006219713BE77C200262B12 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WebbyBoyViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6006217913BE77C200262B12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6006218113BE77C200262B12 /* UIKit.framework in Frameworks */,
+				6006218313BE77C200262B12 /* Foundation.framework in Frameworks */,
+				6006218513BE77C200262B12 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6006217113BE77C200262B12 = {
+			isa = PBXGroup;
+			children = (
+				6006218613BE77C200262B12 /* WebbyBoy */,
+				6006217F13BE77C200262B12 /* Frameworks */,
+				6006217D13BE77C200262B12 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6006217D13BE77C200262B12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6006217C13BE77C200262B12 /* WebbyBoy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6006217F13BE77C200262B12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6006218013BE77C200262B12 /* UIKit.framework */,
+				6006218213BE77C200262B12 /* Foundation.framework */,
+				6006218413BE77C200262B12 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6006218613BE77C200262B12 /* WebbyBoy */ = {
+			isa = PBXGroup;
+			children = (
+				6006218F13BE77C200262B12 /* WebbyBoyAppDelegate.h */,
+				6006219013BE77C200262B12 /* WebbyBoyAppDelegate.m */,
+				6006219213BE77C200262B12 /* WebbyBoyViewController.h */,
+				6006219413BE77C200262B12 /* WebbyBoyViewController.m */,
+				6006219613BE77C200262B12 /* WebbyBoyViewController.xib */,
+				6006218713BE77C200262B12 /* Supporting Files */,
+			);
+			path = WebbyBoy;
+			sourceTree = "<group>";
+		};
+		6006218713BE77C200262B12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6006218813BE77C200262B12 /* WebbyBoy-Info.plist */,
+				6006218913BE77C200262B12 /* InfoPlist.strings */,
+				6006218C13BE77C200262B12 /* main.m */,
+				6006218E13BE77C200262B12 /* WebbyBoy-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6006217B13BE77C200262B12 /* WebbyBoy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6006219B13BE77C200262B12 /* Build configuration list for PBXNativeTarget "WebbyBoy" */;
+			buildPhases = (
+				6006217813BE77C200262B12 /* Sources */,
+				6006217913BE77C200262B12 /* Frameworks */,
+				6006217A13BE77C200262B12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebbyBoy;
+			productName = WebbyBoy;
+			productReference = 6006217C13BE77C200262B12 /* WebbyBoy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6006217313BE77C200262B12 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 6006217613BE77C200262B12 /* Build configuration list for PBXProject "WebbyBoy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6006217113BE77C200262B12;
+			productRefGroup = 6006217D13BE77C200262B12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6006217B13BE77C200262B12 /* WebbyBoy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6006217A13BE77C200262B12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6006218B13BE77C200262B12 /* InfoPlist.strings in Resources */,
+				6006219313BE77C200262B12 /* WebbyBoyViewController.h in Resources */,
+				6006219813BE77C200262B12 /* WebbyBoyViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6006217813BE77C200262B12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6006218D13BE77C200262B12 /* main.m in Sources */,
+				6006219113BE77C200262B12 /* WebbyBoyAppDelegate.m in Sources */,
+				6006219513BE77C200262B12 /* WebbyBoyViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6006218913BE77C200262B12 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6006218A13BE77C200262B12 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6006219613BE77C200262B12 /* WebbyBoyViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6006219713BE77C200262B12 /* en */,
+			);
+			name = WebbyBoyViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6006219913BE77C200262B12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6006219A13BE77C200262B12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6006219C13BE77C200262B12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebbyBoy/WebbyBoy-Prefix.pch";
+				INFOPLIST_FILE = "WebbyBoy/WebbyBoy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6006219D13BE77C200262B12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebbyBoy/WebbyBoy-Prefix.pch";
+				INFOPLIST_FILE = "WebbyBoy/WebbyBoy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6006217613BE77C200262B12 /* Build configuration list for PBXProject "WebbyBoy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6006219913BE77C200262B12 /* Debug */,
+				6006219A13BE77C200262B12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6006219B13BE77C200262B12 /* Build configuration list for PBXNativeTarget "WebbyBoy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6006219C13BE77C200262B12 /* Debug */,
+				6006219D13BE77C200262B12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6006217313BE77C200262B12 /* Project object */;
+}

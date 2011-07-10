@@ -10,6 +10,6 @@
 
 @implementation Item
 
-@synthesize name, description, id;
+@synthesize name, descriptionInRoom, id;
 
 @end

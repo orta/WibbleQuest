@@ -10,4 +10,4 @@
 
 #import "WibbleQuest.h"
 
-@interface WibbleQuest () @end
+@interface WibbleQuest (WibbleQuestViewHandlingCategory) @end

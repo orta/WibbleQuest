@@ -80,7 +80,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUITextField" id="95582927">
+					<object class="IBUITextField" id="34897549">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{13, 411}, {264, 31}}</string>
@@ -117,13 +117,13 @@
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUIWebView" id="1051802825">
+					<object class="IBUIWebView" id="416578174">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrameSize">{320, 395}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="95582927"/>
+						<reference key="NSNextKeyView" ref="34897549"/>
 						<string key="NSReuseIdentifierKey">_NS:673</string>
 						<reference key="IBUIBackgroundColor" ref="1028619524"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -134,7 +134,7 @@
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="1051802825"/>
+				<reference key="NSNextKeyView" ref="416578174"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MC4yNQA</bytes>
@@ -144,10 +144,10 @@
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUICustomObject" id="593602055">
+			<object class="IBUICustomObject" id="365090453">
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUICustomObject" id="241170032">
+			<object class="IBUICustomObject" id="947075188">
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 		</object>
@@ -173,24 +173,16 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">wq</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="593602055"/>
-					</object>
-					<int key="connectionID">47</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="95582927"/>
-						<reference key="destination" ref="593602055"/>
+						<reference key="source" ref="34897549"/>
+						<reference key="destination" ref="365090453"/>
 					</object>
 					<int key="connectionID">53</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">view</string>
-						<reference key="source" ref="593602055"/>
+						<reference key="source" ref="365090453"/>
 						<reference key="destination" ref="883825266"/>
 					</object>
 					<int key="connectionID">54</int>
@@ -198,26 +190,42 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">_textField</string>
-						<reference key="source" ref="593602055"/>
-						<reference key="destination" ref="95582927"/>
+						<reference key="source" ref="365090453"/>
+						<reference key="destination" ref="34897549"/>
 					</object>
 					<int key="connectionID">55</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">_webView</string>
-						<reference key="source" ref="593602055"/>
-						<reference key="destination" ref="1051802825"/>
+						<reference key="source" ref="365090453"/>
+						<reference key="destination" ref="416578174"/>
 					</object>
 					<int key="connectionID">57</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">wq</string>
-						<reference key="source" ref="241170032"/>
-						<reference key="destination" ref="593602055"/>
+						<reference key="source" ref="947075188"/>
+						<reference key="destination" ref="365090453"/>
 					</object>
 					<int key="connectionID">59</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">game</string>
+						<reference key="source" ref="365090453"/>
+						<reference key="destination" ref="947075188"/>
+					</object>
+					<int key="connectionID">61</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="416578174"/>
+						<reference key="destination" ref="365090453"/>
+					</object>
+					<int key="connectionID">62</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -248,8 +256,8 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="558454645"/>
-							<reference ref="1051802825"/>
-							<reference ref="95582927"/>
+							<reference ref="416578174"/>
+							<reference ref="34897549"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -260,23 +268,23 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">46</int>
-						<reference key="object" ref="593602055"/>
+						<reference key="object" ref="365090453"/>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">WibbleQ</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">51</int>
-						<reference key="object" ref="95582927"/>
+						<reference key="object" ref="34897549"/>
 						<reference key="parent" ref="883825266"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">56</int>
-						<reference key="object" ref="1051802825"/>
+						<reference key="object" ref="416578174"/>
 						<reference key="parent" ref="883825266"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">58</int>
-						<reference key="object" ref="241170032"/>
+						<reference key="object" ref="947075188"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</object>
@@ -326,7 +334,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">60</int>
+			<int key="maxID">62</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -378,12 +386,14 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>_textField</string>
 							<string>_webView</string>
+							<string>game</string>
 							<string>view</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UITextField</string>
 							<string>UIWebView</string>
+							<string>NSObject</string>
 							<string>UIView</string>
 						</object>
 					</object>
@@ -393,6 +403,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>_textField</string>
 							<string>_webView</string>
+							<string>game</string>
 							<string>view</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -404,6 +415,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">_webView</string>
 								<string key="candidateClassName">UIWebView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">game</string>
+								<string key="candidateClassName">NSObject</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">view</string>

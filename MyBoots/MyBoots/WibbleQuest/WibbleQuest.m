@@ -8,47 +8,93 @@
 
 //private methods
 @interface WibbleQuest()
-  -(void) checkForNibConnections;
+-(void) checkForNibConnections;
+-(void) loadPageForShowingGame;
+-(void) describeSurroundings;
 @end
 
 @implementation WibbleQuest
-@synthesize view, rooms, currentRoom;
+
+@synthesize view, rooms, currentRoom, game;
 
 -(void)awakeFromNib {
+  // setup wibble for allowing any game actions
+  // before allowing the game to start adding
+  // rooms and other data
+  
   [self checkForNibConnections];
-  rooms = [NSMutableArray array];
+
+  // we do this last, as it has a delegate method when it's ready
+  [self loadPageForShowingGame];
+  _textField.clearsOnBeginEditing = YES;
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *) delagateWebView {
+  [game ready];
 }
 
 -(void) start {
-
+  [self heading:[game gameName]];
+  [self print:[game gameDescription]];
+  // just a neat gap
+  [self heading:@""];
+  
+  [self describeSurroundings];
+  
 }
 
--(void) print:(NSString*)string{
-  NSString * function = [NSString stringWithFormat:@"addParagraph(%@)", string];
-  NSString * ok = [_webView stringByEvaluatingJavaScriptFromString:function];
-  if([@"ok" isEqualToString:ok] == FALSE){
-    NSLog(@"error printing to webview");
+// think about moving this into Room
+-(void) describeSurroundings {
+  [self title:currentRoom.name];
+  [self print:currentRoom.description];
+  if(currentRoom.items){
+    //TODO
+  }
+  
+  if(currentRoom.encounter){
+    //TODO
   }
 }
 
-
 -(void)addRoom:(Room*)room {
+  // custom adding room, this allows some error handling
   if(!room.north && !room.south && !room.west && !room.east){
     NSLog(@"The Room %@ has no connections", room.name);
   }
-  [rooms addObject:room];
   [room retain];
+  if (self.rooms == nil) {
+    self.rooms = [NSMutableArray arrayWithObject:room];
+  }else{
+    [rooms addObject:room];  
+  }
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)inTextField{
+- (BOOL)textFieldShouldReturn:(UITextField *)inTextField {
 	[inTextField resignFirstResponder];
+  [self command:[@"> " stringByAppendingString: inTextField.text]];
+  
+  inTextField.text = @"";
   return YES;
 }
 
--(void) checkForNibConnections{
+#pragma error handling and loading
+
+-(void) loadPageForShowingGame {
+  NSString *path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+  NSURL *url = [NSURL fileURLWithPath:path];
+  NSURLRequest * request = [NSURLRequest requestWithURL:url];
+  [_webView loadRequest:request];
+}
+
+-(void) checkForNibConnections {
   if(_webView == nil){
-    [NSException raise:@"Web View not hooked up to WibbleQuest Object in Nib" format:@"Web View not hooked up to WibbleQuest Object in Nib"];
+    [NSException raise:@"Web View is not hooked up to WibbleQuest Object in Nib" format:@"Web View is not hooked up to WibbleQuest Object in Nib"];
   }
+  
+  if(_webView.delegate != self){
+    [NSException raise:@"Web View delegate is not hooked up to WibbleQuest Object" format:@"Web View delegate is not hooked up to WibbleQuest Object"];
+  }
+
   if(_textField == nil){
     [NSException raise:@"Text Field not hooked up to WibbleQuest Object" format:@"Text Field not hooked up to WibbleQuest Object"];
   }

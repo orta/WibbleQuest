@@ -1,35 +1,49 @@
 <html>
-<head>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <style type="text/css" media="screen">
-    html{
-      background-color: #FCF5E8;
-      color:#082545;
-      font-family: 'American Typewriter';
-    }
-  </style>
-  <script>
-  // these functions are called from the UIWebView
-  
-  function addParagraph(text){
-    var p=document.createElement("p");
-    var p_text = document.createTextNode(text);
-    p.appendChild(p_text);
-    document.body.appendChild(p);
-    return "OK"
-  }
-  
-  function addHeader(text){
-    var h=document.createElement("h1");
-    var h_text = document.createTextNode(text);
-    h.appendChild(h_text);
-    document.body.appendChild(h);
-    return "OK"
-  }
-  
-  </script>
-</head>
-<body>
-
-</body>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+      <style type="text/css" media="screen">
+        html {
+          background-color: #FCF5E8;
+          color:#082545;
+          font-family: 'American Typewriter';
+          text-shadow: 0px 1px 0px #e5e5ee;
+        }
+        code {
+          color:#BEBD9A;
+          font-family: 'American Typewriter';
+          display:block;
+        }
+        </style>
+      <script>
+        // these functions are called from the UIWebView
+        
+        function addParagraph(text){
+          return createElementWithText("p", text);
+        }
+        
+        function addHeader(text){
+          return createElementWithText("h1", text);
+        }
+        
+        function addCommand(text){
+          return createElementWithText("code", text);
+        }
+        
+        function addTitle(text){
+          return createElementWithText("h3", text);
+        }
+        
+        function createElementWithText(element, text){
+          var p=document.createElement(element);
+          var p_text = document.createTextNode(text);
+          p.appendChild(p_text);
+          document.body.appendChild(p);
+          return "OK"
+        }
+        
+        </script>
+  </head>
+  <body>
+    
+  </body>
 </html>
