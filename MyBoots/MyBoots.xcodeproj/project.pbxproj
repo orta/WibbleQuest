@@ -1,0 +1,374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		609B9FAD13C901D400888A6E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAC13C901D400888A6E /* UIKit.framework */; };
+		609B9FAF13C901D400888A6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAE13C901D400888A6E /* Foundation.framework */; };
+		609B9FB113C901D400888A6E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FB013C901D400888A6E /* CoreGraphics.framework */; };
+		609B9FB713C901D400888A6E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FB513C901D400888A6E /* InfoPlist.strings */; };
+		609B9FB913C901D400888A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FB813C901D400888A6E /* main.m */; };
+		609B9FBD13C901D400888A6E /* MyBootsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */; };
+		609B9FC013C901D400888A6E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBF13C901D400888A6E /* GameViewController.m */; };
+		609B9FC313C901D400888A6E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FC213C901D400888A6E /* SettingsViewController.m */; };
+		609B9FC613C901D400888A6E /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */; };
+		609B9FC913C901D400888A6E /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC713C901D400888A6E /* MainViewController_iPad.xib */; };
+		609B9FCC13C901D400888A6E /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FCA13C901D400888A6E /* FlipsideViewController.xib */; };
+		609B9FE013C9059100888A6E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
+		609B9FE313C9069E00888A6E /* WibbleQuest.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FE213C9069E00888A6E /* WibbleQuest.m */; };
+		609B9FE613C90AEA00888A6E /* WibbleQuestViewHandlingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FE513C90AEA00888A6E /* WibbleQuestViewHandlingCategory.m */; };
+		60CC9EA113C94D31006D116C /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EA013C94D31006D116C /* Room.m */; };
+		60CC9EA513C94E87006D116C /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EA413C94E87006D116C /* Item.m */; };
+		60CC9EA813C94ECD006D116C /* Creature.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EA713C94ECD006D116C /* Creature.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		609B9FA813C901D400888A6E /* MyBoots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBoots.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		609B9FAC13C901D400888A6E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		609B9FAE13C901D400888A6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		609B9FB013C901D400888A6E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		609B9FB413C901D400888A6E /* MyBoots-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyBoots-Info.plist"; sourceTree = "<group>"; };
+		609B9FB613C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		609B9FB813C901D400888A6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		609B9FBA13C901D400888A6E /* MyBoots-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyBoots-Prefix.pch"; sourceTree = "<group>"; };
+		609B9FBB13C901D400888A6E /* MyBootsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBootsAppDelegate.h; sourceTree = "<group>"; };
+		609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBootsAppDelegate.m; sourceTree = "<group>"; };
+		609B9FBE13C901D400888A6E /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		609B9FBF13C901D400888A6E /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		609B9FC113C901D400888A6E /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		609B9FC213C901D400888A6E /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		609B9FC513C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPhone.xib; sourceTree = "<group>"; };
+		609B9FC813C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPad.xib; sourceTree = "<group>"; };
+		609B9FDF13C9059100888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
+		609B9FE113C9069E00888A6E /* WibbleQuest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WibbleQuest.h; sourceTree = "<group>"; };
+		609B9FE213C9069E00888A6E /* WibbleQuest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleQuest.m; sourceTree = "<group>"; };
+		609B9FE413C90AEA00888A6E /* WibbleQuestViewHandlingCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WibbleQuestViewHandlingCategory.h; sourceTree = "<group>"; };
+		609B9FE513C90AEA00888A6E /* WibbleQuestViewHandlingCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleQuestViewHandlingCategory.m; sourceTree = "<group>"; };
+		60CC9E9F13C94D31006D116C /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = WibbleQuest/Room.h; sourceTree = "<group>"; };
+		60CC9EA013C94D31006D116C /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Room.m; path = WibbleQuest/Room.m; sourceTree = "<group>"; };
+		60CC9EA313C94E87006D116C /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = WibbleQuest/Item.h; sourceTree = "<group>"; };
+		60CC9EA413C94E87006D116C /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = WibbleQuest/Item.m; sourceTree = "<group>"; };
+		60CC9EA613C94ECD006D116C /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Creature.h; path = WibbleQuest/Creature.h; sourceTree = "<group>"; };
+		60CC9EA713C94ECD006D116C /* Creature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Creature.m; path = WibbleQuest/Creature.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		609B9FA513C901D400888A6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				609B9FAD13C901D400888A6E /* UIKit.framework in Frameworks */,
+				609B9FAF13C901D400888A6E /* Foundation.framework in Frameworks */,
+				609B9FB113C901D400888A6E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		609B9F9D13C901D400888A6E = {
+			isa = PBXGroup;
+			children = (
+				609B9FB213C901D400888A6E /* MyBoots */,
+				609B9FAB13C901D400888A6E /* Frameworks */,
+				609B9FA913C901D400888A6E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		609B9FA913C901D400888A6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				609B9FA813C901D400888A6E /* MyBoots.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		609B9FAB13C901D400888A6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				609B9FAC13C901D400888A6E /* UIKit.framework */,
+				609B9FAE13C901D400888A6E /* Foundation.framework */,
+				609B9FB013C901D400888A6E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		609B9FB213C901D400888A6E /* MyBoots */ = {
+			isa = PBXGroup;
+			children = (
+				609B9FD313C9027300888A6E /* WibbleQuest */,
+				609B9FD213C901E200888A6E /* Boilerplate */,
+				609B9FBE13C901D400888A6E /* GameViewController.h */,
+				609B9FBF13C901D400888A6E /* GameViewController.m */,
+				609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */,
+				609B9FC713C901D400888A6E /* MainViewController_iPad.xib */,
+				609B9FC113C901D400888A6E /* SettingsViewController.h */,
+				609B9FC213C901D400888A6E /* SettingsViewController.m */,
+				609B9FDE13C9059100888A6E /* SettingsViewController.xib */,
+				609B9FB313C901D400888A6E /* Supporting Files */,
+			);
+			path = MyBoots;
+			sourceTree = "<group>";
+		};
+		609B9FB313C901D400888A6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				609B9FB413C901D400888A6E /* MyBoots-Info.plist */,
+				609B9FB513C901D400888A6E /* InfoPlist.strings */,
+				609B9FB813C901D400888A6E /* main.m */,
+				609B9FBA13C901D400888A6E /* MyBoots-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		609B9FD213C901E200888A6E /* Boilerplate */ = {
+			isa = PBXGroup;
+			children = (
+				609B9FBB13C901D400888A6E /* MyBootsAppDelegate.h */,
+				609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */,
+			);
+			name = Boilerplate;
+			sourceTree = "<group>";
+		};
+		609B9FD313C9027300888A6E /* WibbleQuest */ = {
+			isa = PBXGroup;
+			children = (
+				609B9FE113C9069E00888A6E /* WibbleQuest.h */,
+				609B9FE213C9069E00888A6E /* WibbleQuest.m */,
+				609B9FE413C90AEA00888A6E /* WibbleQuestViewHandlingCategory.h */,
+				609B9FE513C90AEA00888A6E /* WibbleQuestViewHandlingCategory.m */,
+				60CC9E9F13C94D31006D116C /* Room.h */,
+				60CC9EA013C94D31006D116C /* Room.m */,
+				60CC9EA313C94E87006D116C /* Item.h */,
+				60CC9EA413C94E87006D116C /* Item.m */,
+				60CC9EA613C94ECD006D116C /* Creature.h */,
+				60CC9EA713C94ECD006D116C /* Creature.m */,
+			);
+			name = WibbleQuest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		609B9FA713C901D400888A6E /* MyBoots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 609B9FCF13C901D400888A6E /* Build configuration list for PBXNativeTarget "MyBoots" */;
+			buildPhases = (
+				609B9FA413C901D400888A6E /* Sources */,
+				609B9FA513C901D400888A6E /* Frameworks */,
+				609B9FA613C901D400888A6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyBoots;
+			productName = MyBoots;
+			productReference = 609B9FA813C901D400888A6E /* MyBoots.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		609B9F9F13C901D400888A6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "http://ortatherox.com";
+			};
+			buildConfigurationList = 609B9FA213C901D400888A6E /* Build configuration list for PBXProject "MyBoots" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 609B9F9D13C901D400888A6E;
+			productRefGroup = 609B9FA913C901D400888A6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				609B9FA713C901D400888A6E /* MyBoots */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		609B9FA613C901D400888A6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				609B9FB713C901D400888A6E /* InfoPlist.strings in Resources */,
+				609B9FC613C901D400888A6E /* MainViewController_iPhone.xib in Resources */,
+				609B9FC913C901D400888A6E /* MainViewController_iPad.xib in Resources */,
+				609B9FCC13C901D400888A6E /* FlipsideViewController.xib in Resources */,
+				609B9FE013C9059100888A6E /* SettingsViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		609B9FA413C901D400888A6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				609B9FB913C901D400888A6E /* main.m in Sources */,
+				609B9FBD13C901D400888A6E /* MyBootsAppDelegate.m in Sources */,
+				609B9FC013C901D400888A6E /* GameViewController.m in Sources */,
+				609B9FC313C901D400888A6E /* SettingsViewController.m in Sources */,
+				609B9FE313C9069E00888A6E /* WibbleQuest.m in Sources */,
+				609B9FE613C90AEA00888A6E /* WibbleQuestViewHandlingCategory.m in Sources */,
+				60CC9EA113C94D31006D116C /* Room.m in Sources */,
+				60CC9EA513C94E87006D116C /* Item.m in Sources */,
+				60CC9EA813C94ECD006D116C /* Creature.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		609B9FB513C901D400888A6E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				609B9FB613C901D400888A6E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				609B9FC513C901D400888A6E /* en */,
+			);
+			name = MainViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		609B9FC713C901D400888A6E /* MainViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				609B9FC813C901D400888A6E /* en */,
+			);
+			name = MainViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		609B9FCA13C901D400888A6E /* FlipsideViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+			);
+			name = FlipsideViewController.xib;
+			path = /Users/orta/spiel/iphone/iphone_examples/MyBoots/MyBoots;
+			sourceTree = "<absolute>";
+		};
+		609B9FDE13C9059100888A6E /* SettingsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				609B9FDF13C9059100888A6E /* en */,
+			);
+			name = SettingsViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		609B9FCD13C901D400888A6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		609B9FCE13C901D400888A6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		609B9FD013C901D400888A6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyBoots/MyBoots-Prefix.pch";
+				INFOPLIST_FILE = "MyBoots/MyBoots-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		609B9FD113C901D400888A6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyBoots/MyBoots-Prefix.pch";
+				INFOPLIST_FILE = "MyBoots/MyBoots-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		609B9FA213C901D400888A6E /* Build configuration list for PBXProject "MyBoots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				609B9FCD13C901D400888A6E /* Debug */,
+				609B9FCE13C901D400888A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		609B9FCF13C901D400888A6E /* Build configuration list for PBXNativeTarget "MyBoots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				609B9FD013C901D400888A6E /* Debug */,
+				609B9FD113C901D400888A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 609B9F9F13C901D400888A6E /* Project object */;
+}
