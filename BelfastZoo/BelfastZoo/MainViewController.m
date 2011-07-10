@@ -1,15 +1,14 @@
 //
 //  MainViewController.m
-//  MyBoots
+//  BelfastZoo
 //
 //  Created by orta therox on 09/07/2011.
 //  Copyright 2011 http://ortatherox.com. All rights reserved.
 //
 
-#import "GameViewController.h"
-#import "WibbleQuest.h"
+#import "MainViewController.h"
 
-@implementation GameViewController
+@implementation MainViewController
 
 @synthesize flipsidePopoverController = _flipsidePopoverController;
 
@@ -66,7 +65,7 @@
 
 #pragma mark - Flipside View Controller
 
-- (void)SettingsViewControllerDidFinish:(SettingsViewController *)controller
+- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         [self dismissModalViewControllerAnimated:YES];
@@ -78,13 +77,13 @@
 - (IBAction)showInfo:(id)sender
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        SettingsViewController *controller = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
+        FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideViewController" bundle:nil];
         controller.delegate = self;
         controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentModalViewController:controller animated:YES];
     } else {
         if (!self.flipsidePopoverController) {
-            SettingsViewController *controller = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
+            FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideViewController" bundle:nil];
             controller.delegate = self;
             
             self.flipsidePopoverController = [[UIPopoverController alloc] initWithContentViewController:controller];
@@ -96,4 +95,5 @@
         }
     }
 }
+
 @end

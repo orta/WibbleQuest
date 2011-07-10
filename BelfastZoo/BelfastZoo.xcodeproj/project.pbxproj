@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60CC9EB913C951F7006D116C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CC9EB813C951F7006D116C /* UIKit.framework */; };
+		60CC9EBB13C951F7006D116C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CC9EBA13C951F7006D116C /* Foundation.framework */; };
+		60CC9EBD13C951F7006D116C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CC9EBC13C951F7006D116C /* CoreGraphics.framework */; };
+		60CC9EC313C951F7006D116C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9EC113C951F7006D116C /* InfoPlist.strings */; };
+		60CC9EC513C951F7006D116C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EC413C951F7006D116C /* main.m */; };
+		60CC9EC913C951F8006D116C /* BelfastZooAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EC813C951F8006D116C /* BelfastZooAppDelegate.m */; };
+		60CC9ECC13C951F8006D116C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9ECB13C951F8006D116C /* MainViewController.m */; };
+		60CC9ECF13C951F8006D116C /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9ECE13C951F8006D116C /* FlipsideViewController.m */; };
+		60CC9ED213C951F8006D116C /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9ED013C951F8006D116C /* MainViewController_iPhone.xib */; };
+		60CC9ED513C951F8006D116C /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9ED313C951F8006D116C /* MainViewController_iPad.xib */; };
+		60CC9ED813C951F8006D116C /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9ED613C951F8006D116C /* FlipsideViewController.xib */; };
+		60CC9EED13C95229006D116C /* Creature.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EE413C95229006D116C /* Creature.m */; };
+		60CC9EEE13C95229006D116C /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EE613C95229006D116C /* Item.m */; };
+		60CC9EEF13C95229006D116C /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EE813C95229006D116C /* Room.m */; };
+		60CC9EF013C95229006D116C /* WibbleQuest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EEA13C95229006D116C /* WibbleQuest.m */; };
+		60CC9EF113C95229006D116C /* WibbleQuestViewHandlingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EEC13C95229006D116C /* WibbleQuestViewHandlingCategory.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		60CC9EB413C951F7006D116C /* BelfastZoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BelfastZoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60CC9EB813C951F7006D116C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		60CC9EBA13C951F7006D116C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		60CC9EBC13C951F7006D116C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		60CC9EC013C951F7006D116C /* BelfastZoo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BelfastZoo-Info.plist"; sourceTree = "<group>"; };
+		60CC9EC213C951F7006D116C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		60CC9EC413C951F7006D116C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60CC9EC613C951F7006D116C /* BelfastZoo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BelfastZoo-Prefix.pch"; sourceTree = "<group>"; };
+		60CC9EC713C951F8006D116C /* BelfastZooAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BelfastZooAppDelegate.h; sourceTree = "<group>"; };
+		60CC9EC813C951F8006D116C /* BelfastZooAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BelfastZooAppDelegate.m; sourceTree = "<group>"; };
+		60CC9ECA13C951F8006D116C /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		60CC9ECB13C951F8006D116C /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		60CC9ECD13C951F8006D116C /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		60CC9ECE13C951F8006D116C /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		60CC9ED113C951F8006D116C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPhone.xib; sourceTree = "<group>"; };
+		60CC9ED413C951F8006D116C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPad.xib; sourceTree = "<group>"; };
+		60CC9ED713C951F8006D116C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FlipsideViewController.xib; sourceTree = "<group>"; };
+		60CC9EE313C95229006D116C /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Creature.h; sourceTree = "<group>"; };
+		60CC9EE413C95229006D116C /* Creature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Creature.m; sourceTree = "<group>"; };
+		60CC9EE513C95229006D116C /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		60CC9EE613C95229006D116C /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		60CC9EE713C95229006D116C /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		60CC9EE813C95229006D116C /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		60CC9EE913C95229006D116C /* WibbleQuest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WibbleQuest.h; sourceTree = "<group>"; };
+		60CC9EEA13C95229006D116C /* WibbleQuest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleQuest.m; sourceTree = "<group>"; };
+		60CC9EEB13C95229006D116C /* WibbleQuestViewHandlingCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WibbleQuestViewHandlingCategory.h; sourceTree = "<group>"; };
+		60CC9EEC13C95229006D116C /* WibbleQuestViewHandlingCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleQuestViewHandlingCategory.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60CC9EB113C951F7006D116C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60CC9EB913C951F7006D116C /* UIKit.framework in Frameworks */,
+				60CC9EBB13C951F7006D116C /* Foundation.framework in Frameworks */,
+				60CC9EBD13C951F7006D116C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60CC9EA913C951F7006D116C = {
+			isa = PBXGroup;
+			children = (
+				60CC9EBE13C951F7006D116C /* BelfastZoo */,
+				60CC9EB713C951F7006D116C /* Frameworks */,
+				60CC9EB513C951F7006D116C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60CC9EB513C951F7006D116C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60CC9EB413C951F7006D116C /* BelfastZoo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60CC9EB713C951F7006D116C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60CC9EB813C951F7006D116C /* UIKit.framework */,
+				60CC9EBA13C951F7006D116C /* Foundation.framework */,
+				60CC9EBC13C951F7006D116C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60CC9EBE13C951F7006D116C /* BelfastZoo */ = {
+			isa = PBXGroup;
+			children = (
+				60CC9EE213C95229006D116C /* WibbleQuest */,
+				60CC9EC713C951F8006D116C /* BelfastZooAppDelegate.h */,
+				60CC9EC813C951F8006D116C /* BelfastZooAppDelegate.m */,
+				60CC9ECA13C951F8006D116C /* MainViewController.h */,
+				60CC9ECB13C951F8006D116C /* MainViewController.m */,
+				60CC9ECD13C951F8006D116C /* FlipsideViewController.h */,
+				60CC9ECE13C951F8006D116C /* FlipsideViewController.m */,
+				60CC9ED013C951F8006D116C /* MainViewController_iPhone.xib */,
+				60CC9ED313C951F8006D116C /* MainViewController_iPad.xib */,
+				60CC9ED613C951F8006D116C /* FlipsideViewController.xib */,
+				60CC9EBF13C951F7006D116C /* Supporting Files */,
+			);
+			path = BelfastZoo;
+			sourceTree = "<group>";
+		};
+		60CC9EBF13C951F7006D116C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				60CC9EC013C951F7006D116C /* BelfastZoo-Info.plist */,
+				60CC9EC113C951F7006D116C /* InfoPlist.strings */,
+				60CC9EC413C951F7006D116C /* main.m */,
+				60CC9EC613C951F7006D116C /* BelfastZoo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60CC9EE213C95229006D116C /* WibbleQuest */ = {
+			isa = PBXGroup;
+			children = (
+				60CC9EE313C95229006D116C /* Creature.h */,
+				60CC9EE413C95229006D116C /* Creature.m */,
+				60CC9EE513C95229006D116C /* Item.h */,
+				60CC9EE613C95229006D116C /* Item.m */,
+				60CC9EE713C95229006D116C /* Room.h */,
+				60CC9EE813C95229006D116C /* Room.m */,
+				60CC9EE913C95229006D116C /* WibbleQuest.h */,
+				60CC9EEA13C95229006D116C /* WibbleQuest.m */,
+				60CC9EEB13C95229006D116C /* WibbleQuestViewHandlingCategory.h */,
+				60CC9EEC13C95229006D116C /* WibbleQuestViewHandlingCategory.m */,
+			);
+			path = WibbleQuest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60CC9EB313C951F7006D116C /* BelfastZoo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60CC9EDB13C951F8006D116C /* Build configuration list for PBXNativeTarget "BelfastZoo" */;
+			buildPhases = (
+				60CC9EB013C951F7006D116C /* Sources */,
+				60CC9EB113C951F7006D116C /* Frameworks */,
+				60CC9EB213C951F7006D116C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BelfastZoo;
+			productName = BelfastZoo;
+			productReference = 60CC9EB413C951F7006D116C /* BelfastZoo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60CC9EAB13C951F7006D116C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "http://ortatherox.com";
+			};
+			buildConfigurationList = 60CC9EAE13C951F7006D116C /* Build configuration list for PBXProject "BelfastZoo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 60CC9EA913C951F7006D116C;
+			productRefGroup = 60CC9EB513C951F7006D116C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60CC9EB313C951F7006D116C /* BelfastZoo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60CC9EB213C951F7006D116C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60CC9EC313C951F7006D116C /* InfoPlist.strings in Resources */,
+				60CC9ED213C951F8006D116C /* MainViewController_iPhone.xib in Resources */,
+				60CC9ED513C951F8006D116C /* MainViewController_iPad.xib in Resources */,
+				60CC9ED813C951F8006D116C /* FlipsideViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60CC9EB013C951F7006D116C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60CC9EC513C951F7006D116C /* main.m in Sources */,
+				60CC9EC913C951F8006D116C /* BelfastZooAppDelegate.m in Sources */,
+				60CC9ECC13C951F8006D116C /* MainViewController.m in Sources */,
+				60CC9ECF13C951F8006D116C /* FlipsideViewController.m in Sources */,
+				60CC9EED13C95229006D116C /* Creature.m in Sources */,
+				60CC9EEE13C95229006D116C /* Item.m in Sources */,
+				60CC9EEF13C95229006D116C /* Room.m in Sources */,
+				60CC9EF013C95229006D116C /* WibbleQuest.m in Sources */,
+				60CC9EF113C95229006D116C /* WibbleQuestViewHandlingCategory.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		60CC9EC113C951F7006D116C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60CC9EC213C951F7006D116C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		60CC9ED013C951F8006D116C /* MainViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60CC9ED113C951F8006D116C /* en */,
+			);
+			name = MainViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		60CC9ED313C951F8006D116C /* MainViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60CC9ED413C951F8006D116C /* en */,
+			);
+			name = MainViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		60CC9ED613C951F8006D116C /* FlipsideViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60CC9ED713C951F8006D116C /* en */,
+			);
+			name = FlipsideViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		60CC9ED913C951F8006D116C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		60CC9EDA13C951F8006D116C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60CC9EDC13C951F8006D116C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BelfastZoo/BelfastZoo-Prefix.pch";
+				INFOPLIST_FILE = "BelfastZoo/BelfastZoo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		60CC9EDD13C951F8006D116C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BelfastZoo/BelfastZoo-Prefix.pch";
+				INFOPLIST_FILE = "BelfastZoo/BelfastZoo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60CC9EAE13C951F7006D116C /* Build configuration list for PBXProject "BelfastZoo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60CC9ED913C951F8006D116C /* Debug */,
+				60CC9EDA13C951F8006D116C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60CC9EDB13C951F8006D116C /* Build configuration list for PBXNativeTarget "BelfastZoo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60CC9EDC13C951F8006D116C /* Debug */,
+				60CC9EDD13C951F8006D116C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 60CC9EAB13C951F7006D116C /* Project object */;
+}

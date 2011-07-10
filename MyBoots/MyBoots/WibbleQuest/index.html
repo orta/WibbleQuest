@@ -1,0 +1,35 @@
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <style type="text/css" media="screen">
+    html{
+      background-color: #FCF5E8;
+      color:#082545;
+      font-family: 'American Typewriter';
+    }
+  </style>
+  <script>
+  // these functions are called from the UIWebView
+  
+  function addParagraph(text){
+    var p=document.createElement("p");
+    var p_text = document.createTextNode(text);
+    p.appendChild(p_text);
+    document.body.appendChild(p);
+    return "OK"
+  }
+  
+  function addHeader(text){
+    var h=document.createElement("h1");
+    var h_text = document.createTextNode(text);
+    h.appendChild(h_text);
+    document.body.appendChild(h);
+    return "OK"
+  }
+  
+  </script>
+</head>
+<body>
+
+</body>
+</html>

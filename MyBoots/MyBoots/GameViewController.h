@@ -10,8 +10,6 @@
 
 @class WibbleQuest;
 @interface GameViewController : UIViewController <SettingsViewControllerDelegate>
-
-@property (retain, nonatomic) IBOutlet WibbleQuest *wq;
 @property (retain, nonatomic) UIPopoverController *flipsidePopoverController;
 
 - (IBAction)showInfo:(id)sender;
