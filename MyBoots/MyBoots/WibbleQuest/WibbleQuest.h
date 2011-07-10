@@ -43,7 +43,7 @@
 
 // launching
 -(void) start;
-
+-(void) describeSurroundings;
 
 @end
 

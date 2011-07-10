@@ -23,17 +23,19 @@
   Room * openingRoom = [[Room alloc] init];
   openingRoom.name = @"Priceton Dorms";
   openingRoom.description = @"There are clothes all over the floor, and you can hear the feint sounds of music from down the hallway, there is a door to the hallway to the south.";
-  [wq addRoom:openingRoom];
-  wq.currentRoom = openingRoom;
   
   Room * hallwayCenter = [[Room alloc] init];
   hallwayCenter.name = @"Hallway";
-  hallwayCenter.description = @"The hallway is long and pretty boring, the music is louder out here, this hallway continues to the east and the west. The door to your room is at the north";
-  openingRoom.north = openingRoom;
+  hallwayCenter.description = @"The hallway is long and pretty boring, the music is louder out here, this hallway continues to the east and the west. The door to your room is to the north";
   
+  openingRoom.south = hallwayCenter;
+  hallwayCenter.north = openingRoom;
+
   [wq addRoom:openingRoom];
   [wq addRoom:hallwayCenter];
   
+  wq.currentRoom = openingRoom;
+
   [wq start];
 }
 
