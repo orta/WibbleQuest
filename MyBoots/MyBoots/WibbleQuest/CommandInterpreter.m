@@ -59,7 +59,11 @@
         [wq print:@"There is nothing to the south."];
       }
     }
-
+    
+    if([@"look" isEqualToString:command] || [@"l" isEqualToString:command]){
+      [wq describeSurroundings];
+      return;
+    }
     
   }
 

@@ -9,7 +9,7 @@
           text-shadow: 0px 1px 0px #e5e5ee;
         }
         code {
-          color:#BEBD9A;
+          color:#A1A083;
           font-family: 'American Typewriter';
           display:block;
         }
@@ -38,7 +38,19 @@
           var p_text = document.createTextNode(text);
           p.appendChild(p_text);
           document.body.appendChild(p);
+          
+          scrollToBottom(p);
           return "OK"
+        }
+        
+        function scrollToBottom(element) {
+          var currentOffset = element.scrollHeight;
+          
+          // Animate sometime to position 0 with a transform.
+          // document.body.style.webkitTransition ='-webkit-transform 300ms ease-out';
+          // document.body.style.webkitTransform = 'translate3d(0, ' + ( -currentOffset ) +'px,0)';
+          
+          document.body.scrollTop += 10000000000;
         }
         
         </script>
