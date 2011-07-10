@@ -12,6 +12,9 @@
 // the code is long and chunky and shouldnt mess up my 
 // main wibblequest class, so it's handled here.
 
+// adapted from http://cocoawithlove.com/2008/10/sliding-uitextfields-around-to-avoid.html
+
+
 #import "WibbleQuestViewHandlingCategory.h"
 
 @implementation WibbleQuest (WibbleQuestViewHandlingCategory)
@@ -21,6 +24,10 @@ static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
 static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
 static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
+
+static const CGFloat IPAD_PORTRAIT_KEYBOARD_HEIGHT = 270;
+static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 720;
+
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
   CGRect textFieldRect =
@@ -44,19 +51,31 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
   {
     heightFraction = 1.0;
   }
-  UIInterfaceOrientation orientation =
-  [[UIApplication sharedApplication] statusBarOrientation];
-  if (orientation == UIInterfaceOrientationPortrait ||
-      orientation == UIInterfaceOrientationPortraitUpsideDown)
-  {
-    animatedDistance = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
+  animatedDistanceX = 0.0;
+  
+  UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+  if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown) {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+      animatedDistanceY = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
+    } 
+    else {
+      animatedDistanceY = floor(IPAD_PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
+    }
+  } 
+  else {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+      animatedDistanceY = floor(LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
+    } 
+    else {
+      animatedDistanceX = floor(IPAD_LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
+    }
   }
-  else
-  {
-    animatedDistance = floor(LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
-  }
+  
   CGRect viewFrame = self.view.frame;
-  viewFrame.origin.y -= animatedDistance;
+  
+  viewFrame.origin.y -= animatedDistanceY;
+  viewFrame.origin.x -= animatedDistanceX;
+
   [UIView beginAnimations:nil context:NULL];
   [UIView setAnimationBeginsFromCurrentState:YES];
   [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
@@ -68,8 +87,9 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
   CGRect viewFrame = self.view.frame;
-  viewFrame.origin.y += animatedDistance;
-  
+  viewFrame.origin.y += animatedDistanceY;
+  viewFrame.origin.x += animatedDistanceX;
+
   [UIView beginAnimations:nil context:NULL];
   [UIView setAnimationBeginsFromCurrentState:YES];
   [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];

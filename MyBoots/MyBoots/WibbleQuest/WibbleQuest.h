@@ -29,7 +29,8 @@
   
   CommandInterpreter *_commandInterpreter;
   
-  CGFloat animatedDistance;
+  CGFloat animatedDistanceX;
+  CGFloat animatedDistanceY;
 
 }
 

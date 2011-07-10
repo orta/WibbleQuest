@@ -14,10 +14,12 @@
 -(void)parse:(NSString*) string {
   string = [string lowercaseString];
   NSArray * parameters = [string componentsSeparatedByString:@" "];
-  if ([parameters count] == 1) {
+  if ([parameters count] > 0) {
     NSString * command = [parameters objectAtIndex:0];
+    
     if([@"help" isEqualToString:command]){
       [self help];
+      return;
     }
     
     if([@"north" isEqualToString:command] || [@"n" isEqualToString:command]){
@@ -27,6 +29,7 @@
         return;
       }else{
         [wq print:@"There is nothing to the north."];
+        return;
       }
     }
     
@@ -37,6 +40,7 @@
         return;
       }else{
         [wq print:@"There is nothing to the west."];
+        return;
       }
     }
     
@@ -47,6 +51,7 @@
         return;
       }else{
         [wq print:@"There is nothing to the east."];
+        return;
       }
     }
 
@@ -57,6 +62,7 @@
         return;
       }else{
         [wq print:@"There is nothing to the south."];
+        return;
       }
     }
     
@@ -65,20 +71,20 @@
       return;
     }
     
+    [wq print:@"Command not recognised"];
   }
-
 }
 
 
 -(void) help {
   if([wq.game respondsToSelector:@selector(help)]){
     [wq.game help];
-  }else{
     
+  }else{
     [wq title:@"Help File"];
     
     [wq print:@"Directions: type in north, east, south or west to move."];
-    [wq print:@"Directions: type in north, east, south or west to go to another room."];    
+    [wq print:@""];    
   }
 }
 
