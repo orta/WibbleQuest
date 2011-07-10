@@ -12,18 +12,22 @@
 
 
 @protocol WibbleQuestGameDelegate
-@required
-  - (void)ready;
+  - (void) ready;
   -(NSString *) gameName;
   -(NSString *) gameDescription;
+@optional
+  -(void) help;
 @end
 
+@class CommandInterpreter;
 
 @interface WibbleQuest : NSObject {
   IBOutlet UIWebView *_webView;
   IBOutlet UITextField  *_textField;
   IBOutlet UIView *view;
   IBOutlet NSObject<WibbleQuestGameDelegate> * game;
+  
+  CommandInterpreter *_commandInterpreter;
   
   CGFloat animatedDistance;
 

@@ -6,6 +6,8 @@
 //  Copyright 2011 http://ortatherox.com. All rights reserved.
 //
 
+#import "CommandInterpreter.h"
+
 //private methods
 @interface WibbleQuest()
 -(void) checkForNibConnections;
@@ -23,7 +25,9 @@
   // rooms and other data
   
   [self checkForNibConnections];
-
+  _commandInterpreter = [[CommandInterpreter alloc] init];
+  _commandInterpreter.wq = self;
+  
   // we do this last, as it has a delegate method when it's ready
   [self loadPageForShowingGame];
   _textField.clearsOnBeginEditing = YES;
@@ -72,6 +76,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)inTextField {
 	[inTextField resignFirstResponder];
   [self command:[@"> " stringByAppendingString: inTextField.text]];
+  [_commandInterpreter parse:inTextField.text];
   
   inTextField.text = @"";
   return YES;

@@ -33,7 +33,6 @@
   
   [wq addRoom:openingRoom];
   [wq addRoom:hallwayCenter];
-
   
   [wq start];
 }

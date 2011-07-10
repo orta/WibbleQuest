@@ -27,6 +27,7 @@
 		60CC9F0D13C9DD01006D116C /* MyBootsGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F0C13C9DD01006D116C /* MyBootsGame.m */; };
 		60CC9F1113C9E40D006D116C /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
 		60CC9F1B13C9F3CC006D116C /* WibbleQuestPrintingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F1A13C9F3CB006D116C /* WibbleQuestPrintingCategory.m */; };
+		60CC9F2113CA0B6B006D116C /* CommandInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		60CC9F1013C9E40D006D116C /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		60CC9F1913C9F3CA006D116C /* WibbleQuestPrintingCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WibbleQuestPrintingCategory.h; sourceTree = "<group>"; };
 		60CC9F1A13C9F3CB006D116C /* WibbleQuestPrintingCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleQuestPrintingCategory.m; sourceTree = "<group>"; };
+		60CC9F1F13CA0B6B006D116C /* CommandInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandInterpreter.h; sourceTree = "<group>"; };
+		60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandInterpreter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				609B9FB213C901D400888A6E /* MyBoots */,
+				609B9FB313C901D400888A6E /* Supporting Files */,
 				609B9FAB13C901D400888A6E /* Frameworks */,
 				609B9FA913C901D400888A6E /* Products */,
 			);
@@ -113,7 +117,6 @@
 				609B9FD213C901E200888A6E /* Boilerplate */,
 				60CC9F0B13C9DD01006D116C /* MyBootsGame.h */,
 				60CC9F0C13C9DD01006D116C /* MyBootsGame.m */,
-				609B9FB313C901D400888A6E /* Supporting Files */,
 			);
 			path = MyBoots;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 				609B9FBA13C901D400888A6E /* MyBoots-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = MyBoots;
 			sourceTree = "<group>";
 		};
 		609B9FD213C901E200888A6E /* Boilerplate */ = {
@@ -142,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				60CC9F0F13C9E3E8006D116C /* html */,
+				60CC9F1F13CA0B6B006D116C /* CommandInterpreter.h */,
+				60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */,
 				60CC9EF813C9D5C0006D116C /* Creature.h */,
 				60CC9EF913C9D5C0006D116C /* Creature.m */,
 				60CC9EFA13C9D5C0006D116C /* Item.h */,
@@ -257,6 +263,7 @@
 				60CC9F0613C9D5C0006D116C /* WibbleQuestViewHandlingCategory.m in Sources */,
 				60CC9F0D13C9DD01006D116C /* MyBootsGame.m in Sources */,
 				60CC9F1B13C9F3CC006D116C /* WibbleQuestPrintingCategory.m in Sources */,
+				60CC9F2113CA0B6B006D116C /* CommandInterpreter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
