@@ -22,7 +22,7 @@
 -(void)ready {
   Room * openingRoom = [[Room alloc] init];
   openingRoom.name = @"Priceton Dorms";
-  openingRoom.description = @"There are clothes all over the floor, and you can hear the feint sounds of music from down the hallway, there is a door to the hallway to the south.";
+  openingRoom.description = @"There are clothes all over the floor, and you can hear the faint sounds of music from down the hallway, there is a door to the hallway to the south.";
   
   Room * hallwayCenter = [[Room alloc] init];
   hallwayCenter.name = @"Hallway";

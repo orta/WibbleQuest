@@ -6,6 +6,8 @@
 //  Copyright 2011 http://ortatherox.com. All rights reserved.
 //
 
+static WibbleQuest *sharedWibble;
+
 #import "CommandInterpreter.h"
 
 //private methods
@@ -17,12 +19,18 @@
 
 @implementation WibbleQuest
 
-@synthesize view, rooms, currentRoom, game;
+@synthesize view, rooms, currentRoom, game, inventory;
+
++ (WibbleQuest *)sharedWibble {
+  return sharedWibble;
+}
 
 -(void)awakeFromNib {
   // setup wibble for allowing any game actions
   // before allowing the game to start adding
   // rooms and other data
+  
+  sharedWibble = self;
   
   [self checkForNibConnections];
   _commandInterpreter = [[CommandInterpreter alloc] init];
@@ -31,6 +39,7 @@
   // we do this last, as it has a delegate method when it's ready
   [self loadPageForShowingGame];
   _textField.clearsOnBeginEditing = YES;
+  self.inventory = [[[PlayerInventory alloc] init] retain];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *) delagateWebView {
@@ -111,5 +120,10 @@
   }
 }
 
+-(void)dealloc{
+  [super release];
+  [inventory release];
+  [currentRoom release];
+}
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PlayerInventory.h"
 
-@class Room;
+@class Room, PlayerInventory;
 
 
 @protocol WibbleQuestGameDelegate
@@ -38,6 +39,11 @@
 @property (retain) NSMutableArray * rooms;
 @property (retain) Room * currentRoom;
 @property (retain) NSObject<WibbleQuestGameDelegate> * game;
+@property (retain) PlayerInventory *inventory;
+
+
+// this is mainly internal
++ (WibbleQuest *)sharedWibble;
 
 // setting up your game 
 -(void) addRoom:(Room*)room;

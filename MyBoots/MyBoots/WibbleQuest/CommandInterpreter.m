@@ -71,6 +71,11 @@
       return;
     }
     
+    if([@"inventory" isEqualToString:command] || [@"i" isEqualToString:command]){
+      [wq.inventory describeInventory];
+      return;
+    }
+    
     [wq print:@"Command not recognised"];
   }
 }
