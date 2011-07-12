@@ -12,4 +12,14 @@
 
 @synthesize name, descriptionInRoom, id;
 
+-(void)command:(NSArray*)commandArray {
+  NSLog(@"command for %@ not implemented", name);
+}
+-(BOOL)respondsToCommand:(NSString*)command {
+  NSLog(@"respondstocommand for %@ not implemented", name);
+  return NO;
+}
+
+
+
 @end

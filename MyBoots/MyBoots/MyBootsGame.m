@@ -7,6 +7,7 @@
 //
 
 #import "MyBootsGame.h"
+#import "Bubba.h"
 
 @implementation MyBootsGame
 @synthesize wq;
@@ -27,6 +28,10 @@
   Room * hallwayCenter = [[Room alloc] init];
   hallwayCenter.name = @"Hallway";
   hallwayCenter.description = @"The hallway is long and pretty boring, the music is louder out here, this hallway continues to the east and the west. The door to your room is to the north";
+  
+  Bubba *b = [[Bubba alloc] init] ;
+  [hallwayCenter addItem:b];
+  
   
   openingRoom.south = hallwayCenter;
   hallwayCenter.north = openingRoom;

@@ -60,9 +60,7 @@ static WibbleQuest *sharedWibble;
 -(void) describeSurroundings {
   [self title:currentRoom.name];
   [self print:currentRoom.description];
-  if(currentRoom.items){
-    //TODO
-  }
+  [self.currentRoom describeInventory];
   
   if(currentRoom.encounter){
     //TODO
@@ -78,7 +76,7 @@ static WibbleQuest *sharedWibble;
   if (self.rooms == nil) {
     self.rooms = [NSMutableArray arrayWithObject:room];
   }else{
-    [rooms addObject:room];  
+    [self.rooms addObject:room];  
   }
 }
 

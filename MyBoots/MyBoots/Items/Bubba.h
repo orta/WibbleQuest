@@ -8,6 +8,10 @@
 
 #import "Item.h"
 
-@interface Bubba : Item
+@interface Bubba : Item {
+  int drinksLeft;
+}
+
+-(void) drink;
 
 @end

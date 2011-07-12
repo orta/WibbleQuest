@@ -10,13 +10,19 @@
 
 @implementation WebbyBoyViewController
 
-- (IBAction)urlTypedIn:(id)sender {
-  [self loadURLString: [sender text]];
+- (void)viewDidLoad {
+  //load home page
+  [super viewDidLoad];
+  [self loadURLString:@"http://orta.github.com"];
 }
 
-- (IBAction)searchRequestTyped:(id)sender {
-  [self loadURLString: [@"http://google.com/search?q=" stringByAppendingString:[sender text]]];
+- (BOOL)textFieldShouldReturn:(UITextField *)inTextField {
+  [self loadURLString: [inTextField text]];
+  return YES;
 }
+
+//  This will do a google search instead
+//  [self loadURLString: [@"http://google.com/search?q=" stringByAppendingString:[sender text]]];
 
 - (void) loadURLString: (NSString*)address{  
   //make sure it has a http:// before it  
@@ -30,6 +36,8 @@
   NSURL* url = [NSURL URLWithString:address];
   NSURLRequest * request = [NSURLRequest requestWithURL:url];
   [webView loadRequest: request];
+  
+  //make the webview the focus
   [webView becomeFirstResponder];
 }
 
@@ -41,16 +49,6 @@
 - (void)webViewDidFinishLoad:(UIWebView *) delagateWebView {
   urlTextField.text = [delagateWebView.request.mainDocumentURL absoluteString];
 }
-
-// add ourselves a back and forwards button
-- (IBAction)backPressed:(id)sender {
-  [webView goBack];
-}
-
-- (IBAction)forwardsPressed:(id)sender {
-  [webView goForward];
-}
-
 
 // don't worry so much about things under this
 

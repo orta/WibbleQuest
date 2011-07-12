@@ -76,6 +76,10 @@
       return;
     }
     
+    if([wq.inventory respondsToCommand:command]) {
+      return;
+    }
+    
     [wq print:@"Command not recognised"];
   }
 }

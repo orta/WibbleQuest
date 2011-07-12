@@ -11,6 +11,13 @@
 @implementation PlayerInventory
 @synthesize items;
 
+-(BOOL) respondsToCommand:(NSString*) command {
+  for (Item * item in items) {
+    [item respondsToCommand:command];
+  }
+  return NO;
+}
+
 -(void)addItem:(Item*) item {
   if(items == nil){
     items = [NSMutableArray arrayWithObject:item];
@@ -27,6 +34,5 @@
       [WQ print:[NSString stringWithFormat:@": %@", item.description ]];
     }
   }
-  
 }
 @end

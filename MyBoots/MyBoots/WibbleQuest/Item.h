@@ -14,5 +14,7 @@
 @property (retain, nonatomic) NSString* descriptionInRoom;
 @property (retain, nonatomic) NSString* id;
 
+-(void)command:(NSArray*)commandArray;
+-(BOOL)respondsToCommand:(NSString*)command;
 
 @end

@@ -17,4 +17,5 @@
 -(void)addItem:(Item*) item;
 -(void)describeInventory;
 
+-(BOOL) respondsToCommand:(NSString*) command;
 @end

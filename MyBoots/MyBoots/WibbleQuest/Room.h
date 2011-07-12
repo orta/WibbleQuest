@@ -12,16 +12,19 @@
 
 @interface Room : NSObject
 
-@property (retain, nonatomic) NSString* name;
-@property (retain, nonatomic) NSString* description;
-@property (retain, nonatomic) NSString* id;
+@property (retain) NSString* name;
+@property (retain) NSString* description;
+@property (retain) NSString* id;
 
-@property (retain, nonatomic) Room* north;
-@property (retain, nonatomic) Room* east;
-@property (retain, nonatomic) Room* south;
-@property (retain, nonatomic) Room* west;
+@property (retain) Room* north;
+@property (retain) Room* east;
+@property (retain) Room* south;
+@property (retain) Room* west;
 
-@property (retain, nonatomic) NSArray *items;
-@property (retain, nonatomic) Creature *encounter;
+@property (retain) NSMutableArray *items;
+@property (retain) Creature *encounter;
+
+- (void) addItem:(Item*) item;
+- (void) describeInventory;
 
 @end
