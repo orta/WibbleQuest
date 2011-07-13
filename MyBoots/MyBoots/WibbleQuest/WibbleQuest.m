@@ -44,6 +44,7 @@ static WibbleQuest *sharedWibble;
 
 - (void)webViewDidFinishLoad:(UIWebView *) delagateWebView {
   [game ready];
+  [_textField becomeFirstResponder];
 }
 
 -(void) start {

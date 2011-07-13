@@ -10,32 +10,43 @@
 
 @implementation Room
 
-@synthesize  name, description, id, north, east, west, south, items, encounter;
+@synthesize  name, description, id, north, east, west, south, items = _items, encounter;
 
 -(id)init{
   self = [super init];
-  items = [NSMutableArray array];
+  self.items = [NSArray array];
   return self;
 }
 
 -(void)addItem:(Item*) item {
-  if(items == nil){
-    items = [NSMutableArray arrayWithObject:item];
-  }else{
-    [items addObject:item];
-  }
+  [item retain];
+  self.items = [self.items arrayByAddingObject: item];
 }
 
 -(void)describeInventory {
-  NSLog(@"HI");
+  for ( Item *item in self.items) {
+    [WQ print:[NSString stringWithFormat:@"%@", item.descriptionInRoom ]];
+  }
+}
 
-  
-  
-    for ( NSObject *item in self.items) {
-//      NSLog(@"item %i", [items count]);
+- (void) connectNorth:(Room*)room{
+  self.north = room;
+  room.south = self;
+}
 
-//    [WQ print:[NSString stringWithFormat:@": %@", item.descriptionInRoom ]];
-    }
+- (void) connectSouth:(Room*)room{
+  self.south = room;
+  room.north = self;
+}
+
+- (void) connectWest:(Room*)room{
+  self.west = room;
+  room.east = self;  
+}
+
+- (void) connectEast:(Room*)room{
+  self.east = room;
+  room.west = self;
 }
 
 @end

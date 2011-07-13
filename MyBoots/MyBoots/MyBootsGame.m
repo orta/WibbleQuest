@@ -28,17 +28,24 @@
   Room * hallwayCenter = [[Room alloc] init];
   hallwayCenter.name = @"Hallway";
   hallwayCenter.description = @"The hallway is long and pretty boring, the music is louder out here, this hallway continues to the east and the west. The door to your room is to the north";
+  [hallwayCenter connectNorth:openingRoom];
+
+  Room * hallwayEast = [[Room alloc] init];
+  hallwayEast.name = @"Hallway East";
+  hallwayEast.description = @"The music is loud, you see some empty red cups. Perhaps the pop and crisp night is on. You realize that sound you hear is Justin Beiber";
+  [hallwayEast connectWest:hallwayCenter];
+  
   
   Bubba *b = [[Bubba alloc] init] ;
-  [hallwayCenter addItem:b];
-  
-  
-  openingRoom.south = hallwayCenter;
-  hallwayCenter.north = openingRoom;
+  [wq.inventory addItem:b];
+
+  Bubba *b2 = [[Bubba alloc] init] ;  
+  [openingRoom addItem:b2];
 
   [wq addRoom:openingRoom];
   [wq addRoom:hallwayCenter];
-  
+  [wq addRoom:hallwayEast];
+
   wq.currentRoom = openingRoom;
 
   [wq start];

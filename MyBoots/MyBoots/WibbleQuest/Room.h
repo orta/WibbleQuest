@@ -21,10 +21,14 @@
 @property (retain) Room* south;
 @property (retain) Room* west;
 
-@property (retain) NSMutableArray *items;
+@property (retain) NSArray *items;
 @property (retain) Creature *encounter;
 
 - (void) addItem:(Item*) item;
 - (void) describeInventory;
 
+- (void) connectNorth:(Room*)room;
+- (void) connectSouth:(Room*)room;
+- (void) connectWest:(Room*)room;
+- (void) connectEast:(Room*)room;
 @end

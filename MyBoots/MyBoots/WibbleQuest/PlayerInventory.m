@@ -9,28 +9,32 @@
 #import "PlayerInventory.h"
 
 @implementation PlayerInventory
-@synthesize items;
+@synthesize items = _items;
+
+-(id)init{
+  self = [super init];
+  self.items = [NSArray array];  
+  return self;
+}
 
 -(BOOL) respondsToCommand:(NSString*) command {
-  for (Item * item in items) {
+  for (Item * item in self.items) {
     [item respondsToCommand:command];
   }
   return NO;
 }
 
 -(void)addItem:(Item*) item {
-  if(items == nil){
-    items = [NSMutableArray arrayWithObject:item];
-  }else{
-    [items addObject:item];
-  }
+  [item retain];
+  self.items = [self.items arrayByAddingObject: item];
 }
 
 -(void)describeInventory {
-  if(items == nil){
+  if([self.items count] == 0){
     [WQ print:@"You have no items"];
   }else{
-    for (Item * item in items) {
+    for (int i = 0; i < [self.items count]; i++) {
+      Item* item = [self.items objectAtIndex:i];
       [WQ print:[NSString stringWithFormat:@": %@", item.description ]];
     }
   }
