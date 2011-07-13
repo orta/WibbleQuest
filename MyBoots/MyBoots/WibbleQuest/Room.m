@@ -29,6 +29,29 @@
   }
 }
 
+-(BOOL)hasItem:(NSString*) itemID {
+  for ( Item *item in self.items) {
+    if([itemID isEqualToString:itemID]){
+      return YES;
+    }
+  }
+  return NO;
+}
+
+-(Item *)getItem:(NSString *)itemID {
+  for ( Item *item in self.items) {
+    if([itemID isEqualToString:itemID]){
+      NSMutableArray *tempItems = [self.items mutableCopy];
+      [tempItems removeObject:self.items];
+
+      self.items = tempItems;
+      [item release];
+      return item;
+    }
+  }  
+  return nil;
+}
+
 - (void) connectNorth:(Room*)room{
   self.north = room;
   room.south = self;

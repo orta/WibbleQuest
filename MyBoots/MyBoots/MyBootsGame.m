@@ -35,10 +35,6 @@
   hallwayEast.description = @"The music is loud, you see some empty red cups. Perhaps the pop and crisp night is on. You realize that sound you hear is Justin Beiber";
   [hallwayEast connectWest:hallwayCenter];
   
-  
-  Bubba *b = [[Bubba alloc] init] ;
-  [wq.inventory addItem:b];
-
   Bubba *b2 = [[Bubba alloc] init] ;  
   [openingRoom addItem:b2];
 
@@ -47,7 +43,7 @@
   [wq addRoom:hallwayEast];
 
   wq.currentRoom = openingRoom;
-
+  
   [wq start];
 }
 

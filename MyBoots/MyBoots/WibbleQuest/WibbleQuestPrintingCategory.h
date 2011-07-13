@@ -11,7 +11,7 @@
 @interface WibbleQuest (WibbleQuestPrintingCategory) 
 
 // any extra narratives
--(void) print:(NSString*)string;
+-(void) print:(NSString*)string, ...;
 -(void) heading:(NSString*)string;
 -(void) command:(NSString*)string;
 -(void) title:(NSString*)string;

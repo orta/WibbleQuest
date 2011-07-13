@@ -80,12 +80,17 @@
       return;
     }
     
+    if([@"get" isEqualToString:command]){
+      [self getCommand:parameters];
+      return;
+    }
+    
     [wq print:@"Command not recognised"];
   }
 }
 
 
--(void) help {
+-(void)help {
   if([wq.game respondsToSelector:@selector(help)]){
     [wq.game help];
     
@@ -95,6 +100,25 @@
     [wq print:@"Directions: type in north, east, south or west to move."];
     [wq print:@""];    
   }
+}
+
+-(void)getCommand:(NSArray *) params {
+  if( [params count] == 1){
+    [wq print:@"Get what?"];
+  }else{
+    NSString *objectID = [params objectAtIndex:1];
+    if([@"all" isEqualToString:objectID]){
+      [wq command:@"all is not yet implemented."];
+      return;
+    }
+    
+    if([wq.currentRoom hasItem:objectID]){
+      [wq.inventory addItem:[wq.currentRoom getItem:objectID]];
+    }else{
+      NSLog(@"test");
+      [wq print:@"Could not find a %@ in the room" , objectID];
+    }
+  }  
 }
 
 @end

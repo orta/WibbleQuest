@@ -27,6 +27,9 @@
 - (void) addItem:(Item*) item;
 - (void) describeInventory;
 
+-(Item*)getItem:(NSString*)itemID;
+-(BOOL) hasItem:(NSString*) itemID;
+
 - (void) connectNorth:(Room*)room;
 - (void) connectSouth:(Room*)room;
 - (void) connectWest:(Room*)room;

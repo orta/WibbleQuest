@@ -14,5 +14,5 @@
   -(void) parse:(NSString*) string;
 
   -(void) help;
-
+  -(void) getCommand:(NSArray *) params;
 @end

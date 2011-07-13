@@ -10,9 +10,15 @@
 
 @implementation WibbleQuest (WibbleQuestPrintingCategory)
 
--(void) print:(NSString*)string {
+
+
+-(void) print:(NSString*)string, ... {
+  va_list      listOfArguments;
+  va_start(listOfArguments, string);
+  NSString * formattedString = [[NSString alloc] initWithFormat:string arguments:listOfArguments];
+  NSLog(formattedString);
   // run a javascript function to add text to the screen
-  NSString * function = [NSString stringWithFormat:@"addParagraph('%@')", string];
+  NSString * function = [NSString stringWithFormat:@"addParagraph('%@')", formattedString];
   [self execJS:function];
 }
 -(void) heading:(NSString*)string {
