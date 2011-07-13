@@ -16,7 +16,6 @@
   va_list      listOfArguments;
   va_start(listOfArguments, string);
   NSString * formattedString = [[NSString alloc] initWithFormat:string arguments:listOfArguments];
-  NSLog(formattedString);
   // run a javascript function to add text to the screen
   NSString * function = [NSString stringWithFormat:@"addParagraph('%@')", formattedString];
   [self execJS:function];

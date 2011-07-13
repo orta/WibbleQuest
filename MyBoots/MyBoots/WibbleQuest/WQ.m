@@ -10,9 +10,13 @@
 
 @implementation WQ
 
-+ (void) print:(NSString*) string {
++(void) print:(NSString*)string, ...{
+  va_list listOfArguments;
+  va_start(listOfArguments, string);
+  NSString* formattedString = [[NSString alloc] initWithFormat:string arguments:listOfArguments];
+
   WibbleQuest *wibble = [WibbleQuest sharedWibble];
-  [wibble print:string];
+  [wibble print:formattedString];
 }
 
 +(void) heading:(NSString*)string{
