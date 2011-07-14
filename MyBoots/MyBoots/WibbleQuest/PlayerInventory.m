@@ -17,9 +17,13 @@
   return self;
 }
 
--(BOOL) respondsToCommand:(NSString*) command {
+-(BOOL) respondToCommand:(NSArray*) commands {
+  NSString * command = [commands componentsJoinedByString:@" "];
   for (Item * item in self.items) {
-    [item respondsToCommand:command];
+    if([item respondsToCommand:command]){
+      [item command: commands];
+      return YES;
+    }
   }
   return NO;
 }

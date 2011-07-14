@@ -10,7 +10,7 @@
 
 @implementation Item
 
-@synthesize name, descriptionInRoom, id;
+@synthesize name, description, descriptionInRoom, id;
 
 -(void)command:(NSArray*)commandArray {
   NSLog(@"command for %@ not implemented", name);

@@ -12,6 +12,7 @@
 
 @property (retain, nonatomic) NSString* name;
 @property (retain, nonatomic) NSString* descriptionInRoom;
+@property (retain, nonatomic) NSString* description;
 @property (retain, nonatomic) NSString* id;
 
 -(void)command:(NSArray*)commandArray;

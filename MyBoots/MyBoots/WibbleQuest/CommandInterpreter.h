@@ -10,9 +10,5 @@
 
 @interface CommandInterpreter : NSObject
   @property (retain, nonatomic) IBOutlet WibbleQuest *wq;
-
   -(void) parse:(NSString*) string;
-
-  -(void) help;
-  -(void) getCommand:(NSArray *) params;
 @end

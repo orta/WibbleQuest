@@ -8,6 +8,17 @@
 
 #import "CommandInterpreter.h"
 
+//private methods
+@interface CommandInterpreter()
+-(void) getCommand:(NSArray *) params;
+-(void) help;
+-(void) north;
+-(void) west;
+-(void) east;
+-(void) south;
+@end
+
+
 @implementation CommandInterpreter
 @synthesize wq;
 
@@ -23,47 +34,19 @@
     }
     
     if([@"north" isEqualToString:command] || [@"n" isEqualToString:command]){
-      if (wq.currentRoom.north) {
-        wq.currentRoom = wq.currentRoom.north;
-        [wq describeSurroundings];
-        return;
-      }else{
-        [wq print:@"There is nothing to the north."];
-        return;
-      }
+      [self north];
     }
     
     if([@"west" isEqualToString:command] || [@"w" isEqualToString:command]){
-      if (wq.currentRoom.west) {
-        wq.currentRoom = wq.currentRoom.west;
-        [wq describeSurroundings];
-        return;
-      }else{
-        [wq print:@"There is nothing to the west."];
-        return;
-      }
+      [self west];
     }
     
     if([@"east" isEqualToString:command] || [@"e" isEqualToString:command]){
-      if (wq.currentRoom.east) {
-        wq.currentRoom = wq.currentRoom.east;
-        [wq describeSurroundings];
-        return;
-      }else{
-        [wq print:@"There is nothing to the east."];
-        return;
-      }
+      [self east];
     }
 
     if([@"south" isEqualToString:command] || [@"s" isEqualToString:command]){
-      if (wq.currentRoom.south) {
-        wq.currentRoom = wq.currentRoom.south;
-        [wq describeSurroundings];
-        return;
-      }else{
-        [wq print:@"There is nothing to the south."];
-        return;
-      }
+      [self south];
     }
     
     if([@"look" isEqualToString:command] || [@"l" isEqualToString:command]){
@@ -76,11 +59,11 @@
       return;
     }
     
-    if([wq.inventory respondsToCommand:command]) {
+    if([wq.inventory respondToCommand:parameters]) {
       return;
     }
     
-    if([@"get" isEqualToString:command]){
+    if([@"get" isEqualToString:command] || [@"g" isEqualToString:command]){
       [self getCommand:parameters];
       return;
     }
@@ -89,6 +72,47 @@
   }
 }
 
+-(void) north{
+  if (wq.currentRoom.north) {
+    wq.currentRoom = wq.currentRoom.north;
+    [wq describeSurroundings];
+    return;
+  }else{
+    [wq print:@"There is nothing to the north."];
+    return;
+  }
+}
+-(void)west{
+  if (wq.currentRoom.west) {
+    wq.currentRoom = wq.currentRoom.west;
+    [wq describeSurroundings];
+    return;
+  }else{
+    [wq print:@"There is nothing to the west."];
+    return;
+  }
+}
+-(void)east{
+  if (wq.currentRoom.east) {
+    wq.currentRoom = wq.currentRoom.east;
+    [wq describeSurroundings];
+    return;
+  }else{
+    [wq print:@"There is nothing to the east."];
+    return;
+  }
+
+}
+-(void)south{
+  if (wq.currentRoom.south) {
+    wq.currentRoom = wq.currentRoom.south;
+    [wq describeSurroundings];
+    return;
+  }else{
+    [wq print:@"There is nothing to the south."];
+    return;
+  }
+}
 
 -(void)help {
   if([wq.game respondsToSelector:@selector(help)]){

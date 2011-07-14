@@ -13,7 +13,8 @@
 - (id)init {
     self = [super init];
     if (self) {
-      self.descriptionInRoom = @"There is a round and massive bottle of water here, on the side is the word Bubba.";
+      self.descriptionInRoom = @"There is a massive bottle of water here, on the side is the word Bubba.";
+      self.description = @"Bubba is a phat bottle of water, there might be some left in, why not try drinking bubba.";
       self.id = @"bubba";
       self.name = @"Bubba";
       drinksLeft = 3;
@@ -36,13 +37,15 @@
 
 -(void)command:(NSArray*)commandArray {
   NSString * command = [commandArray objectAtIndex:0];
-  if([@"drink" isEqualToString:command] || [@"imbibe" isEqualToString:command] || [@"consume" isEqualToString:command] ){
-    [self drink];
+  NSArray *commands = [NSArray arrayWithObjects:@"drink", @"imbibe", @"consume", nil];
+  if ([commands containsObject:command]) {
+    [self drink];  
   }
 }
 
 -(BOOL)respondsToCommand:(NSString*)command{
-  if([@"drink" isEqualToString:command] || [@"imbibe" isEqualToString:command] || [@"consume" isEqualToString:command] ){
+  NSArray *commands = [NSArray arrayWithObjects:@"drink", @"imbibe", @"consume", nil];
+  if ([commands containsObject:command]) {
     return YES;
   }
   return NO;

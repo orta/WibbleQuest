@@ -34,6 +34,7 @@
 }
 -(void) execJS:(NSString*) js {
   NSString * ok = [_webView stringByEvaluatingJavaScriptFromString:js];
+  
   if([@"OK" isEqualToString:ok] == FALSE){
     NSLog(@"error printing to webview");
   }
