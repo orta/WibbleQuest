@@ -54,7 +54,6 @@ static WibbleQuest *sharedWibble;
   [self heading:@""];
   
   [self describeSurroundings];
-  
 }
 
 // think about moving this into Room

@@ -113,9 +113,11 @@
     }
     
     if([wq.currentRoom hasItem:objectID]){
-      [wq.inventory addItem:[wq.currentRoom getItem:objectID]];
+      Item* item = [wq.currentRoom getItem:objectID];
+      [wq.inventory addItem:item];
+      [item onPickup];
+      
     }else{
-      NSLog(@"test");
       [wq print:@"Could not find a %@ in the room" , objectID];
     }
   }  

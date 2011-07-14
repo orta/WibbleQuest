@@ -21,6 +21,10 @@
     return self;
 }
 
+-(void) onPickup{
+  [WQ print:@"Bubba sloshes as you pick up his weighty cylindrical self"];
+}
+
 - (void) drink {
   if (drinksLeft > 0) {
     drinksLeft = drinksLeft--;

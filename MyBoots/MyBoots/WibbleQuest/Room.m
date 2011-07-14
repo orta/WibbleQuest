@@ -31,7 +31,7 @@
 
 -(BOOL)hasItem:(NSString*) itemID {
   for ( Item *item in self.items) {
-    if([itemID isEqualToString:itemID]){
+    if([item.id isEqualToString:itemID]){
       return YES;
     }
   }
@@ -40,9 +40,9 @@
 
 -(Item *)getItem:(NSString *)itemID {
   for ( Item *item in self.items) {
-    if([itemID isEqualToString:itemID]){
+    if([item.id isEqualToString:itemID]){
       NSMutableArray *tempItems = [self.items mutableCopy];
-      [tempItems removeObject:self.items];
+      [tempItems removeObject:item];
 
       self.items = tempItems;
       [item release];

@@ -15,11 +15,13 @@
 -(void)command:(NSArray*)commandArray {
   NSLog(@"command for %@ not implemented", name);
 }
+
 -(BOOL)respondsToCommand:(NSString*)command {
   NSLog(@"respondstocommand for %@ not implemented", name);
   return NO;
 }
 
-
+-(void)onPickup{}
+-(void)onUse{}
 
 @end

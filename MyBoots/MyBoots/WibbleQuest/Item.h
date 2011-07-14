@@ -16,5 +16,7 @@
 
 -(void)command:(NSArray*)commandArray;
 -(BOOL)respondsToCommand:(NSString*)command;
+-(void)onPickup;
+-(void)onUse;
 
 @end
