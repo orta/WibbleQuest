@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6081AB1F13D23D25007C5545 /* GoatBoy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB1E13D23D25007C5545 /* GoatBoy.m */; };
 		6081AB2313D243CD007C5545 /* Keytar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2213D243CD007C5545 /* Keytar.m */; };
+		6081AB2613D249D6007C5545 /* FloatstarPX.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2513D249D6007C5545 /* FloatstarPX.m */; };
+		6081AB2913D24B87007C5545 /* Microphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2813D24B87007C5545 /* Microphone.m */; };
 		609B9FAD13C901D400888A6E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAC13C901D400888A6E /* UIKit.framework */; };
 		609B9FAF13C901D400888A6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAE13C901D400888A6E /* Foundation.framework */; };
 		609B9FB113C901D400888A6E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FB013C901D400888A6E /* CoreGraphics.framework */; };
@@ -35,7 +37,6 @@
 		60F49DD613CBD42C00BDB07C /* PlayerInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD513CBD42C00BDB07C /* PlayerInventory.m */; };
 		60F49DDD13CBD76300BDB07C /* WQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DDC13CBD76300BDB07C /* WQ.m */; };
 		60F5128613D1112300978EC0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128513D1112300978EC0 /* Player.m */; };
-		60F5128C13D11E2D00978EC0 /* Doc.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128B13D11E2D00978EC0 /* Doc.m */; };
 		60F5128F13D11E7E00978EC0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128E13D11E7D00978EC0 /* Person.m */; };
 		60F5129313D1200700978EC0 /* NSArray-Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5129213D1200700978EC0 /* NSArray-Contains.m */; };
 		60F512A213D1E59800978EC0 /* BodyGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F512A113D1E59800978EC0 /* BodyGuard.m */; };
@@ -46,6 +47,10 @@
 		6081AB1E13D23D25007C5545 /* GoatBoy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoatBoy.m; path = People/GoatBoy.m; sourceTree = "<group>"; };
 		6081AB2113D243CD007C5545 /* Keytar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Keytar.h; path = Items/Keytar.h; sourceTree = "<group>"; };
 		6081AB2213D243CD007C5545 /* Keytar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Keytar.m; path = Items/Keytar.m; sourceTree = "<group>"; };
+		6081AB2413D249D6007C5545 /* FloatstarPX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FloatstarPX.h; path = People/FloatstarPX.h; sourceTree = "<group>"; };
+		6081AB2513D249D6007C5545 /* FloatstarPX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FloatstarPX.m; path = People/FloatstarPX.m; sourceTree = "<group>"; };
+		6081AB2713D24B87007C5545 /* Microphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Microphone.h; path = Items/Microphone.h; sourceTree = "<group>"; };
+		6081AB2813D24B87007C5545 /* Microphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Microphone.m; path = Items/Microphone.m; sourceTree = "<group>"; };
 		609B9FA813C901D400888A6E /* MyBoots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBoots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		609B9FAC13C901D400888A6E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		609B9FAE13C901D400888A6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,8 +94,6 @@
 		60F49DDC13CBD76300BDB07C /* WQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQ.m; sourceTree = "<group>"; };
 		60F5128413D1112300978EC0 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		60F5128513D1112300978EC0 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
-		60F5128A13D11E2D00978EC0 /* Doc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Doc.h; path = People/Doc.h; sourceTree = "<group>"; };
-		60F5128B13D11E2D00978EC0 /* Doc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Doc.m; path = People/Doc.m; sourceTree = "<group>"; };
 		60F5128D13D11E7D00978EC0 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		60F5128E13D11E7D00978EC0 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		60F5129113D1200700978EC0 /* NSArray-Contains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray-Contains.h"; path = "Categories/NSArray-Contains.h"; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 				60F49DD213CBD35F00BDB07C /* Bubba.m */,
 				6081AB2113D243CD007C5545 /* Keytar.h */,
 				6081AB2213D243CD007C5545 /* Keytar.m */,
+				6081AB2713D24B87007C5545 /* Microphone.h */,
+				6081AB2813D24B87007C5545 /* Microphone.m */,
 			);
 			name = Items;
 			sourceTree = "<group>";
@@ -235,10 +240,10 @@
 		60F5128813D11CE200978EC0 /* People */ = {
 			isa = PBXGroup;
 			children = (
-				60F5128A13D11E2D00978EC0 /* Doc.h */,
-				60F5128B13D11E2D00978EC0 /* Doc.m */,
 				6081AB1D13D23D25007C5545 /* GoatBoy.h */,
 				6081AB1E13D23D25007C5545 /* GoatBoy.m */,
+				6081AB2413D249D6007C5545 /* FloatstarPX.h */,
+				6081AB2513D249D6007C5545 /* FloatstarPX.m */,
 			);
 			name = People;
 			sourceTree = "<group>";
@@ -387,12 +392,13 @@
 				60F49DD613CBD42C00BDB07C /* PlayerInventory.m in Sources */,
 				60F49DDD13CBD76300BDB07C /* WQ.m in Sources */,
 				60F5128613D1112300978EC0 /* Player.m in Sources */,
-				60F5128C13D11E2D00978EC0 /* Doc.m in Sources */,
 				60F5128F13D11E7E00978EC0 /* Person.m in Sources */,
 				60F5129313D1200700978EC0 /* NSArray-Contains.m in Sources */,
 				60F512A213D1E59800978EC0 /* BodyGuard.m in Sources */,
 				6081AB1F13D23D25007C5545 /* GoatBoy.m in Sources */,
 				6081AB2313D243CD007C5545 /* Keytar.m in Sources */,
+				6081AB2613D249D6007C5545 /* FloatstarPX.m in Sources */,
+				6081AB2913D24B87007C5545 /* Microphone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

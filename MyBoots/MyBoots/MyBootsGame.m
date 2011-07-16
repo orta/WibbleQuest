@@ -12,6 +12,7 @@
 #import "Bubba.h"
 #import "Keytar.h"
 #import "GoatBoy.h"
+#import "FloatstarPX.h"
 
 @implementation MyBootsGame
 @synthesize wq;
@@ -64,10 +65,12 @@
   GoatBoy *gb = [[GoatBoy alloc] init];
   hallwayCenter.person = gb;
   
+  FloatstarPX * px = [[FloatstarPX alloc] init];
+  bar.person = px;
+  
   BodyGuard *joe = [[BodyGuard alloc] init];
   openingRoom.encounter = joe;
-  
-  
+
   [wq addRoom:openingRoom];
   [wq addRoom:hallwayCenter];
   [wq addRoom:bathroom];

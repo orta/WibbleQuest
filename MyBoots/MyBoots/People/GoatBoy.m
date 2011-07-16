@@ -12,7 +12,7 @@
 
 -(void)playerEntersSameRoom {
   if ([Player has:@"keytar"] && !saidKeytar) {
-    [WQ say:@"Goat Boy" words:@"Great you have your Keytar! We only need mics now."];
+    [WQ say:@"Goat Boy" words:@"Great you have your Keytar! We only need mics now. Go and talk to PX about the microphones."];
     saidKeytar = YES;
   }
 }

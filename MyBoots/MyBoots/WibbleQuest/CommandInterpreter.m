@@ -202,7 +202,6 @@
     if([wq.currentRoom hasItem:objectID]){
       Item* item = [wq.currentRoom takeItem:objectID];
       [wq.inventory addItem:item];
-      [item onPickup];
       
     }else{
       [wq print:@"Could not find a %@ in the room" , objectID];
