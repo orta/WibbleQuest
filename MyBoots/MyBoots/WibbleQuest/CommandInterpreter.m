@@ -33,20 +33,35 @@
       return;
     }
     
+    // support 'go north'
+    if ([@"go" isEqualToString:command]) {
+        command = [parameters objectAtIndex:1];
+        
+      // support 'go to north'
+        if ([@"to" isEqualToString:command]) {
+          command = [parameters objectAtIndex:2]; 
+        }
+      }
+    
+    
     if([@"north" isEqualToString:command] || [@"n" isEqualToString:command]){
       [self north];
+      return;
     }
     
     if([@"west" isEqualToString:command] || [@"w" isEqualToString:command]){
       [self west];
+      return;
     }
     
     if([@"east" isEqualToString:command] || [@"e" isEqualToString:command]){
       [self east];
+      return;
     }
 
     if([@"south" isEqualToString:command] || [@"s" isEqualToString:command]){
       [self south];
+      return;
     }
     
     if([@"look" isEqualToString:command] || [@"l" isEqualToString:command]){
@@ -63,54 +78,62 @@
       return;
     }
     
+    if([wq.inventory hasItem:command]){
+      Item * item = [wq.inventory getItem:command];
+      [wq print: item.description];
+    }
+
+    if([wq.currentRoom hasItem:command]){
+      Item * item = [wq.currentRoom getItem:command];
+      [wq print: item.description];
+    }
+    
     if([@"get" isEqualToString:command] || [@"g" isEqualToString:command]){
       [self getCommand:parameters];
       return;
     }
     
+    
+    
     [wq print:@"Command not recognised"];
   }
 }
 
--(void) north{
+-(void)north {
   if (wq.currentRoom.north) {
     wq.currentRoom = wq.currentRoom.north;
     [wq describeSurroundings];
     return;
   }else{
     [wq print:@"There is nothing to the north."];
-    return;
   }
 }
--(void)west{
+
+-(void)west {
   if (wq.currentRoom.west) {
     wq.currentRoom = wq.currentRoom.west;
     [wq describeSurroundings];
-    return;
   }else{
     [wq print:@"There is nothing to the west."];
-    return;
   }
 }
--(void)east{
+
+-(void)east {
   if (wq.currentRoom.east) {
     wq.currentRoom = wq.currentRoom.east;
     [wq describeSurroundings];
-    return;
   }else{
     [wq print:@"There is nothing to the east."];
-    return;
   }
 
 }
--(void)south{
+
+-(void)south {
   if (wq.currentRoom.south) {
     wq.currentRoom = wq.currentRoom.south;
     [wq describeSurroundings];
-    return;
   }else{
     [wq print:@"There is nothing to the south."];
-    return;
   }
 }
 
@@ -120,9 +143,25 @@
     
   }else{
     [wq title:@"Help File"];
+    [wq command:@"most commands work with typing the first letter."];
+    [wq command:@""];
     
-    [wq print:@"Directions: type in north, east, south or west to move."];
-    [wq print:@""];    
+    [wq print:@"north, east, south, west"];
+    [wq command:@"move in a direction"];
+    
+    [wq print:@"get [item]"];
+    [wq command:@"get an item form the current room"];
+    
+    [wq print: @"examine [item]"];
+    [wq command:@"examine an item either in the room, or in your inventory"];
+
+    [wq print: @"inventory"];
+    [wq command:@"examine an item either in the room, or in your inventory"];
+
+    [wq print: @"use [item]"];
+    [wq command:@"A generic use term for items in room, or in your inventory"];
+
+    
   }
 }
 
@@ -137,7 +176,7 @@
     }
     
     if([wq.currentRoom hasItem:objectID]){
-      Item* item = [wq.currentRoom getItem:objectID];
+      Item* item = [wq.currentRoom takeItem:objectID];
       [wq.inventory addItem:item];
       [item onPickup];
       

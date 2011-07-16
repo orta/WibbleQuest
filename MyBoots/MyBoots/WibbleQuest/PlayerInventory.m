@@ -28,6 +28,25 @@
   return NO;
 }
 
+-(BOOL)hasItem:(NSString*) itemID {
+  for ( Item *item in self.items) {
+    if([item.id isEqualToString:itemID]){
+      return YES;
+    }
+  }
+  return NO;
+}
+
+-(Item *)getItem:(NSString*) itemID {
+  for ( Item *item in self.items) {
+    if([item.id isEqualToString:itemID]){
+      return item;
+    }
+  }
+  return nil;
+}
+
+
 -(void)addItem:(Item*) item {
   [item retain];
   self.items = [self.items arrayByAddingObject: item];
