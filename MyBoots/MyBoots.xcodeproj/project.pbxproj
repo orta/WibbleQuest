@@ -31,6 +31,7 @@
 		60F49DD313CBD35F00BDB07C /* Bubba.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD213CBD35F00BDB07C /* Bubba.m */; };
 		60F49DD613CBD42C00BDB07C /* PlayerInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD513CBD42C00BDB07C /* PlayerInventory.m */; };
 		60F49DDD13CBD76300BDB07C /* WQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DDC13CBD76300BDB07C /* WQ.m */; };
+		60F5128613D1112300978EC0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128513D1112300978EC0 /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,8 @@
 		60F49DD513CBD42C00BDB07C /* PlayerInventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInventory.m; sourceTree = "<group>"; };
 		60F49DDB13CBD76300BDB07C /* WQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQ.h; sourceTree = "<group>"; };
 		60F49DDC13CBD76300BDB07C /* WQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQ.m; sourceTree = "<group>"; };
+		60F5128413D1112300978EC0 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		60F5128513D1112300978EC0 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 				60F49DD513CBD42C00BDB07C /* PlayerInventory.m */,
 				60F49DDB13CBD76300BDB07C /* WQ.h */,
 				60F49DDC13CBD76300BDB07C /* WQ.m */,
+				60F5128413D1112300978EC0 /* Player.h */,
+				60F5128513D1112300978EC0 /* Player.m */,
 			);
 			path = WibbleQuest;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				60F49DD313CBD35F00BDB07C /* Bubba.m in Sources */,
 				60F49DD613CBD42C00BDB07C /* PlayerInventory.m in Sources */,
 				60F49DDD13CBD76300BDB07C /* WQ.m in Sources */,
+				60F5128613D1112300978EC0 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

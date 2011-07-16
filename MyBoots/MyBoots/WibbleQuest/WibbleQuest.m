@@ -9,6 +9,7 @@
 static WibbleQuest *sharedWibble;
 
 #import "CommandInterpreter.h"
+#import "PlayerInventory.h"
 
 //private methods
 @interface WibbleQuest()
@@ -19,7 +20,7 @@ static WibbleQuest *sharedWibble;
 
 @implementation WibbleQuest
 
-@synthesize view, rooms, currentRoom, game, inventory;
+@synthesize view, rooms, currentRoom, game, inventory, player;
 
 + (WibbleQuest *)sharedWibble {
   return sharedWibble;

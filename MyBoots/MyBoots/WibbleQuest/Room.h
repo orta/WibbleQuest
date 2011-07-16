@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class Creature;
+@class Creature, Item;
 
 @interface Room : NSObject
 

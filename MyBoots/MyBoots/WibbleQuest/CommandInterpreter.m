@@ -7,6 +7,7 @@
 //
 
 #import "CommandInterpreter.h"
+#import "PlayerInventory.h"
 
 //private methods
 @interface CommandInterpreter()
@@ -92,8 +93,6 @@
       [self getCommand:parameters];
       return;
     }
-    
-    
     
     [wq print:@"Command not recognised"];
   }
