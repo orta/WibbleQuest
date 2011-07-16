@@ -56,7 +56,8 @@
   }
 
   Player * player = [Player sharedPlayer];
-  NSLog(@" player %i / %i, enemy %i / %i", player.health, player.maxHealth, self.health, self.maxHealth);
+  NSString *battleStatus = [NSString stringWithFormat:@" player %i / %i, enemy %i / %i", player.health, player.maxHealth, self.health, self.maxHealth];
+  [WQ command:battleStatus];
   
   if(self.fighting == NO){
     [self beforeFight];
@@ -105,11 +106,15 @@
 }
 
 
+
 -(void)beforeTurn{};
 -(void)afterTurn{};
 
 -(void)beforeFight{};
 -(void)afterFightLost{};
 -(void)afterFightWon{};
+
+-(void)respondToSentenceArray:(NSArray*)sentence{}
+
 
 @end

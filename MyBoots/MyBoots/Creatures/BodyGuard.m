@@ -61,6 +61,17 @@
           @"You impress the bodyguard with your tattoos improving his opinion of you by %i.", nil];
 }
 
+-(void)respondToSentenceArray:(NSArray*)sentence {
+  if([sentence contains:@"hi", @"hello", nil] ){
+    [WQ say:@"Bodyguard" words:@"Who're you"];
+    return;
+  }
+  if([sentence contains:@"orta", nil] ){
+    [WQ say:@"Bodyguard" words:@"Never heard of you."];
+    return;
+  }
+
+}
 
 
 @end

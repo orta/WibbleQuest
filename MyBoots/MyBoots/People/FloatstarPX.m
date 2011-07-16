@@ -19,11 +19,12 @@
 
 -(void)respondToSentenceArray:(NSArray*)sentence {
   if([sentence contains:@"hi", @"hello", nil] ){
-    [WQ say:@"FloatstarPX" words:@"Hey there orta, I'm trying to get all our wires sorted, the owner said that our support band might be giving us some trouble. They want us to support them, should we?"];
+    [WQ say:@"FloatstarPX" words:@"Yo, I'm trying to get all our wires sorted, the owner said that our support band might be giving us some trouble. They want us to support them, should we?"];
     return;
   }
   
   if([sentence contains:@"yes", @"no", nil] ){
+    [WQ print:@"Float pauses"];
     [WQ say:@"FloatstarPX" words:@"I agree, we shouldn't support them, think you can go and tell that burley looking bodyguard in the dark alley out back that for us. Thanks."];
     return;
   }  

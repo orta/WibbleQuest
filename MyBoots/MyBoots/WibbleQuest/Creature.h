@@ -21,6 +21,8 @@
 @property () BOOL fighting;
 @property () BOOL fightable;
 
+// Battle related methods
+
 -(NSRange)damageRange;
 -(NSArray*)formattedAttackPhrases;
 -(NSArray*)formattedDefensePhrases;
@@ -34,5 +36,8 @@
 -(void)beforeFight;
 -(void)afterFightLost;
 -(void)afterFightWon;
+
+// talking
+-(void)respondToSentenceArray:(NSArray*)sentence;
 
 @end

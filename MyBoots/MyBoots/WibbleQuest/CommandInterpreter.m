@@ -93,10 +93,12 @@
       }
       if (wq.currentRoom.person) {
         [wq.currentRoom.person respondToSentenceArray:parameters];
-      }else{
-        [wq print:@"You say something, but there's no one to hear it"];
+        return;
       }
-      return;
+      if(wq.currentRoom.encounter){
+        [wq.currentRoom.encounter respondToSentenceArray:parameters];
+        return;
+      }
     }
     
     if([wq.inventory respondToCommand:parameters]) {

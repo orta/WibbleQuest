@@ -13,7 +13,7 @@
 - (id)init {
   self = [super init];
   if (self) {
-    self.description = @"It's a generic microphone.";
+    self.description = @"A generic microphone.";
     self.id = @"microphone";
     self.name = @"Microphone";
   }

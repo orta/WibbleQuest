@@ -46,7 +46,6 @@
   return nil;
 }
 
-
 -(void)addItem:(Item*) item {
   [item retain];
   self.items = [self.items arrayByAddingObject: item];

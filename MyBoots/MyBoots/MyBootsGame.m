@@ -52,8 +52,14 @@
   Room * bar = [[Room alloc] init];
   bar.name = @"Bar";
   bar.id = @"bar";
-  bar.description = @"The wooden furnish on th bar really adds to the atmosphere. Anyway, to get on-stage you need to go south into the Alley. Or you can get back to the hallway to the east.";
+  bar.description = @"The wooden furnish on the bar really adds to the atmosphere. Anyway, to get on-stage you need to go south into the Alley. FloatstarPX is mulling around next to an empty glass waiting on something.";
   [bar connectWest:hallwayCenter];
+
+  Room * alley = [[Room alloc] init];
+  alley.name = @"Dark Alley";
+  alley.id = @"alley";
+  alley.description = @"The Alley is everything you heard it to be, dark, dingy and crrepy. ou can get back into the bar to the north, there's a guy who Float refered to as a bodyguard here. Looks like he's blocking the entrance to the south. You might have to fight to get past.";
+  [alley connectNorth:bar];
 
   
   Bubba *b2 = [[Bubba alloc] init];
@@ -69,7 +75,7 @@
   bar.person = px;
   
   BodyGuard *joe = [[BodyGuard alloc] init];
-  openingRoom.encounter = joe;
+  alley.encounter = joe;
 
   [wq addRoom:openingRoom];
   [wq addRoom:hallwayCenter];
