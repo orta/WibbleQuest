@@ -26,10 +26,12 @@
 -(void)ready {
   
   Room * openingRoom = [[Room alloc] init];
+  openingRoom.id = @"start";
   openingRoom.name = @"Backstage, at the venue.";
   openingRoom.description = @"There are clothes all over the floor, and you can hear people practicing through the southern door.";
   
   Room * hallwayCenter = [[Room alloc] init];
+  hallwayCenter.id = @"hallway";
   hallwayCenter.name = @"Hallway";
   hallwayCenter.description = @"The hallway is long and pretty boring, the music is louder out here, this hallway continues to the east. The door to your room is to the north";
   [hallwayCenter connectNorth:openingRoom];

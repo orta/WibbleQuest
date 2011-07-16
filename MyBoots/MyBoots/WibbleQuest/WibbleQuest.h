@@ -45,6 +45,7 @@
 
 // setting up your game 
 -(void) addRoom:(Room*)room;
+-(Room *) getRoomByID:(NSString*)id;
 
 // launching
 -(void) start;

@@ -26,7 +26,7 @@
   NSLog(@"No damage range created for Creature %@", name);
   return NSMakeRange(0, 1);
 }
-//
+
 -(NSArray*)formattedAttackPhrases{
   NSLog(@"No formatted attack phrases created for Creature %@", name);
   return [NSArray arrayWithObject:@"The creature attacks you for %i damage"];
@@ -34,6 +34,8 @@
 
 -(void)beforeTurn{};
 -(void)afterTurn{};
-//
+
+-(void)beforeFight{};
+-(void)afterFight{};
 
 @end

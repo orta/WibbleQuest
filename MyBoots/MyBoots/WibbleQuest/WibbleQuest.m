@@ -43,6 +43,8 @@ static WibbleQuest *sharedWibble;
   self.inventory = [[[PlayerInventory alloc] init] retain];
 }
 
+
+
 - (void)webViewDidFinishLoad:(UIWebView *) delagateWebView {
   [game ready];
   [_textField becomeFirstResponder];
@@ -66,6 +68,13 @@ static WibbleQuest *sharedWibble;
   if(currentRoom.encounter){
     //TODO
   }
+}
+
+-(Room *) getRoomByID:(NSString*)id {
+  for(Room * r in self.rooms){
+    if([r.id isEqualToString:id]) return r;
+  }
+  return nil;
 }
 
 -(void)addRoom:(Room*)room {

@@ -21,7 +21,11 @@
 
 -(NSRange)damageRange;
 -(NSArray*)formattedAttackPhrases;
+
+//callbacks
 -(void)beforeTurn;
 -(void)afterTurn;
+-(void)beforeFight;
+-(void)afterFight;
 
 @end
