@@ -15,21 +15,22 @@
 @synthesize wq;
 
 -(NSString *) gameName{
-  return @"My Boots";
+  return @"Brutal Techno Punk On";
 }
 
 -(NSString *) gameDescription{
-  return @"My boots is a game about finding your lost boots in a strange dorm room.";
+  return @"Kieronononon on is a game about getting to the show, and beating the man to it.";
 }
 
 -(void)ready {
+  
   Room * openingRoom = [[Room alloc] init];
-  openingRoom.name = @"Priceton Dorms";
-  openingRoom.description = @"There are clothes all over the floor, and you can hear the faint sounds of music from down the hallway, there is a door to the hallway to the south.";
+  openingRoom.name = @"Backstage, at the venue.";
+  openingRoom.description = @"There are clothes all over the floor, and you can hear people practicing through the southern door.";
   
   Room * hallwayCenter = [[Room alloc] init];
   hallwayCenter.name = @"Hallway";
-  hallwayCenter.description = @"The hallway is long and pretty boring, the music is louder out here, this hallway continues to the east and the west. The door to your room is to the north";
+  hallwayCenter.description = @"The hallway is long and pretty boring, the music is louder out here, this hallway continues to the east. The door to your room is to the north";
   [hallwayCenter connectNorth:openingRoom];
 
   Room * hallwayEast = [[Room alloc] init];
@@ -37,7 +38,7 @@
   hallwayEast.description = @"The music is loud, you see some empty red cups. Perhaps the pop and crisp night is on. You realize that sound you hear is Justin Beiber, and it's coming from the South. Doc is here, he looks worried. Why not say Hi?";
   [hallwayEast connectWest:hallwayCenter];
   hallwayEast.person = [[Doc alloc] init];
-  
+
   
   Bubba *b2 = [[Bubba alloc] init] ;  
   [openingRoom addItem:b2];
@@ -46,9 +47,14 @@
   [wq addRoom:hallwayCenter];
   [wq addRoom:hallwayEast];
 
-  wq.currentRoom = hallwayEast;
+  wq.currentRoom = openingRoom;
+  
+  [wq print:@"You groggily wake up, the lights hurt your eyes as you adjust. There's a lot of bass which presumably is from someone's soundcheck and you remember that you arrived at the music venue a day early and slept over here."];
+
+  [wq print:@"There's a knock on your door and a muffled shout saying 'oi, get up!'"];
   
   [wq start];
+
 }
 
 @end
