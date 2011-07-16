@@ -25,6 +25,8 @@
 @property (retain) Creature *encounter;
 @property (retain) Person *person;
 
+@property () BOOL visited;
+
 - (void) addItem:(Item*) item;
 - (void) describeInventory;
 

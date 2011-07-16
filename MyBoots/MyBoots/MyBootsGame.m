@@ -10,7 +10,7 @@
 
 #import "BodyGuard.h"
 #import "Bubba.h"
-#import "Doc.h"
+#import "Keytar.h"
 #import "GoatBoy.h"
 
 @implementation MyBootsGame
@@ -39,13 +39,13 @@
   Room * hallwayCenter = [[Room alloc] init];
   hallwayCenter.id = @"hallway";
   hallwayCenter.name = @"Hallway";
-  hallwayCenter.description = @"The hallway is long and pretty boring, the music is louder out here, this hallway continues to the east. To the west there is a bathroom, and the Bar is to the east.";
+  hallwayCenter.description = @"The hallway is long and pretty boring, the music is louder out here, this hallway continues to the east. To the west there is a bathroom, and the Bar is to the east. On the bright side, the band's guitarist Goat Boy is infront of you. Why not say Hi?";
   [hallwayCenter connectSouth:openingRoom];
 
   Room * bathroom = [[Room alloc] init];
-  bathroom.id = @"hallway";
+  bathroom.id = @"bathroom";
   bathroom.name = @"Bathroom";
-  bathroom.description = @"Dingy bathroom, anything could be here. Actually, is that your Keytar hanging off the lights?";
+  bathroom.description = @"Dingy bathroom, nothing particularly out of the ordinary, bits of terrible graffitti and the smell of sweat.";
   [bathroom connectEast:hallwayCenter];
   
   Room * bar = [[Room alloc] init];
@@ -58,12 +58,14 @@
   Bubba *b2 = [[Bubba alloc] init];
   [openingRoom addItem:b2];
   
+  Keytar *keytar = [[Keytar alloc] init];
+  [bathroom addItem:keytar];  
+  
   GoatBoy *gb = [[GoatBoy alloc] init];
-  openingRoom.person = gb;
+  hallwayCenter.person = gb;
   
   BodyGuard *joe = [[BodyGuard alloc] init];
   openingRoom.encounter = joe;
-  
   
   
   [wq addRoom:openingRoom];

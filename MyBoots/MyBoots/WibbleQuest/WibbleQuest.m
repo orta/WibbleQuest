@@ -62,11 +62,13 @@ static WibbleQuest *sharedWibble;
 // think about moving this into Room
 -(void) describeSurroundings {
   [self title:currentRoom.name];
-  [self print:currentRoom.description];
-  [self.currentRoom describeInventory];
-  
-  if(currentRoom.encounter){
-    //TODO
+  if(currentRoom.visited == FALSE){
+    [self print:currentRoom.description];
+    [self.currentRoom describeInventory];
+    currentRoom.visited = YES;
+  }  
+  if(currentRoom.person){
+    [currentRoom.person playerEntersSameRoom];
   }
 }
 

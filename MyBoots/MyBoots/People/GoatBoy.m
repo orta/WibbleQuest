@@ -10,6 +10,13 @@
 
 @implementation GoatBoy
 
+-(void)playerEntersSameRoom {
+  if ([Player has:@"keytar"] && !saidKeytar) {
+    [WQ say:@"Goat Boy" words:@"Great you have your Keytar! We only need mics now."];
+    saidKeytar = YES;
+  }
+}
+
 -(void)respondToSentenceArray:(NSArray*)sentence {
   if([sentence contains:@"hi", @"hello", nil] ){
     [WQ say:@"Goat Boy" words:@"Finally you're up! Anyway, we're on stage pretty soon, are you ready? got all your stuff for playing?"];

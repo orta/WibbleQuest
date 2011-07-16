@@ -11,5 +11,6 @@
 @implementation Person
 
 -(void)respondToSentenceArray:(NSArray*)sentence{}
+-(void)playerEntersSameRoom{}
 
 @end
