@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class Creature, Item;
+@class Creature, Item, Person;
 
 @interface Room : NSObject
 
@@ -23,6 +23,7 @@
 
 @property (retain) NSArray *items;
 @property (retain) Creature *encounter;
+@property (retain) Person *person;
 
 - (void) addItem:(Item*) item;
 - (void) describeInventory;

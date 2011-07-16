@@ -75,6 +75,19 @@
       return;
     }
     
+    if([@"say" isEqualToString:command] || [@"s" isEqualToString:command]){
+      if([parameters count] == 1){
+        [wq print:@"What do you want to say?"];
+        return;
+      }
+      if (wq.currentRoom.person) {
+        [wq.currentRoom.person respondToSentenceArray:parameters];
+      }else{
+        [wq print:@"You say something, but there's no one to hear it"];
+      }
+      return;
+    }
+    
     if([wq.inventory respondToCommand:parameters]) {
       return;
     }

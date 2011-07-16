@@ -16,6 +16,8 @@
 -(void) command:(NSString*)string;
 -(void) title:(NSString*)string;
 
+// private, but whatever
 -(void) execJS:(NSString*) js;
+-(NSString *) sanitize:(NSString*) string;
 
 @end

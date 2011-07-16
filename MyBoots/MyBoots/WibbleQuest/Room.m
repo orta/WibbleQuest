@@ -10,7 +10,7 @@
 
 @implementation Room
 
-@synthesize  name, description, id, north, east, west, south, items = _items, encounter;
+@synthesize  name, description, id, north, east, west, south, items = _items, encounter, person;
 
 -(id)init{
   self = [super init];

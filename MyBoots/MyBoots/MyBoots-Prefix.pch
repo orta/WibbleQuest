@@ -17,5 +17,9 @@
   #import "Room.h"
   #import "Item.h"
   #import "Creature.h"
+  #import "Person.h"
+
+  #import "NSArray-Contains.h"
+
 #endif
 

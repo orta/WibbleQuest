@@ -32,6 +32,9 @@
 		60F49DD613CBD42C00BDB07C /* PlayerInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD513CBD42C00BDB07C /* PlayerInventory.m */; };
 		60F49DDD13CBD76300BDB07C /* WQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DDC13CBD76300BDB07C /* WQ.m */; };
 		60F5128613D1112300978EC0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128513D1112300978EC0 /* Player.m */; };
+		60F5128C13D11E2D00978EC0 /* Doc.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128B13D11E2D00978EC0 /* Doc.m */; };
+		60F5128F13D11E7E00978EC0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128E13D11E7D00978EC0 /* Person.m */; };
+		60F5129313D1200700978EC0 /* NSArray-Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5129213D1200700978EC0 /* NSArray-Contains.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,12 @@
 		60F49DDC13CBD76300BDB07C /* WQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQ.m; sourceTree = "<group>"; };
 		60F5128413D1112300978EC0 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		60F5128513D1112300978EC0 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		60F5128A13D11E2D00978EC0 /* Doc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Doc.h; path = People/Doc.h; sourceTree = "<group>"; };
+		60F5128B13D11E2D00978EC0 /* Doc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Doc.m; path = People/Doc.m; sourceTree = "<group>"; };
+		60F5128D13D11E7D00978EC0 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		60F5128E13D11E7D00978EC0 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		60F5129113D1200700978EC0 /* NSArray-Contains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray-Contains.h"; path = "Categories/NSArray-Contains.h"; sourceTree = "<group>"; };
+		60F5129213D1200700978EC0 /* NSArray-Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray-Contains.m"; path = "Categories/NSArray-Contains.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				60F49DCE13CBD32E00BDB07C /* Game */,
-				60CC9F0E13C9DD90006D116C /* ViewControllers */,
 				60CC9EF713C9D5C0006D116C /* WibbleQuest */,
 				609B9FD213C901E200888A6E /* Boilerplate */,
 			);
@@ -147,6 +155,7 @@
 		609B9FD213C901E200888A6E /* Boilerplate */ = {
 			isa = PBXGroup;
 			children = (
+				60CC9F0E13C9DD90006D116C /* ViewControllers */,
 				609B9FBB13C901D400888A6E /* MyBootsAppDelegate.h */,
 				609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */,
 			);
@@ -156,6 +165,7 @@
 		60CC9EF713C9D5C0006D116C /* WibbleQuest */ = {
 			isa = PBXGroup;
 			children = (
+				60F5129013D11FDA00978EC0 /* Categories */,
 				60CC9F0F13C9E3E8006D116C /* html */,
 				60CC9F1F13CA0B6B006D116C /* CommandInterpreter.h */,
 				60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */,
@@ -177,6 +187,8 @@
 				60F49DDC13CBD76300BDB07C /* WQ.m */,
 				60F5128413D1112300978EC0 /* Player.h */,
 				60F5128513D1112300978EC0 /* Player.m */,
+				60F5128D13D11E7D00978EC0 /* Person.h */,
+				60F5128E13D11E7D00978EC0 /* Person.m */,
 			);
 			path = WibbleQuest;
 			sourceTree = "<group>";
@@ -206,6 +218,8 @@
 		60F49DCE13CBD32E00BDB07C /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				60F5128913D11D0200978EC0 /* Creatures */,
+				60F5128813D11CE200978EC0 /* People */,
 				60F49DD013CBD33E00BDB07C /* Items */,
 				60CC9F0B13C9DD01006D116C /* MyBootsGame.h */,
 				60CC9F0C13C9DD01006D116C /* MyBootsGame.m */,
@@ -220,6 +234,31 @@
 				60F49DD213CBD35F00BDB07C /* Bubba.m */,
 			);
 			name = Items;
+			sourceTree = "<group>";
+		};
+		60F5128813D11CE200978EC0 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				60F5128A13D11E2D00978EC0 /* Doc.h */,
+				60F5128B13D11E2D00978EC0 /* Doc.m */,
+			);
+			name = People;
+			sourceTree = "<group>";
+		};
+		60F5128913D11D0200978EC0 /* Creatures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Creatures;
+			sourceTree = "<group>";
+		};
+		60F5129013D11FDA00978EC0 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				60F5129113D1200700978EC0 /* NSArray-Contains.h */,
+				60F5129213D1200700978EC0 /* NSArray-Contains.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +343,9 @@
 				60F49DD613CBD42C00BDB07C /* PlayerInventory.m in Sources */,
 				60F49DDD13CBD76300BDB07C /* WQ.m in Sources */,
 				60F5128613D1112300978EC0 /* Player.m in Sources */,
+				60F5128C13D11E2D00978EC0 /* Doc.m in Sources */,
+				60F5128F13D11E7E00978EC0 /* Person.m in Sources */,
+				60F5129313D1200700978EC0 /* NSArray-Contains.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

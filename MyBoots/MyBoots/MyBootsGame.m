@@ -7,8 +7,9 @@
 //
 
 #import "MyBootsGame.h"
+
 #import "Bubba.h"
-#import "Player.h"
+#import "Doc.h"
 
 @implementation MyBootsGame
 @synthesize wq;
@@ -33,8 +34,10 @@
 
   Room * hallwayEast = [[Room alloc] init];
   hallwayEast.name = @"Hallway East";
-  hallwayEast.description = @"The music is loud, you see some empty red cups. Perhaps the pop and crisp night is on. You realize that sound you hear is Justin Beiber, and it's coming from the South";
+  hallwayEast.description = @"The music is loud, you see some empty red cups. Perhaps the pop and crisp night is on. You realize that sound you hear is Justin Beiber, and it's coming from the South. Doc is here, he looks worried. Why not say Hi?";
   [hallwayEast connectWest:hallwayCenter];
+  hallwayEast.person = [[Doc alloc] init];
+  
   
   Bubba *b2 = [[Bubba alloc] init] ;  
   [openingRoom addItem:b2];
@@ -43,7 +46,7 @@
   [wq addRoom:hallwayCenter];
   [wq addRoom:hallwayEast];
 
-  wq.currentRoom = openingRoom;
+  wq.currentRoom = hallwayEast;
   
   [wq start];
 }
