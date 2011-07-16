@@ -7,16 +7,18 @@
 //
 
 #import "Creature.h"
+#import "Player.h"
 
 @implementation Creature
 
-  @synthesize  health, maxHealth, minDamage, maxDamage, name, description;
+  @synthesize  health, maxHealth, minDamage, maxDamage, name, description, fighting;
 
 -(id)init{
   self = [super init];
-  for (NSString * phrase in [self formattedAttackPhrases]) {
+  NSArray *phrases = [[self formattedAttackPhrases] arrayByAddingObjectsFromArray:[self formattedDefensePhrases]];
+  for (NSString * phrase in phrases) {
     if ([phrase rangeOfString:@"%i"].location == NSNotFound ) {
-      NSLog(@"Did not find a percent i in the attack phrase: '%@' this may cause a crash.", phrase);
+      NSLog(@"Did not find a percent i in the phrase: '%@' this may cause a crash.", phrase);
     }
   }
   return self;
@@ -32,10 +34,38 @@
   return [NSArray arrayWithObject:@"The creature attacks you for %i damage"];
 }
 
+-(NSArray*)formattedDefensePhrases{
+  NSLog(@"No formatted defense phrases created for Creature %@", name);
+  return [NSArray arrayWithObject:@"You attack the creature for %i damage"];  
+}
+
+-(void)fight {
+  Player * player = [Player sharedPlayer];
+  if(self.fighting == NO) [self beforeFight];
+  //PLAYER ATTACK 
+  if(self.health < 1){
+    [self afterFightLost];
+  }
+  [self beforeTurn];
+  //CREATURE ATTACK
+  [self afterTurn];
+  if(player.health < 1){
+    [self afterFightLost];
+    NSObject <WibbleQuestGameDelegate>* game = [[WibbleQuest sharedWibble] game];
+    if([game respondsToSelector:@selector(playerWasBeatenBy:)]){
+      [game playerWasBeatenBy:self];
+    }
+      
+  }
+
+}
+
+
 -(void)beforeTurn{};
 -(void)afterTurn{};
 
 -(void)beforeFight{};
--(void)afterFight{};
+-(void)afterFightLost{};
+-(void)afterFightWon{};
 
 @end

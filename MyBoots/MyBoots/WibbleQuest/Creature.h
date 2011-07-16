@@ -19,13 +19,19 @@
 @property (retain, nonatomic) NSString * name;
 @property (retain, nonatomic) NSString * description;
 
+@property () BOOL fighting;
+
 -(NSRange)damageRange;
 -(NSArray*)formattedAttackPhrases;
+-(NSArray*)formattedDefensePhrases;
+
+-(void)fight;
 
 //callbacks
 -(void)beforeTurn;
 -(void)afterTurn;
 -(void)beforeFight;
--(void)afterFight;
+-(void)afterFightLost;
+-(void)afterFightWon;
 
 @end

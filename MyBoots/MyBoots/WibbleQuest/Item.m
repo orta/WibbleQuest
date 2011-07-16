@@ -12,14 +12,13 @@
 
 @synthesize name, description, examine, descriptionInRoom, id;
 
+
+
 -(void)command:(NSArray*)commandArray {
   NSLog(@"command for %@ not implemented", name);
 }
 
--(BOOL)respondsToCommand:(NSString*)command {
-  NSLog(@"respondstocommand for %@ not implemented", name);
-  return NO;
-}
+-(NSArray*)commands{ return [NSArray array]; }
 
 -(void)onPickup{}
 -(void)onUse{}

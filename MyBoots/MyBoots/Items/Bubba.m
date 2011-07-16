@@ -26,7 +26,11 @@
   [WQ print:@"Bubba sloshes as you pick up his weighty cylindrical self"];
 }
 
-- (void) drink {
+-(NSArray*) commands{
+ return [NSArray arrayWithObjects:@"drink", @"imbibe", @"consume", nil];
+}
+
+- (void) drink{
   if (drinksLeft > 0) {
     drinksLeft = drinksLeft--;
     [WQ print:@"You take a swig from your Bubba, the water is pretty refreshing"];
@@ -41,14 +45,6 @@
   if ([commands containsObject:command]) {
     [self drink];  
   }
-}
-
--(BOOL)respondsToCommand:(NSString*)command{
-  NSArray *commands = [NSArray arrayWithObjects:@"drink", @"imbibe", @"consume", nil];
-  if ([commands containsObject:command]) {
-    return YES;
-  }
-  return NO;
 }
 
 @end

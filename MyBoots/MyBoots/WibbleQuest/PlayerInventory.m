@@ -20,7 +20,7 @@
 -(BOOL) respondToCommand:(NSArray*) commands {
   NSString * command = [commands componentsJoinedByString:@" "];
   for (Item * item in self.items) {
-    if([item respondsToCommand:command]){
+    if([[item commands] contains: command, nil]){
       [item command: commands];
       return YES;
     }

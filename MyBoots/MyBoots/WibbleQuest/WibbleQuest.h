@@ -8,14 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@class Room, PlayerInventory, Player;
+@class Room, PlayerInventory, Player, Creature;
 
+// delegate methods for the Game Object
 @protocol WibbleQuestGameDelegate
   - (void) ready;
   -(NSString *) gameName;
   -(NSString *) gameDescription;
 @optional
   -(void) help;
+  -(void) playerWasBeatenBy:(Creature *)creature;
 @end
 
 @class CommandInterpreter;
@@ -28,9 +30,9 @@
   
   CommandInterpreter *_commandInterpreter;
   
+  // these are for the viewhandlingacategories
   CGFloat animatedDistanceX;
   CGFloat animatedDistanceY;
-
 }
 
 @property (retain) UIView * view;
@@ -40,10 +42,9 @@
 @property (retain) PlayerInventory *inventory;
 @property (retain) Player* player;
 
-// this is mainly internal
 + (WibbleQuest *)sharedWibble;
 
-// setting up your game 
+// API used when setting up your game 
 -(void) addRoom:(Room*)room;
 -(Room *) getRoomByID:(NSString*)id;
 

@@ -75,6 +75,17 @@
       return;
     }
     
+    if([@"fight" isEqualToString:command] || [@"f" isEqualToString:command]||
+       [@"attack" isEqualToString:command] || [@"a" isEqualToString:command]){
+      if (wq.currentRoom.encounter == nil) {
+        [wq print:@"There is no-one here to fight."];
+        return;
+      }
+      [wq.currentRoom.encounter fight];
+      
+      return;
+    }
+    
     if([@"say" isEqualToString:command] || [@"s" isEqualToString:command]){
       if([parameters count] == 1){
         [wq print:@"What do you want to say?"];
@@ -177,6 +188,7 @@
   }
 }
 
+// when get is called
 -(void)getCommand:(NSArray *) params {
   if( [params count] == 1){
     [wq print:@"Get what?"];

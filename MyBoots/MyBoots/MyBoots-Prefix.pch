@@ -18,6 +18,7 @@
   #import "Item.h"
   #import "Creature.h"
   #import "Person.h"
+  #import "Player.h"
 
   #import "NSArray-Contains.h"
 

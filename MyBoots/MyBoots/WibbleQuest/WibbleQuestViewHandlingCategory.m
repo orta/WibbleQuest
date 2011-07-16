@@ -72,9 +72,12 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 720;
   }
   
   CGRect viewFrame = self.view.frame;
-  
   viewFrame.origin.y -= animatedDistanceY;
   viewFrame.origin.x -= animatedDistanceX;
+  
+//  CGRect webViewFrame = self.view.frame;
+  
+
 
   [UIView beginAnimations:nil context:NULL];
   [UIView setAnimationBeginsFromCurrentState:YES];

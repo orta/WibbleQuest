@@ -14,11 +14,11 @@
 
 @property (retain) NSArray * items;
 
+-(void)describeInventory;
+
 -(void)addItem:(Item*) item;
 -(Item *)getItem:(NSString*) itemID;
 -(BOOL)hasItem:(NSString*) itemID;
-
--(void)describeInventory;
 
 -(BOOL)respondToCommand:(NSArray*) commands;
 

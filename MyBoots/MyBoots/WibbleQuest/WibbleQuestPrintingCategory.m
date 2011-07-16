@@ -10,8 +10,6 @@
 
 @implementation WibbleQuest (WibbleQuestPrintingCategory)
 
-
-
 -(void) print:(NSString*)string, ... {
   va_list      listOfArguments;
   va_start(listOfArguments, string);
@@ -41,10 +39,9 @@
 
 -(NSString *) sanitize:(NSString*) string {
   string = [string stringByReplacingOccurrencesOfString:@"'" withString:@"`"];
-  
   return string;
-
 }
+
 -(void) execJS:(NSString*) js {
   //remove chars that break stuff
   

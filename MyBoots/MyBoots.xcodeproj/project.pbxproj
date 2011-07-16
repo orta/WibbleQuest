@@ -19,6 +19,7 @@
 		609B9FC913C901D400888A6E /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC713C901D400888A6E /* MainViewController_iPad.xib */; };
 		609B9FCC13C901D400888A6E /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FCA13C901D400888A6E /* FlipsideViewController.xib */; };
 		609B9FE013C9059100888A6E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
+		60A1E12413D218AB00F42A84 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 60A1E12313D218AB00F42A84 /* README */; };
 		60CC9F0213C9D5C0006D116C /* Creature.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EF913C9D5C0006D116C /* Creature.m */; };
 		60CC9F0313C9D5C0006D116C /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFB13C9D5C0006D116C /* Item.m */; };
 		60CC9F0413C9D5C0006D116C /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFD13C9D5C0006D116C /* Room.m */; };
@@ -56,6 +57,7 @@
 		609B9FC513C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPhone.xib; sourceTree = "<group>"; };
 		609B9FC813C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPad.xib; sourceTree = "<group>"; };
 		609B9FDF13C9059100888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
+		60A1E12313D218AB00F42A84 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		60CC9EF813C9D5C0006D116C /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Creature.h; sourceTree = "<group>"; };
 		60CC9EF913C9D5C0006D116C /* Creature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Creature.m; sourceTree = "<group>"; };
 		60CC9EFA13C9D5C0006D116C /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				60F49DCE13CBD32E00BDB07C /* Game */,
 				60CC9EF713C9D5C0006D116C /* WibbleQuest */,
 				609B9FD213C901E200888A6E /* Boilerplate */,
+				60A1E12313D218AB00F42A84 /* README */,
 			);
 			name = "Text Adventure Game";
 			path = MyBoots;
@@ -347,6 +350,7 @@
 				609B9FCC13C901D400888A6E /* FlipsideViewController.xib in Resources */,
 				609B9FE013C9059100888A6E /* SettingsViewController.xib in Resources */,
 				60CC9F1113C9E40D006D116C /* index.html in Resources */,
+				60A1E12413D218AB00F42A84 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

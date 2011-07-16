@@ -61,7 +61,14 @@
   [wq print:@"There's a knock on your door and a muffled shout saying 'oi, get up!'"];
   
   [wq start];
-
 }
+
+-(void)playerWasBeatenBy:(Creature *)creature {
+  Player * player = [Player sharedPlayer];
+  [wq print:@"Looks like you've ran out of ego. Perhaps you need to find something to help you in your fight against the %@", creature.name];
+  creature.health = creature.maxHealth;
+  player.health = player.maxHealth;
+}
+
 
 @end

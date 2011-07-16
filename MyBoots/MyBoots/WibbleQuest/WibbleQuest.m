@@ -120,9 +120,11 @@ static WibbleQuest *sharedWibble;
   if(_textField == nil){
     [NSException raise:@"Text Field not hooked up to WibbleQuest Object" format:@"Text Field not hooked up to WibbleQuest Object"];
   }
+  
   if(_textField.delegate != self){
     [NSException raise:@"Text Field delegate not hooked up to WibbleQuest Object" format:@"Text Field delegate not hooked up to WibbleQuest Object"];
   }
+  
   if(view == nil){
     [NSException raise:@"Web View not hooked up to WibbleQuest Object in Nib" format:@"Web View not hooked up to WibbleQuest Object in Nib"];
   }
