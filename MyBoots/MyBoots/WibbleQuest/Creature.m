@@ -9,12 +9,22 @@
 #import "Creature.h"
 #import "Player.h"
 
+@interface Creature()
+  -(void)takeDamage:(int)damage;
+  -(void)giveDamage:(int)damage;
+@end
+
 @implementation Creature
 
-  @synthesize  health, maxHealth, minDamage, maxDamage, name, description, fighting;
+  @synthesize  health, maxHealth, name, description, fighting, fightable, damageRange;
 
 -(id)init{
   self = [super init];
+  self.fighting = NO;
+  self.fightable = YES;
+  self.damageRange = NSMakeRange(0, 1);
+  self.health = [self maxHealth];
+  
   NSArray *phrases = [[self formattedAttackPhrases] arrayByAddingObjectsFromArray:[self formattedDefensePhrases]];
   for (NSString * phrase in phrases) {
     if ([phrase rangeOfString:@"%i"].location == NSNotFound ) {
@@ -24,30 +34,56 @@
   return self;
 }
 
--(NSRange)damageRange {
-  NSLog(@"No damage range created for Creature %@", name);
-  return NSMakeRange(0, 1);
-}
-
--(NSArray*)formattedAttackPhrases{
+-(NSArray*)formattedAttackPhrases {
   NSLog(@"No formatted attack phrases created for Creature %@", name);
   return [NSArray arrayWithObject:@"The creature attacks you for %i damage"];
 }
 
--(NSArray*)formattedDefensePhrases{
+-(NSArray*)formattedDefensePhrases {
   NSLog(@"No formatted defense phrases created for Creature %@", name);
   return [NSArray arrayWithObject:@"You attack the creature for %i damage"];  
 }
 
+-(int)damageTakenModifier:(int)originalDamage {
+  // do nothing normally
+  return originalDamage;
+}
+
+
 -(void)fight {
-  Player * player = [Player sharedPlayer];
-  if(self.fighting == NO) [self beforeFight];
-  //PLAYER ATTACK 
-  if(self.health < 1){
-    [self afterFightLost];
+  if (!fightable) {
+    return;
   }
+
+  Player * player = [Player sharedPlayer];
+  NSLog(@" player %i / %i, enemy %i / %i", player.health, player.maxHealth, self.health, self.maxHealth);
+  
+  if(self.fighting == NO){
+    [self beforeFight];
+    self.fighting = YES; 
+  }
+  //player attack 
+  int range = [player damageRange].length - [player damageRange].location;
+  int damage = ( arc4random() % range ) + [player damageRange].location;
+  damage = [self damageTakenModifier:damage];
+  [self takeDamage:damage];
+  self.health -= damage;
+  
+  //enemy health check
+  if(self.health < 1){
+    self.fightable = NO;
+    player.health = maxHealth;
+    [self afterFightLost];
+    return;
+  }
+  
   [self beforeTurn];
-  //CREATURE ATTACK
+  //enemy health check
+  int range2 = player.damageRange.length - player.damageRange.location;
+  int damage2 = ( arc4random() % range2 ) + player.damageRange.location;
+  [self giveDamage:damage2];
+  player.health -= damage2;
+  
   [self afterTurn];
   if(player.health < 1){
     [self afterFightLost];
@@ -55,9 +91,17 @@
     if([game respondsToSelector:@selector(playerWasBeatenBy:)]){
       [game playerWasBeatenBy:self];
     }
-      
   }
+}
 
+-(void)takeDamage:(int)damage{
+  int index = arc4random() % [self.formattedAttackPhrases count];
+  [WQ print:[self.formattedAttackPhrases objectAtIndex:index], damage];
+}
+
+-(void)giveDamage:(int)damage{
+  int index = arc4random() % [self.formattedDefensePhrases count];
+  [WQ print:[self.formattedDefensePhrases objectAtIndex:index], damage];
 }
 
 

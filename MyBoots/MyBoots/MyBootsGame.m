@@ -24,23 +24,34 @@
 }
 
 -(void)ready {
+  Player * player = [Player sharedPlayer];
+  player.damageRange = NSMakeRange(1, 3);
+  player.maxHealth = 10;
+  player.health = 10;
+  
   
   Room * openingRoom = [[Room alloc] init];
-  openingRoom.id = @"start";
+  openingRoom.id = @"spawn";
   openingRoom.name = @"Backstage, at the venue.";
-  openingRoom.description = @"There are clothes all over the floor, and you can hear people practicing through the southern door.";
+  openingRoom.description = @"There are clothes all over the floor, and you can hear people practicing through the northern.";
   
   Room * hallwayCenter = [[Room alloc] init];
   hallwayCenter.id = @"hallway";
   hallwayCenter.name = @"Hallway";
-  hallwayCenter.description = @"The hallway is long and pretty boring, the music is louder out here, this hallway continues to the east. The door to your room is to the north";
-  [hallwayCenter connectNorth:openingRoom];
+  hallwayCenter.description = @"The hallway is long and pretty boring, the music is louder out here, this hallway continues to the east. To the west there is a bathroom, and the Bar is to the east.";
+  [hallwayCenter connectSouth:openingRoom];
 
-  Room * hallwayEast = [[Room alloc] init];
-  hallwayEast.name = @"Hallway East";
-  hallwayEast.description = @"The music is loud, you see some empty red cups. Perhaps the pop and crisp night is on. You realize that sound you hear is Justin Beiber, and it's coming from the South. Doc is here, he looks worried. Why not say Hi?";
-  [hallwayEast connectWest:hallwayCenter];
-  hallwayEast.person = [[Doc alloc] init];
+  Room * bathroom = [[Room alloc] init];
+  bathroom.id = @"hallway";
+  bathroom.name = @"Bathroom";
+  bathroom.description = @"Dingy bathroom, anything could be here. Actually, is that your Keytar hanging off the lights?";
+  [bathroom connectEast:hallwayCenter];
+  
+  Room * bar = [[Room alloc] init];
+  bar.name = @"Bar";
+  bar.id = @"bar";
+  bar.description = @"The wooden furnish on th bar really adds to the atmosphere. Anyway, to get on-stage you need to go south into the Alley. Or you can get back to the hallway to the east.";
+  [bar connectWest:hallwayCenter];
 
   
   Bubba *b2 = [[Bubba alloc] init] ;  
@@ -51,8 +62,9 @@
   
   [wq addRoom:openingRoom];
   [wq addRoom:hallwayCenter];
-  [wq addRoom:hallwayEast];
-
+  [wq addRoom:bathroom];
+  [wq addRoom:bar];
+  
   wq.currentRoom = openingRoom;
   
   [wq heading:@"Wibble Quest Example"];

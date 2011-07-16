@@ -13,17 +13,18 @@
 @property () int health;
 @property () int maxHealth;
 
-@property () int minDamage;
-@property () int maxDamage;
+@property () NSRange damageRange;
 
 @property (retain, nonatomic) NSString * name;
 @property (retain, nonatomic) NSString * description;
 
 @property () BOOL fighting;
+@property () BOOL fightable;
 
 -(NSRange)damageRange;
 -(NSArray*)formattedAttackPhrases;
 -(NSArray*)formattedDefensePhrases;
+-(int)damageTakenModifier:(int)originalDamage;
 
 -(void)fight;
 

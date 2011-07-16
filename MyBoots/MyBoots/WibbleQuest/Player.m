@@ -9,7 +9,7 @@
 #import "Player.h"
 
 @implementation Player
-@synthesize data = _data, health, maxHealth;
+@synthesize data = _data, health, maxHealth, damageRange;
 
 //singleton
 static Player * sharedPlayer;
@@ -27,8 +27,11 @@ static Player * sharedPlayer;
 }
 
 +(Player*)sharedPlayer {
-  return sharedPlayer;
+  if (sharedPlayer) return sharedPlayer;
+  return [[Player alloc] init];
 }
+
+
 
 // this is all currently unused. bad orta. no premature optimizing
 //

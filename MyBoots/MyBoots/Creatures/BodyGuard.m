@@ -30,6 +30,23 @@
   return originalDamage;
 }
 
+-(void)beforeFight {
+  [WQ print:@"You tell the bodyguard that you need to get onstage."];
+  [WQ print:@"He ignores you."];
+  [WQ print:@"Still ignoring you"];
+  [WQ print:@"You start to try push past him, but he simply clenches his fists like he means business. Guess you're gonna have to go Brutal Techno Punk on him."];
+}
+
+
+-(void)afterFightLost{
+  Room* outside = [WQ getRoomByID:@"outside"];
+  Room* finale = [WQ getRoomByID:@"end"];
+  [outside connectWest:finale];
+  
+  [WQ print:@"With a bow to your skill the Body Guard stands out of the way and you can now west onto the stage."];
+};
+
+
 -(NSArray*)formattedAttackPhrases{
   return [NSArray arrayWithObjects:
           @"The bodyguard looks at you grimly and causes %i ego damage.",
@@ -43,5 +60,7 @@
           @"You scream, loudly, impressing the bodyguard by %i damage",
           @"You impress the bodyguard with your tattoos improving his opinion of you by %i.", nil];
 }
+
+
 
 @end

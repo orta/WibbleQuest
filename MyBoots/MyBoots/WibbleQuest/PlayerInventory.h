@@ -20,6 +20,7 @@
 -(Item *)getItem:(NSString*) itemID;
 -(BOOL)hasItem:(NSString*) itemID;
 
+
 -(BOOL)respondToCommand:(NSArray*) commands;
 
 @end
