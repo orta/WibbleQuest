@@ -15,4 +15,15 @@
 // attack
 // defend
 
+-(NSRange)damageRange {
+  return NSMakeRange(0, 1);
+}
+
+-(NSArray*)formattedAttackPhrases{
+  return [NSArray arrayWithObjects:
+          @"The bodyguard looks at you grimly and causes %i damage",
+          @"The bodyguard shakes his head and causes %i damage",
+          @"The bodyguard puts his earphone in and ignores you hurting your ego by %i.", nil];
+}
+
 @end

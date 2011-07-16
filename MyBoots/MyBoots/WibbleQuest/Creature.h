@@ -19,5 +19,9 @@
 @property (retain, nonatomic) NSString * name;
 @property (retain, nonatomic) NSString * description;
 
+-(NSRange)damageRange;
+-(NSArray*)formattedAttackPhrases;
+-(void)beforeTurn;
+-(void)afterTurn;
 
 @end

@@ -12,4 +12,28 @@
 
   @synthesize  health, maxHealth, minDamage, maxDamage, name, description;
 
+-(id)init{
+  self = [super init];
+  for (NSString * phrase in [self formattedAttackPhrases]) {
+    if ([phrase rangeOfString:@"%i"].location == NSNotFound ) {
+      NSLog(@"Did not find a percent i in the attack phrase: '%@' this may cause a crash.", phrase);
+    }
+  }
+  return self;
+}
+
+-(NSRange)damageRange {
+  NSLog(@"No damage range created for Creature %@", name);
+  return NSMakeRange(0, 1);
+}
+//
+-(NSArray*)formattedAttackPhrases{
+  NSLog(@"No formatted attack phrases created for Creature %@", name);
+  return [NSArray arrayWithObject:@"The creature attacks you for %i damage"];
+}
+
+-(void)beforeTurn{};
+-(void)afterTurn{};
+//
+
 @end
