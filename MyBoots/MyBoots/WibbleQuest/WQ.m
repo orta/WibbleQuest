@@ -25,6 +25,12 @@
   [wibble heading:string];
 }
 
++(void) say:(NSString*)name words:(NSString*)words {
+  WibbleQuest *wibble = [WibbleQuest sharedWibble];
+  [wibble say:name words:words];
+}
+
+
 +(void) command:(NSString*)string{
   WibbleQuest *wibble = [WibbleQuest sharedWibble];
   [wibble command:string];

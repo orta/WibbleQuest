@@ -15,6 +15,7 @@
 // so you can write cleaner code
 
 +(void) print:(NSString*)string, ...;
++(void) say:(NSString*)name words:(NSString*)words;
 +(void) heading:(NSString*)string;
 +(void) command:(NSString*)string;
 +(void) title:(NSString*)string;

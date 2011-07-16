@@ -36,6 +36,12 @@
   [self execJS:function];
 }
 
+-(void) say:(NSString*)name words:(NSString*)words {
+  words = [self sanitize:words];
+  NSString * function = [NSString stringWithFormat:@"addSay('%@','%@')",name, words];
+  [self execJS:function];
+
+}
 
 -(NSString *) sanitize:(NSString*) string {
   string = [string stringByReplacingOccurrencesOfString:@"'" withString:@"`"];

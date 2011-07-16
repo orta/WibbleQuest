@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6081AB1F13D23D25007C5545 /* GoatBoy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB1E13D23D25007C5545 /* GoatBoy.m */; };
 		609B9FAD13C901D400888A6E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAC13C901D400888A6E /* UIKit.framework */; };
 		609B9FAF13C901D400888A6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAE13C901D400888A6E /* Foundation.framework */; };
 		609B9FB113C901D400888A6E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FB013C901D400888A6E /* CoreGraphics.framework */; };
@@ -40,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6081AB1D13D23D25007C5545 /* GoatBoy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoatBoy.h; path = People/GoatBoy.h; sourceTree = "<group>"; };
+		6081AB1E13D23D25007C5545 /* GoatBoy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoatBoy.m; path = People/GoatBoy.m; sourceTree = "<group>"; };
 		609B9FA813C901D400888A6E /* MyBoots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBoots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		609B9FAC13C901D400888A6E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		609B9FAE13C901D400888A6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -229,6 +232,8 @@
 			children = (
 				60F5128A13D11E2D00978EC0 /* Doc.h */,
 				60F5128B13D11E2D00978EC0 /* Doc.m */,
+				6081AB1D13D23D25007C5545 /* GoatBoy.h */,
+				6081AB1E13D23D25007C5545 /* GoatBoy.m */,
 			);
 			name = People;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				60F5128F13D11E7E00978EC0 /* Person.m in Sources */,
 				60F5129313D1200700978EC0 /* NSArray-Contains.m in Sources */,
 				60F512A213D1E59800978EC0 /* BodyGuard.m in Sources */,
+				6081AB1F13D23D25007C5545 /* GoatBoy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
