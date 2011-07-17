@@ -119,13 +119,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6065BC8E13D3616F00F1F6D4 /* Room */ = {
+		6065BC8E13D3616F00F1F6D4 /* Rooms */ = {
 			isa = PBXGroup;
 			children = (
 				6065BC9013D3619000F1F6D4 /* StartingRoom.h */,
 				6065BC9113D3619000F1F6D4 /* StartingRoom.m */,
 			);
-			name = Room;
+			name = Rooms;
 			sourceTree = "<group>";
 		};
 		609B9F9D13C901D400888A6E = {
@@ -227,7 +227,7 @@
 		60F49DCE13CBD32E00BDB07C /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				6065BC8E13D3616F00F1F6D4 /* Room */,
+				6065BC8E13D3616F00F1F6D4 /* Rooms */,
 				60F5128913D11D0200978EC0 /* Creatures */,
 				60F5128813D11CE200978EC0 /* People */,
 				60F49DD013CBD33E00BDB07C /* Items */,
