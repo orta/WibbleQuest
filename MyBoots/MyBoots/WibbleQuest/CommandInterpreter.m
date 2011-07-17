@@ -141,19 +141,19 @@
 }
 
 -(void)north {
-  [self moveToRoom:wq.currentRoom.north];
+  [self moveToRoom: wq.currentRoom.north];
 }
 
 -(void)west {
-  [self moveToRoom:wq.currentRoom.west];
+  [self moveToRoom: wq.currentRoom.west];
 }
 
 -(void)east {
-  [self moveToRoom:wq.currentRoom.south];
+  [self moveToRoom: wq.currentRoom.east];
 }
 
 -(void)south {
-  [self moveToRoom:wq.currentRoom.south];
+  [self moveToRoom: wq.currentRoom.south];
 }
 
 -(void)moveToRoom:(Room*)newRoom{
