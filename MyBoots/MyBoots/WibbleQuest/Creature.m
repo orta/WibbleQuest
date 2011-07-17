@@ -56,7 +56,7 @@
   }
 
   Player * player = [Player sharedPlayer];
-  NSString *battleStatus = [NSString stringWithFormat:@" player %i / %i, enemy %i / %i", player.health, player.maxHealth, self.health, self.maxHealth];
+  NSString *battleStatus = [NSString stringWithFormat:@"Player %i / %i, %@ %i / %i.", player.health, player.maxHealth, self.name, self.health, self.maxHealth];
   [WQ command:battleStatus];
   
   if(self.fighting == NO){

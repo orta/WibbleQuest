@@ -51,7 +51,7 @@
 // launching
 -(void) start;
 -(void) describeSurroundings;
-
+-(void) movedRoom;
 @end
 
 // putting these at the end means that all objects get access

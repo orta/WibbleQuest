@@ -127,7 +127,7 @@
 -(void)north {
   if (wq.currentRoom.north) {
     wq.currentRoom = wq.currentRoom.north;
-    [wq describeSurroundings];
+    [wq movedRoom];
     return;
   }else{
     [wq print:@"There is nothing to the north."];
@@ -137,7 +137,7 @@
 -(void)west {
   if (wq.currentRoom.west) {
     wq.currentRoom = wq.currentRoom.west;
-    [wq describeSurroundings];
+    [wq movedRoom];
   }else{
     [wq print:@"There is nothing to the west."];
   }
@@ -146,7 +146,7 @@
 -(void)east {
   if (wq.currentRoom.east) {
     wq.currentRoom = wq.currentRoom.east;
-    [wq describeSurroundings];
+    [wq movedRoom];
   }else{
     [wq print:@"There is nothing to the east."];
   }
@@ -156,7 +156,7 @@
 -(void)south {
   if (wq.currentRoom.south) {
     wq.currentRoom = wq.currentRoom.south;
-    [wq describeSurroundings];
+    [wq movedRoom];
   }else{
     [wq print:@"There is nothing to the south."];
   }

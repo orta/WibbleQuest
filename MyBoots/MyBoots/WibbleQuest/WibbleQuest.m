@@ -15,7 +15,6 @@ static WibbleQuest *sharedWibble;
 @interface WibbleQuest()
 -(void) checkForNibConnections;
 -(void) loadPageForShowingGame;
--(void) describeSurroundings;
 @end
 
 @implementation WibbleQuest
@@ -56,11 +55,11 @@ static WibbleQuest *sharedWibble;
   // just a neat gap
   [self heading:@""];
   
-  [self describeSurroundings];
+  [self movedRoom];
 }
 
 // think about moving this into Room
--(void) describeSurroundings {
+-(void) movedRoom {
   [self title:currentRoom.name];
   if(currentRoom.visited == FALSE){
     [self print:currentRoom.description];
@@ -71,6 +70,13 @@ static WibbleQuest *sharedWibble;
     [currentRoom.person playerEntersSameRoom];
   }
 }
+
+-(void) describeSurroundings {
+  [self title:currentRoom.name];
+  [self print:currentRoom.description];
+  [self.currentRoom describeInventory];
+}
+
 
 -(Room *) getRoomByID:(NSString*)id {
   for(Room * r in self.rooms){

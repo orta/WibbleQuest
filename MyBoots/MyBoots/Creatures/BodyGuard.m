@@ -39,9 +39,10 @@
 
 
 -(void)afterFightLost{
-  Room* outside = [WQ getRoomByID:@"outside"];
-  Room* finale = [WQ getRoomByID:@"end"];
+  Room* outside = [WQ getRoomByID:@"alley"];
+  Room* finale = [WQ getRoomByID:@"finale"];
   [outside connectWest:finale];
+  outside.description = @"The alley seems a lot lighter since the bodyguard went away, you can go north back into the bar, or west to the main stage";
   
   [WQ print:@"With a bow to your skill the Body Guard stands out of the way and you can now west onto the stage."];
 };

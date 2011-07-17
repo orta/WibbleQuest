@@ -61,6 +61,11 @@
   alley.description = @"The Alley is everything you heard it to be, dark, dingy and crrepy. ou can get back into the bar to the north, there's a guy who Float refered to as a bodyguard here. Looks like he's blocking the entrance to the south. You might have to fight to get past.";
   [alley connectNorth:bar];
 
+  Room * final = [[Room alloc] init];
+  alley.name = @"On Stage";
+  alley.id = @"finale";
+  alley.description = @"You arrive on stage, kick the terrible band off stage and wave your keytar in the air like you actually know what you're doing.";
+  
   
   Bubba *b2 = [[Bubba alloc] init];
   [openingRoom addItem:b2];
@@ -81,7 +86,8 @@
   [wq addRoom:hallwayCenter];
   [wq addRoom:bathroom];
   [wq addRoom:bar];
-  
+  [wq addRoom:final];
+
   wq.currentRoom = openingRoom;
   
   [wq heading:@"Wibble Quest Example"];
