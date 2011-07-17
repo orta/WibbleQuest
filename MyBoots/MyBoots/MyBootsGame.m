@@ -62,9 +62,9 @@
   [alley connectNorth:bar];
 
   Room * final = [[Room alloc] init];
-  alley.name = @"On Stage";
-  alley.id = @"finale";
-  alley.description = @"You arrive on stage, kick the terrible band off stage and wave your keytar in the air like you actually know what you're doing.";
+  final.name = @"On Stage";
+  final.id = @"finale";
+  final.description = @"You arrive on stage, kick the terrible band off stage and wave your keytar in the air like you actually know what you're doing.";
   
   
   Bubba *b2 = [[Bubba alloc] init];
