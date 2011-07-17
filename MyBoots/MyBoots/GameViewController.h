@@ -9,8 +9,13 @@
 #import "SettingsViewController.h"
 
 @class WibbleQuest;
-@interface GameViewController : UIViewController <SettingsViewControllerDelegate>
+@interface GameViewController : UIViewController <SettingsViewControllerDelegate> {
+
+  IBOutlet WibbleQuest *wq;
+}
+
 @property (retain, nonatomic) UIPopoverController *flipsidePopoverController;
+
 
 - (IBAction)showInfo:(id)sender;
 

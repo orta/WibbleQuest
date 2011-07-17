@@ -86,7 +86,7 @@
   [wq addRoom:hallwayCenter];
   [wq addRoom:bathroom];
   [wq addRoom:bar];
-  [wq addRoom:final];
+  // [wq addRoom:final];
 
   wq.currentRoom = openingRoom;
   

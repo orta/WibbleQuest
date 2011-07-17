@@ -20,16 +20,19 @@
   NSString * function = [NSString stringWithFormat:@"addParagraph('%@')", formattedString];
   [self execJS:function];
 }
+
 -(void) heading:(NSString*)string {
   string = [self sanitize:string];
   NSString * function = [NSString stringWithFormat:@"addHeader('%@')", string];
   [self execJS:function];
 }
+
 -(void) command:(NSString*)string {
   string = [self sanitize:string];
   NSString * function = [NSString stringWithFormat:@"addCommand('%@')", string];
   [self execJS:function];
 }
+
 -(void) title:(NSString*)string{
   string = [self sanitize:string];
   NSString * function = [NSString stringWithFormat:@"addTitle('%@')", string];
@@ -40,7 +43,6 @@
   words = [self sanitize:words];
   NSString * function = [NSString stringWithFormat:@"addSay('%@','%@')",name, words];
   [self execJS:function];
-
 }
 
 -(NSString *) sanitize:(NSString*) string {
@@ -50,9 +52,7 @@
 
 -(void) execJS:(NSString*) js {
   //remove chars that break stuff
-  
-  NSString * ok = [_webView stringByEvaluatingJavaScriptFromString:js];
-  
+  NSString * ok = [_webView stringByEvaluatingJavaScriptFromString:js];  
   if([@"OK" isEqualToString:ok] == FALSE){
     NSLog(@"error printing to webview");
   }

@@ -10,4 +10,6 @@
 
 #import "WibbleQuest.h"
 
-@interface WibbleQuest (WibbleQuestViewHandlingCategory) @end
+@interface WibbleQuest (WibbleQuestViewHandlingCategory) 
+  -(void)rotatedToUInterfaceIdiom:(UIInterfaceOrientation) orientation;
+@end

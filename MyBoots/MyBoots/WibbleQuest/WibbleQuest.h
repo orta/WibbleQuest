@@ -30,9 +30,10 @@
   
   CommandInterpreter *_commandInterpreter;
   
-  // these are for the viewhandlingacategories
+  // these are for the viewhandling categories
   CGFloat animatedDistanceX;
   CGFloat animatedDistanceY;
+  BOOL rotating;
 }
 
 @property (retain) UIView * view;
@@ -57,3 +58,4 @@
 // putting these at the end means that all objects get access
 // to methods that should be public inside categories
 #import "WibbleQuestPrintingCategory.h"
+#import "WibbleQuestViewHandlingCategory.h"
