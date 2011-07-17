@@ -108,6 +108,9 @@
         [wq print:@"What do you want to say?"];
         return;
       }
+      
+      //TODO remove all question marks
+      
       if (wq.currentRoom.person) {
         [wq.currentRoom.person respondToSentenceArray:parameters];
         return;
@@ -183,15 +186,20 @@
     [wq command:@"get an item from the current room."];
     
     [wq print: @"examine [item]"];
-    [wq command:@"examine an item either in the room, or in your inventory."];
+    [wq command:@"examine an item either in the room."];
 
-    [wq print: @"inventory"];
-    [wq command:@"Look inside your inventory."];
-
-    [wq print: @"use [item]"];
-    [wq command:@"A generic use term for items in room, or in your inventory."];
-
+    [wq print: @"look"];
+    [wq command:@"look at your surroundings."];
     
+    [wq print: @"inventory"];
+    [wq command:@"Look at the items inside your inventory."];
+
+    [wq print: @"fight"];
+    [wq command:@"Start a fight with something hostile."];
+    
+    [wq print: @"say"];
+    [wq command:@"Talk some."];
+
   }
 }
 

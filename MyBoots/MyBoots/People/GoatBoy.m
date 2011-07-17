@@ -26,8 +26,8 @@
     [WQ say:@"Goat Boy" words:@"Finally you're up! Anyway, we're on stage pretty soon, are you ready? got all your stuff for playing?"];
     return;
   }
-  
-  if([sentence contains:@"stuff", @"playing", nil] ){
+
+  if([sentence contains: @"no", @"stuff", @"playing", nil] ){
     [WQ say:@"Goat Boy" words:@"Yeah, you're gonna need your Keytar and some mics. And it seems that we can't get on stage, but PX is on that."];
     return;
   }
