@@ -29,12 +29,14 @@
   return [NSArray arrayWithObjects:@"play", nil];
 }
 
--(void)command:(NSArray*)commandArray {
+-(BOOL)didRespondToCommand:(NSArray*)commandArray {
   NSString * command = [commandArray objectAtIndex:0];
   NSArray *commands = [NSArray arrayWithObjects:@"play", nil];
   if ([commands containsObject:command]) {
     [WQ print:@"You rock out on the Keytar for a while playing some George Michaels, no one seems to pay any attention though"];
+    return YES;
   }
+  return NO;
 }
 
 

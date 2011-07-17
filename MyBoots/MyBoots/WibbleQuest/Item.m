@@ -14,8 +14,9 @@
 
 
 
--(void)command:(NSArray*)commandArray {
+-(BOOL)didRespondToCommand:(NSArray*)commandArray {
   NSLog(@"command for %@ not implemented", name);
+    return NO;
 }
 
 -(NSArray*)commands{ return [NSArray array]; }
