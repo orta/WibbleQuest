@@ -108,6 +108,9 @@
         [wq print:@"What do you want to say?"];
         return;
       }
+      
+      //TODO remove all question marks
+      
       if (wq.currentRoom.person) {
         [wq.currentRoom.person respondToSentenceArray:parameters];
         return;
@@ -138,19 +141,19 @@
 }
 
 -(void)north {
-  [self moveToRoom:wq.currentRoom.north];
+  [self moveToRoom: wq.currentRoom.north];
 }
 
 -(void)west {
-  [self moveToRoom:wq.currentRoom.west];
+  [self moveToRoom: wq.currentRoom.west];
 }
 
 -(void)east {
-  [self moveToRoom:wq.currentRoom.south];
+  [self moveToRoom: wq.currentRoom.east];
 }
 
 -(void)south {
-  [self moveToRoom:wq.currentRoom.south];
+  [self moveToRoom: wq.currentRoom.south];
 }
 
 -(void)moveToRoom:(Room*)newRoom{
@@ -177,21 +180,26 @@
     [wq command:@""];
     
     [wq print:@"north, east, south, west"];
-    [wq command:@"move in a direction"];
+    [wq command:@"move in a direction."];
     
     [wq print:@"get [item]"];
-    [wq command:@"get an item form the current room"];
+    [wq command:@"get an item from the current room."];
     
     [wq print: @"examine [item]"];
-    [wq command:@"examine an item either in the room, or in your inventory"];
+    [wq command:@"examine an item either in the room."];
 
-    [wq print: @"inventory"];
-    [wq command:@"examine an item either in the room, or in your inventory"];
-
-    [wq print: @"use [item]"];
-    [wq command:@"A generic use term for items in room, or in your inventory"];
-
+    [wq print: @"look"];
+    [wq command:@"look at your surroundings."];
     
+    [wq print: @"inventory"];
+    [wq command:@"Look at the items inside your inventory."];
+
+    [wq print: @"fight"];
+    [wq command:@"Start a fight with something hostile."];
+    
+    [wq print: @"say"];
+    [wq command:@"Talk some."];
+
   }
 }
 
