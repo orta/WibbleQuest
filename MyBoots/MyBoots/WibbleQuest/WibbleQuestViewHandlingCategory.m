@@ -108,11 +108,19 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 720;
 
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-  
+  // do it instantly if you're rotating
   if(rotating){
     self.view.frame = [[UIScreen mainScreen] bounds];
+    CGRect webViewFrame = _webView.frame;
+    webViewFrame.size.height += animatedDistanceY;
+    webViewFrame.size.width += animatedDistanceX;
+    webViewFrame.origin.y -= animatedDistanceY;
+    webViewFrame.origin.x -= animatedDistanceX;
+    _webView.frame = webViewFrame;
+
     animatedDistanceY = 0;
     animatedDistanceX = 0;
+    
   }else{
     CGRect viewFrame = self.view.frame;
     viewFrame.origin.y += animatedDistanceY;
@@ -144,4 +152,24 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 720;
   }
   rotating = NO;
 }
+
+#pragma mark gestures on webview
+-(void) setupGestureRecognisers {
+  UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(webViewDoubleTapGesture:)];
+  gestureRecognizer.delegate = self;
+  gestureRecognizer.numberOfTapsRequired = 2;
+  [_webView addGestureRecognizer:gestureRecognizer];
+}
+
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+  return YES;
+}
+
+
+-(void)webViewDoubleTapGesture:(id)sender{
+  [_textField resignFirstResponder];
+}
+
+
 @end

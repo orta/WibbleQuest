@@ -32,6 +32,7 @@ static WibbleQuest *sharedWibble;
   
   sharedWibble = self;
   
+  [self setupGestureRecognisers];
   [self checkForNibConnections];
   _commandInterpreter = [[CommandInterpreter alloc] init];
   _commandInterpreter.wq = self;
@@ -41,8 +42,6 @@ static WibbleQuest *sharedWibble;
   _textField.clearsOnBeginEditing = YES;
   self.inventory = [[[PlayerInventory alloc] init] retain];
 }
-
-
 
 - (void)webViewDidFinishLoad:(UIWebView *) delagateWebView {
   [game ready];
@@ -141,7 +140,7 @@ static WibbleQuest *sharedWibble;
   }
 }
 
--(void)dealloc{
+-(void)dealloc {
   [super release];
   [inventory release];
   [currentRoom release];
