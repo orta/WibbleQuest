@@ -16,7 +16,7 @@
 @property (retain, nonatomic) NSString* id;
 @property (retain, nonatomic) NSString* examine;
 
--(void)command:(NSArray*)commandArray;
+-(BOOL)didRespondToCommand:(NSArray*)commandArray;
 -(NSArray*)commands;
 
 -(void)onPickup;

@@ -39,12 +39,14 @@
   }
 }
 
--(void)command:(NSArray*)commandArray {
+-(BOOL)didRespondToCommand:(NSArray*)commandArray {
   NSString * command = [commandArray objectAtIndex:0];
   NSArray *commands = [NSArray arrayWithObjects:@"drink", @"imbibe", @"consume", nil];
   if ([commands containsObject:command]) {
     [self drink];  
+      return YES;
   }
+    return NO;
 }
 
 @end

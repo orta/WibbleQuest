@@ -22,7 +22,7 @@
 
 @class CommandInterpreter;
 
-@interface WibbleQuest : NSObject {
+@interface WibbleQuest : NSObject <UIWebViewDelegate, UITextFieldDelegate> {
   IBOutlet UIWebView *_webView;
   IBOutlet UITextField  *_textField;
   IBOutlet UIView *view;

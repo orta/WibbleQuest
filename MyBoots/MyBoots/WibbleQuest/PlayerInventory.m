@@ -18,13 +18,12 @@
 }
 
 -(BOOL) respondToCommand:(NSArray*) commands {
-  NSString * command = [commands componentsJoinedByString:@" "];
-  for (Item * item in self.items) {
-    if([[item commands] contains: command, nil]){
-      [item command: commands];
-      return YES;
-    }
-  }
+  // NSString * command = [commands componentsJoinedByString:@" "];
+  if ( [commands count] > 1 && [self hasItem: [commands objectAtIndex:1]] ) {
+    Item *item = [self getItem:[commands objectAtIndex:1]];
+    return [item didRespondToCommand:commands];
+    
+  }  
   return NO;
 }
 
@@ -57,7 +56,7 @@
     [WQ print:@"You have no items"];
   }else{
     [WQ print:@"Inventory"];
-
+    
     for (int i = 0; i < [self.items count]; i++) {
       Item* item = [self.items objectAtIndex:i];
       [WQ print:[NSString stringWithFormat:@"- %@", item.description ]];
