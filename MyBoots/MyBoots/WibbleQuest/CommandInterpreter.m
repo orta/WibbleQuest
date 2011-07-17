@@ -24,7 +24,6 @@
 @synthesize wq;
 
 -(void)parse:(NSString*) string {
-  NSLog(@"hi");
   string = [string lowercaseString];
   NSArray * parameters = [string componentsSeparatedByString:@" "];
   if ([parameters count] > 0) {

@@ -14,10 +14,15 @@
 - (void)SettingsViewControllerDidFinish:(SettingsViewController *)controller;
 @end
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController {
+  UISwitch *_hideTextFieldSwitch;
+}
 
+@property (nonatomic, retain) IBOutlet UISwitch *hideTextFieldSwitch;
 @property (retain, nonatomic) IBOutlet id <SettingsViewControllerDelegate> delegate;
 
 - (IBAction)done:(id)sender;
+-(IBAction)hideTextfieldAfterCommand:(id)sender;
+
 
 @end
