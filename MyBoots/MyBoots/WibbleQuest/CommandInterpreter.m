@@ -177,19 +177,19 @@
     [wq command:@""];
     
     [wq print:@"north, east, south, west"];
-    [wq command:@"move in a direction"];
+    [wq command:@"move in a direction."];
     
     [wq print:@"get [item]"];
-    [wq command:@"get an item form the current room"];
+    [wq command:@"get an item from the current room."];
     
     [wq print: @"examine [item]"];
-    [wq command:@"examine an item either in the room, or in your inventory"];
+    [wq command:@"examine an item either in the room, or in your inventory."];
 
     [wq print: @"inventory"];
-    [wq command:@"examine an item either in the room, or in your inventory"];
+    [wq command:@"Look inside your inventory."];
 
     [wq print: @"use [item]"];
-    [wq command:@"A generic use term for items in room, or in your inventory"];
+    [wq command:@"A generic use term for items in room, or in your inventory."];
 
     
   }
