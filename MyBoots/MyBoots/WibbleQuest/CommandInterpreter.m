@@ -77,11 +77,16 @@
     }
     
     if([@"examine" isEqualToString:command] || [@"x" isEqualToString:command]){
+      if([parameters count] == 1){
+        [wq print:@"Examine what?"];
+        return;
+      }
+
       if([@"room" isEqualToString:[parameters objectAtIndex:1]]){
         [wq describeSurroundings];
         return;
       }
-      
+
       [wq.currentRoom examineWithInput:string];
       return;
     }
