@@ -10,6 +10,7 @@
 
 @interface GoatBoy : Person {
   BOOL saidKeytar;
+  BOOL saidAllstuff;
 }
 
 

@@ -80,7 +80,6 @@
 }
 
 -(void)examineWithInput:(NSString*)input{
-  NSLog(@"examine");
   NSArray * commands = [input componentsSeparatedByString:@" "];
   if ([commands count] > 1) {
     NSString * key = [commands objectAtIndex:1];    

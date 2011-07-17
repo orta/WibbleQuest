@@ -15,6 +15,10 @@
     [WQ say:@"Goat Boy" words:@"Great you have your Keytar! We only need mics now. Go and talk to PX about the microphones."];
     saidKeytar = YES;
   }
+  if ([Player has:@"keytar"] && [Player has:@"microphone"] && !saidAllstuff) {
+    [WQ say:@"Goat Boy" words:@"That looks like most of your equipment. Got your Mac?"];
+    saidAllstuff = YES;
+  }
 }
 
 -(void)respondToSentenceArray:(NSArray*)sentence {
