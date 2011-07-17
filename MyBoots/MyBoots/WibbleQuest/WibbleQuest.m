@@ -15,7 +15,6 @@ static WibbleQuest *sharedWibble;
 @interface WibbleQuest()
 -(void) checkForNibConnections;
 -(void) loadPageForShowingGame;
--(void) describeSurroundings;
 @end
 
 @implementation WibbleQuest
@@ -43,6 +42,8 @@ static WibbleQuest *sharedWibble;
   self.inventory = [[[PlayerInventory alloc] init] retain];
 }
 
+
+
 - (void)webViewDidFinishLoad:(UIWebView *) delagateWebView {
   [game ready];
   [_textField becomeFirstResponder];
@@ -54,18 +55,34 @@ static WibbleQuest *sharedWibble;
   // just a neat gap
   [self heading:@""];
   
-  [self describeSurroundings];
+  [self movedRoom];
 }
 
 // think about moving this into Room
+-(void) movedRoom {
+  [self title:currentRoom.name];
+  if(currentRoom.visited == FALSE){
+    [self print:currentRoom.description];
+    [self.currentRoom describeInventory];
+    currentRoom.visited = YES;
+  }  
+  if(currentRoom.person){
+    [currentRoom.person playerEntersSameRoom];
+  }
+}
+
 -(void) describeSurroundings {
   [self title:currentRoom.name];
   [self print:currentRoom.description];
   [self.currentRoom describeInventory];
-  
-  if(currentRoom.encounter){
-    //TODO
+}
+
+
+-(Room *) getRoomByID:(NSString*)id {
+  for(Room * r in self.rooms){
+    if([r.id isEqualToString:id]) return r;
   }
+  return nil;
 }
 
 -(void)addRoom:(Room*)room {
@@ -82,7 +99,10 @@ static WibbleQuest *sharedWibble;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)inTextField {
-	[inTextField resignFirstResponder];
+  if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hideTextFieldAfterCommand"] == FALSE) {
+    [inTextField resignFirstResponder];
+  }
+  
   [self command:[@"> " stringByAppendingString: inTextField.text]];
   [_commandInterpreter parse:inTextField.text];
   
@@ -111,9 +131,11 @@ static WibbleQuest *sharedWibble;
   if(_textField == nil){
     [NSException raise:@"Text Field not hooked up to WibbleQuest Object" format:@"Text Field not hooked up to WibbleQuest Object"];
   }
+  
   if(_textField.delegate != self){
     [NSException raise:@"Text Field delegate not hooked up to WibbleQuest Object" format:@"Text Field delegate not hooked up to WibbleQuest Object"];
   }
+  
   if(view == nil){
     [NSException raise:@"Web View not hooked up to WibbleQuest Object in Nib" format:@"Web View not hooked up to WibbleQuest Object in Nib"];
   }

@@ -54,27 +54,45 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 720;
   animatedDistanceX = 0.0;
   
   UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+  // PORTRAIT
   if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown) {
+    //IPHONE
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
       animatedDistanceY = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
     } 
+    //IPAD
     else {
+      if (orientation == UIInterfaceOrientationPortraitUpsideDown) {
+        heightFraction = -1;
+      }
+
       animatedDistanceY = floor(IPAD_PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
     }
   } 
+  
+  //LANDSCAPE
   else {
+    //IPHONE
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
       animatedDistanceY = floor(LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
     } 
     else {
+      //IPAD
+      if (orientation == UIInterfaceOrientationLandscapeRight) {
+        heightFraction *= -1;
+      }
+
       animatedDistanceX = floor(IPAD_LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
     }
   }
   
   CGRect viewFrame = self.view.frame;
-  
   viewFrame.origin.y -= animatedDistanceY;
   viewFrame.origin.x -= animatedDistanceX;
+  
+//  CGRect webViewFrame = self.view.frame;
+  
+
 
   [UIView beginAnimations:nil context:NULL];
   [UIView setAnimationBeginsFromCurrentState:YES];
@@ -84,19 +102,32 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 720;
   [UIView commitAnimations];
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-  CGRect viewFrame = self.view.frame;
-  viewFrame.origin.y += animatedDistanceY;
-  viewFrame.origin.x += animatedDistanceX;
-
-  [UIView beginAnimations:nil context:NULL];
-  [UIView setAnimationBeginsFromCurrentState:YES];
-  [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
-  
-  [self.view setFrame:viewFrame];
-  
-  [UIView commitAnimations];
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+  if(rotating){
+    self.view.frame = [[UIScreen mainScreen] bounds];
+    animatedDistanceY = 0;
+    animatedDistanceX = 0;
+  }else{
+    CGRect viewFrame = self.view.frame;
+    viewFrame.origin.y += animatedDistanceY;
+    viewFrame.origin.x += animatedDistanceX;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
+    
+    [self.view setFrame:viewFrame];
+    
+    [UIView commitAnimations];
+    
+  }
 }
 
+-(void)rotatedToUInterfaceIdiom:(UIInterfaceOrientation) orientation{
+  rotating = YES;
+  if ([_textField isFirstResponder]) {
+    [_textField resignFirstResponder];
+  }
+  rotating = NO;
+}
 @end

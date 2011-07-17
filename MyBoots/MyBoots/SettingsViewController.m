@@ -10,6 +10,7 @@
 
 @implementation SettingsViewController
 
+@synthesize hideTextFieldSwitch = _hideTextFieldSwitch;
 @synthesize delegate = _delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -30,9 +31,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+  
+  self.hideTextFieldSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"hideTextFieldAfterCommand"];
 }
 
 - (void)viewDidUnload {
+  [self setHideTextFieldSwitch:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -41,6 +45,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+  
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -74,5 +79,15 @@
 {
     [self.delegate SettingsViewControllerDidFinish:self];
 }
+-(IBAction)hideTextfieldAfterCommand:(id)sender{  
+  UISwitch * switchClass = (UISwitch*)sender;
+  
+  [[NSUserDefaults standardUserDefaults] setBool: [switchClass isOn] forKey:@"hideTextFieldAfterCommand"];
+  [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
+- (void)dealloc {
+  [_hideTextFieldSwitch release];
+  [super dealloc];
+}
 @end

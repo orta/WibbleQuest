@@ -13,6 +13,15 @@
           font-family: 'American Typewriter';
           display:block;
         }
+        h4{
+          margin-bottom:2px;
+        }
+        blockquote{
+          background-color:#FBEBBD;
+          margin: 0;
+          padding: 12px;
+        }
+        
         </style>
       <script>
         // these functions are called from the UIWebView
@@ -33,8 +42,15 @@
           return createElementWithText("h3", text);
         }
         
+        function addSay(name, text){
+          createElementWithText("h4", name);
+          return createElementWithText("blockquote", text);
+        }
+
+        
         function createElementWithText(element, text){
           var p=document.createElement(element);
+          text = text.replace("`", "'");
           var p_text = document.createTextNode(text);
           p.appendChild(p_text);
           document.body.appendChild(p);

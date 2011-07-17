@@ -9,7 +9,7 @@
 #import "Player.h"
 
 @implementation Player
-@synthesize data = _data;
+@synthesize data = _data, health, maxHealth, damageRange;
 
 //singleton
 static Player * sharedPlayer;
@@ -18,27 +18,37 @@ static Player * sharedPlayer;
   self = [super init];
   self.data = [NSMutableDictionary dictionary];
   sharedPlayer = self;
+  health = maxHealth;
   return self;
 }
 
-+(Player*)sharedPlayer{
-  return sharedPlayer;
++(BOOL)has:(NSString*)itemID{
+  return [[WibbleQuest sharedWibble].inventory hasItem:itemID];
 }
 
--(NSString*)getString:(NSString*)key {
-  return [self.data objectForKey:key];
++(Player*)sharedPlayer {
+  if (sharedPlayer) return sharedPlayer;
+  return [[Player alloc] init];
 }
 
--(void)setString:(NSString *)value forKey:(NSString *)key{
-  [self.data setValue:value forKey:key];
-}
 
--(int)getInt:(NSString*)key {
-  return [[self.data objectForKey:key] intValue];
-}
 
--(void)setInt:(int)value forKey:(NSString *)key{
-  [self.data setValue:[NSString stringWithFormat:@"%d", value] forKey:key];
-}
+// this is all currently unused. bad orta. no premature optimizing
+//
+//-(NSString*)getString:(NSString*)key {
+//  return [self.data objectForKey:key];
+//}
+//
+//-(void)setString:(NSString *)value forKey:(NSString *)key{
+//  [self.data setValue:value forKey:key];
+//}
+//
+//-(int)getInt:(NSString*)key {
+//  return [[self.data objectForKey:key] intValue];
+//}
+//
+//-(void)setInt:(int)value forKey:(NSString *)key{
+//  [self.data setValue:[NSString stringWithFormat:@"%d", value] forKey:key];
+//}
 
 @end

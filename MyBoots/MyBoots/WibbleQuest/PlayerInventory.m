@@ -20,7 +20,7 @@
 -(BOOL) respondToCommand:(NSArray*) commands {
   NSString * command = [commands componentsJoinedByString:@" "];
   for (Item * item in self.items) {
-    if([item respondsToCommand:command]){
+    if([[item commands] contains: command, nil]){
       [item command: commands];
       return YES;
     }
@@ -46,19 +46,21 @@
   return nil;
 }
 
-
 -(void)addItem:(Item*) item {
   [item retain];
   self.items = [self.items arrayByAddingObject: item];
+  [item onPickup];
 }
 
 -(void)describeInventory {
   if([self.items count] == 0){
     [WQ print:@"You have no items"];
   }else{
+    [WQ print:@"Inventory"];
+
     for (int i = 0; i < [self.items count]; i++) {
       Item* item = [self.items objectAtIndex:i];
-      [WQ print:[NSString stringWithFormat:@": %@", item.description ]];
+      [WQ print:[NSString stringWithFormat:@"- %@", item.description ]];
     }
   }
 }

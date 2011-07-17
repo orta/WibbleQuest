@@ -11,6 +11,7 @@
 @implementation WQ
 
 +(void) print:(NSString*)string, ...{
+  // do all the argument parsing ourselves and pass through the rendered string
   va_list listOfArguments;
   va_start(listOfArguments, string);
   NSString* formattedString = [[NSString alloc] initWithFormat:string arguments:listOfArguments];
@@ -24,6 +25,12 @@
   [wibble heading:string];
 }
 
++(void) say:(NSString*)name words:(NSString*)words {
+  WibbleQuest *wibble = [WibbleQuest sharedWibble];
+  [wibble say:name words:words];
+}
+
+
 +(void) command:(NSString*)string{
   WibbleQuest *wibble = [WibbleQuest sharedWibble];
   [wibble command:string];
@@ -34,6 +41,9 @@
   [wibble title:string];
 }
 
-
++ (Room *) getRoomByID:(NSString*)id{
+  WibbleQuest *wibble = [WibbleQuest sharedWibble];
+  return [wibble getRoomByID:id];
+}
 
 @end

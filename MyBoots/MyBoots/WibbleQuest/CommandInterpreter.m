@@ -75,6 +75,17 @@
       return;
     }
     
+    if([@"fight" isEqualToString:command] || [@"f" isEqualToString:command]||
+       [@"attack" isEqualToString:command] || [@"a" isEqualToString:command]){
+      if (wq.currentRoom.encounter == nil) {
+        [wq print:@"There is no-one here to fight."];
+        return;
+      }
+      [wq.currentRoom.encounter fight];
+      
+      return;
+    }
+    
     if([@"say" isEqualToString:command] || [@"s" isEqualToString:command]){
       if([parameters count] == 1){
         [wq print:@"What do you want to say?"];
@@ -82,10 +93,12 @@
       }
       if (wq.currentRoom.person) {
         [wq.currentRoom.person respondToSentenceArray:parameters];
-      }else{
-        [wq print:@"You say something, but there's no one to hear it"];
+        return;
       }
-      return;
+      if(wq.currentRoom.encounter){
+        [wq.currentRoom.encounter respondToSentenceArray:parameters];
+        return;
+      }
     }
     /*
     if([wq.inventory respondToCommand:parameters]) {
@@ -126,7 +139,7 @@
 -(void)north {
   if (wq.currentRoom.north) {
     wq.currentRoom = wq.currentRoom.north;
-    [wq describeSurroundings];
+    [wq movedRoom];
     return;
   }else{
     [wq print:@"There is nothing to the north."];
@@ -136,7 +149,7 @@
 -(void)west {
   if (wq.currentRoom.west) {
     wq.currentRoom = wq.currentRoom.west;
-    [wq describeSurroundings];
+    [wq movedRoom];
   }else{
     [wq print:@"There is nothing to the west."];
   }
@@ -145,7 +158,7 @@
 -(void)east {
   if (wq.currentRoom.east) {
     wq.currentRoom = wq.currentRoom.east;
-    [wq describeSurroundings];
+    [wq movedRoom];
   }else{
     [wq print:@"There is nothing to the east."];
   }
@@ -155,7 +168,7 @@
 -(void)south {
   if (wq.currentRoom.south) {
     wq.currentRoom = wq.currentRoom.south;
-    [wq describeSurroundings];
+    [wq movedRoom];
   }else{
     [wq print:@"There is nothing to the south."];
   }
@@ -189,6 +202,7 @@
   }
 }
 
+// when get is called
 -(void)getCommand:(NSArray *) params {
   if( [params count] == 1){
     [wq print:@"Get what?"];
@@ -202,7 +216,6 @@
     if([wq.currentRoom hasItem:objectID]){
       Item* item = [wq.currentRoom takeItem:objectID];
       [wq.inventory addItem:item];
-      [item onPickup];
       
     }else{
       [wq print:@"Could not find a %@ in the room" , objectID];
