@@ -12,8 +12,8 @@
 
 @interface MyBootsAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (/*strong, nonatomic*/) UIWindow *window;
+@property (retain, nonatomic) UIWindow *window;
 
-@property (/*strong, nonatomic*/) GameViewController *mainViewController;
+@property (retain, nonatomic) GameViewController *mainViewController;
 
 @end
