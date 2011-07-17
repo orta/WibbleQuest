@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6065BC9213D3619000F1F6D4 /* StartingRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6065BC9113D3619000F1F6D4 /* StartingRoom.m */; };
 		6081AB1F13D23D25007C5545 /* GoatBoy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB1E13D23D25007C5545 /* GoatBoy.m */; };
 		6081AB2313D243CD007C5545 /* Keytar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2213D243CD007C5545 /* Keytar.m */; };
 		6081AB2613D249D6007C5545 /* FloatstarPX.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2513D249D6007C5545 /* FloatstarPX.m */; };
@@ -43,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6065BC9013D3619000F1F6D4 /* StartingRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartingRoom.h; path = Rooms/StartingRoom.h; sourceTree = "<group>"; };
+		6065BC9113D3619000F1F6D4 /* StartingRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartingRoom.m; path = Rooms/StartingRoom.m; sourceTree = "<group>"; };
 		6081AB1D13D23D25007C5545 /* GoatBoy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoatBoy.h; path = People/GoatBoy.h; sourceTree = "<group>"; };
 		6081AB1E13D23D25007C5545 /* GoatBoy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoatBoy.m; path = People/GoatBoy.m; sourceTree = "<group>"; };
 		6081AB2113D243CD007C5545 /* Keytar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Keytar.h; path = Items/Keytar.h; sourceTree = "<group>"; };
@@ -116,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6065BC8E13D3616F00F1F6D4 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				6065BC9013D3619000F1F6D4 /* StartingRoom.h */,
+				6065BC9113D3619000F1F6D4 /* StartingRoom.m */,
+			);
+			name = Room;
+			sourceTree = "<group>";
+		};
 		609B9F9D13C901D400888A6E = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +227,7 @@
 		60F49DCE13CBD32E00BDB07C /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				6065BC8E13D3616F00F1F6D4 /* Room */,
 				60F5128913D11D0200978EC0 /* Creatures */,
 				60F5128813D11CE200978EC0 /* People */,
 				60F49DD013CBD33E00BDB07C /* Items */,
@@ -399,6 +412,7 @@
 				6081AB2313D243CD007C5545 /* Keytar.m in Sources */,
 				6081AB2613D249D6007C5545 /* FloatstarPX.m in Sources */,
 				6081AB2913D24B87007C5545 /* Microphone.m in Sources */,
+				6065BC9213D3619000F1F6D4 /* StartingRoom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -79,4 +79,29 @@
   room.west = self;
 }
 
+-(void)examineWithInput:(NSString*)input{
+  NSArray * commands = [input componentsSeparatedByString:@" "];
+  if ([commands count] > 1) {
+    NSString * key = [commands objectAtIndex:1];    
+    NSString * itemDescription = [[self dictionaryForExamine] objectForKey:key];
+    if (itemDescription != nil) {
+      [WQ print:@"%@", itemDescription];  
+    }else{
+      [WQ print:@"Could not find a %@ in this room", key];
+    }
+  }else{
+      [WQ print:@"Examine what?"];
+  }
+}
+
+-(NSDictionary*)dictionaryForExamine {
+  return [NSDictionary dictionary];
+}
+
+-(void)playerDidEnterRoom { }
+-(BOOL)playerShouldEnterRoom { return YES; }
+
+-(BOOL)playerShouldLeaveRoom { return YES;}
+-(void)playerDidLeaveRoom { }
+
 @end

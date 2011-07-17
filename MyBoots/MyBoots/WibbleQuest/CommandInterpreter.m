@@ -17,6 +17,7 @@
 -(void) west;
 -(void) east;
 -(void) south;
+-(void)moveToRoom:(Room*)newRoom;
 @end
 
 
@@ -75,6 +76,17 @@
       return;
     }
     
+    if([@"examine" isEqualToString:command] || [@"x" isEqualToString:command]){
+      if([@"room" isEqualToString:[parameters objectAtIndex:1]]){
+        [wq describeSurroundings];
+        return;
+      }
+      
+      [wq.currentRoom examineWithInput:string];
+      return;
+    }
+
+    
     if([@"fight" isEqualToString:command] || [@"f" isEqualToString:command]||
        [@"attack" isEqualToString:command] || [@"a" isEqualToString:command]){
       if (wq.currentRoom.encounter == nil) {
@@ -100,12 +112,6 @@
         return;
       }
     }
-    /*
-    if([wq.inventory respondToCommand:parameters]) {
-      return;
-    }*/
-      //TODO Refactor into playerinventory class
-
     
     if([wq.inventory hasItem:command]){
       Item * item = [wq.inventory getItem:command];
@@ -127,40 +133,32 @@
 }
 
 -(void)north {
-  if (wq.currentRoom.north) {
-    wq.currentRoom = wq.currentRoom.north;
-    [wq movedRoom];
-    return;
-  }else{
-    [wq print:@"There is nothing to the north."];
-  }
+  [self moveToRoom:wq.currentRoom.north];
 }
 
 -(void)west {
-  if (wq.currentRoom.west) {
-    wq.currentRoom = wq.currentRoom.west;
-    [wq movedRoom];
-  }else{
-    [wq print:@"There is nothing to the west."];
-  }
+  [self moveToRoom:wq.currentRoom.west];
 }
 
 -(void)east {
-  if (wq.currentRoom.east) {
-    wq.currentRoom = wq.currentRoom.east;
-    [wq movedRoom];
-  }else{
-    [wq print:@"There is nothing to the east."];
-  }
-
+  [self moveToRoom:wq.currentRoom.south];
 }
 
 -(void)south {
-  if (wq.currentRoom.south) {
-    wq.currentRoom = wq.currentRoom.south;
+  [self moveToRoom:wq.currentRoom.south];
+}
+
+-(void)moveToRoom:(Room*)newRoom{
+  if([wq.currentRoom playerShouldLeaveRoom] &&
+     [newRoom playerShouldEnterRoom]){
+    
+    [wq.currentRoom playerDidLeaveRoom];
+    wq.currentRoom = newRoom;
+    [wq.currentRoom playerDidEnterRoom];
     [wq movedRoom];
-  }else{
-    [wq print:@"There is nothing to the south."];
+  }
+  else{
+    [wq print:@"There is nothing in that direction."];   
   }
 }
 

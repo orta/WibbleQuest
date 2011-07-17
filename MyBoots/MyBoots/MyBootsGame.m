@@ -8,6 +8,7 @@
 
 #import "MyBootsGame.h"
 
+#import "StartingRoom.h"
 #import "BodyGuard.h"
 #import "Bubba.h"
 #import "Keytar.h"
@@ -32,7 +33,7 @@
   player.health = 10;
   
   
-  Room * openingRoom = [[Room alloc] init];
+  Room * openingRoom = [[StartingRoom alloc] init];
   openingRoom.id = @"spawn";
   openingRoom.name = @"Backstage, at the venue.";
   openingRoom.description = @"There are clothes all over the floor, and you can hear people practicing through the northern.";
@@ -86,7 +87,7 @@
   [wq addRoom:hallwayCenter];
   [wq addRoom:bathroom];
   [wq addRoom:bar];
-  // [wq addRoom:final];
+  [wq addRoom:final];
 
   wq.currentRoom = openingRoom;
   

@@ -38,4 +38,15 @@
 - (void) connectSouth:(Room*)room;
 - (void) connectWest:(Room*)room;
 - (void) connectEast:(Room*)room;
+
+-(NSDictionary *)dictionaryForExamine;
+
+-(void)examineWithInput:(NSString*)input;
+
+-(void)playerDidEnterRoom;
+-(BOOL)playerShouldEnterRoom;
+
+-(BOOL)playerShouldLeaveRoom;
+-(void)playerDidLeaveRoom;
+
 @end
