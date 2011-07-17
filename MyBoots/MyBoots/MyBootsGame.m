@@ -65,7 +65,7 @@
   Room * final = [[Room alloc] init];
   final.name = @"On Stage";
   final.id = @"finale";
-  final.description = @"You arrive on stage, kick the terrible band off stage and wave your keytar in the air like you actually know what you're doing.";
+  final.description = @"You arrive on stage, kick the terrible band off stage and wave your keytar in the air like you actually know what you're doing. Congrats! You've completed the game :)";
   
   
   Bubba *b2 = [[Bubba alloc] init];
@@ -87,6 +87,7 @@
   [wq addRoom:hallwayCenter];
   [wq addRoom:bathroom];
   [wq addRoom:bar];
+  [wq addRoom:alley];
   [wq addRoom:final];
 
   wq.currentRoom = openingRoom;
