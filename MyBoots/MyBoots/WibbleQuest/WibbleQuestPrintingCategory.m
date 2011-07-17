@@ -56,7 +56,6 @@
   if([@"OK" isEqualToString:ok] == FALSE){
     NSLog(@"error printing to webview");
   }
-
 }
 
 @end

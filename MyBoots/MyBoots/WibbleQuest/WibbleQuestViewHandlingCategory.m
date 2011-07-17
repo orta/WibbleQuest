@@ -65,7 +65,6 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 720;
       if (orientation == UIInterfaceOrientationPortraitUpsideDown) {
         heightFraction = -1;
       }
-
       animatedDistanceY = floor(IPAD_PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
     }
   } 
@@ -90,19 +89,26 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 720;
   viewFrame.origin.y -= animatedDistanceY;
   viewFrame.origin.x -= animatedDistanceX;
   
-//  CGRect webViewFrame = self.view.frame;
-  
-
+  CGRect webViewFrame = _webView.frame;
+  webViewFrame.size.height -= animatedDistanceY;
+  webViewFrame.size.width -= animatedDistanceX;
+  webViewFrame.origin.y += animatedDistanceY;
+  webViewFrame.origin.x += animatedDistanceX;
 
   [UIView beginAnimations:nil context:NULL];
   [UIView setAnimationBeginsFromCurrentState:YES];
   [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
   
   [self.view setFrame:viewFrame];
+  [_webView setFrame:webViewFrame];
+
   [UIView commitAnimations];
 }
 
+
+
 - (void)textFieldDidEndEditing:(UITextField *)textField {
+  
   if(rotating){
     self.view.frame = [[UIScreen mainScreen] bounds];
     animatedDistanceY = 0;
@@ -112,12 +118,20 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 720;
     viewFrame.origin.y += animatedDistanceY;
     viewFrame.origin.x += animatedDistanceX;
     
+    CGRect webViewFrame = _webView.frame;
+    webViewFrame.size.height += animatedDistanceY;
+    webViewFrame.size.width += animatedDistanceX;
+    webViewFrame.origin.y -= animatedDistanceY;
+    webViewFrame.origin.x -= animatedDistanceX;
+
+    
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
     
     [self.view setFrame:viewFrame];
-    
+    [_webView setFrame:webViewFrame];
+
     [UIView commitAnimations];
     
   }
