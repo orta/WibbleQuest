@@ -87,10 +87,22 @@
       }
       return;
     }
-    
+    /*
     if([wq.inventory respondToCommand:parameters]) {
       return;
-    }
+    }*/
+      //TODO Refactor into playerinventory class
+      if ([parameters count]>1&&[wq.inventory hasItem:[parameters objectAtIndex:1]]) {
+          Item *item = [wq.inventory getItem:[parameters objectAtIndex:1]];
+          if([item respondsToCommand:command]){
+              [item command:parameters];
+              return;
+          }
+          else{
+              [wq print:@"%@ cannot respond to %@",[parameters objectAtIndex:1],[parameters objectAtIndex:0]];
+              return;
+          }
+      }  
     
     if([wq.inventory hasItem:command]){
       Item * item = [wq.inventory getItem:command];
