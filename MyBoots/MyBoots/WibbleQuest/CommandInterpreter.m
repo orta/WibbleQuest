@@ -100,7 +100,7 @@
     }
 
     
-    if([@"shop" isEqualToString:command] || [@"s" isEqualToString:command]){
+    if([@"shop" isEqualToString:command] || [@"trade" isEqualToString:command]){
       [wq.currentRoom describeShop];
       return;
     }
@@ -121,8 +121,7 @@
       return;
     }
     
-    if([@"say" isEqualToString:command] || [@"s" isEqualToString:command] ||
-       [@"ask" isEqualToString:command]){
+    if([@"say" isEqualToString:command] || [@"ask" isEqualToString:command]){
       if([parameters count] == 1){
         [wq print:@"What do you want to say?"];
         return;
