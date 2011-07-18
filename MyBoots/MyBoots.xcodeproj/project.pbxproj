@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		603B99C813D3C3F20001F9CD /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
+		6065BC9213D3619000F1F6D4 /* StartingRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6065BC9113D3619000F1F6D4 /* StartingRoom.m */; };
 		6081AB1F13D23D25007C5545 /* GoatBoy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB1E13D23D25007C5545 /* GoatBoy.m */; };
 		6081AB2313D243CD007C5545 /* Keytar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2213D243CD007C5545 /* Keytar.m */; };
 		6081AB2613D249D6007C5545 /* FloatstarPX.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2513D249D6007C5545 /* FloatstarPX.m */; };
@@ -40,11 +42,13 @@
 		60F5128F13D11E7E00978EC0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128E13D11E7D00978EC0 /* Person.m */; };
 		60F5129313D1200700978EC0 /* NSArray-Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5129213D1200700978EC0 /* NSArray-Contains.m */; };
 		60F512A213D1E59800978EC0 /* BodyGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F512A113D1E59800978EC0 /* BodyGuard.m */; };
-		6F968FC513D359DC00AC7840 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F968FC413D359DC00AC7840 /* Store.m */; };
-		6F968FCA13D35A8E00AC7840 /* RockShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F968FC913D35A8E00AC7840 /* RockShop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		603B99C613D3C3F20001F9CD /* NSArray-named-captures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray-named-captures.h"; path = "Categories/NSArray-named-captures.h"; sourceTree = "<group>"; };
+		603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray-named-captures.m"; path = "Categories/NSArray-named-captures.m"; sourceTree = "<group>"; };
+		6065BC9013D3619000F1F6D4 /* StartingRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartingRoom.h; path = Rooms/StartingRoom.h; sourceTree = "<group>"; };
+		6065BC9113D3619000F1F6D4 /* StartingRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartingRoom.m; path = Rooms/StartingRoom.m; sourceTree = "<group>"; };
 		6081AB1D13D23D25007C5545 /* GoatBoy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoatBoy.h; path = People/GoatBoy.h; sourceTree = "<group>"; };
 		6081AB1E13D23D25007C5545 /* GoatBoy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoatBoy.m; path = People/GoatBoy.m; sourceTree = "<group>"; };
 		6081AB2113D243CD007C5545 /* Keytar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Keytar.h; path = Items/Keytar.h; sourceTree = "<group>"; };
@@ -102,10 +106,6 @@
 		60F5129213D1200700978EC0 /* NSArray-Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray-Contains.m"; path = "Categories/NSArray-Contains.m"; sourceTree = "<group>"; };
 		60F512A013D1E59800978EC0 /* BodyGuard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BodyGuard.h; path = Creatures/BodyGuard.h; sourceTree = "<group>"; };
 		60F512A113D1E59800978EC0 /* BodyGuard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BodyGuard.m; path = Creatures/BodyGuard.m; sourceTree = "<group>"; };
-		6F968FC313D359DC00AC7840 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
-		6F968FC413D359DC00AC7840 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
-		6F968FC813D35A8E00AC7840 /* RockShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RockShop.h; sourceTree = "<group>"; };
-		6F968FC913D35A8E00AC7840 /* RockShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RockShop.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +122,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6065BC8E13D3616F00F1F6D4 /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				6065BC9013D3619000F1F6D4 /* StartingRoom.h */,
+				6065BC9113D3619000F1F6D4 /* StartingRoom.m */,
+			);
+			name = Rooms;
+			sourceTree = "<group>";
+		};
 		609B9F9D13C901D400888A6E = {
 			isa = PBXGroup;
 			children = (
@@ -221,7 +230,7 @@
 		60F49DCE13CBD32E00BDB07C /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				6F968FC713D35A6800AC7840 /* Stores */,
+				6065BC8E13D3616F00F1F6D4 /* Rooms */,
 				60F5128913D11D0200978EC0 /* Creatures */,
 				60F5128813D11CE200978EC0 /* People */,
 				60F49DD013CBD33E00BDB07C /* Items */,
@@ -269,6 +278,8 @@
 			children = (
 				60F5129113D1200700978EC0 /* NSArray-Contains.h */,
 				60F5129213D1200700978EC0 /* NSArray-Contains.m */,
+				603B99C613D3C3F20001F9CD /* NSArray-named-captures.h */,
+				603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -276,8 +287,6 @@
 		60F5129C13D1C79B00978EC0 /* Root Objects */ = {
 			isa = PBXGroup;
 			children = (
-				6F968FC313D359DC00AC7840 /* Store.h */,
-				6F968FC413D359DC00AC7840 /* Store.m */,
 				60F5128D13D11E7D00978EC0 /* Person.h */,
 				60F5128E13D11E7D00978EC0 /* Person.m */,
 				60CC9EF813C9D5C0006D116C /* Creature.h */,
@@ -316,15 +325,6 @@
 				60F49DDC13CBD76300BDB07C /* WQ.m */,
 			);
 			name = Niceities;
-			sourceTree = "<group>";
-		};
-		6F968FC713D35A6800AC7840 /* Stores */ = {
-			isa = PBXGroup;
-			children = (
-				6F968FC813D35A8E00AC7840 /* RockShop.h */,
-				6F968FC913D35A8E00AC7840 /* RockShop.m */,
-			);
-			name = Stores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,8 +417,8 @@
 				6081AB2313D243CD007C5545 /* Keytar.m in Sources */,
 				6081AB2613D249D6007C5545 /* FloatstarPX.m in Sources */,
 				6081AB2913D24B87007C5545 /* Microphone.m in Sources */,
-				6F968FC513D359DC00AC7840 /* Store.m in Sources */,
-				6F968FCA13D35A8E00AC7840 /* RockShop.m in Sources */,
+				6065BC9213D3619000F1F6D4 /* StartingRoom.m in Sources */,
+				603B99C813D3C3F20001F9CD /* NSArray-named-captures.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

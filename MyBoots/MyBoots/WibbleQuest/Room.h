@@ -44,4 +44,14 @@
 -(void) setShop:(Shop*)shop;
 -(void)describeShop;
 -(void)buyItem:(NSArray*)parameter;
+-(NSDictionary *)dictionaryForExamine;
+
+-(void)examineWithInput:(NSString*)input;
+
+-(void)playerDidEnterRoom;
+-(BOOL)playerShouldEnterRoom;
+
+-(BOOL)playerShouldLeaveRoom;
+-(void)playerDidLeaveRoom;
+
 @end

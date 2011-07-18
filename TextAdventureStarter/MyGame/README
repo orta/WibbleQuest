@@ -1,0 +1,42 @@
+Hello!
+
+I want to :
+
+Create a room
+--------------------------------
+Room * openingRoom = [[Room alloc] init];
+openingRoom.id = @"start";
+openingRoom.name = @"Backstage, at the venue.";
+openingRoom.description = @"There are clothes all over the floor, and you can hear people practicing through the southern door.";
+[wq addRoom:openingRoom];
+
+
+Add a Person to talk to in a room
+-------------------------------
+Create the person's class, as a subclass of Person
+Make them respond to words that are said by using 
+
+-(void)respondToSentenceArray:(NSArray*)sentence {
+  if([sentence contains:@"hi", @"hello", nil] ){
+    [WQ print:@"Doc says, Oh wow, glad you've arrived!"];
+    return;
+  }
+}
+
+Make an item that you can pick up
+---------------------------------
+Create an Item subclass,
+ 
+
+Make an item do something when picked up
+---------------------------------
+override onPickup in your class
+
+-(void) onPickup{
+  [WQ print:@"Bubba sloshes as you pick up his weighty cylindrical self"];
+}
+
+Make an item do a command
+---------------------------------
+
+Items can have their own commands if they support 

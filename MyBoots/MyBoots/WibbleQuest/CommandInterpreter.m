@@ -17,6 +17,8 @@
 -(void) west;
 -(void) east;
 -(void) south;
+-(void)moveToRoom:(Room*)newRoom;
+-(NSArray *)removeQuestionMarks:(NSArray*)array;
 @end
 
 
@@ -27,7 +29,7 @@
   string = [string lowercaseString];
   NSArray * parameters = [string componentsSeparatedByString:@" "];
   if ([parameters count] > 0) {
-    NSString * command = [parameters objectAtIndex:0];
+    NSString * command = [parameters first];
     
     if([@"help" isEqualToString:command]){
       [self help];
@@ -36,11 +38,11 @@
     
     // support 'go north'
     if ([@"go" isEqualToString:command]) {
-        command = [parameters objectAtIndex:1];
+        command = [parameters second];
         
       // support 'go to north'
         if ([@"to" isEqualToString:command]) {
-          command = [parameters objectAtIndex:2]; 
+          command = [parameters third]; 
         }
       }
     
@@ -74,6 +76,29 @@
       [wq.inventory describeInventory];
       return;
     }
+
+    if([@"use" isEqualToString:command] || [@"u" isEqualToString:command]){
+      Item *item = [wq.inventory getItem:[parameters second]];
+      [item onUse];
+      return;
+    }
+
+    
+    if([@"examine" isEqualToString:command] || [@"x" isEqualToString:command]){
+      if([parameters count] == 1){
+        [wq print:@"Examine what?"];
+        return;
+      }
+
+      if([@"room" isEqualToString:[parameters second]]){
+        [wq describeSurroundings];
+        return;
+      }
+
+      [wq.currentRoom examineWithInput:string];
+      return;
+    }
+
     
     if([@"shop" isEqualToString:command] || [@"s" isEqualToString:command]){
       [wq.currentRoom describeShop];
@@ -101,6 +126,8 @@
         [wq print:@"What do you want to say?"];
         return;
       }
+      
+      parameters = [self removeQuestionMarks:parameters];
       if (wq.currentRoom.person) {
         [wq.currentRoom.person respondToSentenceArray:parameters];
         return;
@@ -112,6 +139,11 @@
     }
 
     
+    
+    if([wq.inventory respondToCommand:parameters]){
+      return;
+    }
+      
     if([wq.inventory hasItem:command]){
       Item * item = [wq.inventory getItem:command];
       [wq print: item.description];
@@ -132,40 +164,32 @@
 }
 
 -(void)north {
-  if (wq.currentRoom.north) {
-    wq.currentRoom = wq.currentRoom.north;
-    [wq movedRoom];
-    return;
-  }else{
-    [wq print:@"There is nothing to the north."];
-  }
+  [self moveToRoom: wq.currentRoom.north];
 }
 
 -(void)west {
-  if (wq.currentRoom.west) {
-    wq.currentRoom = wq.currentRoom.west;
-    [wq movedRoom];
-  }else{
-    [wq print:@"There is nothing to the west."];
-  }
+  [self moveToRoom: wq.currentRoom.west];
 }
 
 -(void)east {
-  if (wq.currentRoom.east) {
-    wq.currentRoom = wq.currentRoom.east;
-    [wq movedRoom];
-  }else{
-    [wq print:@"There is nothing to the east."];
-  }
-
+  [self moveToRoom: wq.currentRoom.east];
 }
 
 -(void)south {
-  if (wq.currentRoom.south) {
-    wq.currentRoom = wq.currentRoom.south;
+  [self moveToRoom: wq.currentRoom.south];
+}
+
+-(void)moveToRoom:(Room*)newRoom{
+  if([wq.currentRoom playerShouldLeaveRoom] &&
+     [newRoom playerShouldEnterRoom]){
+    
+    [wq.currentRoom playerDidLeaveRoom];
+    wq.currentRoom = newRoom;
+    [wq.currentRoom playerDidEnterRoom];
     [wq movedRoom];
-  }else{
-    [wq print:@"There is nothing to the south."];
+  }
+  else{
+    [wq print:@"There is nothing in that direction."];   
   }
 }
 
@@ -179,21 +203,26 @@
     [wq command:@""];
     
     [wq print:@"north, east, south, west"];
-    [wq command:@"move in a direction"];
+    [wq command:@"move in a direction."];
     
     [wq print:@"get [item]"];
-    [wq command:@"get an item form the current room"];
+    [wq command:@"get an item from the current room."];
     
     [wq print: @"examine [item]"];
-    [wq command:@"examine an item either in the room, or in your inventory"];
+    [wq command:@"examine an item either in the room."];
 
-    [wq print: @"inventory"];
-    [wq command:@"examine an item either in the room, or in your inventory"];
-
-    [wq print: @"use [item]"];
-    [wq command:@"A generic use term for items in room, or in your inventory"];
-
+    [wq print: @"look"];
+    [wq command:@"look at your surroundings."];
     
+    [wq print: @"inventory"];
+    [wq command:@"Look at the items inside your inventory."];
+
+    [wq print: @"fight"];
+    [wq command:@"Start a fight with something hostile."];
+    
+    [wq print: @"say [words]"];
+    [wq command:@"Talk to something or somebody."];
+
   }
 }
 
@@ -216,6 +245,12 @@
       [wq print:@"Could not find a %@ in the room" , objectID];
     }
   }  
+}
+
+-(NSArray *)removeQuestionMarks:(NSArray *)array{
+  NSString * stringedArray = [array componentsJoinedByString:@" "];
+  stringedArray = [stringedArray stringByReplacingOccurrencesOfString:@"?" withString:@""];
+  return [stringedArray componentsSeparatedByString:@" "];
 }
 
 @end
