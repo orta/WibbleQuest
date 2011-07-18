@@ -1,4 +1,0 @@
-Documentation set was installed to Xcode!
-
-Path: /Users/orta/Library/Developer/Shared/Documentation/DocSets/com.gentlebytes.appledoc.docset
-Time: 2011-07-18 00:42:23 +0000
