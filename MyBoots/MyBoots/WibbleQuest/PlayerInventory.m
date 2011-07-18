@@ -47,7 +47,7 @@
 
 -(void)addItem:(Item*) item {
   [item retain];
-  self.items = [self.items arrayByAddingObject: item];
+  self.items = [self.items arrayByAddingObject:item];
   [item onPickup];
 }
 

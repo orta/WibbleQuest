@@ -19,7 +19,7 @@
   #import "Creature.h"
   #import "Person.h"
   #import "Player.h"
-
+  #import "Store.h"
   #import "NSArray-Contains.h"
 
 #endif

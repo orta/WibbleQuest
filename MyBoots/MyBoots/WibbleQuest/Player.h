@@ -13,6 +13,7 @@
 @property () int health;
 @property () int maxHealth;
 @property () NSRange damageRange;
+@property () int money;
 
 @property (retain) NSMutableDictionary *data;
 

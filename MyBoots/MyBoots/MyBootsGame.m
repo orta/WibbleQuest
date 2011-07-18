@@ -13,6 +13,7 @@
 #import "Keytar.h"
 #import "GoatBoy.h"
 #import "FloatstarPX.h"
+#import "RockShop.h"
 
 @implementation MyBootsGame
 @synthesize wq;
@@ -30,12 +31,15 @@
   player.damageRange = NSMakeRange(1, 3);
   player.maxHealth = 10;
   player.health = 10;
+  player.money=20;
   
   
   Room * openingRoom = [[Room alloc] init];
   openingRoom.id = @"spawn";
   openingRoom.name = @"Backstage, at the venue.";
   openingRoom.description = @"There are clothes all over the floor, and you can hear people practicing through the northern.";
+  Shop *rockShop=[[RockShop alloc] init];
+  openingRoom.shop=rockShop;
   
   Room * hallwayCenter = [[Room alloc] init];
   hallwayCenter.id = @"hallway";

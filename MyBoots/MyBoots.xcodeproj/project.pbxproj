@@ -40,6 +40,8 @@
 		60F5128F13D11E7E00978EC0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128E13D11E7D00978EC0 /* Person.m */; };
 		60F5129313D1200700978EC0 /* NSArray-Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5129213D1200700978EC0 /* NSArray-Contains.m */; };
 		60F512A213D1E59800978EC0 /* BodyGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F512A113D1E59800978EC0 /* BodyGuard.m */; };
+		6F968FC513D359DC00AC7840 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F968FC413D359DC00AC7840 /* Store.m */; };
+		6F968FCA13D35A8E00AC7840 /* RockShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F968FC913D35A8E00AC7840 /* RockShop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +102,10 @@
 		60F5129213D1200700978EC0 /* NSArray-Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray-Contains.m"; path = "Categories/NSArray-Contains.m"; sourceTree = "<group>"; };
 		60F512A013D1E59800978EC0 /* BodyGuard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BodyGuard.h; path = Creatures/BodyGuard.h; sourceTree = "<group>"; };
 		60F512A113D1E59800978EC0 /* BodyGuard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BodyGuard.m; path = Creatures/BodyGuard.m; sourceTree = "<group>"; };
+		6F968FC313D359DC00AC7840 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		6F968FC413D359DC00AC7840 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		6F968FC813D35A8E00AC7840 /* RockShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RockShop.h; sourceTree = "<group>"; };
+		6F968FC913D35A8E00AC7840 /* RockShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RockShop.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +221,7 @@
 		60F49DCE13CBD32E00BDB07C /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				6F968FC713D35A6800AC7840 /* Stores */,
 				60F5128913D11D0200978EC0 /* Creatures */,
 				60F5128813D11CE200978EC0 /* People */,
 				60F49DD013CBD33E00BDB07C /* Items */,
@@ -269,6 +276,8 @@
 		60F5129C13D1C79B00978EC0 /* Root Objects */ = {
 			isa = PBXGroup;
 			children = (
+				6F968FC313D359DC00AC7840 /* Store.h */,
+				6F968FC413D359DC00AC7840 /* Store.m */,
 				60F5128D13D11E7D00978EC0 /* Person.h */,
 				60F5128E13D11E7D00978EC0 /* Person.m */,
 				60CC9EF813C9D5C0006D116C /* Creature.h */,
@@ -307,6 +316,15 @@
 				60F49DDC13CBD76300BDB07C /* WQ.m */,
 			);
 			name = Niceities;
+			sourceTree = "<group>";
+		};
+		6F968FC713D35A6800AC7840 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				6F968FC813D35A8E00AC7840 /* RockShop.h */,
+				6F968FC913D35A8E00AC7840 /* RockShop.m */,
+			);
+			name = Stores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +417,8 @@
 				6081AB2313D243CD007C5545 /* Keytar.m in Sources */,
 				6081AB2613D249D6007C5545 /* FloatstarPX.m in Sources */,
 				6081AB2913D24B87007C5545 /* Microphone.m in Sources */,
+				6F968FC513D359DC00AC7840 /* Store.m in Sources */,
+				6F968FCA13D35A8E00AC7840 /* RockShop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

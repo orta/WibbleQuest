@@ -10,7 +10,7 @@
 
 @implementation Room
 
-@synthesize  name, description, id, north, east, west, south, items = _items, encounter, person, visited;
+@synthesize  name, description, id, north, east, west, south, items = _items, encounter, person, visited, shop;
 
 -(id)init{
   self = [super init];
@@ -59,6 +59,18 @@
   return nil;
 }
 
+-(void)buyItem:(NSArray*)parameter{
+  if(shop!=nil){
+    [shop buyItem:parameter];
+    return;
+  }
+  [WQ print:@"There is no shop"];
+}
+
+-(void)describeShop{
+  [WQ print:[shop description]];
+}
+
 - (void) connectNorth:(Room*)room{
   self.north = room;
   room.south = self;
@@ -78,5 +90,6 @@
   self.east = room;
   room.west = self;
 }
+
 
 @end

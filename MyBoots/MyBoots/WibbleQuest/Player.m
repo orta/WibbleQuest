@@ -9,7 +9,7 @@
 #import "Player.h"
 
 @implementation Player
-@synthesize data = _data, health, maxHealth, damageRange;
+@synthesize data = _data, health, maxHealth, damageRange, money;
 
 //singleton
 static Player * sharedPlayer;

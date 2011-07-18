@@ -75,6 +75,16 @@
       return;
     }
     
+    if([@"shop" isEqualToString:command] || [@"s" isEqualToString:command]){
+      [wq.currentRoom describeShop];
+      return;
+    }
+    
+    if([@"buy" isEqualToString:command]){
+      [wq.currentRoom buyItem:parameters];
+      return;
+    }
+    
     if([@"fight" isEqualToString:command] || [@"f" isEqualToString:command]||
        [@"attack" isEqualToString:command] || [@"a" isEqualToString:command]){
       if (wq.currentRoom.encounter == nil) {
@@ -100,11 +110,6 @@
         return;
       }
     }
-    /*
-    if([wq.inventory respondToCommand:parameters]) {
-      return;
-    }*/
-      //TODO Refactor into playerinventory class
 
     
     if([wq.inventory hasItem:command]){
