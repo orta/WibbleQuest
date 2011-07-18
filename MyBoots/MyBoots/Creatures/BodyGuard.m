@@ -41,9 +41,7 @@
 -(void)afterFightLost{
   Room* outside = [WQ getRoomByID:@"alley"];
   Room* finale = [WQ getRoomByID:@"finale"];
-  
-  NSLog(@"outside - %@", outside.name);
-  NSLog(@"ending - %@", finale.name);
+
   [outside connectSouth:finale];
   outside.description = @"The alley seems a lot lighter since the bodyguard went away, you can go north back into the bar, or west to the main stage";
   
