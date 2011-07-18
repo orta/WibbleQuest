@@ -1,0 +1,3 @@
+on ipad landscape make webview move right
+on rotate make javascript to resize htmlview so it fits all text in again
+add a ticking system so objects can do things

@@ -10,12 +10,7 @@
 
 @implementation Item
 
-@synthesize name, description, examine, descriptionInRoom, id;
-
--(BOOL)didRespondToCommand:(NSArray*)commandArray {
-  NSLog(@"command for %@ not implemented", name);
-    return NO;
-}
+@synthesize examine, descriptionInRoom;
 
 -(void)onPickup{}
 -(void)onUse{}

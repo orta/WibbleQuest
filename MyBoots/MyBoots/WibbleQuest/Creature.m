@@ -16,7 +16,7 @@
 
 @implementation Creature
 
-  @synthesize  health, maxHealth, name, description, fighting, fightable, damageRange;
+  @synthesize  health, maxHealth, fighting, fightable, damageRange;
 
 -(id)init{
   self = [super init];
@@ -35,12 +35,12 @@
 }
 
 -(NSArray*)formattedAttackPhrases {
-  NSLog(@"No formatted attack phrases created for Creature %@", name);
+  NSLog(@"No formatted attack phrases created for Creature %@", self.name);
   return [NSArray arrayWithObject:@"The creature attacks you for %i damage"];
 }
 
 -(NSArray*)formattedDefensePhrases {
-  NSLog(@"No formatted defense phrases created for Creature %@", name);
+  NSLog(@"No formatted defense phrases created for Creature %@", self.name);
   return [NSArray arrayWithObject:@"You attack the creature for %i damage"];  
 }
 

@@ -17,7 +17,7 @@
   return self;
 }
 
--(BOOL) respondToCommand:(NSArray*) commands {
+-(BOOL) didRespondToCommand:(NSArray*) commands {
   if ( [commands count] > 1 && [self hasItem: [commands second]] ) {
     Item *item = [self getItem:[commands second]];
     return [item didRespondToCommand:commands];

@@ -9,13 +9,12 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Store : NSObject {
-  NSDictionary *items;
-}
+@interface Store : WibbleObject {}
+
+@property (retain) NSDictionary *items;
+
 -(void)beforeTrading;
 -(void)afterTrading;
--(NSDictionary*)shopItems;
--(NSString *)description;
 -(void)buyItem:(NSArray*)conditions;
 
 @end

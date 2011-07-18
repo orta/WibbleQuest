@@ -31,24 +31,29 @@ static Player * sharedPlayer;
   return [[Player alloc] init];
 }
 
++(void)teleportToRoomWithID:(NSString*)roomID {
+  Room * room = [WQ getRoomByID:roomID];
+  if (room) {
+    WibbleQuest *wq = [WibbleQuest sharedWibble];
+    wq.currentRoom = room;
+    [wq movedRoom];
+  }
+}
 
+-(NSString*)getString:(NSString*)key {
+  return [self.data objectForKey:key];
+}
 
-// this is all currently unused. bad orta. no premature optimizing
-//
-//-(NSString*)getString:(NSString*)key {
-//  return [self.data objectForKey:key];
-//}
-//
-//-(void)setString:(NSString *)value forKey:(NSString *)key{
-//  [self.data setValue:value forKey:key];
-//}
-//
-//-(int)getInt:(NSString*)key {
-//  return [[self.data objectForKey:key] intValue];
-//}
-//
-//-(void)setInt:(int)value forKey:(NSString *)key{
-//  [self.data setValue:[NSString stringWithFormat:@"%d", value] forKey:key];
-//}
+-(void)setString:(NSString *)value forKey:(NSString *)key{
+  [self.data setValue:value forKey:key];
+}
+
+-(int)getInt:(NSString*)key {
+  return [[self.data objectForKey:key] intValue];
+}
+
+-(void)setInt:(int)value forKey:(NSString *)key{
+  [self.data setValue:[NSString stringWithFormat:@"%d", value] forKey:key];
+}
 
 @end

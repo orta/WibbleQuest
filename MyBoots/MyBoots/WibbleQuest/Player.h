@@ -20,10 +20,11 @@
 +(Player*)sharedPlayer;
 +(BOOL)has:(NSString*)itemID;
 
++(void)teleportToRoomWithID:(NSString*)roomID;
 
-//-(NSString*)getString:(NSString*)key;
-//-(void)setString:(NSString *)value forKey:(NSString *)key;
-//
-//-(int)getInt:(NSString*)key;
-//-(void)setInt:(int)value forKey:(NSString *)key;
+-(NSString*)getString:(NSString*)key;
+-(void)setString:(NSString *)value forKey:(NSString *)key;
+
+-(int)getInt:(NSString*)key;
+-(void)setInt:(int)value forKey:(NSString *)key;
 @end

@@ -8,27 +8,21 @@
 
 #import "Store.h"
 
-
 @implementation Store
-
--(NSString*)description{
-  return @"A shop with no description";
-}
+@synthesize items;
 
 -(void)beforeTrading{}
 -(void)afterTrading{}
 
--(NSDictionary*)shopItems{return nil;}
-
 -(void)buyItem:(NSArray*)conditions{
   
   NSString *itemName = [conditions second];
-  if([[self shopItems] objectForKey:itemName] == nil) {
+  if([self.items objectForKey:itemName] == nil) {
     [WQ print:@"We don't sell %@ here", itemName];
     return;
   }
   
-  int cost = [[[self shopItems] objectForKey:itemName] intValue];
+  int cost = [[self.items objectForKey:itemName] intValue];
   Player *player = [Player sharedPlayer];
   if ( player.money < cost ){
     [WQ print:@"You do not have enough money"];
@@ -37,7 +31,7 @@
   player.money -= cost;
   
   Item *playerItem = [[NSClassFromString([itemName capitalizedString]) alloc] init];
-  if(playerItem==nil){
+  if(playerItem == nil){
     [WQ print:@"The item %@ cannot be found (Maybe you forgot to import or spelled it wrong).", itemName];
     return;
   }

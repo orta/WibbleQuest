@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		603B99C813D3C3F20001F9CD /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
 		6065BC9213D3619000F1F6D4 /* StartingRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6065BC9113D3619000F1F6D4 /* StartingRoom.m */; };
+		606B2B7513D4F5B000B90223 /* WibbleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B2B7413D4F5B000B90223 /* WibbleObject.m */; };
+		606B2B7713D4F8F100B90223 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7613D4F8F100B90223 /* TODO */; };
 		6081AB1F13D23D25007C5545 /* GoatBoy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB1E13D23D25007C5545 /* GoatBoy.m */; };
 		6081AB2313D243CD007C5545 /* Keytar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2213D243CD007C5545 /* Keytar.m */; };
 		6081AB2613D249D6007C5545 /* FloatstarPX.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2513D249D6007C5545 /* FloatstarPX.m */; };
@@ -51,6 +53,9 @@
 		603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray-named-captures.m"; path = "Categories/NSArray-named-captures.m"; sourceTree = "<group>"; };
 		6065BC9013D3619000F1F6D4 /* StartingRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartingRoom.h; path = Rooms/StartingRoom.h; sourceTree = "<group>"; };
 		6065BC9113D3619000F1F6D4 /* StartingRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartingRoom.m; path = Rooms/StartingRoom.m; sourceTree = "<group>"; };
+		606B2B7313D4F5AF00B90223 /* WibbleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WibbleObject.h; sourceTree = "<group>"; };
+		606B2B7413D4F5B000B90223 /* WibbleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleObject.m; sourceTree = "<group>"; };
+		606B2B7613D4F8F100B90223 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		6081AB1D13D23D25007C5545 /* GoatBoy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoatBoy.h; path = People/GoatBoy.h; sourceTree = "<group>"; };
 		6081AB1E13D23D25007C5545 /* GoatBoy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoatBoy.m; path = People/GoatBoy.m; sourceTree = "<group>"; };
 		6081AB2113D243CD007C5545 /* Keytar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Keytar.h; path = Items/Keytar.h; sourceTree = "<group>"; };
@@ -172,6 +177,7 @@
 				60CC9EF713C9D5C0006D116C /* WibbleQuest */,
 				609B9FD213C901E200888A6E /* Boilerplate */,
 				60A1E12313D218AB00F42A84 /* README */,
+				606B2B7613D4F8F100B90223 /* TODO */,
 			);
 			name = "Text Adventure Game";
 			path = MyBoots;
@@ -304,6 +310,8 @@
 				60CC9EFB13C9D5C0006D116C /* Item.m */,
 				60CC9EFC13C9D5C0006D116C /* Room.h */,
 				60CC9EFD13C9D5C0006D116C /* Room.m */,
+				606B2B7313D4F5AF00B90223 /* WibbleObject.h */,
+				606B2B7413D4F5B000B90223 /* WibbleObject.m */,
 			);
 			name = "Root Objects";
 			sourceTree = "<group>";
@@ -402,6 +410,7 @@
 				609B9FE013C9059100888A6E /* SettingsViewController.xib in Resources */,
 				60CC9F1113C9E40D006D116C /* index.html in Resources */,
 				60A1E12413D218AB00F42A84 /* README in Resources */,
+				606B2B7713D4F8F100B90223 /* TODO in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +448,7 @@
 				603B99C813D3C3F20001F9CD /* NSArray-named-captures.m in Sources */,
 				6F36C4E113D3D03F003387F7 /* Store.m in Sources */,
 				6F36C4E613D3D079003387F7 /* RockShop.m in Sources */,
+				606B2B7513D4F5B000B90223 /* WibbleObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

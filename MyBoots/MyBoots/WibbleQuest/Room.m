@@ -10,7 +10,7 @@
 
 @implementation Room
 
-@synthesize  name, description, id, north, east, west, south, items = _items, encounter, person, visited, shop;
+@synthesize  north, east, west, south, items = _items, encounter, person, visited, shop;
 
 -(id)init{
   self = [super init];
@@ -102,6 +102,7 @@
     if (itemDescription != nil) {
       [WQ print:@"%@", itemDescription];  
     }else{
+      //TODO : look in inventory
       [WQ print:@"Could not find a %@ in this room", key];
     }
   }else{

@@ -10,11 +10,7 @@
 
 @class Creature, Item, Person, Store;
 
-@interface Room : NSObject
-
-@property (retain) NSString* name;
-@property (retain) NSString* description;
-@property (retain) NSString* id;
+@interface Room : WibbleObject
 
 @property (retain) Room* north;
 @property (retain) Room* east;

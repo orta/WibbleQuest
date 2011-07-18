@@ -3,7 +3,7 @@ Hello there!
 I want to :
 
 Write on the screen
---
+-------------------------------
 Depending on what style of text you'll want to use these 5 commands on WQ
 
 +(void) print:(NSString*)string, ...;
@@ -16,9 +16,6 @@ e.g.
 [WQ say:@"orta" words:@"hello there"];
 [WQ print:@"looks like you picked up %i shoes", shoesCount];
 [WQ heading:@"and so the story ends"];
-
-
-[WibbleQuest sharedWibble].currentRoom
 
 
 Find out what room I'm in 
@@ -52,6 +49,26 @@ If you want to control whether they can leave or join a room, you can override
 which expect a bool as to whether you can move out or in. These do not say anything so that's left to the room to deal with informing the player why.
 
 
+Give a room an Command
+-------------------------------
+Say you have a switch in your room, you can add commands by overriding didRespondToCommand: (this is the same way that Items/People/Creatures/Stores do it! )
+
+-(BOOL)didRespondToCommand:(NSArray*)commandArray {
+NSString * command = [commandArray first];
+if ([@"play" isEqualToString:command]) {
+[WQ print:@"You rock out on the Keytar for a while playing some George Michaels, no one seems to pay any attention though"];
+return YES;
+}
+return NO;
+}
+
+
+Move to another room
+-------------------------------
+
+You can use teleport to room with ID, make sure to have done [wq addRoom: room] and that the room has an id and everything should be fine
+
+[Player teleportToRoomWithID:@"magicroom"];
 
 Add a Person to talk to in a room
 -------------------------------
@@ -67,7 +84,7 @@ Make them respond to words that are said by using
 
 
 make a person give you something
---
+-------------------------------
 You can just add an item to the players inventory for example like below
 
 if([sentence contains:@"mic", @"mics", @"microphone", @"microphones", nil] ){
@@ -77,6 +94,17 @@ if([sentence contains:@"mic", @"mics", @"microphone", @"microphones", nil] ){
   [wibble.inventory addItem: mic];
   
   return;
+}
+
+
+Make it posible to examine things in the room
+--
+You need to subclass the Room object and add the method dictionaryForExamine. For example, this one says something if you write "examine clothes" in the room.
+
+-(NSDictionary*)dictionaryForExamine {
+return [NSDictionary dictionaryWithObjectsAndKeys:
+@"The pile of clothes are covered in sweat, you don't really want to touch it", @"clothes",
+nil];
 }
 
 
@@ -100,7 +128,7 @@ override onPickup in your class
 }
 
 
-Allow the player to use and object
+Allow the player to use an object
 --
 override the method and that will be called when the player does "use [item]"
 -(void)onUse{}
@@ -113,7 +141,7 @@ You want the Item to override did respond to command. In this example it looks t
 
 -(BOOL)didRespondToCommand:(NSArray*)commandArray {
   NSString * command = [commandArray first];
-  if ([@"play" isEqualToString:commands]) {
+  if ([@"play" isEqualToString:command]) {
     [WQ print:@"You rock out on the Keytar for a while playing some George Michaels, no one seems to pay any attention though"];
     return YES;
   }
@@ -123,7 +151,7 @@ You want the Item to override did respond to command. In this example it looks t
 
 
 Make a person that you can talk to
---
+-------------------------------
 Create a subclass of Person, make them respond using the following method
 
 -(void)respondToSentenceArray:(NSArray*)sentence;
@@ -132,15 +160,14 @@ you can use the helpful method array contains to allow people to dig deeply into
 
 
 Make a person say Hello the first time you enter a room
---
+-------------------------------
 In your person subclass override 
 -(void)playerEntersSameRoom {}
 and make it say something
 
 
 Create something to fight
---
-
+-------------------------------
 First you need to have your player have some health, and a damageRange. I add this to my ready function.
 
 Player * player = [Player sharedPlayer];

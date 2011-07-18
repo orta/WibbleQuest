@@ -16,4 +16,15 @@
           nil];
 }
 
+-(BOOL)didRespondToCommand:(NSArray*)commandArray {
+  NSString * command = [commandArray first];
+  if ([@"sleep" isEqualToString:command]) {
+    [WQ print:@"Sleeping probably isn't the smartest move right now."];
+    return YES;
+  }
+  return NO;
+}
+
+
+
 @end

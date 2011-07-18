@@ -8,15 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Creature : NSObject
+@interface Creature : WibbleObject
 
 @property () int health;
 @property () int maxHealth;
 
 @property () NSRange damageRange;
-
-@property (retain, nonatomic) NSString * name;
-@property (retain, nonatomic) NSString * description;
 
 @property () BOOL fighting;
 @property () BOOL fightable;

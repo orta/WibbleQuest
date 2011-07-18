@@ -21,6 +21,6 @@
 -(BOOL)hasItem:(NSString*) itemID;
 
 
--(BOOL)respondToCommand:(NSArray*) commands;
+-(BOOL)didRespondToCommand:(NSArray*) commands;
 
 @end
