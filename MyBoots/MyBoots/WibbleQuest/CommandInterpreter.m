@@ -203,7 +203,7 @@
     [wq command:@"Start a fight with something hostile."];
     
     [wq print: @"say"];
-    [wq command:@"Talk some."];
+    [wq command:@"Talk to something or somebody."];
 
   }
 }
