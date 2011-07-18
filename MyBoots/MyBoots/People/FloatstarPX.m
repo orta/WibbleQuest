@@ -18,6 +18,11 @@
 }
 
 -(void)respondToSentenceArray:(NSArray*)sentence {
+  if([sentence contains:@"it's over", @"trog dor", nil] ){
+    [WQ say:@"FloatstarPX" words:@"magic"];
+    return;
+  }
+  
   if([sentence contains:@"hi", @"hello", nil] ){
     [WQ say:@"FloatstarPX" words:@"Yo, I'm trying to get all our wires sorted, the owner said that our support band might be giving us some trouble. They want us to support them, should we?"];
     return;

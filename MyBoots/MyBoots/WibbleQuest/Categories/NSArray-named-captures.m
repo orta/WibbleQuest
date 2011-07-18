@@ -12,7 +12,7 @@
 
 - (id)first{
   if ([self count] > 0) {
-    return [self first];
+    return [self objectAtIndex:0];
   }
   return nil;
 }

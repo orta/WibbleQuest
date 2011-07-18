@@ -22,9 +22,14 @@
     
   NSArray * words = [newContentString componentsSeparatedByString:@"^"];
   for (NSString * word in words) {
-    if ([newContentString rangeOfString:word].location != NSNotFound) {
-      return YES;
+    if ([newContentString rangeOfString:@" "].location != NSNotFound) {
+      // is there a space in the nsstring given?
+      NSString * selfString = [self componentsJoinedByString:@" "];
+      if ([selfString rangeOfString:word].location != NSNotFound) {
+        return YES;
+      }
     }
+
     if ([self containsObject:word]) {
       return YES;
     } 
