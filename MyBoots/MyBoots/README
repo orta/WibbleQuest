@@ -11,6 +11,20 @@ openingRoom.description = @"There are clothes all over the floor, and you can he
 [wq addRoom:openingRoom];
 
 
+Make a room do something when you enter it
+--------------------------------
+Make a room subclass, in it you can the override which will let you act when they leave / join
+
+-(void)playerDidEnterRoom{}
+-(void)playerDidLeaveRoom{}
+
+If you want to control whether they can leave or join a room, you can override
+
+-(BOOL)playerShouldEnterRoom;
+-(BOOL)playerShouldLeaveRoom;
+
+which expect a bool as to whether you can move out or in. These do not say anything so that's left to the room to deal with informing the player why.
+
 Add a Person to talk to in a room
 -------------------------------
 Create the person's class, as a subclass of Person
@@ -23,10 +37,30 @@ Make them respond to words that are said by using
   }
 }
 
-Make an item that you can pick up
+make a person give you something
+--
+You can just add an item to the players inventory for example like below
+
+if([sentence contains:@"mic", @"mics", @"microphone", @"microphones", nil] ){
+  [WQ say:@"FloatstarPX" words:@"Ah yeah, the microphones, I spotted them earlier, here you go"];
+  Microphone *mic = [[Microphone alloc] init];
+  WibbleQuest * wibble = [WibbleQuest sharedWibble];
+  [wibble.inventory addItem: mic];
+  
+  return;
+}
+
+
+Make an item that you can pick up in a room
 ---------------------------------
-Create an Item subclass,
+Create an Item subclass, add it to a room's inventory, it can have multiple items.
  
+Room * bathroom = [[Room alloc] init];
+bathroom.name = @"Bathroom"; 
+Keytar *keytar = [[Keytar alloc] init];
+[bathroom addItem:keytar];  
+
+
 
 Make an item do something when picked up
 ---------------------------------
@@ -38,5 +72,22 @@ override onPickup in your class
 
 Make an item do a command
 ---------------------------------
+
+
+Make a person that you can talk to
+--
+
+Create a subclass of Person, make them respond using the following method
+
+-(void)respondToSentenceArray:(NSArray*)sentence;
+
+
+Make a person say Hello the first time you enter a room
+--
+In your person subclass override 
+-(void)playerEntersSameRoom {}
+and make it say something
+
+
 
 Items can have their own commands if they support 

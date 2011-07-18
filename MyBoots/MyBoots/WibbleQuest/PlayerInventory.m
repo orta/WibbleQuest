@@ -18,11 +18,9 @@
 }
 
 -(BOOL) respondToCommand:(NSArray*) commands {
-  // NSString * command = [commands componentsJoinedByString:@" "];
   if ( [commands count] > 1 && [self hasItem: [commands objectAtIndex:1]] ) {
     Item *item = [self getItem:[commands objectAtIndex:1]];
     return [item didRespondToCommand:commands];
-    
   }  
   return NO;
 }

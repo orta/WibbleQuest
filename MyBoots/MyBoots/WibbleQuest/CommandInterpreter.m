@@ -121,6 +121,11 @@
       }
     }
     
+    
+    if([wq.inventory respondToCommand:parameters]){
+      return;
+    }
+      
     if([wq.inventory hasItem:command]){
       Item * item = [wq.inventory getItem:command];
       [wq print: item.description];

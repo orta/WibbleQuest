@@ -32,7 +32,7 @@
 
 - (void) drink{
   if (drinksLeft > 0) {
-    drinksLeft = drinksLeft--;
+    drinksLeft = drinksLeft - 1;
     [WQ print:@"You take a swig from your Bubba, the water is pretty refreshing"];
   }else{
     [WQ print:@"Oh.. Looks like Bubba is empty."]; 
