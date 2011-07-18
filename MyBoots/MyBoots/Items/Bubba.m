@@ -26,10 +26,6 @@
   [WQ print:@"Bubba sloshes as you pick up his weighty cylindrical self"];
 }
 
--(NSArray*) commands{
- return [NSArray arrayWithObjects:@"drink", @"imbibe", @"consume", nil];
-}
-
 - (void) drink{
   if (drinksLeft > 0) {
     drinksLeft = drinksLeft - 1;

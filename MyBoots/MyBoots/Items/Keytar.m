@@ -25,10 +25,6 @@
   [WQ print:@"You put the strap over your head and swing the Keytar over to your back."];
 }
 
--(NSArray*) commands{
-  return [NSArray arrayWithObjects:@"play", nil];
-}
-
 -(BOOL)didRespondToCommand:(NSArray*)commandArray {
   NSString * command = [commandArray objectAtIndex:0];
   NSArray *commands = [NSArray arrayWithObjects:@"play", nil];
