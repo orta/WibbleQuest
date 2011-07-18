@@ -29,7 +29,7 @@
   string = [string lowercaseString];
   NSArray * parameters = [string componentsSeparatedByString:@" "];
   if ([parameters count] > 0) {
-    NSString * command = [parameters objectAtIndex:0];
+    NSString * command = [parameters first];
     
     if([@"help" isEqualToString:command]){
       [self help];
@@ -38,11 +38,11 @@
     
     // support 'go north'
     if ([@"go" isEqualToString:command]) {
-        command = [parameters objectAtIndex:1];
+        command = [parameters second];
         
       // support 'go to north'
         if ([@"to" isEqualToString:command]) {
-          command = [parameters objectAtIndex:2]; 
+          command = [parameters third]; 
         }
       }
     
@@ -76,6 +76,13 @@
       [wq.inventory describeInventory];
       return;
     }
+
+    if([@"use" isEqualToString:command] || [@"u" isEqualToString:command]){
+      Item *item = [wq.inventory getItem:[parameters second]];
+      [item onUse];
+      return;
+    }
+
     
     if([@"examine" isEqualToString:command] || [@"x" isEqualToString:command]){
       if([parameters count] == 1){
@@ -83,7 +90,7 @@
         return;
       }
 
-      if([@"room" isEqualToString:[parameters objectAtIndex:1]]){
+      if([@"room" isEqualToString:[parameters second]]){
         [wq describeSurroundings];
         return;
       }

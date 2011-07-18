@@ -21,6 +21,6 @@
   #import "Player.h"
 
   #import "NSArray-Contains.h"
-
+  #import "NSArray-named-captures.h"
 #endif
 
