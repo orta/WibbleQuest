@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		603B99CF13D49F860001F9CD /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99CE13D49F860001F9CD /* NSArray-named-captures.m */; };
 		603FB43713D38EDA00DD37ED /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 603FB43613D38EDA00DD37ED /* Icon.png */; };
 		609B9FAD13C901D400888A6E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAC13C901D400888A6E /* UIKit.framework */; };
 		609B9FAF13C901D400888A6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAE13C901D400888A6E /* Foundation.framework */; };
@@ -38,8 +39,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		603B99CD13D49F860001F9CD /* NSArray-named-captures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray-named-captures.h"; path = "Categories/NSArray-named-captures.h"; sourceTree = "<group>"; };
+		603B99CE13D49F860001F9CD /* NSArray-named-captures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray-named-captures.m"; path = "Categories/NSArray-named-captures.m"; sourceTree = "<group>"; };
 		603FB43613D38EDA00DD37ED /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		609B9FA813C901D400888A6E /* MyBoots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MyBoots.app; path = MyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		609B9FA813C901D400888A6E /* MyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		609B9FAC13C901D400888A6E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		609B9FAE13C901D400888A6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		609B9FB013C901D400888A6E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,7 +123,7 @@
 		609B9FA913C901D400888A6E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				609B9FA813C901D400888A6E /* MyBoots.app */,
+				609B9FA813C901D400888A6E /* MyGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +244,8 @@
 		60F5129013D11FDA00978EC0 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				603B99CD13D49F860001F9CD /* NSArray-named-captures.h */,
+				603B99CE13D49F860001F9CD /* NSArray-named-captures.m */,
 				60F5129113D1200700978EC0 /* NSArray-Contains.h */,
 				60F5129213D1200700978EC0 /* NSArray-Contains.m */,
 			);
@@ -307,7 +312,7 @@
 			);
 			name = MyGame;
 			productName = MyBoots;
-			productReference = 609B9FA813C901D400888A6E /* MyBoots.app */;
+			productReference = 609B9FA813C901D400888A6E /* MyGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -375,6 +380,7 @@
 				60F5128613D1112300978EC0 /* Player.m in Sources */,
 				60F5128F13D11E7E00978EC0 /* Person.m in Sources */,
 				60F5129313D1200700978EC0 /* NSArray-Contains.m in Sources */,
+				603B99CF13D49F860001F9CD /* NSArray-named-captures.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
