@@ -18,6 +18,7 @@
 -(void) east;
 -(void) south;
 -(void)moveToRoom:(Room*)newRoom;
+-(NSArray *)removeQuestionMarks:(NSArray*)array;
 @end
 
 
@@ -109,8 +110,7 @@
         return;
       }
       
-      //TODO remove all question marks
-      
+      parameters = [self removeQuestionMarks:parameters];
       if (wq.currentRoom.person) {
         [wq.currentRoom.person respondToSentenceArray:parameters];
         return;
@@ -227,6 +227,12 @@
       [wq print:@"Could not find a %@ in the room" , objectID];
     }
   }  
+}
+
+-(NSArray *)removeQuestionMarks:(NSArray *)array{
+  NSString * stringedArray = [array componentsJoinedByString:@" "];
+  stringedArray = [stringedArray stringByReplacingOccurrencesOfString:@"?" withString:@""];
+  return [stringedArray componentsSeparatedByString:@" "];
 }
 
 @end
