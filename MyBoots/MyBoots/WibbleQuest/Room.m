@@ -68,7 +68,10 @@
 }
 
 -(void)describeShop{
-  [WQ print:[shop description]];
+  if(shop!=nil){
+    [WQ print:[shop description]];
+  }
+  [WQ print:@"There is no shop"];
 }
 
 - (void) connectNorth:(Room*)room{
