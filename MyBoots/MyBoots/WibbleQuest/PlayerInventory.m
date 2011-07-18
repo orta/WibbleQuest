@@ -18,8 +18,8 @@
 }
 
 -(BOOL) respondToCommand:(NSArray*) commands {
-  if ( [commands count] > 1 && [self hasItem: [commands objectAtIndex:1]] ) {
-    Item *item = [self getItem:[commands objectAtIndex:1]];
+  if ( [commands count] > 1 && [self hasItem: [commands second]] ) {
+    Item *item = [self getItem:[commands second]];
     return [item didRespondToCommand:commands];
   }  
   return NO;

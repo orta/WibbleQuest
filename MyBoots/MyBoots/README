@@ -112,7 +112,7 @@ Make an item do a custom command
 You want the Item to override did respond to command. In this example it looks to see if the command is play and if it is, it says something. We the  return YES, otherwise it will continue to look for other commands.
 
 -(BOOL)didRespondToCommand:(NSArray*)commandArray {
-  NSString * command = [commandArray objectAtIndex:0];
+  NSString * command = [commandArray first];
   if ([@"play" isEqualToString:commands]) {
     [WQ print:@"You rock out on the Keytar for a while playing some George Michaels, no one seems to pay any attention though"];
     return YES;

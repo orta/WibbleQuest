@@ -12,7 +12,7 @@
 @implementation Store
 
 -(NSString*)description{
-  return @"A shop";
+  return @"A shop with no description";
 }
 
 -(void)beforeTrading{}
@@ -22,9 +22,9 @@
 
 -(void)buyItem:(NSArray*)conditions{
   
-  NSString *itemName = [conditions objectAtIndex:1];
+  NSString *itemName = [conditions second];
   if([[self shopItems] objectForKey:itemName] == nil) {
-    [WQ print:[NSString stringWithFormat:@"We don't sell %@ here",[conditions objectAtIndex:1]]];
+    [WQ print:@"We don't sell %@ here", itemName];
     return;
   }
   
@@ -38,7 +38,7 @@
   
   Item *playerItem = [[NSClassFromString([itemName capitalizedString]) alloc] init];
   if(playerItem==nil){
-    [WQ print:[NSString stringWithFormat:@"The item %@ cannot be found(Forgot to import or spelled it wrong). I am talking to you Mr./Mrs. Developer",itemName]];
+    [WQ print:@"The item %@ cannot be found (Maybe you forgot to import or spelled it wrong).", itemName];
     return;
   }
   [[WibbleQuest sharedWibble].inventory addItem:playerItem];

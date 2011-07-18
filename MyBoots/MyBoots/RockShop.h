@@ -9,9 +9,5 @@
 #import <Foundation/Foundation.h>
 
 
-@interface RockShop : Store {
-    
-}
-
-
+@interface RockShop : Store {}
 @end

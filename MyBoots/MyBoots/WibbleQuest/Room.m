@@ -97,7 +97,7 @@
 -(void)examineWithInput:(NSString*)input{
   NSArray * commands = [input componentsSeparatedByString:@" "];
   if ([commands count] > 1) {
-    NSString * key = [commands objectAtIndex:1];    
+    NSString * key = [commands second];    
     NSString * itemDescription = [[self dictionaryForExamine] objectForKey:key];
     if (itemDescription != nil) {
       [WQ print:@"%@", itemDescription];  

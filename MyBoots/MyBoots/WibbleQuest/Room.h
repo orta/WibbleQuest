@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class Creature, Item, Person, Shop;
+@class Creature, Item, Person, Store;
 
 @interface Room : NSObject
 
@@ -21,7 +21,7 @@
 @property (retain) Room* south;
 @property (retain) Room* west;
 
-@property (retain) Shop* shop;
+@property (retain) Store* shop;
 
 @property (retain) NSArray *items;
 @property (retain) Creature *encounter;
@@ -41,7 +41,6 @@
 - (void) connectWest:(Room*)room;
 - (void) connectEast:(Room*)room;
 
--(void) setShop:(Shop*)shop;
 -(void)describeShop;
 -(void)buyItem:(NSArray*)parameter;
 -(NSDictionary *)dictionaryForExamine;

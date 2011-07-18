@@ -39,8 +39,8 @@
   openingRoom.id = @"spawn";
   openingRoom.name = @"Backstage, at the venue.";
   openingRoom.description = @"There are clothes all over the floor, and you can hear people practicing through the northern.";
-  Shop *rockShop=[[RockShop alloc] init];
-  openingRoom.shop=rockShop;
+  RockShop *rockShop = [[RockShop alloc] init];
+  openingRoom.shop = rockShop;
   
   Room * hallwayCenter = [[Room alloc] init];
   hallwayCenter.id = @"hallway";

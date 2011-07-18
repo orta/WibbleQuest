@@ -40,7 +40,7 @@
 }
 
 -(BOOL)didRespondToCommand:(NSArray*)commandArray {
-  NSString * command = [commandArray objectAtIndex:0];
+  NSString * command = [commandArray first];
   NSArray *commands = [NSArray arrayWithObjects:@"drink", @"imbibe", @"consume", nil];
   if ([commands containsObject:command]) {
     [self drink];  
