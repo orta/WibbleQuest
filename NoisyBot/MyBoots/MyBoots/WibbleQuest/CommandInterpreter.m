@@ -121,8 +121,7 @@
       return;
     }
     
-    if([@"say" isEqualToString:command] || [@"s" isEqualToString:command] ||
-       [@"ask" isEqualToString:command]){
+    if([@"say" isEqualToString:command] || [@"s" isEqualToString:command]){
       if([parameters count] == 1){
         [wq print:@"What do you want to say?"];
         return;
@@ -138,7 +137,10 @@
         return;
       }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 43976cc1bb34008360badf73214d8a177f00bdf8
     
     
     if([wq.inventory respondToCommand:parameters]){

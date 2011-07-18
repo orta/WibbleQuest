@@ -41,9 +41,11 @@
 - (void) connectWest:(Room*)room;
 - (void) connectEast:(Room*)room;
 
+<<<<<<< HEAD
 -(void) setShop:(Shop*)shop;
 -(void)describeShop;
 -(void)buyItem:(NSArray*)parameter;
+=======
 -(NSDictionary *)dictionaryForExamine;
 
 -(void)examineWithInput:(NSString*)input;
@@ -54,4 +56,5 @@
 -(BOOL)playerShouldLeaveRoom;
 -(void)playerDidLeaveRoom;
 
+>>>>>>> 43976cc1bb34008360badf73214d8a177f00bdf8
 @end

@@ -1,0 +1,7 @@
+task :docs do
+   puts "creating Docs"
+   `appledoc --project-name WibbleQuest --project-company ortatherox.com  --create-html MyBoots/WibbleQuest/*`
+   puts "done"
+end
+
+task :default => 'docs'

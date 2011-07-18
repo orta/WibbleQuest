@@ -68,10 +68,7 @@
 }
 
 -(void)describeShop{
-  if(shop!=nil){
-    [WQ print:[shop description]];
-  }
-  [WQ print:@"There is no shop"];
+  [WQ print:[shop description]];
 }
 
 - (void) connectNorth:(Room*)room{
@@ -94,6 +91,8 @@
   room.west = self;
 }
 
+<<<<<<< HEAD
+=======
 -(void)examineWithInput:(NSString*)input{
   NSArray * commands = [input componentsSeparatedByString:@" "];
   if ([commands count] > 1) {
@@ -118,5 +117,6 @@
 
 -(BOOL)playerShouldLeaveRoom { return YES;}
 -(void)playerDidLeaveRoom { }
+>>>>>>> 43976cc1bb34008360badf73214d8a177f00bdf8
 
 @end
