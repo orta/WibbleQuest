@@ -26,6 +26,10 @@
   [WQ print:@"Bubba sloshes as you pick up his weighty cylindrical self"];
 }
 
+-(void)onUse{
+  [self drink];
+}
+
 - (void) drink{
   if (drinksLeft > 0) {
     drinksLeft = drinksLeft - 1;
