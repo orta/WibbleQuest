@@ -18,6 +18,16 @@ e.g.
 [WQ heading:@"and so the story ends"];
 
 
+[WibbleQuest sharedWibble].currentRoom
+
+
+Find out what room I'm in 
+---
+You want to get access to the shared WibbleQuest object, and then call currentRoom on it
+
+[WibbleQuest sharedWibble].currentRoom
+
+
 Create a room
 --------------------------------
 Room * openingRoom = [[Room alloc] init];
