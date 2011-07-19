@@ -51,15 +51,15 @@ which expect a bool as to whether you can move out or in. These do not say anyth
 
 Give a room an Command
 -------------------------------
-Say you have a switch in your room, you can add commands by overriding didRespondToCommand: (this is the same way that Items/People/Creatures/Stores do it! )
+Say you have a switch in your room, you can add commands by overriding didRespondToCommand: (this is the same way that Items/People/Creatures/Stores can do it! )
 
 -(BOOL)didRespondToCommand:(NSArray*)commandArray {
-NSString * command = [commandArray first];
-if ([@"play" isEqualToString:command]) {
-[WQ print:@"You rock out on the Keytar for a while playing some George Michaels, no one seems to pay any attention though"];
-return YES;
-}
-return NO;
+  NSString * command = [commandArray first];
+  if ([@"play" isEqualToString:command]) {
+    [WQ print:@"You rock out on the Keytar for a while playing some George Michaels, no one seems to pay any attention though"];
+    return YES;
+  }
+  return NO;
 }
 
 

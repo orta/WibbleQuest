@@ -48,6 +48,11 @@
         }
 
         
+        function rotate(){
+          document.body.width = window.innerwidth;
+          return "OK"
+        }
+        
         function createElementWithText(element, text){
           var p=document.createElement(element);
           text = text.replace("`", "'");
