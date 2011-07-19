@@ -24,28 +24,69 @@
         
         </style>
       <script>
-        // these functions are called from the UIWebView
+        // these functions are called from the UIWebView, they essentially are the public methods
+        
+        function wait(time){
+          var date = new Date()
+          date.setSeconds( date.getSeconds() + time )
+          
+          function_queue.push( date );
+          executeQueue();
+        }
         
         function addParagraph(text){
-          return createElementWithText("p", text);
+          function_queue.push( wrapFunction(_addParagraph, this, [text]) );
+          executeQueue();
         }
         
         function addHeader(text){
-          return createElementWithText("h1", text);
+          function_queue.push( wrapFunction(_addHeader, this, [text]) );
+          executeQueue();
         }
         
         function addCommand(text){
-          return createElementWithText("code", text);
+          function_queue.push( wrapFunction(_addCommand, this, [text]) );
+          executeQueue();
         }
         
         function addTitle(text){
-          return createElementWithText("h3", text);
+          function_queue.push( wrapFunction(_addTitle, this, [text]) );
+          executeQueue();
         }
         
         function addSay(name, text){
+          function_queue.push( wrapFunction(_addSay, this, [name, text]) );
+          executeQueue();
+        }
+
+
+        // these babies actually do the work through, and they're the ones chucked in the processing queue
+              
+        function _addParagraph(text){
+          return createElementWithText("p", text);
+        }
+        
+        function _addParagraph(text){
+          return createElementWithText("p", text);
+        }
+        
+        function _addHeader(text){
+          return createElementWithText("h1", text);
+        }
+        
+        function _addCommand(text){
+          return createElementWithText("code", text);
+        }
+        
+        function _addTitle(text){
+          return createElementWithText("h3", text);
+        }
+        
+        function _addSay(name, text){
           createElementWithText("h4", name);
           return createElementWithText("blockquote", text);
         }
+
 
         
         function rotate(){
@@ -64,6 +105,9 @@
           return "OK"
         }
         
+        
+        
+        
         function scrollToBottom(element) {
           var currentOffset = element.scrollHeight;
           
@@ -74,6 +118,57 @@
           document.body.scrollTop += 10000000000;
         }
         
+        
+        // Javascript Queuing system
+        // http://stackoverflow.com/questions/899102/how-do-i-store-javascript-functions-in-a-queue-for-them-to-be-executed-eventually
+        // Function wrapping code.
+        // fn - reference to function.
+        // context - what you want "this" to be.
+        // params - array of parameters to pass to function.
+        
+        var wrapFunction = function(fn, context, params) {
+            return function() {
+                fn.apply(context, params);
+            };
+        }
+        
+        var function_queue = [];
+        var locked = false;
+        var timerLock = false;
+
+        var timeInterval = 100;
+
+        function executeQueue(){
+          // this stops multiple callsq to exec to not work
+          if(locked && !timerUnLock) {
+            return;
+          }
+          if (function_queue.length != 0) {
+              locked = true;
+              var next_function = function_queue.shift();
+              // try call a Date methods
+              try{
+                  next_function.getTime()
+                }catch(err){
+                  // caught error therefore
+                  // not a time object, a function
+                  next_function();
+                  setTimeout("locked=false;executeQueue()", timeInterval);   
+                  return
+                }
+                var now = new Date;
+                timerUnLock = true;
+                
+                if(now > next_function){
+                  setTimeout("timerUnLock=false;locked=false;executeQueue()", timeInterval);   
+                }else{
+                  // if it's a date, then we unlock when it's ready 
+                   // after throwing it back in the queue
+                   function_queue.push(next_function)
+                   setTimeout(executeQueue, timeInterval);
+                }               
+          }
+        }        
         </script>
   </head>
   <body>

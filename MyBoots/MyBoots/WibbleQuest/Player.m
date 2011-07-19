@@ -22,7 +22,7 @@ static Player * sharedPlayer;
   return self;
 }
 
-+(BOOL)has:(NSString*)itemID{
++(BOOL)has:(NSString*)itemID {
   return [[WibbleQuest sharedWibble].inventory hasItem:itemID];
 }
 

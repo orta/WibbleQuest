@@ -21,6 +21,11 @@
   [self execJS:function];
 }
 
+-(void)wait:(int)time{
+  NSString * function = [NSString stringWithFormat:@"wait('%f')", time];
+  [self execJS:function];
+}
+
 -(void) heading:(NSString*)string {
   string = [self sanitize:string];
   NSString * function = [NSString stringWithFormat:@"addHeader('%@')", string];

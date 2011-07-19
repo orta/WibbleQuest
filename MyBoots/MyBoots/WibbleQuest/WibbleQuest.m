@@ -53,7 +53,6 @@ static WibbleQuest *sharedWibble;
   [self print:[game gameDescription]];
   // just a neat gap
   [self heading:@""];
-  
   [self movedRoom];
 }
 

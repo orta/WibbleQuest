@@ -10,6 +10,8 @@
 
 @interface WibbleQuest (WibbleQuestPrintingCategory) 
 
+
+-(void) wait:(int)time;
 // any extra narratives
 -(void) print:(NSString*)string, ...;
 -(void) heading:(NSString*)string;

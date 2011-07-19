@@ -20,6 +20,11 @@
   [wibble print:formattedString];
 }
 
++(void) wait:(int)time {  
+  WibbleQuest *wibble = [WibbleQuest sharedWibble];
+  [wibble wait:time];
+}
+
 +(void) heading:(NSString*)string{
   WibbleQuest *wibble = [WibbleQuest sharedWibble];
   [wibble heading:string];

@@ -209,7 +209,7 @@
     [wq command:@"get an item from the current room."];
     
     [wq print: @"examine [item]"];
-    [wq command:@"examine an item either in the room."];
+    [wq command:@"examine an item in the room."];
 
     [wq print: @"look"];
     [wq command:@"look at your surroundings."];
@@ -223,6 +223,12 @@
     [wq print: @"say [words]"];
     [wq command:@"Talk to something or somebody."];
 
+    [wq print: @"shop "];
+    [wq command:@"Talk to a shop owner."];
+
+    [wq print: @"buy [item] "];
+    [wq command:@"Buy an item from a shop."];
+    
   }
 }
 

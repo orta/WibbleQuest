@@ -32,8 +32,11 @@
 
 -(void)beforeFight {
   [WQ print:@"You tell the bodyguard that you need to get onstage."];
+  [WQ wait:0.5];
   [WQ print:@"He ignores you."];
+  [WQ wait:0.5];
   [WQ print:@"Still ignoring you"];
+  [WQ wait:0.5];
   [WQ print:@"You start to try push past him, but he simply clenches his fists like he means business. Guess you're gonna have to go Brutal Techno Punk on him."];
 }
 
@@ -42,7 +45,7 @@
   Room* outside = [WQ getRoomByID:@"alley"];
   Room* finale = [WQ getRoomByID:@"finale"];
 
-  [outside connectSouth:finale];
+  [outside connectWest:finale];
   outside.description = @"The alley seems a lot lighter since the bodyguard went away, you can go north back into the bar, or west to the main stage";
   
   [WQ print:@"With a bow to your skill the Body Guard stands out of the way and you can now west onto the stage."];

@@ -30,7 +30,7 @@
   
   if([sentence contains:@"yes", @"no", nil] ){
     [WQ print:@"Float pauses"];
-    [WQ say:@"FloatstarPX" words:@"I agree, we shouldn't support them, think you can go and tell that burley looking bodyguard in the dark alley out back that for us. Thanks."];
+    [WQ say:@"FloatstarPX" words:@"I agree, we shouldn't support them, think you can go and tell that burley looking bodyguard in the dark alley to the south that for us. Thanks."];
     return;
   }  
   

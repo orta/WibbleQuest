@@ -13,7 +13,7 @@
 // This class makes it really easy to print to the screen
 // otherwise you'd have to get a copy of the shared instance
 // so you can write cleaner code
-
++(void) wait:(int)time;
 +(void) print:(NSString*)string, ...;
 +(void) say:(NSString*)name words:(NSString*)words;
 +(void) heading:(NSString*)string;
