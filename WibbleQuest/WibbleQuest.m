@@ -60,7 +60,7 @@ static WibbleQuest *sharedWibble;
 -(void) movedRoom {
   [self title:currentRoom.name];
   if(currentRoom.visited == FALSE){
-    [self print:currentRoom.description];
+    [self print:@"@%", currentRoom.description];
     [self.currentRoom describeInventory];
     currentRoom.visited = YES;
   }  
@@ -71,7 +71,7 @@ static WibbleQuest *sharedWibble;
 
 -(void) describeSurroundings {
   [self title:currentRoom.name];
-  [self print:currentRoom.description];
+  [self print:@"%@", currentRoom.description];
   [self.currentRoom describeInventory];
 }
 

@@ -28,6 +28,12 @@
 }
 
 -(void)ready {
+
+#if RUN_KIF_TESTS
+  [wq start];
+  return;
+#endif
+  
   Player * player = [Player sharedPlayer];
   player.damageRange = NSMakeRange(1, 3);
   player.maxHealth = 10;
