@@ -11,7 +11,8 @@
 #import "KIFTestScenario+EXAdditions.h"
 #import "KIFTestStep.h"
 #import "KIFTestStep+EXAdditions.h"
-
+#import "KIFTestScenario-RunCommand.h"
+#import "KIFTestScenario-RoomCommands.h"
 
 @implementation KIFTestScenario (RoomAPI)
 
@@ -40,19 +41,9 @@
     return KIFTestStepResultSuccess;
   }]];
   
-  [scenario addStep:[KIFTestStep stepToEnterText:@"north" intoViewWithAccessibilityLabel:@"Text Input"]];
-  [scenario addStep:[KIFTestStep stepToTapViewWithAccessibilityLabel:@"return"]];
-
-  [scenario addStep:[KIFTestStep stepWithDescription:@"command north takes you north" executionBlock:^(KIFTestStep *step, NSError **error) {
-    BOOL successfulReset = NO;
-    if (wq.currentRoom == [WQ getRoomByID:@"testNorth"]) {
-      successfulReset = YES;
-    }
-    KIFTestCondition(successfulReset, error, @"Failed to move to room correctly.");
-    
-    return KIFTestStepResultSuccess;
-  }]];
-
+  [scenario runCommand:@"north"];
+  [scenario checkRoomIsID:@"testNorth" because:@"testing moving north"];
+  
   return scenario;
 }
 

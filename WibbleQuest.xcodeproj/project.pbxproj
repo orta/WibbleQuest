@@ -89,6 +89,8 @@
 		60FEA1CA13D65800006997B0 /* RoomAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1C813D65800006997B0 /* RoomAPI.m */; };
 		60FEA1CB13D65867006997B0 /* WBTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1C513D6566B006997B0 /* WBTestController.m */; };
 		60FEA1CE13D65C5E006997B0 /* SettingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1CD13D65C5D006997B0 /* SettingsTests.m */; };
+		60FEA1DC13D66D8E006997B0 /* KIFTestScenario-RunCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1D913D66C44006997B0 /* KIFTestScenario-RunCommand.m */; };
+		60FEA1E113D66E1F006997B0 /* KIFTestScenario-RoomCommands.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1DF13D66E0F006997B0 /* KIFTestScenario-RoomCommands.m */; };
 		6F36C4E113D3D03F003387F7 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C4E013D3D03F003387F7 /* Store.m */; };
 		6F36C4E613D3D079003387F7 /* RockShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C4E513D3D079003387F7 /* RockShop.m */; };
 /* End PBXBuildFile section */
@@ -168,6 +170,10 @@
 		60FEA1C813D65800006997B0 /* RoomAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoomAPI.m; path = tests/RoomAPI.m; sourceTree = "<group>"; };
 		60FEA1CC13D65C5D006997B0 /* SettingsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsTests.h; path = tests/SettingsTests.h; sourceTree = "<group>"; };
 		60FEA1CD13D65C5D006997B0 /* SettingsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsTests.m; path = tests/SettingsTests.m; sourceTree = "<group>"; };
+		60FEA1D813D66C44006997B0 /* KIFTestScenario-RunCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KIFTestScenario-RunCommand.h"; path = "tests/icing/KIFTestScenario-RunCommand.h"; sourceTree = "<group>"; };
+		60FEA1D913D66C44006997B0 /* KIFTestScenario-RunCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "KIFTestScenario-RunCommand.m"; path = "tests/icing/KIFTestScenario-RunCommand.m"; sourceTree = "<group>"; };
+		60FEA1DE13D66E0F006997B0 /* KIFTestScenario-RoomCommands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KIFTestScenario-RoomCommands.h"; path = "tests/room/KIFTestScenario-RoomCommands.h"; sourceTree = "<group>"; };
+		60FEA1DF13D66E0F006997B0 /* KIFTestScenario-RoomCommands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "KIFTestScenario-RoomCommands.m"; path = "tests/room/KIFTestScenario-RoomCommands.m"; sourceTree = "<group>"; };
 		6F36C4DF13D3D03F003387F7 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
 		6F36C4E013D3D03F003387F7 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		6F36C4E413D3D079003387F7 /* RockShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RockShop.h; sourceTree = "<group>"; };
@@ -419,14 +425,34 @@
 		60FEA1C313D65598006997B0 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				60FEA1DD13D66DD8006997B0 /* Room / movement */,
+				60FEA1DB13D66C79006997B0 /* Core */,
 				60FEA1C413D6566B006997B0 /* WBTestController.h */,
 				60FEA1C513D6566B006997B0 /* WBTestController.m */,
-				60FEA1C713D65800006997B0 /* RoomAPI.h */,
-				60FEA1C813D65800006997B0 /* RoomAPI.m */,
 				60FEA1CC13D65C5D006997B0 /* SettingsTests.h */,
 				60FEA1CD13D65C5D006997B0 /* SettingsTests.m */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		60FEA1DB13D66C79006997B0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				60FEA1D813D66C44006997B0 /* KIFTestScenario-RunCommand.h */,
+				60FEA1D913D66C44006997B0 /* KIFTestScenario-RunCommand.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		60FEA1DD13D66DD8006997B0 /* Room / movement */ = {
+			isa = PBXGroup;
+			children = (
+				60FEA1C713D65800006997B0 /* RoomAPI.h */,
+				60FEA1C813D65800006997B0 /* RoomAPI.m */,
+				60FEA1DE13D66E0F006997B0 /* KIFTestScenario-RoomCommands.h */,
+				60FEA1DF13D66E0F006997B0 /* KIFTestScenario-RoomCommands.m */,
+			);
+			name = "Room / movement";
 			sourceTree = "<group>";
 		};
 		6F36C4E313D3D06D003387F7 /* Shop */ = {
@@ -607,6 +633,8 @@
 				60FEA1CA13D65800006997B0 /* RoomAPI.m in Sources */,
 				60FEA1CB13D65867006997B0 /* WBTestController.m in Sources */,
 				60FEA1CE13D65C5E006997B0 /* SettingsTests.m in Sources */,
+				60FEA1DC13D66D8E006997B0 /* KIFTestScenario-RunCommand.m in Sources */,
+				60FEA1E113D66E1F006997B0 /* KIFTestScenario-RoomCommands.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
