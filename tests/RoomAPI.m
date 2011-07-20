@@ -17,9 +17,12 @@
 
 + (id)testRoomAPI {
   
+  
   KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:@"Testing that you can go north."];
   [scenario addStep:[KIFTestStep stepToWaitForTappableViewWithAccessibilityLabel:@"Text Input"]];
   [scenario addStep:[KIFTestStep stepToEnterText:@"north" intoViewWithAccessibilityLabel:@"Text Input"]];  
+  
+  
   return scenario;
 }
 

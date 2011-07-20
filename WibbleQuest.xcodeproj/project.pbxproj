@@ -213,10 +213,9 @@
 			children = (
 				60FEA1C313D65598006997B0 /* Tests */,
 				60CC9EF713C9D5C0006D116C /* WibbleQuest */,
-				609B9FB213C901D400888A6E /* A Text Adventure Game */,
+				609B9FB213C901D400888A6E /* Kierononon Quest */,
 				609B9FB313C901D400888A6E /* Supporting Files */,
 				609B9FA913C901D400888A6E /* Products */,
-				60FEA1C013D653F1006997B0 /* Kieronon on copy-Info.plist */,
 				60FEA1C113D6541D006997B0 /* libKIF.a */,
 			);
 			sourceTree = "<group>";
@@ -241,15 +240,16 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		609B9FB213C901D400888A6E /* A Text Adventure Game */ = {
+		609B9FB213C901D400888A6E /* Kierononon Quest */ = {
 			isa = PBXGroup;
 			children = (
+				60FEA1C013D653F1006997B0 /* Kieronon on copy-Info.plist */,
 				609B9FAB13C901D400888A6E /* Frameworks */,
 				60F49DCE13CBD32E00BDB07C /* Game */,
 				609B9FD213C901E200888A6E /* Boilerplate */,
 				60A1E12313D218AB00F42A84 /* README */,
 			);
-			name = "A Text Adventure Game";
+			name = "Kierononon Quest";
 			path = KieronononGame;
 			sourceTree = "<group>";
 		};
