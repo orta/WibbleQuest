@@ -7,8 +7,11 @@
 //
 
 #import "MyBootsAppDelegate.h"
-
 #import "GameViewController.h"
+
+#if RUN_KIF_TESTS
+#import "WBTestController.h"
+#endif
 
 @implementation MyBootsAppDelegate
 
@@ -17,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  
     // Override point for customization after application launch.
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
@@ -26,6 +30,16 @@
   }
   self.window.rootViewController = self.mainViewController;
     [self.window makeKeyAndVisible];
+  
+#if RUN_KIF_TESTS
+  NSLog(@"%@", [WBTestController sharedInstance]);
+  [[WBTestController sharedInstance] startTestingWithCompletionBlock:^{
+    // Exit after the tests complete so that CI knows we're done
+    exit([[WBTestController sharedInstance] failureCount]);
+  }];
+#endif
+
+  
     return YES;
 }
 

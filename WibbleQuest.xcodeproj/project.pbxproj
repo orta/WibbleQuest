@@ -45,6 +45,50 @@
 		60F5128F13D11E7E00978EC0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128E13D11E7D00978EC0 /* Person.m */; };
 		60F5129313D1200700978EC0 /* NSArray-Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5129213D1200700978EC0 /* NSArray-Contains.m */; };
 		60F512A213D1E59800978EC0 /* BodyGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F512A113D1E59800978EC0 /* BodyGuard.m */; };
+		60FEA19113D653F0006997B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FB813C901D400888A6E /* main.m */; };
+		60FEA19213D653F0006997B0 /* MyBootsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */; };
+		60FEA19313D653F0006997B0 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBF13C901D400888A6E /* GameViewController.m */; };
+		60FEA19413D653F0006997B0 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FC213C901D400888A6E /* SettingsViewController.m */; };
+		60FEA19513D653F0006997B0 /* Creature.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EF913C9D5C0006D116C /* Creature.m */; };
+		60FEA19613D653F0006997B0 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFB13C9D5C0006D116C /* Item.m */; };
+		60FEA19713D653F0006997B0 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFD13C9D5C0006D116C /* Room.m */; };
+		60FEA19813D653F0006997B0 /* WibbleQuest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFF13C9D5C0006D116C /* WibbleQuest.m */; };
+		60FEA19913D653F0006997B0 /* WibbleQuestViewHandlingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F0113C9D5C0006D116C /* WibbleQuestViewHandlingCategory.m */; };
+		60FEA19A13D653F0006997B0 /* MyBootsGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F0C13C9DD01006D116C /* MyBootsGame.m */; };
+		60FEA19B13D653F0006997B0 /* WibbleQuestPrintingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F1A13C9F3CB006D116C /* WibbleQuestPrintingCategory.m */; };
+		60FEA19C13D653F0006997B0 /* CommandInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */; };
+		60FEA19D13D653F0006997B0 /* Bubba.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD213CBD35F00BDB07C /* Bubba.m */; };
+		60FEA19E13D653F0006997B0 /* PlayerInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD513CBD42C00BDB07C /* PlayerInventory.m */; };
+		60FEA19F13D653F0006997B0 /* WQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DDC13CBD76300BDB07C /* WQ.m */; };
+		60FEA1A013D653F0006997B0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128513D1112300978EC0 /* Player.m */; };
+		60FEA1A113D653F0006997B0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128E13D11E7D00978EC0 /* Person.m */; };
+		60FEA1A213D653F0006997B0 /* NSArray-Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5129213D1200700978EC0 /* NSArray-Contains.m */; };
+		60FEA1A313D653F0006997B0 /* BodyGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F512A113D1E59800978EC0 /* BodyGuard.m */; };
+		60FEA1A413D653F0006997B0 /* GoatBoy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB1E13D23D25007C5545 /* GoatBoy.m */; };
+		60FEA1A513D653F0006997B0 /* Keytar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2213D243CD007C5545 /* Keytar.m */; };
+		60FEA1A613D653F0006997B0 /* FloatstarPX.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2513D249D6007C5545 /* FloatstarPX.m */; };
+		60FEA1A713D653F0006997B0 /* Microphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2813D24B87007C5545 /* Microphone.m */; };
+		60FEA1A813D653F0006997B0 /* StartingRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6065BC9113D3619000F1F6D4 /* StartingRoom.m */; };
+		60FEA1A913D653F0006997B0 /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
+		60FEA1AA13D653F0006997B0 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C4E013D3D03F003387F7 /* Store.m */; };
+		60FEA1AB13D653F0006997B0 /* RockShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C4E513D3D079003387F7 /* RockShop.m */; };
+		60FEA1AC13D653F0006997B0 /* WibbleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B2B7413D4F5B000B90223 /* WibbleObject.m */; };
+		60FEA1AE13D653F0006997B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAC13C901D400888A6E /* UIKit.framework */; };
+		60FEA1AF13D653F0006997B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAE13C901D400888A6E /* Foundation.framework */; };
+		60FEA1B013D653F0006997B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FB013C901D400888A6E /* CoreGraphics.framework */; };
+		60FEA1B213D653F0006997B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FB513C901D400888A6E /* InfoPlist.strings */; };
+		60FEA1B313D653F0006997B0 /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */; };
+		60FEA1B413D653F0006997B0 /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC713C901D400888A6E /* MainViewController_iPad.xib */; };
+		60FEA1B513D653F0006997B0 /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FCA13C901D400888A6E /* FlipsideViewController.xib */; };
+		60FEA1B613D653F0006997B0 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
+		60FEA1B713D653F0006997B0 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
+		60FEA1B813D653F0006997B0 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 60A1E12313D218AB00F42A84 /* README */; };
+		60FEA1B913D653F0006997B0 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7613D4F8F100B90223 /* TODO */; };
+		60FEA1BA13D653F0006997B0 /* initialIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* initialIcon.png */; };
+		60FEA1C213D6541D006997B0 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FEA1C113D6541D006997B0 /* libKIF.a */; };
+		60FEA1CA13D65800006997B0 /* RoomAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1C813D65800006997B0 /* RoomAPI.m */; };
+		60FEA1CB13D65867006997B0 /* WBTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1C513D6566B006997B0 /* WBTestController.m */; };
+		60FEA1CE13D65C5E006997B0 /* SettingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1CD13D65C5D006997B0 /* SettingsTests.m */; };
 		6F36C4E113D3D03F003387F7 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C4E013D3D03F003387F7 /* Store.m */; };
 		6F36C4E613D3D079003387F7 /* RockShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C4E513D3D079003387F7 /* RockShop.m */; };
 /* End PBXBuildFile section */
@@ -115,6 +159,15 @@
 		60F5129213D1200700978EC0 /* NSArray-Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray-Contains.m"; path = "Categories/NSArray-Contains.m"; sourceTree = "<group>"; };
 		60F512A013D1E59800978EC0 /* BodyGuard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BodyGuard.h; path = Creatures/BodyGuard.h; sourceTree = "<group>"; };
 		60F512A113D1E59800978EC0 /* BodyGuard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BodyGuard.m; path = Creatures/BodyGuard.m; sourceTree = "<group>"; };
+		60FEA1BE13D653F0006997B0 /* WibbleTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WibbleTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60FEA1C013D653F1006997B0 /* Kieronon on copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Kieronon on copy-Info.plist"; path = "/Users/orta/spiel/iphone/WibbleQuest/Kieronon on copy-Info.plist"; sourceTree = "<absolute>"; };
+		60FEA1C113D6541D006997B0 /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "vendor/KIF/build/Release-iphoneos/libKIF.a"; sourceTree = "<group>"; };
+		60FEA1C413D6566B006997B0 /* WBTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBTestController.h; path = tests/WBTestController.h; sourceTree = "<group>"; };
+		60FEA1C513D6566B006997B0 /* WBTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBTestController.m; path = tests/WBTestController.m; sourceTree = "<group>"; };
+		60FEA1C713D65800006997B0 /* RoomAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoomAPI.h; path = tests/RoomAPI.h; sourceTree = "<group>"; };
+		60FEA1C813D65800006997B0 /* RoomAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoomAPI.m; path = tests/RoomAPI.m; sourceTree = "<group>"; };
+		60FEA1CC13D65C5D006997B0 /* SettingsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsTests.h; path = tests/SettingsTests.h; sourceTree = "<group>"; };
+		60FEA1CD13D65C5D006997B0 /* SettingsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsTests.m; path = tests/SettingsTests.m; sourceTree = "<group>"; };
 		6F36C4DF13D3D03F003387F7 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
 		6F36C4E013D3D03F003387F7 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		6F36C4E413D3D079003387F7 /* RockShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RockShop.h; sourceTree = "<group>"; };
@@ -129,6 +182,17 @@
 				609B9FAD13C901D400888A6E /* UIKit.framework in Frameworks */,
 				609B9FAF13C901D400888A6E /* Foundation.framework in Frameworks */,
 				609B9FB113C901D400888A6E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60FEA1AD13D653F0006997B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60FEA1C213D6541D006997B0 /* libKIF.a in Frameworks */,
+				60FEA1AE13D653F0006997B0 /* UIKit.framework in Frameworks */,
+				60FEA1AF13D653F0006997B0 /* Foundation.framework in Frameworks */,
+				60FEA1B013D653F0006997B0 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,11 +211,13 @@
 		609B9F9D13C901D400888A6E = {
 			isa = PBXGroup;
 			children = (
+				60FEA1C313D65598006997B0 /* Tests */,
 				60CC9EF713C9D5C0006D116C /* WibbleQuest */,
-				609B9FB213C901D400888A6E /* Text Adventure Game */,
+				609B9FB213C901D400888A6E /* A Text Adventure Game */,
 				609B9FB313C901D400888A6E /* Supporting Files */,
-				609B9FAB13C901D400888A6E /* Frameworks */,
 				609B9FA913C901D400888A6E /* Products */,
+				60FEA1C013D653F1006997B0 /* Kieronon on copy-Info.plist */,
+				60FEA1C113D6541D006997B0 /* libKIF.a */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				609B9FA813C901D400888A6E /* Kieronon on.app */,
+				60FEA1BE13D653F0006997B0 /* WibbleTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,16 +238,18 @@
 				609B9FB013C901D400888A6E /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		609B9FB213C901D400888A6E /* Text Adventure Game */ = {
+		609B9FB213C901D400888A6E /* A Text Adventure Game */ = {
 			isa = PBXGroup;
 			children = (
+				609B9FAB13C901D400888A6E /* Frameworks */,
 				60F49DCE13CBD32E00BDB07C /* Game */,
 				609B9FD213C901E200888A6E /* Boilerplate */,
 				60A1E12313D218AB00F42A84 /* README */,
 			);
-			name = "Text Adventure Game";
+			name = "A Text Adventure Game";
 			path = KieronononGame;
 			sourceTree = "<group>";
 		};
@@ -347,6 +416,19 @@
 			name = Niceities;
 			sourceTree = "<group>";
 		};
+		60FEA1C313D65598006997B0 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				60FEA1C413D6566B006997B0 /* WBTestController.h */,
+				60FEA1C513D6566B006997B0 /* WBTestController.m */,
+				60FEA1C713D65800006997B0 /* RoomAPI.h */,
+				60FEA1C813D65800006997B0 /* RoomAPI.m */,
+				60FEA1CC13D65C5D006997B0 /* SettingsTests.h */,
+				60FEA1CD13D65C5D006997B0 /* SettingsTests.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
 		6F36C4E313D3D06D003387F7 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +458,23 @@
 			productReference = 609B9FA813C901D400888A6E /* Kieronon on.app */;
 			productType = "com.apple.product-type.application";
 		};
+		60FEA18F13D653F0006997B0 /* Wibble Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60FEA1BB13D653F0006997B0 /* Build configuration list for PBXNativeTarget "Wibble Tests" */;
+			buildPhases = (
+				60FEA19013D653F0006997B0 /* Sources */,
+				60FEA1AD13D653F0006997B0 /* Frameworks */,
+				60FEA1B113D653F0006997B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Wibble Tests";
+			productName = MyBoots;
+			productReference = 60FEA1BE13D653F0006997B0 /* WibbleTests.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -397,6 +496,7 @@
 			projectRoot = "";
 			targets = (
 				609B9FA713C901D400888A6E /* Kieronon on */,
+				60FEA18F13D653F0006997B0 /* Wibble Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -415,6 +515,22 @@
 				60A1E12413D218AB00F42A84 /* README in Resources */,
 				606B2B7713D4F8F100B90223 /* TODO in Resources */,
 				606B2B7B13D5282B00B90223 /* initialIcon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60FEA1B113D653F0006997B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60FEA1B213D653F0006997B0 /* InfoPlist.strings in Resources */,
+				60FEA1B313D653F0006997B0 /* MainViewController_iPhone.xib in Resources */,
+				60FEA1B413D653F0006997B0 /* MainViewController_iPad.xib in Resources */,
+				60FEA1B513D653F0006997B0 /* FlipsideViewController.xib in Resources */,
+				60FEA1B613D653F0006997B0 /* SettingsViewController.xib in Resources */,
+				60FEA1B713D653F0006997B0 /* index.html in Resources */,
+				60FEA1B813D653F0006997B0 /* README in Resources */,
+				60FEA1B913D653F0006997B0 /* TODO in Resources */,
+				60FEA1BA13D653F0006997B0 /* initialIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +569,44 @@
 				6F36C4E113D3D03F003387F7 /* Store.m in Sources */,
 				6F36C4E613D3D079003387F7 /* RockShop.m in Sources */,
 				606B2B7513D4F5B000B90223 /* WibbleObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60FEA19013D653F0006997B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60FEA19113D653F0006997B0 /* main.m in Sources */,
+				60FEA19213D653F0006997B0 /* MyBootsAppDelegate.m in Sources */,
+				60FEA19313D653F0006997B0 /* GameViewController.m in Sources */,
+				60FEA19413D653F0006997B0 /* SettingsViewController.m in Sources */,
+				60FEA19513D653F0006997B0 /* Creature.m in Sources */,
+				60FEA19613D653F0006997B0 /* Item.m in Sources */,
+				60FEA19713D653F0006997B0 /* Room.m in Sources */,
+				60FEA19813D653F0006997B0 /* WibbleQuest.m in Sources */,
+				60FEA19913D653F0006997B0 /* WibbleQuestViewHandlingCategory.m in Sources */,
+				60FEA19A13D653F0006997B0 /* MyBootsGame.m in Sources */,
+				60FEA19B13D653F0006997B0 /* WibbleQuestPrintingCategory.m in Sources */,
+				60FEA19C13D653F0006997B0 /* CommandInterpreter.m in Sources */,
+				60FEA19D13D653F0006997B0 /* Bubba.m in Sources */,
+				60FEA19E13D653F0006997B0 /* PlayerInventory.m in Sources */,
+				60FEA19F13D653F0006997B0 /* WQ.m in Sources */,
+				60FEA1A013D653F0006997B0 /* Player.m in Sources */,
+				60FEA1A113D653F0006997B0 /* Person.m in Sources */,
+				60FEA1A213D653F0006997B0 /* NSArray-Contains.m in Sources */,
+				60FEA1A313D653F0006997B0 /* BodyGuard.m in Sources */,
+				60FEA1A413D653F0006997B0 /* GoatBoy.m in Sources */,
+				60FEA1A513D653F0006997B0 /* Keytar.m in Sources */,
+				60FEA1A613D653F0006997B0 /* FloatstarPX.m in Sources */,
+				60FEA1A713D653F0006997B0 /* Microphone.m in Sources */,
+				60FEA1A813D653F0006997B0 /* StartingRoom.m in Sources */,
+				60FEA1A913D653F0006997B0 /* NSArray-named-captures.m in Sources */,
+				60FEA1AA13D653F0006997B0 /* Store.m in Sources */,
+				60FEA1AB13D653F0006997B0 /* RockShop.m in Sources */,
+				60FEA1AC13D653F0006997B0 /* WibbleObject.m in Sources */,
+				60FEA1CA13D65800006997B0 /* RoomAPI.m in Sources */,
+				60FEA1CB13D65867006997B0 /* WBTestController.m in Sources */,
+				60FEA1CE13D65C5E006997B0 /* SettingsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +731,60 @@
 			};
 			name = Release;
 		};
+		60FEA1BC13D653F0006997B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"RUN_KIF_TESTS=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/vendor/KIF/\"/**",
+				);
+				INFOPLIST_FILE = "Kieronon on copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = WibbleTests;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		60FEA1BD13D653F0006997B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"RUN_KIF_TESTS=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/vendor/KIF/\"/**",
+				);
+				INFOPLIST_FILE = "Kieronon on copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = WibbleTests;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -594,6 +802,15 @@
 			buildConfigurations = (
 				609B9FD013C901D400888A6E /* Debug */,
 				609B9FD113C901D400888A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60FEA1BB13D653F0006997B0 /* Build configuration list for PBXNativeTarget "Wibble Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60FEA1BC13D653F0006997B0 /* Debug */,
+				60FEA1BD13D653F0006997B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
