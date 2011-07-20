@@ -17,6 +17,9 @@
     if ([WibbleQuest sharedWibble].currentRoom == [WQ getRoomByID:string]) {
       successfulReset = YES;
     }
+    if(successfulReset == NO){
+      NSLog(@"room.id = %@", [WibbleQuest sharedWibble].currentRoom.id);
+    }
 
     KIFTestCondition(successfulReset, error, @"Failed to move to room correctly.");
     return KIFTestStepResultSuccess;

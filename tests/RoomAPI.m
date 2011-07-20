@@ -20,7 +20,7 @@
   
   WibbleQuest * wq = [WibbleQuest sharedWibble];
   
-  KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:@"Testing that you can go north."];
+  KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:@"Testing that you can go move N E S W."];
   [scenario addStep:[KIFTestStep stepToWaitForTappableViewWithAccessibilityLabel:@"Text Input"]];
     
   [scenario addStep:[KIFTestStep stepWithDescription:@"setup rooms" executionBlock:^(KIFTestStep *step, NSError **error) {
@@ -32,10 +32,15 @@
     [wq addRoom:r];
     
     Room * rNorth = [[Room alloc] init];
-    [r connectNorth:rNorth];
     rNorth.id = @"testNorth";
+    [r connectNorth:rNorth];
     [wq addRoom:rNorth];
     
+    Room * rWest = [[Room alloc] init];
+    rWest.id = @"testWest";
+    [r connectWest:rWest];
+    [wq addRoom:rWest];
+
     wq.currentRoom = r;
   
     return KIFTestStepResultSuccess;
@@ -43,6 +48,16 @@
   
   [scenario runCommand:@"north"];
   [scenario checkRoomIsID:@"testNorth" because:@"testing moving north"];
+  
+  [scenario runCommand:@"south"];
+  [scenario checkRoomIsID:@"test" because:@"testing moving south"];
+
+  [scenario runCommand:@"west"];
+  [scenario checkRoomIsID:@"testWest" because:@"testing moving west"];
+
+  [scenario runCommand:@"east"];
+  [scenario checkRoomIsID:@"test" because:@"testing moving east"];
+
   
   return scenario;
 }
