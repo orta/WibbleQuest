@@ -34,6 +34,9 @@
   if ([parameters count] > 0) {
     NSString * command = [parameters first];
     
+    if ([@"" isEqualToString:command]) {
+      return;
+    }
     if([@"help" isEqualToString:command]){
       [self help];
       return;

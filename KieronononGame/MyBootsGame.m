@@ -9,6 +9,7 @@
 #import "MyBootsGame.h"
 
 #import "StartingRoom.h"
+#import "FinaleRoom.h"
 #import "BodyGuard.h"
 #import "Bubba.h"
 #import "Keytar.h"
@@ -72,7 +73,7 @@
   alley.description = @"The Alley is everything you heard it to be, dark, dingy and crrepy. ou can get back into the bar to the north, there's a guy who Float refered to as a bodyguard here. Looks like he's blocking the entrance to the south. You might have to fight to get past.";
   [alley connectNorth:bar];
 
-  Room * final = [[Room alloc] init];
+  FinaleRoom * final = [[FinaleRoom alloc] init];
   final.name = @"On Stage";
   final.id = @"finale";
   final.description = @"You arrive on stage, kick the terrible band off stage and wave your keytar in the air like you actually know what you're doing. Congrats! You've completed the game :)";

@@ -11,7 +11,7 @@
 @implementation FinaleRoom
 
 -(BOOL)playerShouldEnterRoom {
-  if ([Player has:@"keytar"] && [Player has:@"mic"]) {
+  if ([Player has:@"keytar"] && [Player has:@"microphone"]) {
     return YES;
   }
   [WQ print:@"You wouldn't want to go on stage without a Mic and your Keytar! Better go find them."];
