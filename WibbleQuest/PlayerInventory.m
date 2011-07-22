@@ -49,6 +49,16 @@
   [item onPickup];
 }
 
+-(void)removeItemByID:(NSString*) itemID {
+  [self removeItem:[self getItem:itemID]];
+}
+
+-(void)removeItem:(Item*) item {
+  NSMutableArray * temp = [self.items mutableCopy];
+  [temp removeObject:item];
+  self.items = temp;
+}
+
 -(void)describeInventory {
   if([self.items count] == 0){
     [WQ print:@"You have no items"];

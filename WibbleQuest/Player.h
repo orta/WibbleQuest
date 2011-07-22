@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class Item;
 @interface Player : NSObject
 
 @property () int health;
@@ -18,7 +19,11 @@
 @property (retain) NSMutableDictionary *data;
 
 +(Player*)sharedPlayer;
+
 +(BOOL)has:(NSString*)itemID;
+
++(BOOL)hasItemByID:(NSString*)itemID;
++(Item*)getItemByID:(NSString *)itemID;
 
 +(void)teleportToRoomWithID:(NSString*)roomID;
 

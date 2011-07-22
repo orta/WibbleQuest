@@ -18,8 +18,11 @@
 
 -(void)addItem:(Item*) item;
 -(Item *)getItem:(NSString*) itemID;
+
 -(BOOL)hasItem:(NSString*) itemID;
 
+-(void)removeItemByID:(NSString*) itemID;
+-(void)removeItem:(Item*) item;
 
 -(BOOL)didRespondToCommand:(NSArray*) commands;
 

@@ -7,6 +7,7 @@
 //
 
 #import "Player.h"
+#import "PlayerInventory.h"
 
 @implementation Player
 @synthesize data = _data, health, maxHealth, damageRange, money;
@@ -22,8 +23,23 @@ static Player * sharedPlayer;
   return self;
 }
 
-+(BOOL)has:(NSString*)itemID {
++(BOOL)has:(NSString*)itemID{
+  return [Player hasItemByID:itemID];
+}
+
++(void)removeItemByID:(NSString *)itemID {
+  if ([Player hasItemByID:itemID]) {
+    WibbleQuest *wq = [WibbleQuest sharedWibble];
+    [wq.inventory removeItemByID:itemID];
+  }
+}
+
++(BOOL)hasItemByID:(NSString*)itemID {
   return [[WibbleQuest sharedWibble].inventory hasItem:itemID];
+}
+
++(Item*)getItemByID:(NSString *)itemID{
+  return [[WibbleQuest sharedWibble].inventory getItem:itemID];
 }
 
 +(Player*)sharedPlayer {
@@ -37,6 +53,8 @@ static Player * sharedPlayer;
     WibbleQuest *wq = [WibbleQuest sharedWibble];
     wq.currentRoom = room;
     [wq movedRoom];
+  }else{
+    NSLog(@"could not find room %@ for teleporting, are you sure it's got an id and has been added to WQ", roomID);
   }
 }
 

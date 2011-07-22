@@ -12,11 +12,14 @@
 //private methods
 @interface CommandInterpreter()
 -(void) getCommand:(NSArray *) params;
+-(void) dropCommand:(NSArray *) params;
 -(void) help;
+
 -(void) north;
 -(void) west;
 -(void) east;
 -(void) south;
+
 -(void)moveToRoom:(Room*)newRoom;
 -(NSArray *)removeQuestionMarks:(NSArray*)array;
 @end
@@ -83,6 +86,10 @@
       return;
     }
 
+    if([@"drop" isEqualToString:command] || [@"d" isEqualToString:command]){
+      [self dropCommand:parameters];
+      return;
+    }
     
     if([@"examine" isEqualToString:command] || [@"x" isEqualToString:command]){
       if([parameters count] == 1){
@@ -249,6 +256,28 @@
       
     }else{
       [wq print:@"Could not find a %@ in the room" , objectID];
+    }
+  }  
+}
+
+-(void)dropCommand:(NSArray *) params {
+  if( [params count] == 1){
+    [wq print:@"Drop what?"];
+  }else{
+    NSString *objectID = [params objectAtIndex:1];
+    if([@"all" isEqualToString:objectID]){
+      [wq command:@"All is not yet implemented."];
+      return;
+    }
+    
+    if([Player hasItemByID:objectID]){
+      Item* item = [Player getItemByID:objectID];
+      [wq.currentRoom addItem:item];
+      [[Player getItemByID:objectID] onDrop];
+      [wq.inventory removeItemByID:objectID];
+      
+    }else{
+      [wq print:@"Could not find a %@ in your inventory" , objectID];
     }
   }  
 }

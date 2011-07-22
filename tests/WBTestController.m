@@ -8,12 +8,15 @@
 
 #import "WBTestController.h"
 #import "RoomAPI.h"
-#import "SettingsTests.h"
+#import "InventoryTests.h"
 
 @implementation WBTestController
 
 - (void)initializeScenarios{
   [self addScenario:[KIFTestScenario testRoomAPI]];
+  [self addScenario:[KIFTestScenario inventoryAPITests]];
+  
+  
 }
 
 @end

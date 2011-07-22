@@ -13,6 +13,7 @@
 @synthesize examine, descriptionInRoom;
 
 -(void)onPickup{}
+-(void)onDrop{}
 -(void)onUse{}
 
 @end

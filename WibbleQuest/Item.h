@@ -16,5 +16,6 @@
 
 -(void)onPickup;
 -(void)onUse;
+-(void)onDrop;
 
 @end
