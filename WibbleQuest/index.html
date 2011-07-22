@@ -29,8 +29,6 @@
         function wait(time){
           var date = new Date()
           date.setSeconds( date.getSeconds() + time )
-          
-          console.log( "waiting till " + date)
           function_queue.push( date );
           executeQueue();
         }
