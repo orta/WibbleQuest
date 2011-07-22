@@ -103,7 +103,7 @@
   wq.currentRoom = openingRoom;
   
   [wq heading:@"Wibble Quest Example"];
-  [wq wait:5];
+  [wq wait:1];
   [wq print:@"You groggily wake up, the lights hurt your eyes as you adjust. There's a low grumble of bass which presumably is from someone's soundcheck and you remember that you arrived at the music venue a day early and slept over here."];
 
   [wq print:@"There's a knock on your door and a muffled shout saying 'oi, get up!'"];

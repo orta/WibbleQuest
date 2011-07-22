@@ -21,8 +21,9 @@
   [self execJS:function];
 }
 
--(void)wait:(int)time{
-  NSString * function = [NSString stringWithFormat:@"wait('%f')", time];
+-(void)wait:(float)time {
+  NSString * function = [NSString stringWithFormat:@"wait(%2.2f)", time];
+  NSLog(function);
   [self execJS:function];
 }
 
