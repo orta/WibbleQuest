@@ -87,11 +87,12 @@
   
   [self afterTurn];
   if(player.health < 1){
-    [self afterFightLost];
+    [self afterFightWon];
     NSObject <WibbleQuestGameDelegate>* game = [[WibbleQuest sharedWibble] game];
     if([game respondsToSelector:@selector(playerWasBeatenBy:)]){
       [game playerWasBeatenBy:self];
     }
+    return;
   }
 }
 
