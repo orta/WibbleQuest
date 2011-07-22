@@ -30,6 +30,7 @@
           var date = new Date()
           date.setSeconds( date.getSeconds() + time )
           
+          console.log( "waiting till " + date)
           function_queue.push( date );
           executeQueue();
         }
@@ -134,13 +135,12 @@
         
         var function_queue = [];
         var locked = false;
-        var timerLock = false;
 
         var timeInterval = 100;
 
         function executeQueue(){
           // this stops multiple callsq to exec to not work
-          if(locked && !timerUnLock) {
+          if(locked) {
             return;
           }
           if (function_queue.length != 0) {
@@ -156,16 +156,15 @@
                   setTimeout("locked=false;executeQueue()", timeInterval);   
                   return
                 }
-                var now = new Date;
-                timerUnLock = true;
                 
+                var now = new Date;
                 if(now > next_function){
-                  setTimeout("timerUnLock=false;locked=false;executeQueue()", timeInterval);   
+                  setTimeout("locked=false;executeQueue()", timeInterval);   
                 }else{
                   // if it's a date, then we unlock when it's ready 
                    // after throwing it back in the queue
-                   function_queue.push(next_function)
-                   setTimeout(executeQueue, timeInterval);
+                   function_queue.unshift(next_function)
+                   setTimeout("locked=false;executeQueue()", timeInterval);   
                 }               
           }
         }        
