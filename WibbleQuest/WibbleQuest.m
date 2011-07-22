@@ -100,9 +100,13 @@ static WibbleQuest *sharedWibble;
   if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hideTextFieldAfterCommand"] == FALSE) {
     [inTextField resignFirstResponder];
   }
-  
-  [self command:[@"> " stringByAppendingString: inTextField.text]];
-  [_commandInterpreter parse:inTextField.text];
+  NSString * command = inTextField.text;
+  [self command:[@"> " stringByAppendingString: command]];
+  NSArray * commands = [command componentsSeparatedByString:@";"];
+  for (NSString *command in commands) {
+    [_commandInterpreter parse:command];
+  }
+
   
   inTextField.text = @"";
   return YES;
