@@ -23,7 +23,6 @@
 
 -(void)wait:(float)time {
   NSString * function = [NSString stringWithFormat:@"wait(%2.2f)", time];
-  NSLog(function);
   [self execJS:function];
 }
 

@@ -165,8 +165,13 @@
       [self getCommand:parameters];
       return;
     }
+    if (madeFirstMistake == NO) {
+      [wq print:@"Command not understood, type help if you want to see the help file."];
+      madeFirstMistake = YES;
+    }else{
+      [wq print:@"Command not recognised"];
+    }
     
-    [wq print:@"Command not recognised"];
   }
 }
 
@@ -214,6 +219,9 @@
     
     [wq print:@"get [item]"];
     [wq command:@"get an item from the current room."];
+
+    [wq print:@"drop [item]"];
+    [wq command:@"drop an item into the current room."];
     
     [wq print: @"examine [item]"];
     [wq command:@"examine an item in the room."];
