@@ -58,6 +58,9 @@
   [scenario runCommand:@"east"];
   [scenario checkRoomIsID:@"test" because:@"testing moving east"];
 
+  [scenario runCommand:@"north;south"];
+  [scenario checkRoomIsID:@"test" because:@"testing moving north then back south in one command"];
+
   [scenario addStep:[KIFTestStep stepWithDescription:@"Player teleport" executionBlock:^(KIFTestStep *step, NSError **error) {
     
     [Player teleportToRoomWithID:@"testNorth"] ;
