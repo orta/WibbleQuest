@@ -14,6 +14,8 @@
 
 // adapted from http://cocoawithlove.com/2008/10/sliding-uitextfields-around-to-avoid.html
 
+#define UP true
+#define DOWN false
 
 #import "WibbleQuestViewHandlingCategory.h"
 
@@ -22,50 +24,28 @@
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
 static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
-static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
-static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
+
+static const CGFloat IPHONE_PORTRAIT_KEYBOARD_HEIGHT = 216;
+static const CGFloat IPHONE_LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 static const CGFloat IPAD_PORTRAIT_KEYBOARD_HEIGHT = 270;
-static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 720;
+static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 354;
 
+//TODO MAJOR REFACTORING
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-  CGRect textFieldRect =
-  [self.view.window convertRect:textField.bounds fromView:textField];
-  CGRect viewRect =
-  [self.view.window convertRect:self.view.bounds fromView:self.view];
-  
-  CGFloat midline = textFieldRect.origin.y + 0.5 * textFieldRect.size.height;
-  CGFloat numerator =
-  midline - viewRect.origin.y
-  - MINIMUM_SCROLL_FRACTION * viewRect.size.height;
-  CGFloat denominator =
-  (MAXIMUM_SCROLL_FRACTION - MINIMUM_SCROLL_FRACTION)
-  * viewRect.size.height;
-  CGFloat heightFraction = numerator / denominator;
-  if (heightFraction < 0.0)
-  {
-    heightFraction = 0.0;
-  }
-  else if (heightFraction > 1.0)
-  {
-    heightFraction = 1.0;
-  }
-  animatedDistanceX = 0.0;
+-(float)distanceForMovement {
+  float distance;
   
   UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
   // PORTRAIT
   if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown) {
     //IPHONE
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-      animatedDistanceY = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
-    } 
-    //IPAD
+      distance = IPHONE_PORTRAIT_KEYBOARD_HEIGHT;
+    }
     else {
-      if (orientation == UIInterfaceOrientationPortraitUpsideDown) {
-        heightFraction = -1;
-      }
-      animatedDistanceY = floor(IPAD_PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
+      //IPAD
+      distance = IPAD_PORTRAIT_KEYBOARD_HEIGHT;
     }
   } 
   
@@ -73,36 +53,51 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 720;
   else {
     //IPHONE
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-      animatedDistanceY = floor(LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
+      distance = IPHONE_LANDSCAPE_KEYBOARD_HEIGHT;
     } 
     else {
       //IPAD
-      if (orientation == UIInterfaceOrientationLandscapeRight) {
-        heightFraction *= -1;
-        NSLog(@"RIGHT");
-      }
-
-      animatedDistanceX = floor(IPAD_LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
+      distance = IPAD_LANDSCAPE_KEYBOARD_HEIGHT;
     }
   }
-  
-  
-  CGRect viewFrame = self.view.frame;
-  viewFrame.origin.y -= animatedDistanceY;
-  viewFrame.origin.x -= animatedDistanceX;
-  
-  CGRect webViewFrame = _webView.frame;
+  return distance;
+}
 
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+  movementDistance = [self distanceForMovement];
+  
+  CGRect viewFrame = self.view.frame;  
+  CGRect webViewFrame = _webView.frame;
+  
+  UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
   
   if( UIDeviceOrientationIsLandscape( orientation ) ){
-    webViewFrame.size.height -= animatedDistanceX;
-    webViewFrame.origin.y += animatedDistanceX;
-  }else{
-    webViewFrame.size.height -= animatedDistanceY;
-    webViewFrame.origin.y += animatedDistanceY;
-  }
+    if (orientation == UIInterfaceOrientationLandscapeRight) {
+      webViewFrame.size.height -= movementDistance;
+      webViewFrame.origin.y += movementDistance;
+      viewFrame.origin.x += movementDistance;
 
-  
+
+    }else{
+      webViewFrame.size.height -= movementDistance;
+      webViewFrame.origin.y += movementDistance;
+      viewFrame.origin.x -= movementDistance;
+    }
+    
+  }else{
+    // portrait
+    if (orientation == UIInterfaceOrientationPortrait) {
+      webViewFrame.size.height -= movementDistance;
+      webViewFrame.origin.y += movementDistance;
+      viewFrame.origin.y -= movementDistance;
+    }else{
+      
+      webViewFrame.size.height -= movementDistance;
+      webViewFrame.origin.y += movementDistance;
+      viewFrame.origin.y += movementDistance;
+    }
+  }
 
   [UIView beginAnimations:nil context:NULL];
   [UIView setAnimationBeginsFromCurrentState:YES];
@@ -119,54 +114,53 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 720;
 - (void)textFieldDidEndEditing:(UITextField *)textField {
   // do it instantly if you're rotating
   UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-
-  if(rotating){
-    self.view.frame = [[UIScreen mainScreen] bounds];
-    CGRect webViewFrame = _webView.frame;
-    
-    if(UIDeviceOrientationIsLandscape( orientation ) ){
-      webViewFrame.size.height += animatedDistanceX;
-      webViewFrame.origin.y -= animatedDistanceX;
+  CGRect viewFrame = self.view.frame;    
+  CGRect webViewFrame = _webView.frame;
+  movementDistance *= -1;
+  
+  if( UIDeviceOrientationIsLandscape( orientation ) ){
+    if (orientation == UIInterfaceOrientationLandscapeRight) {
+      webViewFrame.size.height -= movementDistance;
+      webViewFrame.origin.y += movementDistance;
+      viewFrame.origin.x += movementDistance;
+      
       
     }else{
-      webViewFrame.size.height += animatedDistanceY;
-      webViewFrame.origin.y -= animatedDistanceY;
+      webViewFrame.size.height -= movementDistance;
+      webViewFrame.origin.y += movementDistance;
+      viewFrame.origin.x -= movementDistance;
     }
-    _webView.frame = webViewFrame;
-
-    animatedDistanceY = 0;
-    animatedDistanceX = 0;
     
   }else{
-    CGRect viewFrame = self.view.frame;
-    viewFrame.origin.y += animatedDistanceY;
-    viewFrame.origin.x += animatedDistanceX;
-    
-    CGRect webViewFrame = _webView.frame;
-    
-    if(UIDeviceOrientationIsLandscape( orientation ) ){
-      webViewFrame.size.height += animatedDistanceX;
-      webViewFrame.origin.y -= animatedDistanceX;
-      
+    // portrait
+    if (orientation == UIInterfaceOrientationPortrait) {
+      webViewFrame.size.height -= movementDistance;
+      webViewFrame.origin.y += movementDistance;
+      viewFrame.origin.y -= movementDistance;
     }else{
-      webViewFrame.size.height += animatedDistanceY;
-      webViewFrame.origin.y -= animatedDistanceY;
+      
+      webViewFrame.size.height -= movementDistance;
+      webViewFrame.origin.y += movementDistance;
+      viewFrame.origin.y += movementDistance;
     }
-    
+  }
+  
+  if(animateMovement){
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
-    
-    [self.view setFrame:viewFrame];
-    [_webView setFrame:webViewFrame];
-
+  }
+  
+  [self.view setFrame:viewFrame];
+  [_webView setFrame:webViewFrame];
+  
+  if(animateMovement){
     [UIView commitAnimations];
-    
   }
 }
 
 -(void)rotatedToUInterfaceIdiom:(UIInterfaceOrientation) orientation{
-  rotating = YES;
+  animateMovement = YES;
   
   if ([_textField isFirstResponder]) {
     [_textField resignFirstResponder];
@@ -174,7 +168,7 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 720;
   
   [_webView stringByEvaluatingJavaScriptFromString:@"rotate()"];  
 
-  rotating = NO;
+  animateMovement = NO;
 }
 
 #pragma mark gestures on webview

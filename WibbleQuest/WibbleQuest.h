@@ -31,9 +31,8 @@
   CommandInterpreter *_commandInterpreter;
   
   // these are for the viewhandling categories
-  CGFloat animatedDistanceX;
-  CGFloat animatedDistanceY;
-  BOOL rotating;
+  float movementDistance;
+  bool animateMovement;
 }
 
 @property (retain) UIView * view;

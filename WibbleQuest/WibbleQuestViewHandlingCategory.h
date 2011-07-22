@@ -13,4 +13,5 @@
 @interface WibbleQuest (WibbleQuestViewHandlingCategory) 
   -(void)rotatedToUInterfaceIdiom:(UIInterfaceOrientation) orientation;
   -(void) setupGestureRecognisers;
+  -(float)distanceForMovement;
 @end
