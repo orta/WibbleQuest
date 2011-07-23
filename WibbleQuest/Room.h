@@ -37,8 +37,6 @@
 - (void) connectWest:(Room*)room;
 - (void) connectEast:(Room*)room;
 
--(void)describeShop;
--(void)buyItem:(NSArray*)parameter;
 -(NSDictionary *)dictionaryForExamine;
 
 -(void)examineWithInput:(NSString*)input;

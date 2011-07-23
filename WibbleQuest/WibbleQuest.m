@@ -57,6 +57,18 @@ static WibbleQuest *sharedWibble;
   [self movedRoom];
 }
 
+-(void) purge{
+  for (Room*room in self.rooms) {
+    [rooms release];
+  }
+  self.rooms = [NSMutableArray array];
+  
+  for (Item *item in self.inventory.items) {
+    [item release];
+  }
+  self.inventory = [[PlayerInventory alloc] init];
+}
+
 // think about moving this into Room
 -(void) movedRoom {
   [self title:currentRoom.name];
@@ -144,7 +156,7 @@ static WibbleQuest *sharedWibble;
   }
 }
 
--(void)dealloc {
+-(void) dealloc {
   [super release];
   [inventory release];
   [currentRoom release];

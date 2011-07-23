@@ -59,20 +59,6 @@
   return nil;
 }
 
--(void)buyItem:(NSArray*)parameter{
-  if(shop!=nil){
-    [shop buyItem:parameter];
-    return;
-  }
-  [WQ print:@"There is no shop"];
-}
-
--(void)describeShop{
-  if(shop!=nil){
-    [WQ print:[shop description]];
-  }
-  [WQ print:@"There is no shop"];
-}
 
 - (void) connectNorth:(Room*)room{
   self.north = room;

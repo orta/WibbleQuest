@@ -11,32 +11,61 @@
 @implementation Store
 @synthesize items;
 
+-(id) init{
+  self = [super init];
+  self.items = [NSMutableArray array];
+  return self;
+}
+
 -(void)beforeTrading{}
 -(void)afterTrading{}
 
--(void)buyItem:(NSArray*)conditions{
-  
+// third time this has been rewrote,
+// I think that by defining the class we ensure that 
+// someone doesn't accidentally put the wrong string in.
+-(void)addItemOfClass:(Class)class withValue:(int) value {
+  [self.items addObject:class];
+  [self.items addObject:[NSNumber numberWithInt:value]];
+}
+
+-(void)showInventory {
+  [WQ print:@"%@", self.description];
+  for (int i = 0; i < [self.items count] ; i += 2) {
+    [WQ print:@"%@ - £%@", NSStringFromClass([self.items objectAtIndex:i]), [self.items objectAtIndex: i+1 ]];    
+  }
+}
+
+-(void) buyItem:(NSArray*)conditions{  
   NSString *itemName = [conditions second];
-  if([self.items objectForKey:itemName] == nil) {
-    [WQ print:@"We don't sell %@ here", itemName];
-    return;
-  }
-  
-  int cost = [[self.items objectForKey:itemName] intValue];
   Player *player = [Player sharedPlayer];
-  if ( player.money < cost ){
-    [WQ print:@"You do not have enough money"];
+
+  bool found;
+  for (int i = 0; i < [self.items count] ; i += 2) {
+    Class ItemClass = [self.items objectAtIndex:i];
+    if ([[itemName lowercaseString] isEqualToString:[(NSString*) NSStringFromClass(ItemClass) lowercaseString]]) {
+      // found the class
+      int cost = [[self.items objectAtIndex:i+1] intValue];
+      if ( player.money < cost ){
+        [WQ print:@"You do not have enough money"];
+        return;
+      }
+      Item * item;
+      @try {
+        item = [[ItemClass alloc] init];
+      }
+      @catch (NSException *exception) {
+        NSLog(@"something went wrong with creating a copy of the class %@ - are you sure it's a subclass of Item?", itemName);
+      }
+      
+      [[WibbleQuest sharedWibble].inventory addItem:item];
+      player.money -= cost;
+      found = YES;
+    }
+  }  
+  if( found == NO ){
+    [WQ print:@"We don't sell %@'s here", itemName];
     return;
   }
-  player.money -= cost;
-  
-  Item *playerItem = [[NSClassFromString([itemName capitalizedString]) alloc] init];
-  if(playerItem == nil){
-    [WQ print:@"The item %@ cannot be found (Maybe you forgot to import or spelled it wrong).", itemName];
-    return;
-  }
-  [[WibbleQuest sharedWibble].inventory addItem:playerItem];
-  
-  
+//
 }
 @end

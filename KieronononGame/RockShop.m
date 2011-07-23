@@ -7,23 +7,18 @@
 //
 
 #import "RockShop.h"
-
+#import "Microphone.h"
+#import "Keytar.h"
 
 @implementation RockShop
 
-- (NSDictionary *)shopItems { 
-  return [NSDictionary dictionaryWithObjectsAndKeys:
-          [NSNumber numberWithInt:20],@"microphone",
-          [NSNumber numberWithInt:300], @"macbook",
-          [NSNumber numberWithInt:10], @"bubba",
-          nil];
+-(id)init{
+  self = [super init];
+  
+  [self addItemOfClass: [Microphone class] withValue:45];
+  [self addItemOfClass: [Keytar class] withValue:10];
+  
+  return self;
 }
-
--(NSString *)description{
-  return @"A shop for all your rocker needs";
-}
-
-
-
 
 @end

@@ -111,12 +111,21 @@
 
     
     if([@"shop" isEqualToString:command] || [@"trade" isEqualToString:command]){
-      [wq.currentRoom describeShop];
+      if (wq.currentRoom.shop) {
+        [wq.currentRoom.shop showInventory];
+      }else{
+        [wq print:@"There isn't a shop here."];
+      }
+
       return;
     }
     
     if([@"buy" isEqualToString:command]){
-      [wq.currentRoom buyItem:parameters];
+      if (wq.currentRoom.shop) {
+        [wq.currentRoom.shop buyItem:parameters];
+      }else{
+        [wq print:@"There isn't a shop here."];
+      }
       return;
     }
     

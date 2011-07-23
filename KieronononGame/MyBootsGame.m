@@ -77,7 +77,10 @@
   final.name = @"On Stage";
   final.id = @"finale";
   final.description = @"You arrive on stage, kick the terrible band off stage and wave your keytar in the air like you actually know what you're doing. Congrats! You've completed the game :)";
-  
+
+  RockShop *shop = [[RockShop alloc] init];
+  shop.description = @"1234 shop";
+  openingRoom.shop = shop;
   
   Bubba *b2 = [[Bubba alloc] init];
   [openingRoom addItem:b2];

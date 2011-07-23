@@ -44,7 +44,7 @@
 
 @property (retain) NSString * lastPrinted;
 
-+ (WibbleQuest *)sharedWibble;
++(WibbleQuest *) sharedWibble;
 
 // API used when setting up your game 
 -(void) addRoom:(Room*)room;
@@ -54,6 +54,8 @@
 -(void) start;
 -(void) describeSurroundings;
 -(void) movedRoom;
+
+-(void) purge;
 @end
 
 // putting these at the end means that all objects get access

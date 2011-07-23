@@ -12,6 +12,4 @@
 
 - (void)initializeScenarios;
 
-
-
 @end

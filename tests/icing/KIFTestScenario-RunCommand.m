@@ -16,4 +16,10 @@
   [self addStep:[KIFTestStep stepToTapViewWithAccessibilityLabel:@"return"]];
 }
 
+- (id)boolTestWithDescription:(NSString*)description andBlock^(){; {
+  return [self stepWithDescription:@"Always succeeds" executionBlock:^(KIFTestStep *step, NSError **error) {
+    return KIFTestStepResultSuccess;
+  }];
+}
+
 @end
