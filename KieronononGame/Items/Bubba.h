@@ -6,12 +6,9 @@
 //  Copyright 2011 http://ortatherox.com. All rights reserved.
 //
 
-#import "Item.h"
-
 @interface Bubba : Item {
   int drinksLeft;
 }
 
 -(void) drink;
-
 @end

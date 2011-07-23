@@ -16,7 +16,8 @@
   NSString * formattedString = [[NSString alloc] initWithFormat:string arguments:listOfArguments];
   // run a javascript function to add text to the screen
   formattedString = [self sanitize:formattedString];
-
+  self.lastPrinted = formattedString;
+  
   NSString * function = [NSString stringWithFormat:@"addParagraph('%@')", formattedString];
   [self execJS:function];
 }

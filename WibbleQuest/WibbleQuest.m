@@ -20,6 +20,7 @@ static WibbleQuest *sharedWibble;
 @implementation WibbleQuest
 
 @synthesize view, rooms, currentRoom, game, inventory, player;
+@synthesize lastPrinted;
 
 + (WibbleQuest *)sharedWibble {
   return sharedWibble;

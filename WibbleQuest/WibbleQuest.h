@@ -42,6 +42,8 @@
 @property (retain) PlayerInventory *inventory;
 @property (retain) Player* player;
 
+@property (retain) NSString * lastPrinted;
+
 + (WibbleQuest *)sharedWibble;
 
 // API used when setting up your game 
