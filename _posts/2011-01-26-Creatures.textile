@@ -1,0 +1,9 @@
+---
+title: "Creatures"
+---
+
+h1. Alas, it's not that easy. 
+ 
+We're working with a GUI, and that means you've got a lot more things to think about. So before we get started on what additional syntax we have to deal with iOS dev, we're going to have to get some words right.
+
+When writing applications for iOS, you say you're writing Objective-C with UIKit.

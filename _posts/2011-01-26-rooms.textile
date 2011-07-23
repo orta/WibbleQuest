@@ -1,0 +1,11 @@
+---
+title: "Rooms"
+---
+
+A lot of the time you won't need to subclass a Room object, you can "create":#createroom a room easily, it's normal to only create a subclass when you want to "allow / disallow":#roomtalk, add respond to "examine":#roomexamine to the room or add your own "commands":#command inside the room.
+
+Rooms have a name and description that is called when you enter that room, and they also have an "id":#id so you can get them using getRoomByID on the WQ class.
+
+{% highlight objc %}
+Room* finale = [WQ getRoomByID:@"finale"];
+{% endhighlight %}

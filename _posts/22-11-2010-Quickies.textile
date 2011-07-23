@@ -1,0 +1,233 @@
+
+h3. Write on the screen
+
+Depending on what style of text you'll want to use these 5 commands on WQ
+
+{% highlight objc %}
++(void) print:(NSString*)string, ...;
++(void) say:(NSString*)name words:(NSString*)words;
++(void) heading:(NSString*)string;
++(void) command:(NSString*)string;
++(void) title:(NSString*)string;
+{% endhighlight %}
+
+For example
+
+{% highlight objc %}
+[WQ say:@"orta" words:@"hello there"];
+[WQ print:@"looks like you picked up %i shoes", shoesCount];
+[WQ heading:@"and so the story ends"];
+{% endhighlight %}
+
+h3(#id). What is the id property on all these objects for?
+
+You use the object.id whenever you are trying to find a specific object like [Player has:@"itemID"] or [WQ findRoomByID:@"roomID"]. TLDR; always add one.
+
+h3(#command). Make any object do a custom command
+
+You want the Objject to override did respond to command. In this example it looks to see if the command is play and if it is, it says something. We the  return YES, otherwise it will continue to look for other commands.
+
+{% highlight objc %}
+-(BOOL)didRespondToCommand:(NSArray*)commandArray {
+  NSString * command = [commandArray first];
+  if ([@"play" isEqualToString:command]) {
+    [WQ print:@"You rock out on the Keytar for a while playing some George Michaels, no one seems to pay any attention though"];
+    return YES;
+  }
+  return NO;
+}
+{% endhighlight %}
+
+
+h3. Find out what room I'm in 
+
+You want to get access to the shared WibbleQuest object, and then call currentRoom on it
+
+{% highlight objc %}
+[WibbleQuest sharedWibble].currentRoom
+{% endhighlight %}
+
+
+h3(#createroom). Create a room
+
+{% highlight objc %}
+Room * openingRoom = [[Room alloc] init];
+openingRoom.id = @"start";
+openingRoom.name = @"Backstage, at the venue.";
+openingRoom.description = @"There are clothes all over the floor, and you can hear people practicing through the southern door.";
+[wq addRoom:openingRoom];
+{% endhighlight %}
+
+
+h3(#roomtalk). Make a room do something when you enter it
+
+Make a room subclass, in it you can the override which will let you act when they leave / join
+
+{% highlight objc %}
+-(void)playerDidEnterRoom{}
+-(void)playerDidLeaveRoom{}
+{% endhighlight %}
+
+If you want to control whether they can leave or join a room, you can override
+
+{% highlight objc %}
+-(BOOL)playerShouldEnterRoom;
+-(BOOL)playerShouldLeaveRoom;
+{% endhighlight %}
+
+which expect a bool as to whether you can move out or in. These do not say anything so that's left to the room to deal with informing the player why.
+
+
+h3(#teleport). Move to another room
+
+You can use teleport to room with ID, make sure to have done [wq addRoom: room] and that the room has an id and everything should be fine
+
+{% highlight objc %}
+[Player teleportToRoomWithID:@"magicroom"];
+{% endhighlight %}
+
+
+h3(#roomexamine). Make it possible to examine things in the room
+
+You need to subclass the Room object and add the method dictionaryForExamine. For example, this one says something if you write "examine clothes" in the room.
+
+{% highlight objc %}
+-(NSDictionary*)dictionaryForExamine {
+return [NSDictionary dictionaryWithObjectsAndKeys:
+@"The pile of clothes are covered in sweat, you don't really want to touch it", @"clothes",
+nil];
+}
+{% endhighlight %}
+
+
+h3. Add a Person to talk to in a room
+
+Create the person's class, as a subclass of Person
+Make them respond to words that are said by using 
+
+{% highlight objc %}
+-(void)respondToSentenceArray:(NSArray*)sentence {
+  if([sentence contains:@"hi", @"hello", nil] ){
+    [WQ print:@"Doc says, Oh wow, glad you've arrived!"];
+    return;
+  }
+}
+{% endhighlight %}
+
+
+h3. make a person give you something
+
+You can just add an item to the players inventory for example like below
+
+{% highlight objc %}
+if([sentence contains:@"mic", @"mics", @"microphone", @"microphones", nil] ){
+  [WQ say:@"FloatstarPX" words:@"Ah yeah, the microphones, I spotted them earlier, here you go"];
+  Microphone *mic = [[Microphone alloc] init];
+  WibbleQuest * wibble = [WibbleQuest sharedWibble];
+  [wibble.inventory addItem: mic];
+  
+  return;
+}
+{% endhighlight %}
+
+
+h3. Make an item that you can pick up in a room
+
+Create an Item subclass, add it to a room's inventory, it can have multiple items.
+ 
+{% highlight objc %}
+Room * bathroom = [[Room alloc] init];
+bathroom.name = @"Bathroom"; 
+Keytar *keytar = [[Keytar alloc] init];
+[bathroom addItem:keytar];  
+{% endhighlight %}
+
+
+
+h3(#pickup). Make an item do something when picked up or dropped
+
+override onPickup in your class
+
+{% highlight objc %}
+-(void) onPickup{
+  [WQ print:@"Bubba sloshes as you pick up his weighty self"];
+}
+
+-(void) onDrop{
+  [WQ print:@"You politely return to the floor"];
+}
+{% endhighlight %}
+
+
+h3. Allow the player to use an object
+
+override the method and that will be called when the player does "use [item]"
+
+{% highlight objc %}
+-(void)onUse{ }
+{% endhighlight %}
+
+
+h3(#talk). Make a person that you can talk to
+
+Create a subclass of Person, make them respond using the following method
+
+{% highlight objc %}
+-(void)respondToSentenceArray:(NSArray*)sentence;
+{% endhighlight %}
+
+you can use the helpful method array contains to allow people to dig deeply into the conversation tree, or to allow them to react to multiple words with the same speech.
+
+
+h3(#hello). Make a person say Hello the first time you enter a room
+
+In your person subclass override 
+
+{% highlight objc %}
+
+-(void)playerEntersSameRoom {}
+
+{% endhighlight %}
+
+and make it say something
+
+
+h3. Create something to fight
+
+First you need to have your player have some health, and a damageRange. I add this to my ready function.
+
+{% highlight objc %}
+Player * player = [Player sharedPlayer];
+player.damageRange = NSMakeRange(1, 3);
+player.maxHealth = 10;
+player.health = 10;
+{% endhighlight %}
+
+A fightable character is a subclass of a Creature, they have name, damageRange, and Max Health variables that are self explanatory. 
+
+What is less obvious is that you can do lots with what the creature says and how you attack it. There is a handy method called damageModifier which allows you to modify the damage after it's been rolled. For example, in this case the damage is doubled if the user has picked up a keytar.
+
+
+{% highlight objc %}
+-(int)damageTakenModifier:(int)originalDamage {
+  // if the player has a keytar, then double the damage
+  if([Player has:@"keytar"]){
+    return originalDamage * 2;
+  }
+  return originalDamage;
+}  
+{% endhighlight %}
+
+
+
+There is a lot of methods you can override in order to get your creatures to be realistic, override as many as you want.
+
+{% highlight objc %}
+-(void)beforeTurn;
+-(void)afterTurn;
+-(void)beforeFight;
+-(void)afterFightLost;
+-(void)afterFightWon;
+{% endhighlight %}
+
+Once you're happy with your class, you just need to add the creature to a room to make everything connect up.

@@ -1,0 +1,125 @@
+---
+layout: nil
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>Wibble Quest an iPhone Text Adventure Game Framework</title>
+  <meta name="generator" content="Sublime Editor 2" />
+  <meta name="author" content="orta therox" />
+  <meta name="company" content="http://ortatherox.com" />
+  <meta name="email" content="orta.therox@gmail.com" />
+  <meta name="date" content="Fri 22 Jul 2011 18:54:20 EDT" />
+  <meta name="venue" content="The Internets" />
+  <link rel="stylesheet" href="assets/css/syntax.css">
+  <style>
+  html {
+    background-color: #261406;
+    color:#A75821;
+  }
+
+  body {
+    width: 920px;
+    margin: 50px auto;
+    font-family: 'American Typewriter';
+  }
+
+  nav {
+    position: fixed;
+    width:200px;
+    float: left;
+    top: 40px;
+    left: 20px;
+  }
+  nav h1{
+    text-align: center;
+    padding-left: 30px;
+    font-weight: normal;
+    font-size: 3em;
+    letter-spacing: -0.1em;
+    margin-bottom: 6px;
+  }
+  nav h1 a {
+    text-decoration: none;
+    color: #E06F00 !important;
+  }
+  
+  nav ul{
+    margin-top: 0;
+  }
+  nav li{
+    background-color: #110903;
+    list-style: none;
+  }
+  nav li:hover{
+    background-color: #231908;
+  }
+  nav li a{
+    display: block;
+    padding: 5px 5px 5px 20px;
+    color:#E06F00 !important;
+  }
+
+  nav li:first-child{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; 
+  }
+  nav li:last-child{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; 
+  }
+
+  section {
+    padding-left: 240px;
+    width: 600px;
+  }
+
+  h3{
+    margin-top: 2em;
+  }
+  
+  section header{
+    margin-top: 2em;
+    background-color: #0D0903;
+    padding: 20px 0 20px 20px;
+    font-size: 2em;
+  }
+  
+  section a{
+    color:#D6955E !important;
+  }
+  
+  
+  </style>
+
+  <body>
+
+    <nav>
+      <h1><a href="index.html">WQ</a></h1>
+      <ul>
+        {% for post in site.posts %}
+        <li><a href="#{{ post.title | downcase }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <section>
+      {% for post in site.posts %}
+      <article>
+        <header id="{{ post.title | downcase }}">{{ post.title }}</header>
+        {{ post.content }}
+      </article>
+      {% endfor %}
+    </section>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+  <script src="assets/js/jquery_scroll.js"></script>
+  <script>
+
+      $('a').smoothScroll();
+
+  </script>
+  
+  </html>

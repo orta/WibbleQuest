@@ -1,0 +1,6 @@
+---
+title: "Items"
+---
+
+Items are objects that can be "picked up and dropped":#pickup, you can examine them when they are in the same room as you and they show up in your inventory. 
+

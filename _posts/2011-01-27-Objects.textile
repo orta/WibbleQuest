@@ -1,0 +1,5 @@
+Everything is an object. Let's start with that. Also, this is an application with a GUI, so there's no need to do lots of crazy infinite loops to wrap everything. 
+
+Using Objects means that you can put the right function in the right place, lets say you want to have an Item respond to the drink command. You can create a subclass ("subclass?!?":http://www.virtuosimedia.com/dev/php/procedural-vs-object-oriented-programming-oop) of the Item class and then add the "didRespondToCommand":#command method that will respond to the command drink. 
+
+Every object that you place in game has the ability to respond to commands, that means you could add slay to the Dragon class, or sleep in the Bedroom class. You just have to think about the best place to put the command.

@@ -1,0 +1,97 @@
+---
+layout: nil
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>Wibble Quest an iPhone Text Adventure Game Framework</title>
+  <meta name="generator" content="Sublime Editor 2" />
+  <meta name="author" content="orta therox" />
+  <meta name="company" content="http://ortatherox.com" />
+  <meta name="email" content="orta.therox@gmail.com" />
+  <meta name="date" content="Fri 22 Jul 2011 18:54:20 EDT" />
+  <meta name="venue" content="The Internets" />
+
+  <style>
+  html{
+    background-color: #261406;
+    color:#A75821;
+  }
+  body{
+    width: 920px;
+    margin: 50px auto;
+    font-family: 'American Typewriter';
+  }
+  section {
+    float:left;
+    width: 450px;
+    text-align:center;
+  }
+  #description{
+    margin-top: 20px;
+  }
+  h1{
+    font-weight: normal;
+    font-size: 10em;
+    margin: 10px;
+  }
+  h2{
+    font-weight: normal;
+    font-size: 1.4em;
+  }
+  ul li{
+    float:left;
+    width: 200px;
+    text-align: center;
+    list-style: none;
+
+  }
+  ul li a{
+    padding: 10px 0px;
+    display: block;
+    color: #94450B !important;
+  } 
+  ul li#download{
+    width: 400px;
+  }
+   ul li:hover {
+     background-color: #44250C;
+   }
+   p{
+     clear: both;
+     padding-top: 22px;
+   }
+  </style>
+
+  <body>
+
+
+    <section id="description">
+      <h1>WQ</h1>
+      <h2>A iOS Text Adventure Game Framework with a simple object oriented API for:</h2>
+      <ul>
+        
+        {% for post in site.posts %}
+              <li><a href="docs.html#{{ post.title | downcase }}">{{ post.title }}</a></li>
+        {% endfor %}
+        
+      </ul>
+      <p>
+        Wibble Quest will help you make a Text Adventure game very very quickly, and will help you scale to a complex game with ease. 
+      </p>
+
+      <ul>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="http://github.com/orta/wibblequest">Github</a></li>
+        <li id="download"><a href="https://github.com/orta/WibbleQuest/archives/master">Download</a></li>
+      </ul>
+    </section>
+
+    <section id="calltoaction">
+      <a href ="https://github.com/orta/WibbleQuest/archives/master"><img src="assets/images/iphonescreenshot.png"/></a>
+    </section>
+
+  </body>
+  </html>
