@@ -18,9 +18,7 @@
   
   KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:@"Testing that you can load settings."];
   [scenario addStep:[KIFTestStep stepToWaitForTappableViewWithAccessibilityLabel:@"Settings"]];
-//  [scenario addStep:[KIFTestStep stepToSetOn:YES forSwitchWithAccessibilityLabel:@""];
 
-  
   return scenario;
 }
 
