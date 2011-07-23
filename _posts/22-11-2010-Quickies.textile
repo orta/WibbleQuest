@@ -120,7 +120,7 @@ h3. make a person give you something
 You can just add an item to the players inventory for example like below
 
 {% highlight objc %}
-if([sentence contains:@"mic", @"mics", @"microphone", @"microphones", nil] ){
+if([sentence contains:@"mic", @"mics", @"microphone", nil] ){
   [WQ say:@"FloatstarPX" words:@"Ah yeah, the microphones, I spotted them earlier, here you go"];
   Microphone *mic = [[Microphone alloc] init];
   WibbleQuest * wibble = [WibbleQuest sharedWibble];

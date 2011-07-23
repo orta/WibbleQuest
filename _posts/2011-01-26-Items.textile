@@ -2,5 +2,46 @@
 title: "Items"
 ---
 
-Items are objects that can be "picked up and dropped":#pickup, you can examine them when they are in the same room as you and they show up in your inventory. 
+Items are objects that can be "picked up and dropped":#pickup, have their "own commands":#commands, can be used and they show up in your inventory. 
 
+The API for whether an item is on the player is all in the Player class, with the functions hasItemByID, getItemByID and removeItemByID, you can see them in use below in the snippet below
+
+{% highlight objc %}
+if( [Player hasItemByID:@"bubba"] ){
+  Item * bubba = [Player getItemByID:@"bubba"];
+  [Player removeItemByID:@"bubba"];
+  ...
+}
+{% endhighlight %}
+
+In this case we're asking if the player has picked up an Item with an id called bubba, if they have then get a copy of it ( for later use ) and remove the one from the inventory.
+
+
+
+As Items can have their own commands it makes sense to put commands in them, this also means they can keep their own variables, like this drink command which keeps drinking till drinksLeft is 0. 
+
+{% highlight objc %}
+@interface Bubba : Item {
+  int drinksLeft;
+}
+
+-(void) drink;
+@end
+{% endhighlight %}
+
+And in the implmentation file
+
+{% highlight objc %}
+-(void)onUse{
+  [self drink];
+}
+
+- (void) drink{
+  if (drinksLeft > 0) {
+    drinksLeft = drinksLeft - 1;
+    [WQ print:@"You take a swig from Bubba, it's pretty refreshing"];
+  }else{
+    [WQ print:@"Oh.. Looks like Bubba is empty."]; 
+  }
+}
+{% endhighlight %}

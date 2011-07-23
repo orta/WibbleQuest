@@ -36,7 +36,7 @@ pre { white-space: pre-wrap; }
 } /* Literal.String */
 .na { color: #a6e22e } /* Name.Attribute */
 .nb { color: #f8f8f2 } /* Name.Builtin */
-.nc { color: #a6e22e } /* Name.Class */
+.nc { color: #FF6C00 } /* Name.Class */
 .no { color: #66d9ef } /* Name.Constant */
 .nd { color: #a6e22e } /* Name.Decorator */
 .ni { color: #f8f8f2 } /* Name.Entity */
