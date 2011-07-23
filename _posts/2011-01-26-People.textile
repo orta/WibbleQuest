@@ -2,3 +2,5 @@
 title: "People"
 ---
 
+People are objects that "respond to say":#talk, and are added to a room using _room.person_ they are a simplified version of the Creature class. You can make people respond to when you have "entered a room":#hello that a player has gone into. This is useful for starting up a conversation, let the Person talk first.
+

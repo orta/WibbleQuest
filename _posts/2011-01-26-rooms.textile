@@ -4,8 +4,10 @@ title: "Rooms"
 
 A lot of the time you won't need to subclass a Room object, you can "create":#createroom a room easily, it's normal to only create a subclass when you want to "allow / disallow":#roomtalk, add respond to "examine":#roomexamine to the room or add your own "commands":#command inside the room.
 
-Rooms have a name and description that is called when you enter that room, and they also have an "id":#id so you can get them using getRoomByID on the WQ class.
+Rooms have a name and description that is called when you enter that room, and they also have an "id":#id so you can use _getRoomByID_ on the WQ class.
 
 {% highlight objc %}
 Room* finale = [WQ getRoomByID:@"finale"];
 {% endhighlight %}
+
+You can add multiple objects that can be examined in a room very easily by making an nsdictionary of what you want to say vs what you want people to type. This is great for a "quick _examine item_":#roomexamine command that prints out some text. But if you want to do things like add Items to the players inventory or the room, you'll have to add them as custom commands.

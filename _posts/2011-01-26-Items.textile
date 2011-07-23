@@ -29,14 +29,14 @@ As Items can have their own commands it makes sense to put commands in them, thi
 @end
 {% endhighlight %}
 
-And in the implmentation file
+And in the implementation file
 
 {% highlight objc %}
--(void)onUse{
+-(void) onUse{
   [self drink];
 }
 
-- (void) drink{
+-(void) drink{
   if (drinksLeft > 0) {
     drinksLeft = drinksLeft - 1;
     [WQ print:@"You take a swig from Bubba, it's pretty refreshing"];

@@ -89,18 +89,18 @@ You can use teleport to room with ID, make sure to have done [wq addRoom: room] 
 
 h3(#roomexamine). Make it possible to examine things in the room
 
-You need to subclass the Room object and add the method dictionaryForExamine. For example, this one says something if you write "examine clothes" in the room.
+You need to subclass the Room object and add the method _dictionaryForExamine_. For example, this one says something if you write "examine clothes" in the room.
 
 {% highlight objc %}
 -(NSDictionary*)dictionaryForExamine {
 return [NSDictionary dictionaryWithObjectsAndKeys:
-@"The pile of clothes are covered in sweat, you don't really want to touch it", @"clothes",
+@"The clothes are sweaty, you don't really want to touch them", @"clothes",
 nil];
 }
 {% endhighlight %}
 
 
-h3. Add a Person to talk to in a room
+h3(#say). Add a Person to talk to you in a room
 
 Create the person's class, as a subclass of Person
 Make them respond to words that are said by using 
