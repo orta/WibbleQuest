@@ -1,3 +1,8 @@
+h3(#ready). Where do I put my code?
+
+If you download one of the example applications, you'll see they have a folder for the WibbleQuest framework as well as a game folder. In the game folder there is a usually files called  [something]Game.m and [something]Game.h this is your main Game class, and where you do a lot of setting up your game. 
+
+It will come with a method already called ready which is where you can safely set up your game. Once ready is finished then the game starts but saying your Game's Title and Description and puts the player in the first room.
 
 h3. Write on the screen
 
@@ -190,44 +195,3 @@ In your person subclass override
 {% endhighlight %}
 
 and make it say something
-
-
-h3. Create something to fight
-
-First you need to have your player have some health, and a damageRange. I add this to my ready function.
-
-{% highlight objc %}
-Player * player = [Player sharedPlayer];
-player.damageRange = NSMakeRange(1, 3);
-player.maxHealth = 10;
-player.health = 10;
-{% endhighlight %}
-
-A fightable character is a subclass of a Creature, they have name, damageRange, and Max Health variables that are self explanatory. 
-
-What is less obvious is that you can do lots with what the creature says and how you attack it. There is a handy method called damageModifier which allows you to modify the damage after it's been rolled. For example, in this case the damage is doubled if the user has picked up a keytar.
-
-
-{% highlight objc %}
--(int)damageTakenModifier:(int)originalDamage {
-  // if the player has a keytar, then double the damage
-  if([Player has:@"keytar"]){
-    return originalDamage * 2;
-  }
-  return originalDamage;
-}  
-{% endhighlight %}
-
-
-
-There is a lot of methods you can override in order to get your creatures to be realistic, override as many as you want.
-
-{% highlight objc %}
--(void)beforeTurn;
--(void)afterTurn;
--(void)beforeFight;
--(void)afterFightLost;
--(void)afterFightWon;
-{% endhighlight %}
-
-Once you're happy with your class, you just need to add the creature to a room to make everything connect up.

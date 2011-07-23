@@ -2,8 +2,53 @@
 title: "Creatures"
 ---
 
-h1. Alas, it's not that easy. 
- 
-We're working with a GUI, and that means you've got a lot more things to think about. So before we get started on what additional syntax we have to deal with iOS dev, we're going to have to get some words right.
+Creatures are things you want to fight. The act like People but have additional functions like responding to commands like fight.
 
-When writing applications for iOS, you say you're writing Objective-C with UIKit.
+To use them you need to have your player have some health, and a damageRange. Usually this is added in the "_ready_":#ready function.
+
+{% highlight objc %}
+Player * player = [Player sharedPlayer];
+player.damageRange = NSMakeRange(1, 3);
+player.maxHealth = 10;
+player.health = 10;
+{% endhighlight %}
+
+A fightable character is a subclass of a Creature, they have name, damageRange, and Max Health variables that are self explanatory. 
+
+What is less obvious is that you can do lots with what the creature says and how you attack it. There is a handy method called damageModifier which allows you to modify the damage after it's been rolled. For example, in this case the damage is doubled if the user has picked up a keytar.
+
+{% highlight objc %}
+-(int)damageTakenModifier:(int)originalDamage {
+  // if the player has a keytar, then double the damage
+  if([Player has:@"keytar"]){
+    return originalDamage * 2;
+  }
+  return originalDamage;
+}  
+{% endhighlight %}
+
+The way that the battle is described is quite interesting too, you supply a collection of strings in the form of an array that lets you describe each attack given and recieved, this means you dont have to have generic "you hit the hippogruff for 5 damage" messages, you can make your own up. Like below.
+
+{% highlight objc %}
+-(NSArray*)formattedAttackPhrases{
+  return [NSArray arrayWithObjects:
+          @"The bodyguard looks at you grimly and causes %i ego damage.",
+          @"The bodyguard shakes his head and bruising yourego by %i.",
+          @"The bodyguard puts his earphone in hurting your ego by %i.",
+         nil];
+}
+{% endhighlight %}
+
+They should always contain a %i or you could have an application crash. 
+
+There is a lot of methods you can override in order to get your creatures to be realistic, override as many as you want.
+
+{% highlight objc %}
+-(void)beforeTurn;
+-(void)afterTurn;
+-(void)beforeFight;
+-(void)afterFightLost;
+-(void)afterFightWon;
+{% endhighlight %}
+
+Once you're happy with your class, you just need to add the creature to a room to make everything connect up.
