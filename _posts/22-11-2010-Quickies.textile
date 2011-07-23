@@ -104,6 +104,20 @@ nil];
 }
 {% endhighlight %}
 
+h3(#deny). Make a room deny entry until you've got certain items
+
+In your Room subclass you can ban someone to enter the room by returning NO. You also have a way of not letting someone leave the room, by using _playerShouldLeaveRoom_.
+
+{% highlight objc %}
+-(BOOL)playerShouldEnterRoom {
+  if ([Player has:@"keytar"] && [Player has:@"microphone"]) {
+    return YES;
+  }
+  
+  [WQ print:@"You wouldn't want to go on stage without a Mic and your Keytar! Better go find them."];
+  return NO;
+}
+{% endhighlight %}
 
 h3(#say). Add a Person to talk to you in a room
 

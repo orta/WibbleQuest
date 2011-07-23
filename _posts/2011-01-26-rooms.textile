@@ -11,3 +11,6 @@ Room* finale = [WQ getRoomByID:@"finale"];
 {% endhighlight %}
 
 You can add multiple objects that can be examined in a room very easily by making an nsdictionary of what you want to say vs what you want people to type. This is great for a "quick _examine item_":#roomexamine command that prints out some text. But if you want to do things like add Items to the players inventory or the room, you'll have to add them as custom commands.
+
+It's normal to have rooms connected that you still may not have permission to access yet, say for example if you need a key or some other items to enter the room, you can use the method playerShouldEnterRoom and "allow players to not enter":#deny if they do not have the required items.
+
