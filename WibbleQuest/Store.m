@@ -66,6 +66,5 @@
     [WQ print:@"We don't sell %@'s here", itemName];
     return;
   }
-//
 }
 @end

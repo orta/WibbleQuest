@@ -48,6 +48,7 @@
     return KIFTestStepResultFailure;
     
   }]];
+  
   return scenario;
 }
 
