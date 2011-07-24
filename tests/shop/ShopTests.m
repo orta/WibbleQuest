@@ -8,8 +8,8 @@
 
 #import "ShopTests.h"
 #import "KIFTestStep.h"
-#import "KIFTestScenario-Helpers.h"
 #import "RockShop.h"
+#import "KIFScenario-Helpers.h"
 
 @implementation KIFTestScenario (ShopTests)
 
