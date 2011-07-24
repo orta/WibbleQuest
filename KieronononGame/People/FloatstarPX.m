@@ -28,7 +28,7 @@
     return;
   }
   
-  if([sentence contains:@"no", nil] ){
+  if([sentence contains:@"yes", nil] ){
     [WQ print:@"Float laughs"];
     [WQ wait:4];
     [WQ say:@"FloatstarPX" words:@"Cynic, nah we're not supporting them. Think you can go and tell that burley looking bodyguard in the dark alley to the south that for us? Thanks."];
