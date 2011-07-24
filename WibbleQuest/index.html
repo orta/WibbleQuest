@@ -1,5 +1,6 @@
 <html>
   <head>
+    <script src="zepto.min.js"></script>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
       <style type="text/css" media="screen">
         html {
@@ -94,13 +95,8 @@
         }
         
         function createElementWithText(element, text){
-          var p=document.createElement(element);
-          text = text.replace("`", "'");
-          var p_text = document.createTextNode(text);
-          p.appendChild(p_text);
-          document.body.appendChild(p);
-          
-          scrollToBottom(p);
+          $("body").append("<" + element +">" + text + "</" + element + ">")
+          // scrollToBottom(p);
           return "OK"
         }
         
@@ -165,7 +161,7 @@
                    setTimeout("locked=false;executeQueue()", timeInterval);   
                 }               
           }
-        }        
+        }
         </script>
   </head>
   <body>

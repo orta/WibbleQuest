@@ -140,7 +140,7 @@
       return;
     }
     
-    if([@"say" isEqualToString:command] || [@"ask" isEqualToString:command]){
+    if([@"say" isEqualToString:command] || [@"ask" isEqualToString:command] || [@"talk" isEqualToString:command]){
       if([parameters count] == 1){
         [wq print:@"What do you want to say?"];
         return;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		602A45E513DCA5AB00504291 /* zepto.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 602A45E413DCA5AB00504291 /* zepto.min.js */; };
+		602A45E613DCA5AB00504291 /* zepto.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 602A45E413DCA5AB00504291 /* zepto.min.js */; };
 		603B99C813D3C3F20001F9CD /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
 		6050F43013DC4B0300BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
 		6050F43113DC4B6700BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
@@ -33,7 +35,6 @@
 		609B9FC913C901D400888A6E /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC713C901D400888A6E /* MainViewController_iPad.xib */; };
 		609B9FCC13C901D400888A6E /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FCA13C901D400888A6E /* FlipsideViewController.xib */; };
 		609B9FE013C9059100888A6E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
-		60A1E12413D218AB00F42A84 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 60A1E12313D218AB00F42A84 /* README */; };
 		60BCD36F13DB4FAE00CBBB42 /* ShopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCD36E13DB4FAE00CBBB42 /* ShopTests.m */; };
 		60CC9F0213C9D5C0006D116C /* Creature.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EF913C9D5C0006D116C /* Creature.m */; };
 		60CC9F0313C9D5C0006D116C /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFB13C9D5C0006D116C /* Item.m */; };
@@ -88,7 +89,6 @@
 		60FEA1B513D653F0006997B0 /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FCA13C901D400888A6E /* FlipsideViewController.xib */; };
 		60FEA1B613D653F0006997B0 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
 		60FEA1B713D653F0006997B0 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
-		60FEA1B813D653F0006997B0 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 60A1E12313D218AB00F42A84 /* README */; };
 		60FEA1B913D653F0006997B0 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7613D4F8F100B90223 /* TODO */; };
 		60FEA1BA13D653F0006997B0 /* initialIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* initialIcon.png */; };
 		60FEA1C213D6541D006997B0 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FEA1C113D6541D006997B0 /* libKIF.a */; };
@@ -160,6 +160,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		602A45E413DCA5AB00504291 /* zepto.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = zepto.min.js; sourceTree = "<group>"; };
 		603B99C613D3C3F20001F9CD /* NSArray-named-captures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray-named-captures.h"; path = "Categories/NSArray-named-captures.h"; sourceTree = "<group>"; };
 		603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray-named-captures.m"; path = "Categories/NSArray-named-captures.m"; sourceTree = "<group>"; };
 		6050F3E213DB868100BB8E82 /* KIFScenario-Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KIFScenario-Helpers.h"; path = "tests/KIFScenario-Helpers.h"; sourceTree = "<group>"; };
@@ -200,7 +201,6 @@
 		609B9FC513C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPhone.xib; sourceTree = "<group>"; };
 		609B9FC813C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPad.xib; sourceTree = "<group>"; };
 		609B9FDF13C9059100888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
-		60A1E12313D218AB00F42A84 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		60BCD36D13DB4FAE00CBBB42 /* ShopTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopTests.h; path = tests/shop/ShopTests.h; sourceTree = "<group>"; };
 		60BCD36E13DB4FAE00CBBB42 /* ShopTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShopTests.m; path = tests/shop/ShopTests.m; sourceTree = "<group>"; };
 		60CC9EF813C9D5C0006D116C /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Creature.h; sourceTree = "<group>"; };
@@ -364,7 +364,6 @@
 				609B9FAB13C901D400888A6E /* Frameworks */,
 				60F49DCE13CBD32E00BDB07C /* Game */,
 				609B9FD213C901E200888A6E /* Boilerplate */,
-				60A1E12313D218AB00F42A84 /* README */,
 			);
 			name = Game;
 			path = KieronononGame;
@@ -432,6 +431,7 @@
 		60CC9F0F13C9E3E8006D116C /* html */ = {
 			isa = PBXGroup;
 			children = (
+				602A45E413DCA5AB00504291 /* zepto.min.js */,
 				60CC9F1013C9E40D006D116C /* index.html */,
 			);
 			name = html;
@@ -710,7 +710,6 @@
 				609B9FCC13C901D400888A6E /* FlipsideViewController.xib in Resources */,
 				609B9FE013C9059100888A6E /* SettingsViewController.xib in Resources */,
 				60CC9F1113C9E40D006D116C /* index.html in Resources */,
-				60A1E12413D218AB00F42A84 /* README in Resources */,
 				606B2B7713D4F8F100B90223 /* TODO in Resources */,
 				606B2B7B13D5282B00B90223 /* initialIcon.png in Resources */,
 			);
@@ -726,7 +725,6 @@
 				60FEA1B513D653F0006997B0 /* FlipsideViewController.xib in Resources */,
 				60FEA1B613D653F0006997B0 /* SettingsViewController.xib in Resources */,
 				60FEA1B713D653F0006997B0 /* index.html in Resources */,
-				60FEA1B813D653F0006997B0 /* README in Resources */,
 				60FEA1B913D653F0006997B0 /* TODO in Resources */,
 				60FEA1BA13D653F0006997B0 /* initialIcon.png in Resources */,
 			);
@@ -768,6 +766,7 @@
 				6F36C4E613D3D079003387F7 /* RockShop.m in Sources */,
 				606B2B7513D4F5B000B90223 /* WibbleObject.m in Sources */,
 				607CB92C13D9070600A72FD2 /* FinaleRoom.m in Sources */,
+				602A45E513DCA5AB00504291 /* zepto.min.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,6 +809,7 @@
 				607CB92913D8EE4100A72FD2 /* InventoryTests.m in Sources */,
 				607CB92D13D9070600A72FD2 /* FinaleRoom.m in Sources */,
 				60BCD36F13DB4FAE00CBBB42 /* ShopTests.m in Sources */,
+				602A45E613DCA5AB00504291 /* zepto.min.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

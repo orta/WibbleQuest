@@ -32,11 +32,11 @@
 
 -(void)beforeFight {
   [WQ print:@"You tell the bodyguard that you need to get onstage."];
-  [WQ wait:1];
+  [WQ wait:3];
   [WQ print:@"He ignores you."];
-  [WQ wait:1];
+  [WQ wait:3];
   [WQ print:@"Still ignoring you"];
-  [WQ wait:2];
+  [WQ wait:4];
   [WQ print:@"You start to try push past him, but he simply clenches his fists like he means business. Guess you're gonna have to go Brutal Techno Punk on him."];
 }
 

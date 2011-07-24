@@ -28,8 +28,16 @@
     return;
   }
   
-  if([sentence contains:@"yes", @"no", nil] ){
+  if([sentence contains:@"no", nil] ){
+    [WQ print:@"Float laughs"];
+    [WQ wait:4];
+    [WQ say:@"FloatstarPX" words:@"Cynic, nah we're not supporting them. Think you can go and tell that burley looking bodyguard in the dark alley to the south that for us? Thanks."];
+    return;
+  }  
+  
+  if([sentence contains:@"no", nil] ){
     [WQ print:@"Float pauses"];
+    [WQ wait:4];
     [WQ say:@"FloatstarPX" words:@"I agree, we shouldn't support them, think you can go and tell that burley looking bodyguard in the dark alley to the south that for us. Thanks."];
     return;
   }  
