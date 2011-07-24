@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		603B99C813D3C3F20001F9CD /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
-		6050F42913DC48B800BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
+		6050F43013DC4B0300BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
+		6050F43113DC4B6700BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
 		6065BC9213D3619000F1F6D4 /* StartingRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6065BC9113D3619000F1F6D4 /* StartingRoom.m */; };
 		606B2B7513D4F5B000B90223 /* WibbleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B2B7413D4F5B000B90223 /* WibbleObject.m */; };
 		606B2B7713D4F8F100B90223 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7613D4F8F100B90223 /* TODO */; };
@@ -135,6 +136,27 @@
 			remoteGlobalIDString = AAB07268139719AC008AF393;
 			remoteInfo = KIF;
 		};
+		6050F43213DC4BB300BB8E82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCC2626813920FC7003D9994;
+			remoteInfo = "sbjson-ios";
+		};
+		6050F43413DC4BDD00BB8E82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6050F42A13DC493300BB8E82 /* KIF.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AAB07267139719AC008AF393;
+			remoteInfo = KIF;
+		};
+		6050F43613DC4BE100BB8E82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCC2626813920FC7003D9994;
+			remoteInfo = "sbjson-ios";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -234,10 +256,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6050F42913DC48B800BB8E82 /* libsbjson-ios.a in Frameworks */,
 				609B9FAD13C901D400888A6E /* UIKit.framework in Frameworks */,
 				609B9FAF13C901D400888A6E /* Foundation.framework in Frameworks */,
 				609B9FB113C901D400888A6E /* CoreGraphics.framework in Frameworks */,
+				6050F43013DC4B0300BB8E82 /* libsbjson-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +267,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6050F43113DC4B6700BB8E82 /* libsbjson-ios.a in Frameworks */,
 				60FEA1C213D6541D006997B0 /* libKIF.a in Frameworks */,
 				60FEA1AE13D653F0006997B0 /* UIKit.framework in Frameworks */,
 				60FEA1AF13D653F0006997B0 /* Foundation.framework in Frameworks */,
@@ -578,6 +601,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6050F43313DC4BB300BB8E82 /* PBXTargetDependency */,
 			);
 			name = "Kieronon on";
 			productName = MyBoots;
@@ -595,6 +619,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				6050F43713DC4BE100BB8E82 /* PBXTargetDependency */,
+				6050F43513DC4BDD00BB8E82 /* PBXTargetDependency */,
 			);
 			name = "Wibble Tests";
 			productName = MyBoots;
@@ -791,6 +817,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6050F43313DC4BB300BB8E82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "sbjson-ios";
+			targetProxy = 6050F43213DC4BB300BB8E82 /* PBXContainerItemProxy */;
+		};
+		6050F43513DC4BDD00BB8E82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KIF;
+			targetProxy = 6050F43413DC4BDD00BB8E82 /* PBXContainerItemProxy */;
+		};
+		6050F43713DC4BE100BB8E82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "sbjson-ios";
+			targetProxy = 6050F43613DC4BE100BB8E82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		609B9FB513C901D400888A6E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -855,6 +899,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "vendor/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -874,6 +919,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "vendor/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
@@ -890,6 +936,11 @@
 				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
 				INFOPLIST_FILE = "KieronononGame/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -904,6 +955,11 @@
 				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
 				INFOPLIST_FILE = "KieronononGame/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

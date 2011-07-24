@@ -17,6 +17,8 @@
 #import "FloatstarPX.h"
 #import "RockShop.h"
 
+#import "SBJson.h"
+
 @implementation MyBootsGame
 @synthesize wq;
 
@@ -29,6 +31,9 @@
 }
 
 -(void)ready {
+  NSLog(@"Parsed some JSON: %@", [@"[1,2,3,true,false,null]" JSONValue]);
+  
+
 
 #if RUN_KIF_TESTS
   [wq start];
