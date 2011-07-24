@@ -1,0 +1,13 @@
+h1. Wibble Quest
+
+h2. A Text Adventure Game Framework for iOS.
+
+A iOS Text Adventure Game Framework with a simple object oriented API for:
+
+* Objects
+* Rooms
+* People
+* Items
+* Creatures
+
+Wibble Quest will help you make a Text Adventure game very very quickly, and will help you scale to a complex game with ease, to do this you're gonna want to clone this repository and ensure the submodules are included.

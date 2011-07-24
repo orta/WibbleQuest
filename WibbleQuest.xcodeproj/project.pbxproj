@@ -332,7 +332,7 @@
 			children = (
 				60FEA1C313D65598006997B0 /* Tests */,
 				60CC9EF713C9D5C0006D116C /* WibbleQuest */,
-				609B9FB213C901D400888A6E /* Kierononon Quest */,
+				609B9FB213C901D400888A6E /* Game */,
 				609B9FB313C901D400888A6E /* Supporting Files */,
 				609B9FA913C901D400888A6E /* Products */,
 				6050F41513DC480100BB8E82 /* Vendor */,
@@ -359,7 +359,7 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		609B9FB213C901D400888A6E /* Kierononon Quest */ = {
+		609B9FB213C901D400888A6E /* Game */ = {
 			isa = PBXGroup;
 			children = (
 				60FEA1C013D653F1006997B0 /* Kieronon on copy-Info.plist */,
@@ -368,7 +368,7 @@
 				609B9FD213C901E200888A6E /* Boilerplate */,
 				60A1E12313D218AB00F42A84 /* README */,
 			);
-			name = "Kierononon Quest";
+			name = Game;
 			path = KieronononGame;
 			sourceTree = "<group>";
 		};
