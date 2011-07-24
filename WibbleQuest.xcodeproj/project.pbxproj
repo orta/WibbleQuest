@@ -235,7 +235,6 @@
 		60F512A013D1E59800978EC0 /* BodyGuard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BodyGuard.h; path = Creatures/BodyGuard.h; sourceTree = "<group>"; };
 		60F512A113D1E59800978EC0 /* BodyGuard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BodyGuard.m; path = Creatures/BodyGuard.m; sourceTree = "<group>"; };
 		60FEA1BE13D653F0006997B0 /* WibbleTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WibbleTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		60FEA1C013D653F1006997B0 /* Kieronon on copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Kieronon on copy-Info.plist"; path = "/Users/orta/spiel/iphone/WibbleQuest/Kieronon on copy-Info.plist"; sourceTree = "<absolute>"; };
 		60FEA1C113D6541D006997B0 /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "vendor/KIF/build/Release-iphoneos/libKIF.a"; sourceTree = "<group>"; };
 		60FEA1C413D6566B006997B0 /* WBTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBTestController.h; path = tests/WBTestController.h; sourceTree = "<group>"; };
 		60FEA1C513D6566B006997B0 /* WBTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBTestController.m; path = tests/WBTestController.m; sourceTree = "<group>"; };
@@ -362,7 +361,6 @@
 		609B9FB213C901D400888A6E /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				60FEA1C013D653F1006997B0 /* Kieronon on copy-Info.plist */,
 				609B9FAB13C901D400888A6E /* Frameworks */,
 				60F49DCE13CBD32E00BDB07C /* Game */,
 				609B9FD213C901E200888A6E /* Boilerplate */,
