@@ -1,6 +1,6 @@
-[submodule "vendor/KIF"]
-	path = vendor/KIF
-	url = https://github.com/square/KIF.git
 [submodule "vendor/json"]
 	path = vendor/json
 	url = https://github.com/stig/json-framework.git
+[submodule "vendor/KIF"]
+	path = vendor/KIF
+	url = https://github.com/square/KIF.git
