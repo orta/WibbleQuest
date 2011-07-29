@@ -19,4 +19,5 @@ better Room API
 [Room currentRoom]
 [Room amIn:@"room"]
 automate adding room to the WQ
-id's should be automated
+room id's should be automated, but overridable
+do not hide keyboard if command not recognised
