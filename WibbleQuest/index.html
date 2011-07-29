@@ -22,7 +22,17 @@
           margin: 0;
           padding: 12px;
         }
-        
+
+        @-webkit-keyframes fade {
+          0%   { opacity: 0; }
+          10%  { opacity: 0.7; }
+          100% { opacity: 1; }
+        }
+        p, h4, blockquote,code{
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 3s;
+        }
+  
         </style>
       <script>
         // these functions are called from the UIWebView, they essentially are the public methods

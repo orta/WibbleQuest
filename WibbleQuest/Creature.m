@@ -65,6 +65,8 @@
   }
   //player attack 
   int range = [player damageRange].length - [player damageRange].location;
+  range = MAX(range, 1);
+
   int damage = ( arc4random() % range ) + [player damageRange].location;
   damage = [self damageTakenModifier:damage];
   [self takeDamage:damage];
@@ -80,8 +82,10 @@
   
   [self beforeTurn];
   //enemy health check
-  int range2 = player.damageRange.length - player.damageRange.location;
-  int damage2 = ( arc4random() % range2 ) + player.damageRange.location;
+  int range2 = self.damageRange.length - self.damageRange.location;
+  range2 = MAX(range2, 1);
+  
+  int damage2 = ( arc4random() % range2 ) + self.damageRange.location;
   [self giveDamage:damage2];
   player.health -= damage2;
   
@@ -98,12 +102,12 @@
 
 -(void)takeDamage:(int)damage{
   int index = arc4random() % [self.formattedAttackPhrases count];
-  [WQ print:[self.formattedAttackPhrases objectAtIndex:index], damage];
+  [WQ print:[self.formattedDefensePhrases objectAtIndex:index], damage];
 }
 
 -(void)giveDamage:(int)damage{
   int index = arc4random() % [self.formattedDefensePhrases count];
-  [WQ print:[self.formattedDefensePhrases objectAtIndex:index], damage];
+  [WQ print:[self.formattedAttackPhrases objectAtIndex:index], damage];
 }
 
 
@@ -112,8 +116,12 @@
 -(void)afterTurn{};
 
 -(void)beforeFight{};
+-(void)afterCreatureLost{};
+-(void)afterCreatureWon{};
+
 -(void)afterFightLost{};
 -(void)afterFightWon{};
+
 
 -(void)respondToSentenceArray:(NSArray*)sentence{}
 

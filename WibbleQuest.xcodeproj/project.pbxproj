@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60114B2013E34020007F97A5 /* zepto.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 602A45E413DCA5AB00504291 /* zepto.min.js */; };
 		602A45E513DCA5AB00504291 /* zepto.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 602A45E413DCA5AB00504291 /* zepto.min.js */; };
 		602A45E613DCA5AB00504291 /* zepto.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 602A45E413DCA5AB00504291 /* zepto.min.js */; };
 		603B99C813D3C3F20001F9CD /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
@@ -711,6 +712,7 @@
 				609B9FE013C9059100888A6E /* SettingsViewController.xib in Resources */,
 				60CC9F1113C9E40D006D116C /* index.html in Resources */,
 				606B2B7713D4F8F100B90223 /* TODO in Resources */,
+				60114B2013E34020007F97A5 /* zepto.min.js in Resources */,
 				606B2B7B13D5282B00B90223 /* initialIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -978,7 +980,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/vendor/KIF/\"/**",
 				);
-				INFOPLIST_FILE = "Kieronon on copy-Info.plist";
+				INFOPLIST_FILE = "KieronononGame/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -1005,7 +1007,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/vendor/KIF/\"/**",
 				);
-				INFOPLIST_FILE = "Kieronon on copy-Info.plist";
+				INFOPLIST_FILE = "KieronononGame/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-all_load",

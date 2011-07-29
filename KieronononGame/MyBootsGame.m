@@ -31,8 +31,7 @@
 }
 
 -(void)ready {
-  NSLog(@"Parsed some JSON: %@", [@"[1,2,3,true,false,null]" JSONValue]);
-  
+
 
 
 #if RUN_KIF_TESTS
@@ -117,6 +116,8 @@
 
   [wq print:@"There's a knock on your door and a muffled shout saying 'oi, get up!'"];
   
+  
+  NSLog(@"hi");
   [wq start];
 }
 
