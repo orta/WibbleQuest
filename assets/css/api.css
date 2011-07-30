@@ -1,0 +1,10 @@
+body{
+  color: #A75821;
+  margin: none;
+  width:auto;
+}
+
+#background, td.code, th.code {
+  background-color: #B49675;
+  border-left: 1px solid #64442F;
+}

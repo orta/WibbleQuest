@@ -14,3 +14,4 @@ You can add multiple objects that can be examined in a room very easily by makin
 
 It's normal to have rooms connected that you still may not have permission to access yet, say for example if you need a key or some other items to enter the room, you can use the method playerShouldEnterRoom and "allow players to not enter":#deny if they do not have the required items.
 
+To find out the current room (for example in an Item's use method), you can use [Room current] to get the room the player is in right now.

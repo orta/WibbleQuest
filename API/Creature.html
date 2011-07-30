@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>Creature.h</title>
+  <link rel="stylesheet" href="http://jashkenas.github.com/docco/resources/docco.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/syntax.css">
+  <link rel="stylesheet" href="../assets/css/api.css">
+  
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <table cellspacing=0 cellpadding=0>
+  <thead>
+    <tr>
+      <th class=docs><h1>Creature.h</h1></th>
+      <th class=code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id='section-1'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-1">&#182;</a>
+        </div>
+        <p>Creature.h
+ MyBoots</p>
+
+<p>Created by orta therox on 09/07/2011.
+ Copyright 2011 http://ortatherox.com. All rights reserved.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
+
+<span class="err">@</span><span class="n">interface</span> <span class="n">Creature</span> <span class="o">:</span> <span class="n">WibbleObject</span>
+
+<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">health</span><span class="p">;</span>
+<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">maxHealth</span><span class="p">;</span>
+
+<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">NSRange</span> <span class="n">damageRange</span><span class="p">;</span>
+
+<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">BOOL</span> <span class="n">fighting</span><span class="p">;</span>
+<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">BOOL</span> <span class="n">fightable</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-2'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-2">&#182;</a>
+        </div>
+        <p>Battle related methods</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">NSRange</span><span class="p">)</span><span class="n">damageRange</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">formattedAttackPhrases</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">formattedDefensePhrases</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">damageTakenModifier</span><span class="o">:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">originalDamage</span><span class="p">;</span>
+
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">fight</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-3'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-3">&#182;</a>
+        </div>
+        <p>callbacks</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">beforeTurn</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">afterTurn</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">beforeFight</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">afterFightLost</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">afterFightWon</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-4'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-4">&#182;</a>
+        </div>
+        <p>talking</p>
+
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">respondToSentenceArray</span><span class="o">:</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">sentence</span><span class="p">;</span>
+
+<span class="err">@</span><span class="n">end</span></pre></div>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>

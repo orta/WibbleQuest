@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>CommandInterpreter.h</title>
+  <link rel="stylesheet" href="http://jashkenas.github.com/docco/resources/docco.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/syntax.css">
+  <link rel="stylesheet" href="../assets/css/api.css">
+  
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <table cellspacing=0 cellpadding=0>
+  <thead>
+    <tr>
+      <th class=docs><h1>CommandInterpreter.h</h1></th>
+      <th class=code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id='section-1'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-1">&#182;</a>
+        </div>
+        <p>CommandInterpreter.h
+ MyBoots</p>
+
+<p>Created by orta therox on 10/07/2011.
+ Copyright 2011 http://ortatherox.com. All rights reserved.</p>
+
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
+
+<span class="err">@</span><span class="n">interface</span> <span class="n">CommandInterpreter</span> <span class="o">:</span> <span class="n">NSObject</span><span class="p">{</span>
+  <span class="n">BOOL</span> <span class="n">madeFirstMistake</span><span class="p">;</span>
+<span class="p">}</span>
+
+  <span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">IBOutlet</span> <span class="n">WibbleQuest</span> <span class="o">*</span><span class="n">wq</span><span class="p">;</span>
+  <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">parse</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">string</span><span class="p">;</span>
+
+<span class="err">@</span><span class="n">end</span></pre></div>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
