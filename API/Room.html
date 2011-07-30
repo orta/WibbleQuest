@@ -26,7 +26,7 @@
           <a class="pilcrow" href="#section-1">&#182;</a>
         </div>
         <p>Room.h
- MyBoots</p>
+ WibbleQuest</p>
 
 <p>Created by orta therox on 09/07/2011.
  Copyright 2011 http://ortatherox.com. All rights reserved.</p>
@@ -63,9 +63,9 @@
       <td class=code>
         <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">Store</span><span class="o">*</span> <span class="n">shop</span><span class="p">;</span>
 
-<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">NSArray</span> <span class="o">*</span><span class="n">items</span><span class="p">;</span>
-<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">Creature</span> <span class="o">*</span><span class="n">encounter</span><span class="p">;</span>
-<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">Person</span> <span class="o">*</span><span class="n">person</span><span class="p">;</span>
+<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">*</span> <span class="n">items</span><span class="p">;</span>
+<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">Creature</span><span class="o">*</span> <span class="n">encounter</span><span class="p">;</span>
+<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">Person</span><span class="o">*</span> <span class="n">person</span><span class="p">;</span>
 
 <span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">BOOL</span> <span class="n">visited</span><span class="p">;</span></pre></div>
       </td>
@@ -78,7 +78,7 @@
         <p>Get the room that the user is in at the minute</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="o">+</span> <span class="p">(</span><span class="n">Room</span><span class="o">*</span><span class="p">)</span> <span class="n">current</span><span class="p">;</span></pre></div>
+        <div class='highlight'><pre><span class="o">+</span> <span class="p">(</span><span class="n">Room</span> <span class="o">*</span><span class="p">)</span> <span class="n">current</span><span class="p">;</span></pre></div>
       </td>
     </tr>
     <tr id='section-5'>
@@ -109,28 +109,92 @@ this is done when entering a room.</p>
         <div class="pilwrap">
           <a class="pilcrow" href="#section-7">&#182;</a>
         </div>
-        <p>Take an item out of the room</p>
+        <p>Take an item out of the room, also removing it</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">Item</span> <span class="o">*</span><span class="p">)</span><span class="n">takeItem</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-8'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-8">&#182;</a>
+        </div>
+        <p>Get an item from from the room</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">Item</span> <span class="o">*</span><span class="p">)</span><span class="n">getItem</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-9'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-9">&#182;</a>
+        </div>
+        <p>Returns true if the Item is in the room</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span> <span class="n">hasItem</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-10'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-10">&#182;</a>
+        </div>
+        <p>Bi-Directional connections for rooms,
+basically a quick way of doing x.north = y
+y.south = x.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">connectNorth</span><span class="o">:</span><span class="p">(</span><span class="n">Room</span><span class="o">*</span><span class="p">)</span><span class="n">room</span><span class="p">;</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">connectSouth</span><span class="o">:</span><span class="p">(</span><span class="n">Room</span><span class="o">*</span><span class="p">)</span><span class="n">room</span><span class="p">;</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">connectWest</span><span class="o">:</span><span class="p">(</span><span class="n">Room</span><span class="o">*</span><span class="p">)</span><span class="n">room</span><span class="p">;</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">connectEast</span><span class="o">:</span><span class="p">(</span><span class="n">Room</span><span class="o">*</span><span class="p">)</span><span class="n">room</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-11'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-11">&#182;</a>
+        </div>
+        <p>Provides a NSDictionary of keys and values that are 
+acted upon when using the examine command inside a room.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="n">dictionaryForExamine</span><span class="p">;</span>
+
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">examineWithInput</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">input</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-12'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-12">&#182;</a>
+        </div>
+        <p>By overriding these methonds you can narrate the story 
+dealing when a player enters or leaves a room.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerDidEnterRoom</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerDidLeaveRoom</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-13'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-13">&#182;</a>
+        </div>
+        <p>By overriding these methods in your subclass you can force a 
+player to either not get into a room or to be stuck in a room, you do this
+by returning YES or NO. You will need to add an explaination because this method
+will silently stop players.</p>
 
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">Item</span><span class="o">*</span><span class="p">)</span><span class="n">takeItem</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span>
-<span class="o">-</span><span class="p">(</span><span class="n">Item</span> <span class="o">*</span><span class="p">)</span><span class="n">getItem</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span>
-<span class="o">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span> <span class="n">hasItem</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span>
-
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">connectNorth</span><span class="o">:</span><span class="p">(</span><span class="n">Room</span><span class="o">*</span><span class="p">)</span><span class="n">room</span><span class="p">;</span>
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">connectSouth</span><span class="o">:</span><span class="p">(</span><span class="n">Room</span><span class="o">*</span><span class="p">)</span><span class="n">room</span><span class="p">;</span>
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">connectWest</span><span class="o">:</span><span class="p">(</span><span class="n">Room</span><span class="o">*</span><span class="p">)</span><span class="n">room</span><span class="p">;</span>
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">connectEast</span><span class="o">:</span><span class="p">(</span><span class="n">Room</span><span class="o">*</span><span class="p">)</span><span class="n">room</span><span class="p">;</span>
-
-<span class="o">-</span><span class="p">(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="n">dictionaryForExamine</span><span class="p">;</span>
-
-<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">examineWithInput</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">input</span><span class="p">;</span>
-
-<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerDidEnterRoom</span><span class="p">;</span>
-<span class="o">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">playerShouldEnterRoom</span><span class="p">;</span>
-
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">playerShouldEnterRoom</span><span class="p">;</span>
 <span class="o">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">playerShouldLeaveRoom</span><span class="p">;</span>
-<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerDidLeaveRoom</span><span class="p">;</span>
+
 
 <span class="err">@</span><span class="n">end</span></pre></div>
       </td>

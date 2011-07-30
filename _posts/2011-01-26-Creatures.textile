@@ -27,13 +27,13 @@ What is less obvious is that you can do lots with what the creature says and how
 }  
 {% endhighlight %}
 
-The way that the battle is described is quite interesting too, you supply a collection of strings in the form of an array that lets you describe each attack given and recieved, this means you dont have to have generic "you hit the hippogruff for 5 damage" messages, you can make your own up. Like below.
+The way that the battle is described is quite interesting too, you supply a collection of strings in the form of an array that lets you describe each attack given and received, this means you don't have to have generic "you hit the hippogruff for 5 damage" messages, you can make your own up. Like below.
 
 {% highlight objc %}
 -(NSArray*)formattedAttackPhrases{
   return [NSArray arrayWithObjects:
           @"The bodyguard looks at you grimly and causes %i ego damage.",
-          @"The bodyguard shakes his head and bruising yourego by %i.",
+          @"The bodyguard shakes his head and bruising your ego by %i.",
           @"The bodyguard puts his earphone in hurting your ego by %i.",
          nil];
 }

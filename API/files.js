@@ -1,0 +1,1 @@
+var classes = ["CommandInterpreter","Creature","Item","Person","Player","PlayerInventory","Room","Store","WibbleObject","WibbleQuest","WibbleQuestPrintingCategory","WibbleQuestViewHandlingCategory","WQ",''];
