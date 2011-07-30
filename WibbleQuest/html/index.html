@@ -1,6 +1,6 @@
 <html>
   <head>
-    <script src="zepto.min.js"></script>
+    <script src="jquery.js"></script>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
       <style type="text/css" media="screen">
         html {
@@ -109,11 +109,13 @@
         function createElementWithText(element, text){
           $("body").append("<" + element +">" + text + "</" + element + ">")
           
-
           if( $("body").height() > window.innerHeight ){
             var height = $(element + ":last-child").height();
             totalHeight += height;
-            $("html, body").animate({ scrollTop:  "-" + height + "px" });
+            // height += window.innerHeight;
+            document.body.scrollTop += height;
+//      $("html, body").animate({ scrollTop: totalHeight + "px" });
+
           }           
           return "OK"
         }
