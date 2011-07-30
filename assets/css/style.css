@@ -6,7 +6,7 @@ html {
 body {
   width: 920px;
   margin: 50px auto;
-  font-family: 'American Typewriter','Century Schoolbook';
+  font-family: 'American Typewriter','Century Schoolbook', 'consolas', 'gill sans';
 }
 
 a.api {
