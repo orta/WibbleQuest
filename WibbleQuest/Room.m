@@ -12,6 +12,8 @@
 
 @synthesize  north, east, west, south, items = _items, encounter, person, visited, shop;
 
+#pragma mark room
+
 -(id)init{
   self = [super init];
   self.items = [NSArray array];

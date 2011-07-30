@@ -19,6 +19,7 @@
 +(void) heading:(NSString*)string;
 +(void) command:(NSString*)string;
 +(void) title:(NSString*)string;
++(void) art:(NSString*)string;
 
 + (Room *) getRoomByID:(NSString*)id;
 

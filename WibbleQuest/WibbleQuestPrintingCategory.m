@@ -51,6 +51,12 @@
   [self execJS:function];
 }
 
+-(void) art:(NSString*)art {
+  art = [self sanitize:art];
+  NSString * function = [NSString stringWithFormat:@"addArt('%@')", art];
+  [self execJS:function];
+}
+
 -(NSString *) sanitize:(NSString*) string {
   string = [string stringByReplacingOccurrencesOfString:@"'" withString:@"`"];
   return string;

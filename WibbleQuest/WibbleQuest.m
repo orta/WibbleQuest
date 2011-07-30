@@ -20,7 +20,7 @@ static WibbleQuest *sharedWibble;
 @implementation WibbleQuest
 
 @synthesize view, rooms, currentRoom, game, inventory, player;
-@synthesize lastPrinted;
+@synthesize lastPrinted, previousCommands;
 
 + (WibbleQuest *)sharedWibble {
   return sharedWibble;
@@ -42,6 +42,7 @@ static WibbleQuest *sharedWibble;
   [self loadPageForShowingGame];
   _textField.clearsOnBeginEditing = YES;
   self.inventory = [[[PlayerInventory alloc] init] retain];
+  self.previousCommands = [NSMutableArray array];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *) delagateWebView {
@@ -57,7 +58,7 @@ static WibbleQuest *sharedWibble;
   [self movedRoom];
 }
 
--(void) purge{
+-(void)purge {
   for (Room*room in self.rooms) {
     [rooms release];
   }
@@ -67,6 +68,11 @@ static WibbleQuest *sharedWibble;
     [item release];
   }
   self.inventory = [[PlayerInventory alloc] init];
+}
+
+-(void) restart {
+  [self purge];
+  [game ready];
 }
 
 // think about moving this into Room

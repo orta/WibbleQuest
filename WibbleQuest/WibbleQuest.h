@@ -42,6 +42,8 @@
 @property (retain) PlayerInventory *inventory;
 @property (retain) Player* player;
 
+@property (retain) NSMutableArray* previousCommands;
+
 @property (retain) NSString * lastPrinted;
 
 +(WibbleQuest *) sharedWibble;
@@ -55,7 +57,9 @@
 -(void) describeSurroundings;
 -(void) movedRoom;
 
+-(void) restart;
 -(void) purge;
+
 @end
 
 // putting these at the end means that all objects get access

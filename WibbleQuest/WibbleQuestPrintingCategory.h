@@ -19,6 +19,7 @@
 -(void) command:(NSString*)string;
 -(void) title:(NSString*)string;
 -(void) say:(NSString*)name words:(NSString*)words;
+-(void) art:(NSString*)art;
 
 // private, but whatever
 -(void) execJS:(NSString*) js;

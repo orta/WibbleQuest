@@ -14,6 +14,10 @@
           font-family: 'American Typewriter';
           display:block;
         }
+        pre {
+          font-family: 'Courier';          
+        }
+        
         h4{
           margin-bottom:2px;
         }
@@ -68,6 +72,12 @@
           function_queue.push( wrapFunction(_addSay, this, [name, text]) );
           executeQueue();
         }
+        
+        function addArt(text){
+
+          function_queue.push( wrapFunction(_addArt, this, [text]) );
+          executeQueue();
+        }
 
 
         // these babies actually do the work through, and they're the ones chucked in the processing queue
@@ -91,7 +101,12 @@
         function _addTitle(text){
           return createElementWithText("h3", text);
         }
-        
+
+        function _addArt(text){
+          text = text.replace(/\$/g, "\n");
+          return createElementWithText("pre", text);
+        }
+
         function _addSay(name, text){
           createElementWithText("h4", name);
           return createElementWithText("blockquote", text);
@@ -119,21 +134,7 @@
           }           
           return "OK"
         }
-        
-        
-        
-        
-        function scrollToBottom(element) {
-          var currentOffset = element.scrollHeight;
-          
-          // Animate sometime to position 0 with a transform.
-          // document.body.style.webkitTransition ='-webkit-transform 300ms ease-out';
-          // document.body.style.webkitTransform = 'translate3d(0, ' + ( -currentOffset ) +'px,0)';
-          
-          document.body.scrollTop += 10000000000;
-        }
-        
-        
+                
         // Javascript Queuing system
         // http://stackoverflow.com/questions/899102/how-do-i-store-javascript-functions-in-a-queue-for-them-to-be-executed-eventually
         // Function wrapping code.
