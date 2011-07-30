@@ -30,35 +30,137 @@
 
 <p>Created by orta therox on 15/07/2011.
  Copyright 2011 http://ortatherox.com. All rights reserved.</p>
-
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
 
 <span class="err">@</span><span class="n">class</span> <span class="n">Item</span><span class="p">;</span>
-<span class="err">@</span><span class="n">interface</span> <span class="n">Player</span> <span class="o">:</span> <span class="n">NSObject</span>
+<span class="err">@</span><span class="n">interface</span> <span class="n">Player</span> <span class="o">:</span> <span class="n">NSObject</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-2'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-2">&#182;</a>
+        </div>
+        <p>These are normal variables on a player like object</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">health</span><span class="p">;</span>
+<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">maxHealth</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-3'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-3">&#182;</a>
+        </div>
+        <p>The damage done as a range, this is before the 
+Creatures damageModifier </p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">NSRange</span> <span class="n">damageRange</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-4'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-4">&#182;</a>
+        </div>
+        <p>A generic currency that is used in shops, or
+can be used anywhere you want really</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">money</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-5'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-5">&#182;</a>
+        </div>
+        <p>It&rsquo;s normal for Interactive Fiction games to have
+a scoring system so you can see how well you completed the
+game.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">score</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-6'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-6">&#182;</a>
+        </div>
+        <p>Access to the shared player object</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">+</span><span class="p">(</span><span class="n">Player</span> <span class="o">*</span><span class="p">)</span><span class="n">sharedPlayer</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-7'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-7">&#182;</a>
+        </div>
+        <p>Easy methods for asking questions about the current players position
+and inventory.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">+</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isIn</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">roomID</span><span class="p">;</span>
+<span class="o">+</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">has</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">itemID</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-8'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-8">&#182;</a>
+        </div>
+        <p>More easy methods for dealing with objects</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">+</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">hasItemByID</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">itemID</span><span class="p">;</span>
+<span class="o">+</span><span class="p">(</span><span class="n">Item</span> <span class="o">*</span><span class="p">)</span><span class="n">getItemByID</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">itemID</span><span class="p">;</span>
+<span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">removeItemByID</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">itemID</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-9'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-9">&#182;</a>
+        </div>
+        <p>Logicalally read teleportation code.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">teleportToRoomWithID</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">roomID</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-10'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-10">&#182;</a>
+        </div>
+        <p>Key Value store used  in get/set String or Int below</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">NSMutableDictionary</span> <span class="o">*</span><span class="n">data</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-11'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-11">&#182;</a>
+        </div>
+        <p>These provide a Kev Value Store on the player so you can save any 
+details on the player object so you don&rsquo;t have to extend the 
+class to add your own vars to the player.</p>
 
-<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">health</span><span class="p">;</span>
-<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">maxHealth</span><span class="p">;</span>
-<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">NSRange</span> <span class="n">damageRange</span><span class="p">;</span>
-<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">money</span><span class="p">;</span>
-
-<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">NSMutableDictionary</span> <span class="o">*</span><span class="n">data</span><span class="p">;</span>
-
-<span class="o">+</span><span class="p">(</span><span class="n">Player</span><span class="o">*</span><span class="p">)</span><span class="n">sharedPlayer</span><span class="p">;</span>
-
-<span class="o">+</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isIn</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">roomID</span><span class="p">;</span>
-<span class="o">+</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">has</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">itemID</span><span class="p">;</span>
-
-<span class="o">+</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">hasItemByID</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">itemID</span><span class="p">;</span>
-<span class="o">+</span><span class="p">(</span><span class="n">Item</span><span class="o">*</span><span class="p">)</span><span class="n">getItemByID</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">itemID</span><span class="p">;</span>
-
-<span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">teleportToRoomWithID</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">roomID</span><span class="p">;</span>
-
-<span class="o">-</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">getString</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">key</span><span class="p">;</span>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getString</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">key</span><span class="p">;</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">setString</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">value</span> <span class="n">forKey</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">key</span><span class="p">;</span>
 
-<span class="o">-</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">getInt</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">key</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">getInt</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">key</span><span class="p">;</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">setInt</span><span class="o">:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">value</span> <span class="n">forKey</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">key</span><span class="p">;</span>
 <span class="err">@</span><span class="n">end</span></pre></div>
       </td>

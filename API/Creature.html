@@ -34,15 +34,7 @@
       <td class=code>
         <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
 
-<span class="err">@</span><span class="n">interface</span> <span class="n">Creature</span> <span class="o">:</span> <span class="n">WibbleObject</span>
-
-<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">health</span><span class="p">;</span>
-<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">maxHealth</span><span class="p">;</span>
-
-<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">NSRange</span> <span class="n">damageRange</span><span class="p">;</span>
-
-<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">BOOL</span> <span class="n">fighting</span><span class="p">;</span>
-<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">BOOL</span> <span class="n">fightable</span><span class="p">;</span></pre></div>
+<span class="err">@</span><span class="n">interface</span> <span class="n">Creature</span> <span class="o">:</span> <span class="n">WibbleObject</span></pre></div>
       </td>
     </tr>
     <tr id='section-2'>
@@ -50,15 +42,12 @@
         <div class="pilwrap">
           <a class="pilcrow" href="#section-2">&#182;</a>
         </div>
-        <p>Battle related methods</p>
+        <p>You need a creature to have health 
+and a max health if you&rsquo;re going to fight them</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">NSRange</span><span class="p">)</span><span class="n">damageRange</span><span class="p">;</span>
-<span class="o">-</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">formattedAttackPhrases</span><span class="p">;</span>
-<span class="o">-</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">formattedDefensePhrases</span><span class="p">;</span>
-<span class="o">-</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">damageTakenModifier</span><span class="o">:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">originalDamage</span><span class="p">;</span>
-
-<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">fight</span><span class="p">;</span></pre></div>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">health</span><span class="p">;</span>
+<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">maxHealth</span><span class="p">;</span></pre></div>
       </td>
     </tr>
     <tr id='section-3'>
@@ -66,7 +55,92 @@
         <div class="pilwrap">
           <a class="pilcrow" href="#section-3">&#182;</a>
         </div>
-        <p>callbacks</p>
+        <p>Damage Range says the max and the minimum range
+of damage will be done to you, the player.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">NSRange</span> <span class="n">damageRange</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-4'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-4">&#182;</a>
+        </div>
+        <p>internal, but lets you know if the Creature is mid
+battle, or has been beaten.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">BOOL</span> <span class="n">fighting</span><span class="p">;</span>
+<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">BOOL</span> <span class="n">fightable</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-5'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-5">&#182;</a>
+        </div>
+        <p>Battle related methods</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+    <tr id='section-6'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-6">&#182;</a>
+        </div>
+        <p>An array of strings that are grabbed randomly when the
+Creature takes a turn in battle</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">formattedAttackPhrases</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-7'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-7">&#182;</a>
+        </div>
+        <p>An array of strings that are grabbed randomly when the
+Player takes a turn in battle.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">formattedDefensePhrases</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-8'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-8">&#182;</a>
+        </div>
+        <p>You can modify the damage the player does to the Creature
+by modifying the originalDamage and returning that, this is
+used a lot after checking for items in the inventory.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">damageTakenModifier</span><span class="o">:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">originalDamage</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-9'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-9">&#182;</a>
+        </div>
+        <p>The method that actually does a fight turn</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">fight</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-10'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-10">&#182;</a>
+        </div>
+        <p>Callbacks for fight interactions so you can add narrative to the
+combat.</p>
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">beforeTurn</span><span class="p">;</span>
@@ -76,12 +150,13 @@
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">afterFightWon</span><span class="p">;</span></pre></div>
       </td>
     </tr>
-    <tr id='section-4'>
+    <tr id='section-11'>
       <td class=docs>
         <div class="pilwrap">
-          <a class="pilcrow" href="#section-4">&#182;</a>
+          <a class="pilcrow" href="#section-11">&#182;</a>
         </div>
-        <p>talking</p>
+        <p>A creature can hold a conversation just like a person does if you&rsquo;d 
+like them to.</p>
 
       </td>
       <td class=code>

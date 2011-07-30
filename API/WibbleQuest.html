@@ -34,7 +34,7 @@
       <td class=code>
         <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
 
-<span class="err">@</span><span class="n">class</span> <span class="n">Room</span><span class="p">,</span> <span class="n">PlayerInventory</span><span class="p">,</span> <span class="n">Player</span><span class="p">,</span> <span class="n">Creature</span><span class="p">;</span></pre></div>
+<span class="err">@</span><span class="n">class</span> <span class="n">Room</span><span class="p">,</span> <span class="n">PlayerInventory</span><span class="p">,</span> <span class="n">Player</span><span class="p">,</span> <span class="n">Creature</span><span class="p">,</span> <span class="n">CommandInterpreter</span><span class="p">;</span></pre></div>
       </td>
     </tr>
     <tr id='section-2'>
@@ -42,22 +42,50 @@
         <div class="pilwrap">
           <a class="pilcrow" href="#section-2">&#182;</a>
         </div>
-        <p>delegate methods for the Game Object</p>
+        <p>delegate methods for the Game Object, these are functions that
+the Game object needs to support so that the game will work correctly.</p>
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="err">@</span><span class="n">protocol</span> <span class="n">WibbleQuestGameDelegate</span>
   <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">ready</span><span class="p">;</span>
   <span class="o">-</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span> <span class="n">gameName</span><span class="p">;</span>
   <span class="o">-</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span> <span class="n">gameDescription</span><span class="p">;</span>
-<span class="err">@</span><span class="n">optional</span>
-  <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">help</span><span class="p">;</span>
+<span class="err">@</span><span class="n">optional</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-3'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-3">&#182;</a>
+        </div>
+        <p>These methods are optional, for example you can use the original help file, or completely overwrite it with your own version. </p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>  <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">help</span><span class="p">;</span>
   <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">playerWasBeatenBy</span><span class="o">:</span><span class="p">(</span><span class="n">Creature</span> <span class="o">*</span><span class="p">)</span><span class="n">creature</span><span class="p">;</span>
-<span class="err">@</span><span class="n">end</span>
-
-<span class="err">@</span><span class="n">class</span> <span class="n">CommandInterpreter</span><span class="p">;</span>
-
-<span class="err">@</span><span class="n">interface</span> <span class="n">WibbleQuest</span> <span class="o">:</span> <span class="n">NSObject</span> <span class="o">&lt;</span><span class="n">UIWebViewDelegate</span><span class="p">,</span> <span class="n">UITextFieldDelegate</span><span class="p">,</span> <span class="n">UIGestureRecognizerDelegate</span><span class="o">&gt;</span> <span class="p">{</span>
-  <span class="n">IBOutlet</span> <span class="n">UIWebView</span> <span class="o">*</span><span class="n">_webView</span><span class="p">;</span>
+<span class="err">@</span><span class="n">end</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-4'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-4">&#182;</a>
+        </div>
+        <p>WibbleQuest is the delegate for quite a few objects.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">interface</span> <span class="n">WibbleQuest</span> <span class="o">:</span> <span class="n">NSObject</span> <span class="o">&lt;</span><span class="n">UIWebViewDelegate</span><span class="p">,</span> <span class="n">UITextFieldDelegate</span><span class="p">,</span> <span class="n">UIGestureRecognizerDelegate</span><span class="o">&gt;</span> <span class="p">{</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-5'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-5">&#182;</a>
+        </div>
+        <p>IBOutlets for connecting up the game in the XIB</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>  <span class="n">IBOutlet</span> <span class="n">UIWebView</span> <span class="o">*</span><span class="n">_webView</span><span class="p">;</span>
   <span class="n">IBOutlet</span> <span class="n">UITextField</span>  <span class="o">*</span><span class="n">_textField</span><span class="p">;</span>
   <span class="n">IBOutlet</span> <span class="n">UIView</span> <span class="o">*</span><span class="n">view</span><span class="p">;</span>
   <span class="n">IBOutlet</span> <span class="n">NSObject</span><span class="o">&lt;</span><span class="n">WibbleQuestGameDelegate</span><span class="o">&gt;</span> <span class="o">*</span> <span class="n">game</span><span class="p">;</span>
@@ -66,10 +94,10 @@
   </pre></div>
       </td>
     </tr>
-    <tr id='section-3'>
+    <tr id='section-6'>
       <td class=docs>
         <div class="pilwrap">
-          <a class="pilcrow" href="#section-3">&#182;</a>
+          <a class="pilcrow" href="#section-6">&#182;</a>
         </div>
         <p>these are for the viewhandling categories</p>
       </td>
@@ -92,10 +120,10 @@
 <span class="o">+</span><span class="p">(</span><span class="n">WibbleQuest</span> <span class="o">*</span><span class="p">)</span> <span class="n">sharedWibble</span><span class="p">;</span></pre></div>
       </td>
     </tr>
-    <tr id='section-4'>
+    <tr id='section-7'>
       <td class=docs>
         <div class="pilwrap">
-          <a class="pilcrow" href="#section-4">&#182;</a>
+          <a class="pilcrow" href="#section-7">&#182;</a>
         </div>
         <p>API used when setting up your game </p>
       </td>
@@ -104,10 +132,10 @@
 <span class="o">-</span><span class="p">(</span><span class="n">Room</span> <span class="o">*</span><span class="p">)</span> <span class="n">getRoomByID</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">id</span><span class="p">;</span></pre></div>
       </td>
     </tr>
-    <tr id='section-5'>
+    <tr id='section-8'>
       <td class=docs>
         <div class="pilwrap">
-          <a class="pilcrow" href="#section-5">&#182;</a>
+          <a class="pilcrow" href="#section-8">&#182;</a>
         </div>
         <p>launching</p>
       </td>
@@ -122,10 +150,10 @@
 <span class="err">@</span><span class="n">end</span></pre></div>
       </td>
     </tr>
-    <tr id='section-6'>
+    <tr id='section-9'>
       <td class=docs>
         <div class="pilwrap">
-          <a class="pilcrow" href="#section-6">&#182;</a>
+          <a class="pilcrow" href="#section-9">&#182;</a>
         </div>
         <p>putting these at the end means that all objects get access
 to methods that should be public inside categories</p>
