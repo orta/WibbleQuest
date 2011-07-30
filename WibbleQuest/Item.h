@@ -10,9 +10,16 @@
 
 @interface Item : WibbleObject
 
+// Description of the object when before it's been 'get'ed,
+// or after it has been 'drop'ed
 @property (retain, nonatomic) NSString* descriptionInRoom;
+
+// A String that is used when someone does a command like
+// examine [object id]
 @property (retain, nonatomic) NSString* examine;
 
+// Methods to override so that you can react to the players
+// interactions
 
 -(void)onPickup;
 -(void)onUse;

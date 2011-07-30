@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+// Warnings, this object is still untested in the real world
 
 @interface Store : WibbleObject {}
 

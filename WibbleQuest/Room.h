@@ -21,14 +21,14 @@
 //Hold an instance of a Store if the Room has one
 @property (retain) Store* shop;
 
-@property (retain) NSArray *items;
-@property (retain) Creature *encounter;
-@property (retain) Person *person;
+@property (retain) NSArray* items;
+@property (retain) Creature* encounter;
+@property (retain) Person* person;
 
 @property () BOOL visited;
 
 // Get the room that the user is in at the minute
-+ (Room*) current;
++ (Room *) current;
 
 // Add an item into the room's inventory
 - (void) addItem:(Item*) item;
@@ -37,24 +37,38 @@
 // this is done when entering a room.
 - (void) describeInventory;
 
-// Take an item out of the room
--(Item*)takeItem:(NSString*) itemID;
+// Take an item out of the room, also removing it
+-(Item *)takeItem:(NSString*) itemID;
+// Get an item from from the room
 -(Item *)getItem:(NSString*) itemID;
+// Returns true if the Item is in the room
 -(BOOL) hasItem:(NSString*) itemID;
 
+// Bi-Directional connections for rooms,
+// basically a quick way of doing x.north = y
+// y.south = x.
 - (void) connectNorth:(Room*)room;
 - (void) connectSouth:(Room*)room;
 - (void) connectWest:(Room*)room;
 - (void) connectEast:(Room*)room;
 
+// Provides a NSDictionary of keys and values that are 
+// acted upon when using the examine command inside a room.
 -(NSDictionary *)dictionaryForExamine;
 
--(void)examineWithInput:(NSString*)input;
+-(void)examineWithInput:(NSString *)input;
 
+// By overriding these methonds you can narrate the story 
+// dealing when a player enters or leaves a room.
 -(void)playerDidEnterRoom;
--(BOOL)playerShouldEnterRoom;
-
--(BOOL)playerShouldLeaveRoom;
 -(void)playerDidLeaveRoom;
+
+// By overriding these methods in your subclass you can force a 
+// player to either not get into a room or to be stuck in a room, you do this
+// by returning YES or NO. You will need to add an explaination because this method
+// will silently stop players.
+-(BOOL)playerShouldEnterRoom;
+-(BOOL)playerShouldLeaveRoom;
+
 
 @end

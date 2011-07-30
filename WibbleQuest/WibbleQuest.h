@@ -8,21 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
-@class Room, PlayerInventory, Player, Creature;
+@class Room, PlayerInventory, Player, Creature, CommandInterpreter;
 
-// delegate methods for the Game Object
+// delegate methods for the Game Object, these are functions that
+// the Game object needs to support so that the game will work correctly.
 @protocol WibbleQuestGameDelegate
   - (void) ready;
   -(NSString *) gameName;
   -(NSString *) gameDescription;
 @optional
+// These methods are optional, for example you can use the original help file, or completely overwrite it with your own version. 
   -(void) help;
   -(void) playerWasBeatenBy:(Creature *)creature;
 @end
 
-@class CommandInterpreter;
-
+// WibbleQuest is the delegate for quite a few objects.
 @interface WibbleQuest : NSObject <UIWebViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate> {
+
+  //IBOutlets for connecting up the game in the XIB
   IBOutlet UIWebView *_webView;
   IBOutlet UITextField  *_textField;
   IBOutlet UIView *view;
