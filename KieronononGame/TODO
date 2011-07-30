@@ -15,8 +15,6 @@ restart function
 warnings in fights if you haven't included a damageRange
 don't want to always create a custom Item subclass when I'm just doing simple text for stuff. 
 better Room API
-[Room currentRoom]
-[Room amIn:@"room"]
 automate adding room to the WQ
 room id's should be automated, but overridable
 do not hide keyboard if command not recognised

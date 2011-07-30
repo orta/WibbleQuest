@@ -20,6 +20,7 @@
 
 +(Player*)sharedPlayer;
 
++(BOOL)isIn:(NSString *)roomID;
 +(BOOL)has:(NSString*)itemID;
 
 +(BOOL)hasItemByID:(NSString*)itemID;

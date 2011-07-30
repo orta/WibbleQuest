@@ -25,6 +25,8 @@
 
 @property () BOOL visited;
 
++ (Room*) current;
+
 - (void) addItem:(Item*) item;
 - (void) describeInventory;
 

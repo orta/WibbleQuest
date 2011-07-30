@@ -15,6 +15,13 @@
 //singleton
 static Player * sharedPlayer;
 
++(BOOL) isIn:(NSString *)roomID {
+  if ([[Room current].id isEqualToString:roomID]) {
+    return YES;
+  }
+  return NO;
+}
+
 -(id)init {
   self = [super init];
   self.data = [NSMutableDictionary dictionary];

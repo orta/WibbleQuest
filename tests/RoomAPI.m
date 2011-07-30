@@ -68,6 +68,23 @@
   }]];
   [scenario checkRoomIsID:@"testNorth" because:@"testing Player teleporting"];
 
+  [scenario addStep:[KIFTestStep stepWithDescription:@"Room currentRoom API test" executionBlock:^(KIFTestStep *step, NSError **error) {
+    
+    if ([[Room current].id isEqualToString:@"testNorth"]) {
+      return KIFTestStepResultSuccess;
+    }
+    return KIFTestStepResultFailure;
+  }]];
+  
+  [scenario addStep:[KIFTestStep stepWithDescription:@"Player isIn API test" executionBlock:^(KIFTestStep *step, NSError **error) {
+    
+    if ([Player isIn:@"testNorth"]) {
+      return KIFTestStepResultSuccess;
+    }
+    return KIFTestStepResultFailure;
+  }]];
+
+  
   return scenario;
 }
 

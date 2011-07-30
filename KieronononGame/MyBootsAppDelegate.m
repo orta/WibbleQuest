@@ -32,7 +32,6 @@
     [self.window makeKeyAndVisible];
   
 #if RUN_KIF_TESTS
-  NSLog(@"%@", [WBTestController sharedInstance]);
   [[WBTestController sharedInstance] startTestingWithCompletionBlock:^{
     // Exit after the tests complete so that CI knows we're done
     exit([[WBTestController sharedInstance] failureCount]);

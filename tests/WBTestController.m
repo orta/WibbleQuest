@@ -15,7 +15,7 @@
 
 - (void)initializeScenarios{
   // [self addScenario:[KIFTestScenario shopTests]];
-  // [self addScenario:[KIFTestScenario testRoomAPI]];
+   [self addScenario:[KIFTestScenario testRoomAPI]];
   // [self addScenario:[KIFTestScenario inventoryAPITests]];
 }
 

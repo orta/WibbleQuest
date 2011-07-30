@@ -10,6 +10,7 @@
 		60114B3713E387AA007F97A5 /* jquery.js in Sources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
 		60114B3813E387AA007F97A5 /* jquery.js in Sources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
 		60114B3913E390F7007F97A5 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
+		60114B3E13E44998007F97A5 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
 		603B99C813D3C3F20001F9CD /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
 		6050F43013DC4B0300BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
 		6050F43113DC4B6700BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
@@ -724,6 +725,7 @@
 				60FEA1B213D653F0006997B0 /* InfoPlist.strings in Resources */,
 				60FEA1B313D653F0006997B0 /* MainViewController_iPhone.xib in Resources */,
 				60FEA1B413D653F0006997B0 /* MainViewController_iPad.xib in Resources */,
+				60114B3E13E44998007F97A5 /* jquery.js in Resources */,
 				60FEA1B513D653F0006997B0 /* FlipsideViewController.xib in Resources */,
 				60FEA1B613D653F0006997B0 /* SettingsViewController.xib in Resources */,
 				60FEA1B713D653F0006997B0 /* index.html in Resources */,

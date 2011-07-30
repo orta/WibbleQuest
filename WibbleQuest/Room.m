@@ -12,7 +12,12 @@
 
 @synthesize  north, east, west, south, items = _items, encounter, person, visited, shop;
 
-#pragma mark room
+#pragma mark class methods
+
++ (Room*) current {
+  WibbleQuest * wq = [WibbleQuest sharedWibble];
+  return wq.currentRoom;
+}
 
 -(id)init{
   self = [super init];
