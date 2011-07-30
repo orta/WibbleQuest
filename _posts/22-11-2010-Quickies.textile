@@ -6,7 +6,7 @@ It will come with a method already called ready which is where you can safely se
 
 h3. Write on the screen
 
-Depending on what style of text you'll want to use these 5 commands on WQ
+Depending on what style of text you'll want to use these 6 commands on WQ
 
 {% highlight objc %}
 +(void) print:(NSString*)string, ...;
@@ -14,6 +14,7 @@ Depending on what style of text you'll want to use these 5 commands on WQ
 +(void) heading:(NSString*)string;
 +(void) command:(NSString*)string;
 +(void) title:(NSString*)string;
++(void) art:(NSString *)string;
 {% endhighlight %}
 
 For example
@@ -23,6 +24,27 @@ For example
 [WQ print:@"looks like you picked up %i shoes", shoesCount];
 [WQ heading:@"and so the story ends"];
 {% endhighlight %}
+
+h3(#ascii). I want to have some ASCII art (Like a map or a 'drawing')
+
+Awesome, you can do that by using the art function on WQ, this will give you monospaced text, you have up to 32 characters per line (on the iPhone) and the lines are separated by dollar signs '$' the final gotcha is that all backslashes '\' have to be two backslashes '\\' as they are normally used to do things other than draw skeleton arms.
+
+{% highlight objc %}
+[wq art:@""
+ "12345678901234567890123456789012$"
+ "     ,--.            $"
+ "     ([ oo]          $"
+ "      `- ^\\         $"
+ "     _ I`-'          $"
+ "   ,o(`-V'           $"
+ "   |( `-H-'          $"
+ "   |(`--A-'          $"
+ "   |(`-/_\'\\        $"
+ "   O `'I ``\\\\      $"
+ "   (\\  I    |\\,    $ "
+ "   \\\\-T-'`,        "];  
+ {% endhighlight %}
+
 
 h3(#id). What is the id property on all these objects for?
 
