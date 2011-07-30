@@ -10,7 +10,13 @@
 
 @implementation WibbleObject
 
-@synthesize name, id, description;
+@synthesize name, description, id = _id;
+
+-(void) setId:(NSString *)id {
+  [_id release];
+  id = [id lowercaseString];
+  _id = [id retain];
+}
 
 -(BOOL)didRespondToCommand:(NSArray*)commandArray {
   return NO;

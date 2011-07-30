@@ -122,6 +122,8 @@
         var totalHeight = 0;
         
         function createElementWithText(element, text){
+          text = text.replace(/`/g, "'");
+
           $("body").append("<" + element +">" + text + "</" + element + ">")
           
           if( $("body").height() > window.innerHeight ){

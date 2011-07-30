@@ -44,6 +44,7 @@
   }
   return NO;
 }
+
 -(Item *)getItem:(NSString*) itemID {
   for ( Item *item in self.items) {
     if([item.id isEqualToString:itemID]){
@@ -52,6 +53,7 @@
   }
   return nil;
 }
+
 -(Item *)takeItem:(NSString *)itemID {
   for ( Item *item in self.items) {
     if([item.id isEqualToString:itemID]){
@@ -65,7 +67,6 @@
   }  
   return nil;
 }
-
 
 - (void) connectNorth:(Room*)room{
   self.north = room;

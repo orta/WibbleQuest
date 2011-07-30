@@ -11,6 +11,17 @@
 		60114B3813E387AA007F97A5 /* jquery.js in Sources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
 		60114B3913E390F7007F97A5 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
 		60114B3E13E44998007F97A5 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
+		60114B6B13E4C481007F97A5 /* KidB.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5313E4C480007F97A5 /* KidB.m */; };
+		60114B6C13E4C481007F97A5 /* ExitRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5513E4C480007F97A5 /* ExitRoom.m */; };
+		60114B6D13E4C481007F97A5 /* Bubba.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5813E4C480007F97A5 /* Bubba.m */; };
+		60114B6E13E4C481007F97A5 /* Flag.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5A13E4C480007F97A5 /* Flag.m */; };
+		60114B6F13E4C481007F97A5 /* FoamSword.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5C13E4C480007F97A5 /* FoamSword.m */; };
+		60114B7013E4C481007F97A5 /* MegatronGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5E13E4C480007F97A5 /* MegatronGame.m */; };
+		60114B7113E4C481007F97A5 /* OpeningRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6013E4C480007F97A5 /* OpeningRoom.m */; };
+		60114B7213E4C481007F97A5 /* OrtasRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6213E4C480007F97A5 /* OrtasRoom.m */; };
+		60114B7313E4C481007F97A5 /* KidA.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6513E4C480007F97A5 /* KidA.m */; };
+		60114B7413E4C481007F97A5 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6713E4C480007F97A5 /* Snake.m */; };
+		60114B7513E4C481007F97A5 /* SnakesRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6A13E4C480007F97A5 /* SnakesRoom.m */; };
 		603B99C813D3C3F20001F9CD /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
 		6050F43013DC4B0300BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
 		6050F43113DC4B6700BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
@@ -47,7 +58,6 @@
 		60CC9F1113C9E40D006D116C /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
 		60CC9F1B13C9F3CC006D116C /* WibbleQuestPrintingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F1A13C9F3CB006D116C /* WibbleQuestPrintingCategory.m */; };
 		60CC9F2113CA0B6B006D116C /* CommandInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */; };
-		60F49DD313CBD35F00BDB07C /* Bubba.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD213CBD35F00BDB07C /* Bubba.m */; };
 		60F49DD613CBD42C00BDB07C /* PlayerInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD513CBD42C00BDB07C /* PlayerInventory.m */; };
 		60F49DDD13CBD76300BDB07C /* WQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DDC13CBD76300BDB07C /* WQ.m */; };
 		60F5128613D1112300978EC0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128513D1112300978EC0 /* Player.m */; };
@@ -66,7 +76,6 @@
 		60FEA19A13D653F0006997B0 /* MyBootsGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F0C13C9DD01006D116C /* MyBootsGame.m */; };
 		60FEA19B13D653F0006997B0 /* WibbleQuestPrintingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F1A13C9F3CB006D116C /* WibbleQuestPrintingCategory.m */; };
 		60FEA19C13D653F0006997B0 /* CommandInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */; };
-		60FEA19D13D653F0006997B0 /* Bubba.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD213CBD35F00BDB07C /* Bubba.m */; };
 		60FEA19E13D653F0006997B0 /* PlayerInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD513CBD42C00BDB07C /* PlayerInventory.m */; };
 		60FEA19F13D653F0006997B0 /* WQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DDC13CBD76300BDB07C /* WQ.m */; };
 		60FEA1A013D653F0006997B0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128513D1112300978EC0 /* Player.m */; };
@@ -163,6 +172,28 @@
 
 /* Begin PBXFileReference section */
 		60114B3613E387AA007F97A5 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.js; path = html/jquery.js; sourceTree = "<group>"; };
+		60114B5213E4C480007F97A5 /* KidB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidB.h; sourceTree = "<group>"; };
+		60114B5313E4C480007F97A5 /* KidB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KidB.m; sourceTree = "<group>"; };
+		60114B5413E4C480007F97A5 /* ExitRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExitRoom.h; sourceTree = "<group>"; };
+		60114B5513E4C480007F97A5 /* ExitRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExitRoom.m; sourceTree = "<group>"; };
+		60114B5713E4C480007F97A5 /* Bubba.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bubba.h; sourceTree = "<group>"; };
+		60114B5813E4C480007F97A5 /* Bubba.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bubba.m; sourceTree = "<group>"; };
+		60114B5913E4C480007F97A5 /* Flag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flag.h; sourceTree = "<group>"; };
+		60114B5A13E4C480007F97A5 /* Flag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flag.m; sourceTree = "<group>"; };
+		60114B5B13E4C480007F97A5 /* FoamSword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoamSword.h; sourceTree = "<group>"; };
+		60114B5C13E4C480007F97A5 /* FoamSword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoamSword.m; sourceTree = "<group>"; };
+		60114B5D13E4C480007F97A5 /* MegatronGame.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MegatronGame.h; sourceTree = "<group>"; };
+		60114B5E13E4C480007F97A5 /* MegatronGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MegatronGame.m; sourceTree = "<group>"; };
+		60114B5F13E4C480007F97A5 /* OpeningRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpeningRoom.h; sourceTree = "<group>"; };
+		60114B6013E4C480007F97A5 /* OpeningRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpeningRoom.m; sourceTree = "<group>"; };
+		60114B6113E4C480007F97A5 /* OrtasRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrtasRoom.h; sourceTree = "<group>"; };
+		60114B6213E4C480007F97A5 /* OrtasRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrtasRoom.m; sourceTree = "<group>"; };
+		60114B6413E4C480007F97A5 /* KidA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidA.h; sourceTree = "<group>"; };
+		60114B6513E4C480007F97A5 /* KidA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KidA.m; sourceTree = "<group>"; };
+		60114B6613E4C480007F97A5 /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snake.h; sourceTree = "<group>"; };
+		60114B6713E4C480007F97A5 /* Snake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snake.m; sourceTree = "<group>"; };
+		60114B6913E4C480007F97A5 /* SnakesRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnakesRoom.h; sourceTree = "<group>"; };
+		60114B6A13E4C480007F97A5 /* SnakesRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnakesRoom.m; sourceTree = "<group>"; };
 		603B99C613D3C3F20001F9CD /* NSArray-named-captures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray-named-captures.h"; path = "Categories/NSArray-named-captures.h"; sourceTree = "<group>"; };
 		603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray-named-captures.m"; path = "Categories/NSArray-named-captures.m"; sourceTree = "<group>"; };
 		6050F3E213DB868100BB8E82 /* KIFScenario-Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KIFScenario-Helpers.h"; path = "tests/KIFScenario-Helpers.h"; sourceTree = "<group>"; };
@@ -222,8 +253,6 @@
 		60CC9F1A13C9F3CB006D116C /* WibbleQuestPrintingCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleQuestPrintingCategory.m; sourceTree = "<group>"; };
 		60CC9F1F13CA0B6B006D116C /* CommandInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CommandInterpreter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CommandInterpreter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		60F49DD113CBD35F00BDB07C /* Bubba.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Bubba.h; path = Items/Bubba.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		60F49DD213CBD35F00BDB07C /* Bubba.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Bubba.m; path = Items/Bubba.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		60F49DD413CBD42C00BDB07C /* PlayerInventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInventory.h; sourceTree = "<group>"; };
 		60F49DD513CBD42C00BDB07C /* PlayerInventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInventory.m; sourceTree = "<group>"; };
 		60F49DDB13CBD76300BDB07C /* WQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQ.h; sourceTree = "<group>"; };
@@ -279,6 +308,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60114B5013E4C480007F97A5 /* Megatron */ = {
+			isa = PBXGroup;
+			children = (
+				60114B5113E4C480007F97A5 /* Creatures */,
+				60114B5413E4C480007F97A5 /* ExitRoom.h */,
+				60114B5513E4C480007F97A5 /* ExitRoom.m */,
+				60114B5613E4C480007F97A5 /* Items */,
+				60114B5D13E4C480007F97A5 /* MegatronGame.h */,
+				60114B5E13E4C480007F97A5 /* MegatronGame.m */,
+				60114B5F13E4C480007F97A5 /* OpeningRoom.h */,
+				60114B6013E4C480007F97A5 /* OpeningRoom.m */,
+				60114B6113E4C480007F97A5 /* OrtasRoom.h */,
+				60114B6213E4C480007F97A5 /* OrtasRoom.m */,
+				60114B6313E4C480007F97A5 /* People */,
+				60114B6813E4C480007F97A5 /* Rooms */,
+			);
+			name = Megatron;
+			path = ../Megatron;
+			sourceTree = "<group>";
+		};
+		60114B5113E4C480007F97A5 /* Creatures */ = {
+			isa = PBXGroup;
+			children = (
+				60114B5213E4C480007F97A5 /* KidB.h */,
+				60114B5313E4C480007F97A5 /* KidB.m */,
+			);
+			path = Creatures;
+			sourceTree = "<group>";
+		};
+		60114B5613E4C480007F97A5 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				60114B5713E4C480007F97A5 /* Bubba.h */,
+				60114B5813E4C480007F97A5 /* Bubba.m */,
+				60114B5913E4C480007F97A5 /* Flag.h */,
+				60114B5A13E4C480007F97A5 /* Flag.m */,
+				60114B5B13E4C480007F97A5 /* FoamSword.h */,
+				60114B5C13E4C480007F97A5 /* FoamSword.m */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		60114B6313E4C480007F97A5 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				60114B6413E4C480007F97A5 /* KidA.h */,
+				60114B6513E4C480007F97A5 /* KidA.m */,
+				60114B6613E4C480007F97A5 /* Snake.h */,
+				60114B6713E4C480007F97A5 /* Snake.m */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		60114B6813E4C480007F97A5 /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				60114B6913E4C480007F97A5 /* SnakesRoom.h */,
+				60114B6A13E4C480007F97A5 /* SnakesRoom.m */,
+			);
+			path = Rooms;
+			sourceTree = "<group>";
+		};
+		60114B7613E4C491007F97A5 /* Kieronononon */ = {
+			isa = PBXGroup;
+			children = (
+				6F36C4E313D3D06D003387F7 /* Shop */,
+				6065BC8E13D3616F00F1F6D4 /* Rooms */,
+				60F5128913D11D0200978EC0 /* Creatures */,
+				60F5128813D11CE200978EC0 /* People */,
+				60F49DD013CBD33E00BDB07C /* Items */,
+				60CC9F0B13C9DD01006D116C /* MyBootsGame.h */,
+				60CC9F0C13C9DD01006D116C /* MyBootsGame.m */,
+			);
+			name = Kieronononon;
+			sourceTree = "<group>";
+		};
 		6050F41513DC480100BB8E82 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -442,13 +547,8 @@
 		60F49DCE13CBD32E00BDB07C /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				6F36C4E313D3D06D003387F7 /* Shop */,
-				6065BC8E13D3616F00F1F6D4 /* Rooms */,
-				60F5128913D11D0200978EC0 /* Creatures */,
-				60F5128813D11CE200978EC0 /* People */,
-				60F49DD013CBD33E00BDB07C /* Items */,
-				60CC9F0B13C9DD01006D116C /* MyBootsGame.h */,
-				60CC9F0C13C9DD01006D116C /* MyBootsGame.m */,
+				60114B7613E4C491007F97A5 /* Kieronononon */,
+				60114B5013E4C480007F97A5 /* Megatron */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -456,8 +556,6 @@
 		60F49DD013CBD33E00BDB07C /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				60F49DD113CBD35F00BDB07C /* Bubba.h */,
-				60F49DD213CBD35F00BDB07C /* Bubba.m */,
 				6081AB2113D243CD007C5545 /* Keytar.h */,
 				6081AB2213D243CD007C5545 /* Keytar.m */,
 				6081AB2713D24B87007C5545 /* Microphone.h */,
@@ -753,7 +851,6 @@
 				60CC9F0D13C9DD01006D116C /* MyBootsGame.m in Sources */,
 				60CC9F1B13C9F3CC006D116C /* WibbleQuestPrintingCategory.m in Sources */,
 				60CC9F2113CA0B6B006D116C /* CommandInterpreter.m in Sources */,
-				60F49DD313CBD35F00BDB07C /* Bubba.m in Sources */,
 				60F49DD613CBD42C00BDB07C /* PlayerInventory.m in Sources */,
 				60F49DDD13CBD76300BDB07C /* WQ.m in Sources */,
 				60F5128613D1112300978EC0 /* Player.m in Sources */,
@@ -771,6 +868,17 @@
 				606B2B7513D4F5B000B90223 /* WibbleObject.m in Sources */,
 				607CB92C13D9070600A72FD2 /* FinaleRoom.m in Sources */,
 				60114B3713E387AA007F97A5 /* jquery.js in Sources */,
+				60114B6B13E4C481007F97A5 /* KidB.m in Sources */,
+				60114B6C13E4C481007F97A5 /* ExitRoom.m in Sources */,
+				60114B6D13E4C481007F97A5 /* Bubba.m in Sources */,
+				60114B6E13E4C481007F97A5 /* Flag.m in Sources */,
+				60114B6F13E4C481007F97A5 /* FoamSword.m in Sources */,
+				60114B7013E4C481007F97A5 /* MegatronGame.m in Sources */,
+				60114B7113E4C481007F97A5 /* OpeningRoom.m in Sources */,
+				60114B7213E4C481007F97A5 /* OrtasRoom.m in Sources */,
+				60114B7313E4C481007F97A5 /* KidA.m in Sources */,
+				60114B7413E4C481007F97A5 /* Snake.m in Sources */,
+				60114B7513E4C481007F97A5 /* SnakesRoom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,7 +898,6 @@
 				60FEA19A13D653F0006997B0 /* MyBootsGame.m in Sources */,
 				60FEA19B13D653F0006997B0 /* WibbleQuestPrintingCategory.m in Sources */,
 				60FEA19C13D653F0006997B0 /* CommandInterpreter.m in Sources */,
-				60FEA19D13D653F0006997B0 /* Bubba.m in Sources */,
 				60FEA19E13D653F0006997B0 /* PlayerInventory.m in Sources */,
 				60FEA19F13D653F0006997B0 /* WQ.m in Sources */,
 				60FEA1A013D653F0006997B0 /* Player.m in Sources */,
