@@ -62,7 +62,7 @@ static WibbleQuest *sharedWibble;
 
 -(void)purge {
   for (Room*room in self.rooms) {
-    [rooms release];
+    [room release];
   }
   self.rooms = [NSMutableArray array];
   
@@ -80,7 +80,8 @@ static WibbleQuest *sharedWibble;
 // think about moving this into Room
 -(void) movedRoom {
   [self title:currentRoom.name];
-  if(currentRoom.visited == FALSE){
+  bool alwaysLook = [[NSUserDefaults standardUserDefaults] boolForKey:@"performLookOnNewRoom"];
+  if(currentRoom.visited == FALSE || alwaysLook ){
     [self print:@"%@", currentRoom.description];
     [self.currentRoom describeInventory];
     currentRoom.visited = YES;

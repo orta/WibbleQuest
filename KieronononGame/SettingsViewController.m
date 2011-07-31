@@ -10,7 +10,7 @@
 
 @implementation SettingsViewController
 
-@synthesize hideTextFieldSwitch = _hideTextFieldSwitch;
+@synthesize hideTextFieldSwitch = _hideTextFieldSwitch, showLookSwitch = _showLookSwitch;
 @synthesize delegate = _delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -33,6 +33,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
   
   self.hideTextFieldSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"hideTextFieldAfterCommand"];
+  self.showLookSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"performLookOnNewRoom"];
+
 }
 
 - (void)viewDidUnload {
@@ -85,6 +87,14 @@
   [[NSUserDefaults standardUserDefaults] setBool: [switchClass isOn] forKey:@"hideTextFieldAfterCommand"];
   [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
+-(IBAction)showDescriptionOnRoomChange:(id)sender{  
+  UISwitch * switchClass = (UISwitch*)sender;
+  
+  [[NSUserDefaults standardUserDefaults] setBool: [switchClass isOn] forKey:@"performLookOnNewRoom"];
+  [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 
 - (void)dealloc {
   [_hideTextFieldSwitch release];
