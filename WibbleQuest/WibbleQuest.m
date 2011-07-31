@@ -106,9 +106,6 @@ static WibbleQuest *sharedWibble;
 
 -(void)addRoom:(Room*)room {
   // custom adding room, this allows some error handling
-  if(!room.north && !room.south && !room.west && !room.east){
-    NSLog(@"The Room %@ has no connections", room.name);
-  }
   [room retain];
   if (self.rooms == nil) {
     self.rooms = [NSMutableArray arrayWithObject:room];
