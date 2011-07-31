@@ -114,7 +114,7 @@
 		60ED574913E5EB54006E4D27 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
 		60ED574A13E5EB54006E4D27 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
 		60ED574B13E5EB54006E4D27 /* initialIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* initialIcon.png */; };
-		60ED574C13E5EB54006E4D27 /* WibbleQuest-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FB413C901D400888A6E /* WibbleQuest-Info.plist */; };
+		60ED574C13E5EB54006E4D27 /* Wibble-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FB413C901D400888A6E /* Wibble-Prefix.pch */; };
 		60ED574D13E5EB54006E4D27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FB513C901D400888A6E /* InfoPlist.strings */; };
 		60F49DD613CBD42C00BDB07C /* PlayerInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD513CBD42C00BDB07C /* PlayerInventory.m */; };
 		60F49DDD13CBD76300BDB07C /* WQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DDC13CBD76300BDB07C /* WQ.m */; };
@@ -276,8 +276,8 @@
 		6065BC9113D3619000F1F6D4 /* StartingRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartingRoom.m; path = Rooms/StartingRoom.m; sourceTree = "<group>"; };
 		606B2B7313D4F5AF00B90223 /* WibbleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WibbleObject.h; sourceTree = "<group>"; };
 		606B2B7413D4F5B000B90223 /* WibbleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleObject.m; sourceTree = "<group>"; };
-		606B2B7613D4F8F100B90223 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO; path = ../KieronononGame/TODO; sourceTree = "<group>"; };
-		606B2B7A13D5282A00B90223 /* initialIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = initialIcon.png; sourceTree = "<group>"; };
+		606B2B7613D4F8F100B90223 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
+		606B2B7A13D5282A00B90223 /* initialIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = initialIcon.png; path = ../WibbleQuest/shared/initialIcon.png; sourceTree = "<group>"; };
 		607CB92713D8EE4100A72FD2 /* InventoryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InventoryTests.h; path = tests/items/InventoryTests.h; sourceTree = "<group>"; };
 		607CB92813D8EE4100A72FD2 /* InventoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InventoryTests.m; path = tests/items/InventoryTests.m; sourceTree = "<group>"; };
 		607CB92A13D9070600A72FD2 /* FinaleRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FinaleRoom.h; path = Rooms/FinaleRoom.h; sourceTree = "<group>"; };
@@ -290,15 +290,15 @@
 		6081AB2513D249D6007C5545 /* FloatstarPX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FloatstarPX.m; path = People/FloatstarPX.m; sourceTree = "<group>"; };
 		6081AB2713D24B87007C5545 /* Microphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Microphone.h; path = Items/Microphone.h; sourceTree = "<group>"; };
 		6081AB2813D24B87007C5545 /* Microphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Microphone.m; path = Items/Microphone.m; sourceTree = "<group>"; };
-		609B9FA813C901D400888A6E /* Kieronon on.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kieronon on.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		609B9FA813C901D400888A6E /* WibbleQuest-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WibbleQuest-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		609B9FAC13C901D400888A6E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		609B9FAE13C901D400888A6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		609B9FB013C901D400888A6E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		609B9FB413C901D400888A6E /* WibbleQuest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WibbleQuest-Info.plist"; sourceTree = "<group>"; };
+		609B9FB413C901D400888A6E /* Wibble-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Wibble-Prefix.pch"; path = "../WibbleQuest/shared/Wibble-Prefix.pch"; sourceTree = "<group>"; };
 		609B9FB613C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		609B9FB813C901D400888A6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		609B9FBA13C901D400888A6E /* Wibble-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wibble-Prefix.pch"; sourceTree = "<group>"; };
-		609B9FBB13C901D400888A6E /* MyBootsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBootsAppDelegate.h; sourceTree = "<group>"; };
+		609B9FBA13C901D400888A6E /* WibbleQuest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WibbleQuest-Info.plist"; path = "../WibbleQuest/shared/WibbleQuest-Info.plist"; sourceTree = "<group>"; };
+		609B9FBB13C901D400888A6E /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; name = TODO; path = ../WibbleQuest/TODO; sourceTree = "<group>"; };
 		609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBootsAppDelegate.m; sourceTree = "<group>"; };
 		609B9FBE13C901D400888A6E /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		609B9FBF13C901D400888A6E /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
@@ -550,7 +550,7 @@
 		609B9FA913C901D400888A6E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				609B9FA813C901D400888A6E /* Kieronon on.app */,
+				609B9FA813C901D400888A6E /* WibbleQuest-iOS.app */,
 				60FEA1BE13D653F0006997B0 /* WibbleTests.app */,
 				60C021CD13E5D280009251C3 /* WibbleQuest-Mac.app */,
 			);
@@ -571,7 +571,8 @@
 		609B9FB213C901D400888A6E /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				60F49DCE13CBD32E00BDB07C /* Game */,
+				60114B7613E4C491007F97A5 /* Kieronononon */,
+				60114B5013E4C480007F97A5 /* Megatron */,
 			);
 			name = Game;
 			path = KieronononGame;
@@ -581,10 +582,10 @@
 			isa = PBXGroup;
 			children = (
 				606B2B7A13D5282A00B90223 /* initialIcon.png */,
-				609B9FB413C901D400888A6E /* WibbleQuest-Info.plist */,
+				609B9FB413C901D400888A6E /* Wibble-Prefix.pch */,
 				609B9FB513C901D400888A6E /* InfoPlist.strings */,
 				609B9FB813C901D400888A6E /* main.m */,
-				609B9FBA13C901D400888A6E /* Wibble-Prefix.pch */,
+				609B9FBA13C901D400888A6E /* WibbleQuest-Info.plist */,
 			);
 			name = "Supporting Files";
 			path = KieronononGame;
@@ -595,7 +596,7 @@
 			children = (
 				609B9FAB13C901D400888A6E /* Frameworks */,
 				60CC9F0E13C9DD90006D116C /* ViewControllers */,
-				609B9FBB13C901D400888A6E /* MyBootsAppDelegate.h */,
+				609B9FBB13C901D400888A6E /* TODO */,
 				609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */,
 			);
 			name = WibbleQuestiOS;
@@ -689,15 +690,6 @@
 				60114B3613E387AA007F97A5 /* jquery.js */,
 			);
 			name = html;
-			sourceTree = "<group>";
-		};
-		60F49DCE13CBD32E00BDB07C /* Game */ = {
-			isa = PBXGroup;
-			children = (
-				60114B7613E4C491007F97A5 /* Kieronononon */,
-				60114B5013E4C480007F97A5 /* Megatron */,
-			);
-			name = Game;
 			sourceTree = "<group>";
 		};
 		60F49DD013CBD33E00BDB07C /* Items */ = {
@@ -852,7 +844,7 @@
 			);
 			name = "WibbleQuest-iOS";
 			productName = MyBoots;
-			productReference = 609B9FA813C901D400888A6E /* Kieronon on.app */;
+			productReference = 609B9FA813C901D400888A6E /* WibbleQuest-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		60C021CC13E5D280009251C3 /* WibbleQuest-Mac */ = {
@@ -991,7 +983,7 @@
 				60ED574913E5EB54006E4D27 /* index.html in Resources */,
 				60ED574A13E5EB54006E4D27 /* jquery.js in Resources */,
 				60ED574B13E5EB54006E4D27 /* initialIcon.png in Resources */,
-				60ED574C13E5EB54006E4D27 /* WibbleQuest-Info.plist in Resources */,
+				60ED574C13E5EB54006E4D27 /* Wibble-Prefix.pch in Resources */,
 				60ED574D13E5EB54006E4D27 /* InfoPlist.strings in Resources */,
 				60C0220F13E5E4A8009251C3 /* MainViewController_iPhone.xib in Resources */,
 				60C0221013E5E4A8009251C3 /* MainViewController_iPad.xib in Resources */,
@@ -1302,8 +1294,8 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
-				INFOPLIST_FILE = "KieronononGame/WibbleQuest-Info.plist";
+				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
+				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1321,8 +1313,8 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
-				INFOPLIST_FILE = "KieronononGame/WibbleQuest-Info.plist";
+				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
+				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",

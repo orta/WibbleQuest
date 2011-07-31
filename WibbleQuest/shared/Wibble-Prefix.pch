@@ -1,0 +1,29 @@
+//
+// Prefix header for all source files of the 'MyBoots' target in the 'MyBoots' project
+//
+
+#import <Availability.h>
+
+#ifdef TARGET_OS_IPHONE
+#else
+//#import <Cocoa/Cocoa.h>
+#endif
+
+#ifdef __OBJC__
+  #import <UIKit/UIKit.h>
+  #import <Foundation/Foundation.h>
+
+  #import "WibbleQuest.h"
+  #import "WQ.h"
+  #import "WibbleObject.h"
+  
+  #import "Room.h"
+  #import "Item.h"
+  #import "Creature.h"
+  #import "Person.h"
+  #import "Player.h"
+  #import "Store.h"
+  #import "NSArray-Contains.h"
+  #import "NSArray-named-captures.h"
+#endif
+
