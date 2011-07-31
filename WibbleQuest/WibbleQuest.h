@@ -36,8 +36,12 @@
   // these are for the viewhandling categories
   float movementDistance;
   bool animateMovement;
+  
+  // for handling drag commands up and down on the text field
+  int _commandIndex;
 }
 
+// Variables that are kept
 @property (retain) UIView * view;
 @property (retain) NSMutableArray * rooms;
 @property (retain) Room * currentRoom;
@@ -51,16 +55,25 @@
 
 +(WibbleQuest *) sharedWibble;
 
-// API used when setting up your game 
+// Add rooms to a global list of rooms, this means 
+// you can get it by ID
 -(void) addRoom:(Room*)room;
 -(Room *) getRoomByID:(NSString*)id;
 
-// launching
+
+// Start the game
 -(void) start;
+
+// This method describes the room and items in it,
+// its called by moving rooms, or by teleporting.
 -(void) describeSurroundings;
 -(void) movedRoom;
 
+// Restart the game
 -(void) restart;
+
+// Clears the resources like Rooms / Items etc, 
+// it's rarely used in games but used in Testing quite a lot. 
 -(void) purge;
 
 @end
@@ -69,3 +82,4 @@
 // to methods that should be public inside categories
 #import "WibbleQuestPrintingCategory.h"
 #import "WibbleQuestViewHandlingCategory.h"
+#import "WibbleQuestSwipeHandlers.h"

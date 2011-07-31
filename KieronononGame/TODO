@@ -17,3 +17,4 @@ room id's should be automated, but overridable
 do not hide keyboard if command not recognised
 ordered attack / defense phrases
 webview scroll on keyboard movement
+parser return YES if recognised

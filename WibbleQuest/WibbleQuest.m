@@ -34,6 +34,8 @@ static WibbleQuest *sharedWibble;
   sharedWibble = self;
   
   [self setupGestureRecognisers];
+  [self setupCommandSwipes];
+  
   [self checkForNibConnections];
   _commandInterpreter = [[CommandInterpreter alloc] init];
   _commandInterpreter.wq = self;
@@ -120,6 +122,9 @@ static WibbleQuest *sharedWibble;
     [inTextField resignFirstResponder];
   }
   NSString * command = inTextField.text;
+  [previousCommands addObject:command];
+  _commandIndex++;
+  
   [self command:[@"> " stringByAppendingString: command]];
   NSArray * commands = [command componentsSeparatedByString:@";"];
   for (NSString *command in commands) {
