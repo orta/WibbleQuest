@@ -7,7 +7,6 @@ saving / loading state
 add a way to do images from resources
 BLOCKS
 fights without damage %i
-in game minimap?
 toggle for look on each room
 swipe for last command
 restart function
@@ -17,3 +16,4 @@ automate adding room to the WQ
 room id's should be automated, but overridable
 do not hide keyboard if command not recognised
 ordered attack / defense phrases
+webview scroll on keyboard movement

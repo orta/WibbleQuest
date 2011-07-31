@@ -182,7 +182,7 @@
 		60114B5A13E4C480007F97A5 /* Flag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flag.m; sourceTree = "<group>"; };
 		60114B5B13E4C480007F97A5 /* FoamSword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoamSword.h; sourceTree = "<group>"; };
 		60114B5C13E4C480007F97A5 /* FoamSword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoamSword.m; sourceTree = "<group>"; };
-		60114B5D13E4C480007F97A5 /* MegatronGame.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MegatronGame.h; sourceTree = "<group>"; };
+		60114B5D13E4C480007F97A5 /* MegatronGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MegatronGame.h; sourceTree = "<group>"; };
 		60114B5E13E4C480007F97A5 /* MegatronGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MegatronGame.m; sourceTree = "<group>"; };
 		60114B5F13E4C480007F97A5 /* OpeningRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpeningRoom.h; sourceTree = "<group>"; };
 		60114B6013E4C480007F97A5 /* OpeningRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpeningRoom.m; sourceTree = "<group>"; };
