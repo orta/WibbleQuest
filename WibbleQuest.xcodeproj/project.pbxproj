@@ -176,8 +176,8 @@
 		60114B3613E387AA007F97A5 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.js; path = html/jquery.js; sourceTree = "<group>"; };
 		60114B5213E4C480007F97A5 /* KidB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidB.h; sourceTree = "<group>"; };
 		60114B5313E4C480007F97A5 /* KidB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KidB.m; sourceTree = "<group>"; };
-		60114B5413E4C480007F97A5 /* ExitRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExitRoom.h; sourceTree = "<group>"; };
-		60114B5513E4C480007F97A5 /* ExitRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExitRoom.m; sourceTree = "<group>"; };
+		60114B5413E4C480007F97A5 /* ExitRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExitRoom.h; path = ../ExitRoom.h; sourceTree = "<group>"; };
+		60114B5513E4C480007F97A5 /* ExitRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExitRoom.m; path = ../ExitRoom.m; sourceTree = "<group>"; };
 		60114B5713E4C480007F97A5 /* Bubba.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bubba.h; sourceTree = "<group>"; };
 		60114B5813E4C480007F97A5 /* Bubba.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bubba.m; sourceTree = "<group>"; };
 		60114B5913E4C480007F97A5 /* Flag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flag.h; sourceTree = "<group>"; };
@@ -186,10 +186,10 @@
 		60114B5C13E4C480007F97A5 /* FoamSword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoamSword.m; sourceTree = "<group>"; };
 		60114B5D13E4C480007F97A5 /* MegatronGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MegatronGame.h; sourceTree = "<group>"; };
 		60114B5E13E4C480007F97A5 /* MegatronGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MegatronGame.m; sourceTree = "<group>"; };
-		60114B5F13E4C480007F97A5 /* OpeningRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpeningRoom.h; sourceTree = "<group>"; };
-		60114B6013E4C480007F97A5 /* OpeningRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpeningRoom.m; sourceTree = "<group>"; };
-		60114B6113E4C480007F97A5 /* OrtasRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrtasRoom.h; sourceTree = "<group>"; };
-		60114B6213E4C480007F97A5 /* OrtasRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrtasRoom.m; sourceTree = "<group>"; };
+		60114B5F13E4C480007F97A5 /* OpeningRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpeningRoom.h; path = ../OpeningRoom.h; sourceTree = "<group>"; };
+		60114B6013E4C480007F97A5 /* OpeningRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpeningRoom.m; path = ../OpeningRoom.m; sourceTree = "<group>"; };
+		60114B6113E4C480007F97A5 /* OrtasRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrtasRoom.h; path = ../OrtasRoom.h; sourceTree = "<group>"; };
+		60114B6213E4C480007F97A5 /* OrtasRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrtasRoom.m; path = ../OrtasRoom.m; sourceTree = "<group>"; };
 		60114B6413E4C480007F97A5 /* KidA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidA.h; sourceTree = "<group>"; };
 		60114B6513E4C480007F97A5 /* KidA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KidA.m; sourceTree = "<group>"; };
 		60114B6613E4C480007F97A5 /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snake.h; sourceTree = "<group>"; };
@@ -316,15 +316,9 @@
 			isa = PBXGroup;
 			children = (
 				60114B5113E4C480007F97A5 /* Creatures */,
-				60114B5413E4C480007F97A5 /* ExitRoom.h */,
-				60114B5513E4C480007F97A5 /* ExitRoom.m */,
 				60114B5613E4C480007F97A5 /* Items */,
 				60114B5D13E4C480007F97A5 /* MegatronGame.h */,
 				60114B5E13E4C480007F97A5 /* MegatronGame.m */,
-				60114B5F13E4C480007F97A5 /* OpeningRoom.h */,
-				60114B6013E4C480007F97A5 /* OpeningRoom.m */,
-				60114B6113E4C480007F97A5 /* OrtasRoom.h */,
-				60114B6213E4C480007F97A5 /* OrtasRoom.m */,
 				60114B6313E4C480007F97A5 /* People */,
 				60114B6813E4C480007F97A5 /* Rooms */,
 			);
@@ -368,6 +362,12 @@
 		60114B6813E4C480007F97A5 /* Rooms */ = {
 			isa = PBXGroup;
 			children = (
+				60114B5413E4C480007F97A5 /* ExitRoom.h */,
+				60114B5513E4C480007F97A5 /* ExitRoom.m */,
+				60114B5F13E4C480007F97A5 /* OpeningRoom.h */,
+				60114B6013E4C480007F97A5 /* OpeningRoom.m */,
+				60114B6113E4C480007F97A5 /* OrtasRoom.h */,
+				60114B6213E4C480007F97A5 /* OrtasRoom.m */,
 				60114B6913E4C480007F97A5 /* SnakesRoom.h */,
 				60114B6A13E4C480007F97A5 /* SnakesRoom.m */,
 			);

@@ -101,15 +101,7 @@
   BodyGuard *joe = [[BodyGuard alloc] init];
   alley.encounter = joe;
 
-  [wq addRoom:openingRoom];
-  [wq addRoom:hallwayCenter];
-  [wq addRoom:bathroom];
-  [wq addRoom:bar];
-  [wq addRoom:alley];
-  [wq addRoom:final];
-
   wq.currentRoom = openingRoom;
-  
   
   [wq art:@"12345678901234567890123456789012$"
    "     ,--.            $"

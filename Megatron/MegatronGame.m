@@ -96,11 +96,8 @@
   [nyansRoom connectNorth:programmingRoom];
   [nyansRoom connectSouth:exitRoom];
   
-  [wq addRoom:openingRoom];
-  [wq addRoom:snakesRoom];
-
   wq.currentRoom = openingRoom;
-  //  wq.currentRoom = programmingRoom;
+
   [wq start];
 }
 

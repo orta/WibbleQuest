@@ -22,6 +22,10 @@
 -(id)init{
   self = [super init];
   self.items = [NSArray array];
+
+  // Add yourself into the wq rooms array
+  WibbleQuest * wq = [WibbleQuest sharedWibble];
+  [wq addRoom:self];
   return self;
 }
 
