@@ -24,6 +24,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  NSLog(@"view did load");
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -85,10 +86,12 @@
         [self presentModalViewController:controller animated:YES];
     } else {
         if (!self.flipsidePopoverController) {
+          NSLog(@"pre crash?");
             SettingsViewController *controller = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
             controller.delegate = self;
             
             self.flipsidePopoverController = [[UIPopoverController alloc] initWithContentViewController:controller];
+                    NSLog(@"post crash?");
         }
         if ([self.flipsidePopoverController isPopoverVisible]) {
             [self.flipsidePopoverController dismissPopoverAnimated:YES];

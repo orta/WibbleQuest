@@ -126,14 +126,7 @@
 
           $("body").append("<" + element +">" + text + "</" + element + ">")
           
-          if( $("body").height() > window.innerHeight ){
-            var height = $(element + ":last-child").height();
-            totalHeight += height;
-            // height += window.innerHeight;
-            document.body.scrollTop += 10000000;
-//      $("html, body").animate({ scrollTop: totalHeight + "px" });
-
-          }           
+          
           return "OK"
         }
                 

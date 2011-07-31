@@ -28,6 +28,7 @@
   } else {
       self.mainViewController = [[GameViewController alloc] initWithNibName:@"MainViewController_iPad" bundle:nil]; 
   }
+
   self.window.rootViewController = self.mainViewController;
     [self.window makeKeyAndVisible];
   

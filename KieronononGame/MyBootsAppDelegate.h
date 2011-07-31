@@ -13,7 +13,6 @@
 @interface MyBootsAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (retain, nonatomic) UIWindow *window;
-
 @property (retain, nonatomic) GameViewController *mainViewController;
 
 @end

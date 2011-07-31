@@ -51,6 +51,56 @@
 		609B9FCC13C901D400888A6E /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FCA13C901D400888A6E /* FlipsideViewController.xib */; };
 		609B9FE013C9059100888A6E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
 		60BCD36F13DB4FAE00CBBB42 /* ShopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCD36E13DB4FAE00CBBB42 /* ShopTests.m */; };
+		60C021DB13E5D280009251C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60C021D913E5D280009251C3 /* InfoPlist.strings */; };
+		60C021DD13E5D280009251C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C021DC13E5D280009251C3 /* main.m */; };
+		60C021E113E5D280009251C3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 60C021DF13E5D280009251C3 /* Credits.rtf */; };
+		60C021E413E5D280009251C3 /* WibbleQuestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C021E313E5D280009251C3 /* WibbleQuestAppDelegate.m */; };
+		60C021E713E5D280009251C3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C021E513E5D280009251C3 /* MainMenu.xib */; };
+		60C021EC13E5D2A6009251C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C021EB13E5D2A6009251C3 /* UIKit.framework */; };
+		60C021EE13E5D2C5009251C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C021ED13E5D2C5009251C3 /* Cocoa.framework */; };
+		60C021F113E5D313009251C3 /* UIKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60C021EB13E5D2A6009251C3 /* UIKit.framework */; };
+		60C021F213E5D46F009251C3 /* WQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DDC13CBD76300BDB07C /* WQ.m */; };
+		60C021F313E5D46F009251C3 /* WibbleQuest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFF13C9D5C0006D116C /* WibbleQuest.m */; };
+		60C021F413E5D46F009251C3 /* WibbleQuestPrintingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F1A13C9F3CB006D116C /* WibbleQuestPrintingCategory.m */; };
+		60C021F513E5D46F009251C3 /* WibbleQuestViewHandlingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F0113C9D5C0006D116C /* WibbleQuestViewHandlingCategory.m */; };
+		60C021F613E5D46F009251C3 /* WibbleQuestSwipeHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B7813E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m */; };
+		60C021F813E5D4CC009251C3 /* CommandInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */; };
+		60C021F913E5D4CC009251C3 /* PlayerInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD513CBD42C00BDB07C /* PlayerInventory.m */; };
+		60C021FA13E5D4CC009251C3 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128513D1112300978EC0 /* Player.m */; };
+		60C021FB13E5D4CC009251C3 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C4E013D3D03F003387F7 /* Store.m */; };
+		60C021FC13E5D4CC009251C3 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128E13D11E7D00978EC0 /* Person.m */; };
+		60C021FD13E5D4CC009251C3 /* Creature.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EF913C9D5C0006D116C /* Creature.m */; };
+		60C021FE13E5D4CC009251C3 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFB13C9D5C0006D116C /* Item.m */; };
+		60C021FF13E5D4CC009251C3 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFD13C9D5C0006D116C /* Room.m */; };
+		60C0220013E5D4CC009251C3 /* WibbleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B2B7413D4F5B000B90223 /* WibbleObject.m */; };
+		60C0220113E5D4CC009251C3 /* NSArray-Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5129213D1200700978EC0 /* NSArray-Contains.m */; };
+		60C0220213E5D4CC009251C3 /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
+		60C0220C13E5E410009251C3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBF13C901D400888A6E /* GameViewController.m */; };
+		60C0220D13E5E410009251C3 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FC213C901D400888A6E /* SettingsViewController.m */; };
+		60C0220E13E5E410009251C3 /* MyBootsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */; };
+		60C0220F13E5E4A8009251C3 /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */; };
+		60C0221013E5E4A8009251C3 /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC713C901D400888A6E /* MainViewController_iPad.xib */; };
+		60C0221113E5E4A8009251C3 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
+		60C0221213E5E52A009251C3 /* RockShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C4E513D3D079003387F7 /* RockShop.m */; };
+		60C0221313E5E52A009251C3 /* StartingRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6065BC9113D3619000F1F6D4 /* StartingRoom.m */; };
+		60C0221413E5E52A009251C3 /* FinaleRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 607CB92B13D9070600A72FD2 /* FinaleRoom.m */; };
+		60C0221513E5E52A009251C3 /* BodyGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F512A113D1E59800978EC0 /* BodyGuard.m */; };
+		60C0221613E5E52A009251C3 /* GoatBoy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB1E13D23D25007C5545 /* GoatBoy.m */; };
+		60C0221713E5E52A009251C3 /* FloatstarPX.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2513D249D6007C5545 /* FloatstarPX.m */; };
+		60C0221813E5E52A009251C3 /* Keytar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2213D243CD007C5545 /* Keytar.m */; };
+		60C0221913E5E52A009251C3 /* Microphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 6081AB2813D24B87007C5545 /* Microphone.m */; };
+		60C0221A13E5E52A009251C3 /* MyBootsGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F0C13C9DD01006D116C /* MyBootsGame.m */; };
+		60C0221B13E5E52A009251C3 /* KidB.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5313E4C480007F97A5 /* KidB.m */; };
+		60C0221C13E5E52A009251C3 /* Bubba.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5813E4C480007F97A5 /* Bubba.m */; };
+		60C0221D13E5E52A009251C3 /* Flag.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5A13E4C480007F97A5 /* Flag.m */; };
+		60C0221E13E5E52A009251C3 /* FoamSword.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5C13E4C480007F97A5 /* FoamSword.m */; };
+		60C0221F13E5E52A009251C3 /* MegatronGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5E13E4C480007F97A5 /* MegatronGame.m */; };
+		60C0222013E5E52A009251C3 /* KidA.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6513E4C480007F97A5 /* KidA.m */; };
+		60C0222113E5E52A009251C3 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6713E4C480007F97A5 /* Snake.m */; };
+		60C0222213E5E52A009251C3 /* ExitRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5513E4C480007F97A5 /* ExitRoom.m */; };
+		60C0222313E5E52A009251C3 /* OpeningRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6013E4C480007F97A5 /* OpeningRoom.m */; };
+		60C0222413E5E52A009251C3 /* OrtasRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6213E4C480007F97A5 /* OrtasRoom.m */; };
+		60C0222513E5E52A009251C3 /* SnakesRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6A13E4C480007F97A5 /* SnakesRoom.m */; };
 		60CC9F0213C9D5C0006D116C /* Creature.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EF913C9D5C0006D116C /* Creature.m */; };
 		60CC9F0313C9D5C0006D116C /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFB13C9D5C0006D116C /* Item.m */; };
 		60CC9F0413C9D5C0006D116C /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFD13C9D5C0006D116C /* Room.m */; };
@@ -60,6 +110,12 @@
 		60CC9F1113C9E40D006D116C /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
 		60CC9F1B13C9F3CC006D116C /* WibbleQuestPrintingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F1A13C9F3CB006D116C /* WibbleQuestPrintingCategory.m */; };
 		60CC9F2113CA0B6B006D116C /* CommandInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */; };
+		60ED574813E5E913006E4D27 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60ED574713E5E913006E4D27 /* Quartz.framework */; };
+		60ED574913E5EB54006E4D27 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
+		60ED574A13E5EB54006E4D27 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
+		60ED574B13E5EB54006E4D27 /* initialIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* initialIcon.png */; };
+		60ED574C13E5EB54006E4D27 /* WibbleQuest-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FB413C901D400888A6E /* WibbleQuest-Info.plist */; };
+		60ED574D13E5EB54006E4D27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FB513C901D400888A6E /* InfoPlist.strings */; };
 		60F49DD613CBD42C00BDB07C /* PlayerInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD513CBD42C00BDB07C /* PlayerInventory.m */; };
 		60F49DDD13CBD76300BDB07C /* WQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DDC13CBD76300BDB07C /* WQ.m */; };
 		60F5128613D1112300978EC0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128513D1112300978EC0 /* Player.m */; };
@@ -172,6 +228,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		60C021F013E5D30A009251C3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				60C021F113E5D313009251C3 /* UIKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		60114B3613E387AA007F97A5 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.js; path = html/jquery.js; sourceTree = "<group>"; };
 		60114B5213E4C480007F97A5 /* KidB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidB.h; sourceTree = "<group>"; };
@@ -240,6 +309,20 @@
 		609B9FDF13C9059100888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
 		60BCD36D13DB4FAE00CBBB42 /* ShopTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopTests.h; path = tests/shop/ShopTests.h; sourceTree = "<group>"; };
 		60BCD36E13DB4FAE00CBBB42 /* ShopTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShopTests.m; path = tests/shop/ShopTests.m; sourceTree = "<group>"; };
+		60C021CD13E5D280009251C3 /* WibbleQuest-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WibbleQuest-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60C021D313E5D280009251C3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		60C021D413E5D280009251C3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		60C021D513E5D280009251C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		60C021D813E5D280009251C3 /* WibbleQuest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WibbleQuest-Info.plist"; sourceTree = "<group>"; };
+		60C021DA13E5D280009251C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		60C021DC13E5D280009251C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60C021DE13E5D280009251C3 /* WibbleQuest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WibbleQuest-Prefix.pch"; sourceTree = "<group>"; };
+		60C021E013E5D280009251C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		60C021E213E5D280009251C3 /* WibbleQuestAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WibbleQuestAppDelegate.h; sourceTree = "<group>"; };
+		60C021E313E5D280009251C3 /* WibbleQuestAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WibbleQuestAppDelegate.m; sourceTree = "<group>"; };
+		60C021E613E5D280009251C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		60C021EB13E5D2A6009251C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UIKit.framework; sourceTree = "<group>"; };
+		60C021ED13E5D2C5009251C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		60CC9EF813C9D5C0006D116C /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Creature.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		60CC9EF913C9D5C0006D116C /* Creature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Creature.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		60CC9EFA13C9D5C0006D116C /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
@@ -257,6 +340,7 @@
 		60CC9F1A13C9F3CB006D116C /* WibbleQuestPrintingCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleQuestPrintingCategory.m; sourceTree = "<group>"; };
 		60CC9F1F13CA0B6B006D116C /* CommandInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CommandInterpreter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CommandInterpreter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		60ED574713E5E913006E4D27 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Quartz.framework; sourceTree = DEVELOPER_DIR; };
 		60F49DD413CBD42C00BDB07C /* PlayerInventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInventory.h; sourceTree = "<group>"; };
 		60F49DD513CBD42C00BDB07C /* PlayerInventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInventory.m; sourceTree = "<group>"; };
 		60F49DDB13CBD76300BDB07C /* WQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQ.h; sourceTree = "<group>"; };
@@ -294,6 +378,16 @@
 				609B9FAF13C901D400888A6E /* Foundation.framework in Frameworks */,
 				609B9FB113C901D400888A6E /* CoreGraphics.framework in Frameworks */,
 				6050F43013DC4B0300BB8E82 /* libsbjson-ios.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60C021CA13E5D280009251C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60ED574813E5E913006E4D27 /* Quartz.framework in Frameworks */,
+				60C021EE13E5D2C5009251C3 /* Cocoa.framework in Frameworks */,
+				60C021EC13E5D2A6009251C3 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +485,7 @@
 		6050F41513DC480100BB8E82 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				60C021EB13E5D2A6009251C3 /* UIKit.framework */,
 				6050F42A13DC493300BB8E82 /* KIF.xcodeproj */,
 				60FEA1C113D6541D006997B0 /* libKIF.a */,
 				6050F41713DC483100BB8E82 /* SBJson.xcodeproj */,
@@ -440,10 +535,13 @@
 		609B9F9D13C901D400888A6E = {
 			isa = PBXGroup;
 			children = (
-				60FEA1C313D65598006997B0 /* Tests */,
-				60CC9EF713C9D5C0006D116C /* WibbleQuest */,
 				609B9FB213C901D400888A6E /* Game */,
+				60CC9EF713C9D5C0006D116C /* WibbleQuest */,
+				609B9FD213C901E200888A6E /* WibbleQuestiOS */,
+				60C021D613E5D280009251C3 /* WibbleQuestOSX */,
 				609B9FB313C901D400888A6E /* Supporting Files */,
+				60FEA1C313D65598006997B0 /* Tests */,
+				60C021CF13E5D280009251C3 /* Frameworks */,
 				609B9FA913C901D400888A6E /* Products */,
 				6050F41513DC480100BB8E82 /* Vendor */,
 			);
@@ -454,6 +552,7 @@
 			children = (
 				609B9FA813C901D400888A6E /* Kieronon on.app */,
 				60FEA1BE13D653F0006997B0 /* WibbleTests.app */,
+				60C021CD13E5D280009251C3 /* WibbleQuest-Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -472,9 +571,7 @@
 		609B9FB213C901D400888A6E /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				609B9FAB13C901D400888A6E /* Frameworks */,
 				60F49DCE13CBD32E00BDB07C /* Game */,
-				609B9FD213C901E200888A6E /* Boilerplate */,
 			);
 			name = Game;
 			path = KieronononGame;
@@ -493,14 +590,16 @@
 			path = KieronononGame;
 			sourceTree = "<group>";
 		};
-		609B9FD213C901E200888A6E /* Boilerplate */ = {
+		609B9FD213C901E200888A6E /* WibbleQuestiOS */ = {
 			isa = PBXGroup;
 			children = (
+				609B9FAB13C901D400888A6E /* Frameworks */,
 				60CC9F0E13C9DD90006D116C /* ViewControllers */,
 				609B9FBB13C901D400888A6E /* MyBootsAppDelegate.h */,
 				609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */,
 			);
-			name = Boilerplate;
+			name = WibbleQuestiOS;
+			path = KieronononGame;
 			sourceTree = "<group>";
 		};
 		60BCD36B13DB4F8A00CBBB42 /* Shop */ = {
@@ -510,6 +609,50 @@
 				60BCD36E13DB4FAE00CBBB42 /* ShopTests.m */,
 			);
 			name = Shop;
+			sourceTree = "<group>";
+		};
+		60C021CF13E5D280009251C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60ED574713E5E913006E4D27 /* Quartz.framework */,
+				60C021ED13E5D2C5009251C3 /* Cocoa.framework */,
+				60C021D213E5D280009251C3 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60C021D213E5D280009251C3 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60C021D313E5D280009251C3 /* AppKit.framework */,
+				60C021D413E5D280009251C3 /* CoreData.framework */,
+				60C021D513E5D280009251C3 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		60C021D613E5D280009251C3 /* WibbleQuestOSX */ = {
+			isa = PBXGroup;
+			children = (
+				60C021E213E5D280009251C3 /* WibbleQuestAppDelegate.h */,
+				60C021E313E5D280009251C3 /* WibbleQuestAppDelegate.m */,
+				60C021E513E5D280009251C3 /* MainMenu.xib */,
+				60C021D713E5D280009251C3 /* Supporting Files */,
+			);
+			name = WibbleQuestOSX;
+			path = WibbleQuest;
+			sourceTree = "<group>";
+		};
+		60C021D713E5D280009251C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				60C021D813E5D280009251C3 /* WibbleQuest-Info.plist */,
+				60C021D913E5D280009251C3 /* InfoPlist.strings */,
+				60C021DC13E5D280009251C3 /* main.m */,
+				60C021DE13E5D280009251C3 /* WibbleQuest-Prefix.pch */,
+				60C021DF13E5D280009251C3 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		60CC9EF713C9D5C0006D116C /* WibbleQuest */ = {
@@ -694,9 +837,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		609B9FA713C901D400888A6E /* Kieronon on */ = {
+		609B9FA713C901D400888A6E /* WibbleQuest-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 609B9FCF13C901D400888A6E /* Build configuration list for PBXNativeTarget "Kieronon on" */;
+			buildConfigurationList = 609B9FCF13C901D400888A6E /* Build configuration list for PBXNativeTarget "WibbleQuest-iOS" */;
 			buildPhases = (
 				609B9FA413C901D400888A6E /* Sources */,
 				609B9FA513C901D400888A6E /* Frameworks */,
@@ -707,9 +850,27 @@
 			dependencies = (
 				6050F43313DC4BB300BB8E82 /* PBXTargetDependency */,
 			);
-			name = "Kieronon on";
+			name = "WibbleQuest-iOS";
 			productName = MyBoots;
 			productReference = 609B9FA813C901D400888A6E /* Kieronon on.app */;
+			productType = "com.apple.product-type.application";
+		};
+		60C021CC13E5D280009251C3 /* WibbleQuest-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60C021E813E5D280009251C3 /* Build configuration list for PBXNativeTarget "WibbleQuest-Mac" */;
+			buildPhases = (
+				60C021C913E5D280009251C3 /* Sources */,
+				60C021CA13E5D280009251C3 /* Frameworks */,
+				60C021CB13E5D280009251C3 /* Resources */,
+				60C021F013E5D30A009251C3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WibbleQuest-Mac";
+			productName = WibbleQuest;
+			productReference = 60C021CD13E5D280009251C3 /* WibbleQuest-Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
 		60FEA18F13D653F0006997B0 /* Wibble Tests */ = {
@@ -761,7 +922,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				609B9FA713C901D400888A6E /* Kieronon on */,
+				609B9FA713C901D400888A6E /* WibbleQuest-iOS */,
+				60C021CC13E5D280009251C3 /* WibbleQuest-Mac */,
 				60FEA18F13D653F0006997B0 /* Wibble Tests */,
 			);
 		};
@@ -819,6 +981,24 @@
 				606B2B7713D4F8F100B90223 /* TODO in Resources */,
 				60114B3913E390F7007F97A5 /* jquery.js in Resources */,
 				606B2B7B13D5282B00B90223 /* initialIcon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60C021CB13E5D280009251C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60ED574913E5EB54006E4D27 /* index.html in Resources */,
+				60ED574A13E5EB54006E4D27 /* jquery.js in Resources */,
+				60ED574B13E5EB54006E4D27 /* initialIcon.png in Resources */,
+				60ED574C13E5EB54006E4D27 /* WibbleQuest-Info.plist in Resources */,
+				60ED574D13E5EB54006E4D27 /* InfoPlist.strings in Resources */,
+				60C0220F13E5E4A8009251C3 /* MainViewController_iPhone.xib in Resources */,
+				60C0221013E5E4A8009251C3 /* MainViewController_iPad.xib in Resources */,
+				60C0221113E5E4A8009251C3 /* SettingsViewController.xib in Resources */,
+				60C021DB13E5D280009251C3 /* InfoPlist.strings in Resources */,
+				60C021E113E5D280009251C3 /* Credits.rtf in Resources */,
+				60C021E713E5D280009251C3 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,6 +1066,54 @@
 				60114B7413E4C481007F97A5 /* Snake.m in Sources */,
 				60114B7513E4C481007F97A5 /* SnakesRoom.m in Sources */,
 				60114B7913E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60C021C913E5D280009251C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60C0221213E5E52A009251C3 /* RockShop.m in Sources */,
+				60C0221313E5E52A009251C3 /* StartingRoom.m in Sources */,
+				60C0221413E5E52A009251C3 /* FinaleRoom.m in Sources */,
+				60C0221513E5E52A009251C3 /* BodyGuard.m in Sources */,
+				60C0221613E5E52A009251C3 /* GoatBoy.m in Sources */,
+				60C0221713E5E52A009251C3 /* FloatstarPX.m in Sources */,
+				60C0221813E5E52A009251C3 /* Keytar.m in Sources */,
+				60C0221913E5E52A009251C3 /* Microphone.m in Sources */,
+				60C0221A13E5E52A009251C3 /* MyBootsGame.m in Sources */,
+				60C0221B13E5E52A009251C3 /* KidB.m in Sources */,
+				60C0221C13E5E52A009251C3 /* Bubba.m in Sources */,
+				60C0221D13E5E52A009251C3 /* Flag.m in Sources */,
+				60C0221E13E5E52A009251C3 /* FoamSword.m in Sources */,
+				60C0221F13E5E52A009251C3 /* MegatronGame.m in Sources */,
+				60C0222013E5E52A009251C3 /* KidA.m in Sources */,
+				60C0222113E5E52A009251C3 /* Snake.m in Sources */,
+				60C0222213E5E52A009251C3 /* ExitRoom.m in Sources */,
+				60C0222313E5E52A009251C3 /* OpeningRoom.m in Sources */,
+				60C0222413E5E52A009251C3 /* OrtasRoom.m in Sources */,
+				60C0222513E5E52A009251C3 /* SnakesRoom.m in Sources */,
+				60C0220C13E5E410009251C3 /* GameViewController.m in Sources */,
+				60C0220D13E5E410009251C3 /* SettingsViewController.m in Sources */,
+				60C0220E13E5E410009251C3 /* MyBootsAppDelegate.m in Sources */,
+				60C021F813E5D4CC009251C3 /* CommandInterpreter.m in Sources */,
+				60C021F913E5D4CC009251C3 /* PlayerInventory.m in Sources */,
+				60C021FA13E5D4CC009251C3 /* Player.m in Sources */,
+				60C021FB13E5D4CC009251C3 /* Store.m in Sources */,
+				60C021FC13E5D4CC009251C3 /* Person.m in Sources */,
+				60C021FD13E5D4CC009251C3 /* Creature.m in Sources */,
+				60C021FE13E5D4CC009251C3 /* Item.m in Sources */,
+				60C021FF13E5D4CC009251C3 /* Room.m in Sources */,
+				60C0220013E5D4CC009251C3 /* WibbleObject.m in Sources */,
+				60C0220113E5D4CC009251C3 /* NSArray-Contains.m in Sources */,
+				60C0220213E5D4CC009251C3 /* NSArray-named-captures.m in Sources */,
+				60C021F213E5D46F009251C3 /* WQ.m in Sources */,
+				60C021F313E5D46F009251C3 /* WibbleQuest.m in Sources */,
+				60C021F413E5D46F009251C3 /* WibbleQuestPrintingCategory.m in Sources */,
+				60C021F513E5D46F009251C3 /* WibbleQuestViewHandlingCategory.m in Sources */,
+				60C021F613E5D46F009251C3 /* WibbleQuestSwipeHandlers.m in Sources */,
+				60C021DD13E5D280009251C3 /* main.m in Sources */,
+				60C021E413E5D280009251C3 /* WibbleQuestAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -993,6 +1221,30 @@
 			name = SettingsViewController.xib;
 			sourceTree = "<group>";
 		};
+		60C021D913E5D280009251C3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60C021DA13E5D280009251C3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		60C021DF13E5D280009251C3 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60C021E013E5D280009251C3 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		60C021E513E5D280009251C3 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60C021E613E5D280009251C3 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1083,6 +1335,52 @@
 			};
 			name = Release;
 		};
+		60C021E913E5D280009251C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "WibbleQuest/WibbleQuest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		60C021EA13E5D280009251C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "WibbleQuest/WibbleQuest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		60FEA1BC13D653F0006997B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1149,11 +1447,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		609B9FCF13C901D400888A6E /* Build configuration list for PBXNativeTarget "Kieronon on" */ = {
+		609B9FCF13C901D400888A6E /* Build configuration list for PBXNativeTarget "WibbleQuest-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				609B9FD013C901D400888A6E /* Debug */,
 				609B9FD113C901D400888A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60C021E813E5D280009251C3 /* Build configuration list for PBXNativeTarget "WibbleQuest-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60C021E913E5D280009251C3 /* Debug */,
+				60C021EA13E5D280009251C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
