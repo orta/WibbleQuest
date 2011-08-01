@@ -751,11 +751,14 @@
 				606B2B7413D4F5B000B90223 /* WibbleObject.m */,
 			);
 			name = "Root Objects";
+			path = objects;
 			sourceTree = "<group>";
 		};
 		60F5129D13D1C7BE00978EC0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				60F49DDB13CBD76300BDB07C /* WQ.h */,
+				60F49DDC13CBD76300BDB07C /* WQ.m */,
 				60CC9EFE13C9D5C0006D116C /* WibbleQuest.h */,
 				60CC9EFF13C9D5C0006D116C /* WibbleQuest.m */,
 				60CC9F1913C9F3CA006D116C /* WibbleQuestPrintingCategory.h */,
@@ -772,13 +775,12 @@
 				60F5128513D1112300978EC0 /* Player.m */,
 			);
 			name = Core;
+			path = core;
 			sourceTree = "<group>";
 		};
 		60F5129E13D1C7D300978EC0 /* Niceities */ = {
 			isa = PBXGroup;
 			children = (
-				60F49DDB13CBD76300BDB07C /* WQ.h */,
-				60F49DDC13CBD76300BDB07C /* WQ.m */,
 			);
 			name = Niceities;
 			sourceTree = "<group>";
