@@ -48,6 +48,7 @@ static WibbleQuest *sharedWibble;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *) delagateWebView {
+  NSLog(@"game? %@", game);
   [game ready];
   [_textField becomeFirstResponder];
 }
