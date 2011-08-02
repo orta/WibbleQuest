@@ -76,7 +76,7 @@
   if(self.health < 1){
     self.fightable = NO;
     player.health = maxHealth;
-    [self afterFightLost];
+    [self afterCreatureLost];
     return;
   }
   
@@ -91,7 +91,7 @@
   
   [self afterTurn];
   if(player.health < 1){
-    [self afterFightWon];
+    [self afterCreatureWon];
     NSObject <WibbleQuestGameDelegate>* game = [[WibbleQuest sharedWibble] game];
     if([game respondsToSelector:@selector(playerWasBeatenBy:)]){
       [game playerWasBeatenBy:self];
@@ -114,13 +114,10 @@
 
 -(void)beforeTurn{};
 -(void)afterTurn{};
-
 -(void)beforeFight{};
+
 -(void)afterCreatureLost{};
 -(void)afterCreatureWon{};
-
--(void)afterFightLost{};
--(void)afterFightWon{};
 
 
 -(void)respondToSentenceArray:(NSArray*)sentence{}

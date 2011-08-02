@@ -45,7 +45,7 @@
 		609B9FAF13C901D400888A6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAE13C901D400888A6E /* Foundation.framework */; };
 		609B9FB113C901D400888A6E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FB013C901D400888A6E /* CoreGraphics.framework */; };
 		609B9FB913C901D400888A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FB813C901D400888A6E /* main.m */; };
-		609B9FBD13C901D400888A6E /* MyBootsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */; };
+		609B9FBD13C901D400888A6E /* WQIOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBC13C901D400888A6E /* WQIOSAppDelegate.m */; };
 		609B9FC013C901D400888A6E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBF13C901D400888A6E /* GameViewController.m */; };
 		609B9FC313C901D400888A6E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FC213C901D400888A6E /* SettingsViewController.m */; };
 		609B9FC613C901D400888A6E /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */; };
@@ -79,7 +79,7 @@
 		60C0220213E5D4CC009251C3 /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
 		60C0220C13E5E410009251C3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBF13C901D400888A6E /* GameViewController.m */; };
 		60C0220D13E5E410009251C3 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FC213C901D400888A6E /* SettingsViewController.m */; };
-		60C0220E13E5E410009251C3 /* MyBootsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */; };
+		60C0220E13E5E410009251C3 /* WQIOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBC13C901D400888A6E /* WQIOSAppDelegate.m */; };
 		60C0220F13E5E4A8009251C3 /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */; };
 		60C0221013E5E4A8009251C3 /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC713C901D400888A6E /* MainViewController_iPad.xib */; };
 		60C0221113E5E4A8009251C3 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
@@ -127,7 +127,7 @@
 		60F5129313D1200700978EC0 /* NSArray-Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5129213D1200700978EC0 /* NSArray-Contains.m */; };
 		60F512A213D1E59800978EC0 /* BodyGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F512A113D1E59800978EC0 /* BodyGuard.m */; };
 		60FEA19113D653F0006997B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FB813C901D400888A6E /* main.m */; };
-		60FEA19213D653F0006997B0 /* MyBootsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */; };
+		60FEA19213D653F0006997B0 /* WQIOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBC13C901D400888A6E /* WQIOSAppDelegate.m */; };
 		60FEA19313D653F0006997B0 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBF13C901D400888A6E /* GameViewController.m */; };
 		60FEA19413D653F0006997B0 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FC213C901D400888A6E /* SettingsViewController.m */; };
 		60FEA19513D653F0006997B0 /* Creature.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EF913C9D5C0006D116C /* Creature.m */; };
@@ -303,7 +303,7 @@
 		609B9FB413C901D400888A6E /* Wibble-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Wibble-Prefix.pch"; path = "../WibbleQuest/shared/Wibble-Prefix.pch"; sourceTree = "<group>"; };
 		609B9FB813C901D400888A6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		609B9FBA13C901D400888A6E /* WibbleQuest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WibbleQuest-Info.plist"; path = "../WibbleQuest/shared/WibbleQuest-Info.plist"; sourceTree = "<group>"; };
-		609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBootsAppDelegate.m; sourceTree = "<group>"; };
+		609B9FBC13C901D400888A6E /* WQIOSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQIOSAppDelegate.m; sourceTree = "<group>"; };
 		609B9FBE13C901D400888A6E /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		609B9FBF13C901D400888A6E /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		609B9FC113C901D400888A6E /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -345,7 +345,7 @@
 		60CC9F1F13CA0B6B006D116C /* CommandInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CommandInterpreter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CommandInterpreter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		60ED574713E5E913006E4D27 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Quartz.framework; sourceTree = DEVELOPER_DIR; };
-		60ED578E13E76FD0006E4D27 /* MyBootsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBootsAppDelegate.h; sourceTree = "<group>"; };
+		60ED578E13E76FD0006E4D27 /* WQIOSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; path = WQIOSAppDelegate.h; sourceTree = "<group>"; };
 		60ED579613E7748A006E4D27 /* GameSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameSelector.m; path = WibbleQuest/GameSelector.m; sourceTree = SOURCE_ROOT; };
 		60F49DD413CBD42C00BDB07C /* PlayerInventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInventory.h; sourceTree = "<group>"; };
 		60F49DD513CBD42C00BDB07C /* PlayerInventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInventory.m; sourceTree = "<group>"; };
@@ -599,8 +599,8 @@
 			children = (
 				609B9FAB13C901D400888A6E /* Frameworks */,
 				60CC9F0E13C9DD90006D116C /* ViewControllers */,
-				609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */,
-				60ED578E13E76FD0006E4D27 /* MyBootsAppDelegate.h */,
+				609B9FBC13C901D400888A6E /* WQIOSAppDelegate.m */,
+				60ED578E13E76FD0006E4D27 /* WQIOSAppDelegate.h */,
 			);
 			name = WibbleQuestiOS;
 			path = iOS;
@@ -1028,7 +1028,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				609B9FB913C901D400888A6E /* main.m in Sources */,
-				609B9FBD13C901D400888A6E /* MyBootsAppDelegate.m in Sources */,
+				609B9FBD13C901D400888A6E /* WQIOSAppDelegate.m in Sources */,
 				609B9FC013C901D400888A6E /* GameViewController.m in Sources */,
 				609B9FC313C901D400888A6E /* SettingsViewController.m in Sources */,
 				60CC9F0213C9D5C0006D116C /* Creature.m in Sources */,
@@ -1099,7 +1099,7 @@
 				60C0222513E5E52A009251C3 /* SnakesRoom.m in Sources */,
 				60C0220C13E5E410009251C3 /* GameViewController.m in Sources */,
 				60C0220D13E5E410009251C3 /* SettingsViewController.m in Sources */,
-				60C0220E13E5E410009251C3 /* MyBootsAppDelegate.m in Sources */,
+				60C0220E13E5E410009251C3 /* WQIOSAppDelegate.m in Sources */,
 				60C021F813E5D4CC009251C3 /* CommandInterpreter.m in Sources */,
 				60C021F913E5D4CC009251C3 /* PlayerInventory.m in Sources */,
 				60C021FA13E5D4CC009251C3 /* Player.m in Sources */,
@@ -1128,7 +1128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60FEA19113D653F0006997B0 /* main.m in Sources */,
-				60FEA19213D653F0006997B0 /* MyBootsAppDelegate.m in Sources */,
+				60FEA19213D653F0006997B0 /* WQIOSAppDelegate.m in Sources */,
 				60FEA19313D653F0006997B0 /* GameViewController.m in Sources */,
 				60FEA19413D653F0006997B0 /* SettingsViewController.m in Sources */,
 				60FEA19513D653F0006997B0 /* Creature.m in Sources */,
@@ -1347,7 +1347,7 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
+				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "WibbleQuest/WibbleQuest-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
@@ -1371,7 +1371,7 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
+				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "WibbleQuest/WibbleQuest-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
@@ -1386,7 +1386,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
+				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"RUN_KIF_TESTS=1",
 					"$(inherited)",
@@ -1395,7 +1395,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/vendor/KIF/\"/**",
 				);
-				INFOPLIST_FILE = "KieronononGame/WibbleQuest-Info.plist";
+				INFOPLIST_FILE = "WibbleQuest/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -1413,7 +1413,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
+				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"RUN_KIF_TESTS=1",
 					"$(inherited)",
@@ -1422,7 +1422,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/vendor/KIF/\"/**",
 				);
-				INFOPLIST_FILE = "KieronononGame/WibbleQuest-Info.plist";
+				INFOPLIST_FILE = "WibbleQuest/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-all_load",

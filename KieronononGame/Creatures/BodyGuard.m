@@ -41,7 +41,8 @@
 }
 
 
--(void)afterFightLost{
+
+-(void)afterCreatureLost{
   Room* outside = [WQ getRoomByID:@"alley"];
   Room* finale = [WQ getRoomByID:@"finale"];
 
