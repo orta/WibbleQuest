@@ -41,7 +41,6 @@
 		609B9FAD13C901D400888A6E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAC13C901D400888A6E /* UIKit.framework */; };
 		609B9FAF13C901D400888A6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAE13C901D400888A6E /* Foundation.framework */; };
 		609B9FB113C901D400888A6E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FB013C901D400888A6E /* CoreGraphics.framework */; };
-		609B9FB713C901D400888A6E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FB513C901D400888A6E /* InfoPlist.strings */; };
 		609B9FB913C901D400888A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FB813C901D400888A6E /* main.m */; };
 		609B9FBD13C901D400888A6E /* MyBootsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */; };
 		609B9FC013C901D400888A6E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBF13C901D400888A6E /* GameViewController.m */; };
@@ -115,7 +114,9 @@
 		60ED574A13E5EB54006E4D27 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
 		60ED574B13E5EB54006E4D27 /* initialIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* initialIcon.png */; };
 		60ED574C13E5EB54006E4D27 /* Wibble-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FB413C901D400888A6E /* Wibble-Prefix.pch */; };
-		60ED574D13E5EB54006E4D27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FB513C901D400888A6E /* InfoPlist.strings */; };
+		60ED579713E7748B006E4D27 /* GameSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED579613E7748A006E4D27 /* GameSelector.m */; };
+		60ED579813E7748B006E4D27 /* GameSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED579613E7748A006E4D27 /* GameSelector.m */; };
+		60ED579913E7748B006E4D27 /* GameSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED579613E7748A006E4D27 /* GameSelector.m */; };
 		60F49DD613CBD42C00BDB07C /* PlayerInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD513CBD42C00BDB07C /* PlayerInventory.m */; };
 		60F49DDD13CBD76300BDB07C /* WQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DDC13CBD76300BDB07C /* WQ.m */; };
 		60F5128613D1112300978EC0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128513D1112300978EC0 /* Player.m */; };
@@ -152,7 +153,6 @@
 		60FEA1AE13D653F0006997B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAC13C901D400888A6E /* UIKit.framework */; };
 		60FEA1AF13D653F0006997B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAE13C901D400888A6E /* Foundation.framework */; };
 		60FEA1B013D653F0006997B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FB013C901D400888A6E /* CoreGraphics.framework */; };
-		60FEA1B213D653F0006997B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FB513C901D400888A6E /* InfoPlist.strings */; };
 		60FEA1B313D653F0006997B0 /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */; };
 		60FEA1B413D653F0006997B0 /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC713C901D400888A6E /* MainViewController_iPad.xib */; };
 		60FEA1B513D653F0006997B0 /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FCA13C901D400888A6E /* FlipsideViewController.xib */; };
@@ -295,10 +295,8 @@
 		609B9FAE13C901D400888A6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		609B9FB013C901D400888A6E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		609B9FB413C901D400888A6E /* Wibble-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Wibble-Prefix.pch"; path = "../WibbleQuest/shared/Wibble-Prefix.pch"; sourceTree = "<group>"; };
-		609B9FB613C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		609B9FB813C901D400888A6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		609B9FBA13C901D400888A6E /* WibbleQuest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WibbleQuest-Info.plist"; path = "../WibbleQuest/shared/WibbleQuest-Info.plist"; sourceTree = "<group>"; };
-		609B9FBB13C901D400888A6E /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; name = TODO; path = ../WibbleQuest/TODO; sourceTree = "<group>"; };
 		609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBootsAppDelegate.m; sourceTree = "<group>"; };
 		609B9FBE13C901D400888A6E /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		609B9FBF13C901D400888A6E /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
@@ -341,6 +339,8 @@
 		60CC9F1F13CA0B6B006D116C /* CommandInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CommandInterpreter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CommandInterpreter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		60ED574713E5E913006E4D27 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Quartz.framework; sourceTree = DEVELOPER_DIR; };
+		60ED578E13E76FD0006E4D27 /* MyBootsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBootsAppDelegate.h; sourceTree = "<group>"; };
+		60ED579613E7748A006E4D27 /* GameSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameSelector.m; path = WibbleQuest/GameSelector.m; sourceTree = SOURCE_ROOT; };
 		60F49DD413CBD42C00BDB07C /* PlayerInventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInventory.h; sourceTree = "<group>"; };
 		60F49DD513CBD42C00BDB07C /* PlayerInventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInventory.m; sourceTree = "<group>"; };
 		60F49DDB13CBD76300BDB07C /* WQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQ.h; sourceTree = "<group>"; };
@@ -485,12 +485,14 @@
 		6050F41513DC480100BB8E82 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				60C021CF13E5D280009251C3 /* Frameworks */,
 				60C021EB13E5D2A6009251C3 /* UIKit.framework */,
 				6050F42A13DC493300BB8E82 /* KIF.xcodeproj */,
 				60FEA1C113D6541D006997B0 /* libKIF.a */,
 				6050F41713DC483100BB8E82 /* SBJson.xcodeproj */,
 			);
 			name = Vendor;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		6050F41813DC483100BB8E82 /* Products */ = {
@@ -537,13 +539,7 @@
 			children = (
 				609B9FB213C901D400888A6E /* Game */,
 				60CC9EF713C9D5C0006D116C /* WibbleQuest */,
-				609B9FD213C901E200888A6E /* WibbleQuestiOS */,
-				60C021D613E5D280009251C3 /* WibbleQuestOSX */,
-				609B9FB313C901D400888A6E /* Supporting Files */,
-				60FEA1C313D65598006997B0 /* Tests */,
-				60C021CF13E5D280009251C3 /* Frameworks */,
 				609B9FA913C901D400888A6E /* Products */,
-				6050F41513DC480100BB8E82 /* Vendor */,
 			);
 			sourceTree = "<group>";
 		};
@@ -573,6 +569,7 @@
 			children = (
 				60114B7613E4C491007F97A5 /* Kieronononon */,
 				60114B5013E4C480007F97A5 /* Megatron */,
+				60ED579613E7748A006E4D27 /* GameSelector.m */,
 			);
 			name = Game;
 			path = KieronononGame;
@@ -583,12 +580,11 @@
 			children = (
 				606B2B7A13D5282A00B90223 /* initialIcon.png */,
 				609B9FB413C901D400888A6E /* Wibble-Prefix.pch */,
-				609B9FB513C901D400888A6E /* InfoPlist.strings */,
 				609B9FB813C901D400888A6E /* main.m */,
 				609B9FBA13C901D400888A6E /* WibbleQuest-Info.plist */,
 			);
 			name = "Supporting Files";
-			path = KieronononGame;
+			path = ../KieronononGame;
 			sourceTree = "<group>";
 		};
 		609B9FD213C901E200888A6E /* WibbleQuestiOS */ = {
@@ -596,11 +592,11 @@
 			children = (
 				609B9FAB13C901D400888A6E /* Frameworks */,
 				60CC9F0E13C9DD90006D116C /* ViewControllers */,
-				609B9FBB13C901D400888A6E /* TODO */,
 				609B9FBC13C901D400888A6E /* MyBootsAppDelegate.m */,
+				60ED578E13E76FD0006E4D27 /* MyBootsAppDelegate.h */,
 			);
 			name = WibbleQuestiOS;
-			path = KieronononGame;
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		60BCD36B13DB4F8A00CBBB42 /* Shop */ = {
@@ -641,7 +637,6 @@
 				60C021D713E5D280009251C3 /* Supporting Files */,
 			);
 			name = WibbleQuestOSX;
-			path = WibbleQuest;
 			sourceTree = "<group>";
 		};
 		60C021D713E5D280009251C3 /* Supporting Files */ = {
@@ -659,6 +654,11 @@
 		60CC9EF713C9D5C0006D116C /* WibbleQuest */ = {
 			isa = PBXGroup;
 			children = (
+				609B9FD213C901E200888A6E /* WibbleQuestiOS */,
+				60C021D613E5D280009251C3 /* WibbleQuestOSX */,
+				609B9FB313C901D400888A6E /* Supporting Files */,
+				60FEA1C313D65598006997B0 /* Tests */,
+				6050F41513DC480100BB8E82 /* Vendor */,
 				606B2B7613D4F8F100B90223 /* TODO */,
 				60F5129E13D1C7D300978EC0 /* Niceities */,
 				60F5129D13D1C7BE00978EC0 /* Core */,
@@ -796,6 +796,7 @@
 				60FEA1C513D6566B006997B0 /* WBTestController.m */,
 			);
 			name = Tests;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		60FEA1DB13D66C79006997B0 /* Core */ = {
@@ -966,7 +967,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				609B9FB713C901D400888A6E /* InfoPlist.strings in Resources */,
 				609B9FC613C901D400888A6E /* MainViewController_iPhone.xib in Resources */,
 				609B9FC913C901D400888A6E /* MainViewController_iPad.xib in Resources */,
 				609B9FCC13C901D400888A6E /* FlipsideViewController.xib in Resources */,
@@ -986,7 +986,6 @@
 				60ED574A13E5EB54006E4D27 /* jquery.js in Resources */,
 				60ED574B13E5EB54006E4D27 /* initialIcon.png in Resources */,
 				60ED574C13E5EB54006E4D27 /* Wibble-Prefix.pch in Resources */,
-				60ED574D13E5EB54006E4D27 /* InfoPlist.strings in Resources */,
 				60C0220F13E5E4A8009251C3 /* MainViewController_iPhone.xib in Resources */,
 				60C0221013E5E4A8009251C3 /* MainViewController_iPad.xib in Resources */,
 				60C0221113E5E4A8009251C3 /* SettingsViewController.xib in Resources */,
@@ -1000,7 +999,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60FEA1B213D653F0006997B0 /* InfoPlist.strings in Resources */,
 				60FEA1B313D653F0006997B0 /* MainViewController_iPhone.xib in Resources */,
 				60FEA1B413D653F0006997B0 /* MainViewController_iPad.xib in Resources */,
 				60114B3E13E44998007F97A5 /* jquery.js in Resources */,
@@ -1060,6 +1058,7 @@
 				60114B7413E4C481007F97A5 /* Snake.m in Sources */,
 				60114B7513E4C481007F97A5 /* SnakesRoom.m in Sources */,
 				60114B7913E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m in Sources */,
+				60ED579713E7748B006E4D27 /* GameSelector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1108,6 +1107,7 @@
 				60C021F613E5D46F009251C3 /* WibbleQuestSwipeHandlers.m in Sources */,
 				60C021DD13E5D280009251C3 /* main.m in Sources */,
 				60C021E413E5D280009251C3 /* WibbleQuestAppDelegate.m in Sources */,
+				60ED579813E7748B006E4D27 /* GameSelector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1151,6 +1151,7 @@
 				60BCD36F13DB4FAE00CBBB42 /* ShopTests.m in Sources */,
 				60114B3813E387AA007F97A5 /* jquery.js in Sources */,
 				60114B7A13E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m in Sources */,
+				60ED579913E7748B006E4D27 /* GameSelector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1175,14 +1176,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		609B9FB513C901D400888A6E /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				609B9FB613C901D400888A6E /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
