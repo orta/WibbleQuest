@@ -6,8 +6,10 @@
 //  Copyright 2011 http://ortatherox.com. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "KIFTestScenario.h"
 
-@interface CreatureTests : NSObject
+@interface KIFTestScenario (ShopTests)
+
++ (id)creatureTests;
 
 @end

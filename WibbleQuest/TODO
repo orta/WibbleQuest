@@ -12,7 +12,7 @@ warnings in fights if you haven't included a damageRange
 don't want to always create a custom Item subclass when I'm just doing simple text for stuff. 
 room id's should be automated, but overridable
 do not hide keyboard if command not recognised
-ordered attack / defense phrases
 webview scroll on keyboard movement
 parser return YES if recognised
 Prettyfy the settings page
+Support for landscape w/keyboard

@@ -25,8 +25,6 @@
 		60114B7913E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B7813E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m */; };
 		60114B7A13E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B7813E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m */; };
 		603B99C813D3C3F20001F9CD /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
-		6050F43013DC4B0300BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
-		6050F43113DC4B6700BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
 		6065BC9213D3619000F1F6D4 /* StartingRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6065BC9113D3619000F1F6D4 /* StartingRoom.m */; };
 		606B2B7513D4F5B000B90223 /* WibbleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B2B7413D4F5B000B90223 /* WibbleObject.m */; };
 		606B2B7713D4F8F100B90223 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7613D4F8F100B90223 /* TODO */; };
@@ -167,64 +165,55 @@
 		60FEA1E113D66E1F006997B0 /* KIFTestScenario-RoomCommands.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1DF13D66E0F006997B0 /* KIFTestScenario-RoomCommands.m */; };
 		6F36C4E113D3D03F003387F7 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C4E013D3D03F003387F7 /* Store.m */; };
 		6F36C4E613D3D079003387F7 /* RockShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C4E513D3D079003387F7 /* RockShop.m */; };
+		6F895BB213E64499009C5853 /* Bubba.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5813E4C480007F97A5 /* Bubba.m */; };
+		6F895BB313E644E6009C5853 /* KidB.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5313E4C480007F97A5 /* KidB.m */; };
+		6F895BB413E644E6009C5853 /* Flag.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5A13E4C480007F97A5 /* Flag.m */; };
+		6F895BB513E644E6009C5853 /* FoamSword.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5C13E4C480007F97A5 /* FoamSword.m */; };
+		6F895BB613E644E6009C5853 /* MegatronGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5E13E4C480007F97A5 /* MegatronGame.m */; };
+		6F895BB713E644E6009C5853 /* KidA.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6513E4C480007F97A5 /* KidA.m */; };
+		6F895BB813E644E6009C5853 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6713E4C480007F97A5 /* Snake.m */; };
+		6F895BB913E644E6009C5853 /* ExitRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5513E4C480007F97A5 /* ExitRoom.m */; };
+		6F895BBA13E644E6009C5853 /* OpeningRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6013E4C480007F97A5 /* OpeningRoom.m */; };
+		6F895BBB13E644E6009C5853 /* OrtasRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6213E4C480007F97A5 /* OrtasRoom.m */; };
+		6F895BBC13E644E7009C5853 /* SnakesRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B6A13E4C480007F97A5 /* SnakesRoom.m */; };
+		6F895BC013E6472A009C5853 /* CreatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F895BBF13E6472A009C5853 /* CreatureTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6050F42113DC483100BB8E82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BC12323D1391D5CC00131607;
-			remoteInfo = SBJson;
-		};
-		6050F42313DC483100BB8E82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BC1232521391D5CC00131607;
-			remoteInfo = SBJsonTests;
-		};
-		6050F42513DC483100BB8E82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCC2626913920FC7003D9994;
-			remoteInfo = "sbjson-ios";
-		};
-		6050F42713DC483100BB8E82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCC2627313920FC7003D9994;
-			remoteInfo = "sbjson-iosTests";
-		};
-		6050F42E13DC493400BB8E82 /* PBXContainerItemProxy */ = {
+		6F895B9F13E643A5009C5853 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6050F42A13DC493300BB8E82 /* KIF.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = AAB07268139719AC008AF393;
 			remoteInfo = KIF;
 		};
-		6050F43213DC4BB300BB8E82 /* PBXContainerItemProxy */ = {
+		6F895BAA13E643B5009C5853 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BCC2626813920FC7003D9994;
-			remoteInfo = "sbjson-ios";
+			proxyType = 2;
+			remoteGlobalIDString = BC12323D1391D5CC00131607;
+			remoteInfo = SBJson;
 		};
-		6050F43413DC4BDD00BB8E82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6050F42A13DC493300BB8E82 /* KIF.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AAB07267139719AC008AF393;
-			remoteInfo = KIF;
-		};
-		6050F43613DC4BE100BB8E82 /* PBXContainerItemProxy */ = {
+		6F895BAC13E643B5009C5853 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BCC2626813920FC7003D9994;
+			proxyType = 2;
+			remoteGlobalIDString = BC1232521391D5CC00131607;
+			remoteInfo = SBJsonTests;
+		};
+		6F895BAE13E643B5009C5853 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCC2626913920FC7003D9994;
 			remoteInfo = "sbjson-ios";
+		};
+		6F895BB013E643B5009C5853 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCC2627313920FC7003D9994;
+			remoteInfo = "sbjson-iosTests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -270,8 +259,8 @@
 		603B99C613D3C3F20001F9CD /* NSArray-named-captures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray-named-captures.h"; path = "Categories/NSArray-named-captures.h"; sourceTree = "<group>"; };
 		603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray-named-captures.m"; path = "Categories/NSArray-named-captures.m"; sourceTree = "<group>"; };
 		6050F3E213DB868100BB8E82 /* KIFScenario-Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KIFScenario-Helpers.h"; path = "tests/KIFScenario-Helpers.h"; sourceTree = "<group>"; };
-		6050F41713DC483100BB8E82 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = vendor/json/SBJson.xcodeproj; sourceTree = "<group>"; };
-		6050F42A13DC493300BB8E82 /* KIF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KIF.xcodeproj; path = vendor/KIF/KIF.xcodeproj; sourceTree = "<group>"; };
+		6050F41713DC483100BB8E82 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = json/SBJson.xcodeproj; sourceTree = "<group>"; };
+		6050F42A13DC493300BB8E82 /* KIF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KIF.xcodeproj; path = KIF/KIF.xcodeproj; sourceTree = "<group>"; };
 		6065BC9013D3619000F1F6D4 /* StartingRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartingRoom.h; path = Rooms/StartingRoom.h; sourceTree = "<group>"; };
 		6065BC9113D3619000F1F6D4 /* StartingRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartingRoom.m; path = Rooms/StartingRoom.m; sourceTree = "<group>"; };
 		606B2B7313D4F5AF00B90223 /* WibbleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WibbleObject.h; sourceTree = "<group>"; };
@@ -367,6 +356,8 @@
 		6F36C4E013D3D03F003387F7 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		6F36C4E413D3D079003387F7 /* RockShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RockShop.h; sourceTree = "<group>"; };
 		6F36C4E513D3D079003387F7 /* RockShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RockShop.m; sourceTree = "<group>"; };
+		6F895BBE13E6472A009C5853 /* CreatureTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreatureTests.h; path = tests/creature/CreatureTests.h; sourceTree = "<group>"; };
+		6F895BBF13E6472A009C5853 /* CreatureTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreatureTests.m; path = tests/creature/CreatureTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,7 +368,6 @@
 				609B9FAD13C901D400888A6E /* UIKit.framework in Frameworks */,
 				609B9FAF13C901D400888A6E /* Foundation.framework in Frameworks */,
 				609B9FB113C901D400888A6E /* CoreGraphics.framework in Frameworks */,
-				6050F43013DC4B0300BB8E82 /* libsbjson-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +385,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6050F43113DC4B6700BB8E82 /* libsbjson-ios.a in Frameworks */,
 				60FEA1C213D6541D006997B0 /* libKIF.a in Frameworks */,
 				60FEA1AE13D653F0006997B0 /* UIKit.framework in Frameworks */,
 				60FEA1AF13D653F0006997B0 /* Foundation.framework in Frameworks */,
@@ -491,25 +480,7 @@
 				6050F41713DC483100BB8E82 /* SBJson.xcodeproj */,
 			);
 			name = Vendor;
-			sourceTree = "<group>";
-		};
-		6050F41813DC483100BB8E82 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6050F42213DC483100BB8E82 /* SBJson.framework */,
-				6050F42413DC483100BB8E82 /* SBJsonTests.octest */,
-				6050F42613DC483100BB8E82 /* libsbjson-ios.a */,
-				6050F42813DC483100BB8E82 /* sbjson-iosTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6050F42B13DC493300BB8E82 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6050F42F13DC493400BB8E82 /* libKIF.a */,
-			);
-			name = Products;
+			path = vendor;
 			sourceTree = "<group>";
 		};
 		6065BC8E13D3616F00F1F6D4 /* Rooms */ = {
@@ -786,6 +757,7 @@
 		60FEA1C313D65598006997B0 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				6F895BBD13E6468D009C5853 /* Creature */,
 				60BCD36B13DB4F8A00CBBB42 /* Shop */,
 				607CB92513D8EDE800A72FD2 /* Items / Inventory */,
 				60FEA1DD13D66DD8006997B0 /* Room / movement */,
@@ -826,6 +798,34 @@
 			name = Shop;
 			sourceTree = "<group>";
 		};
+		6F895B9C13E643A5009C5853 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F895BA013E643A5009C5853 /* libKIF.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F895BA413E643B5009C5853 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F895BAB13E643B5009C5853 /* SBJson.framework */,
+				6F895BAD13E643B5009C5853 /* SBJsonTests.octest */,
+				6F895BAF13E643B5009C5853 /* libsbjson-ios.a */,
+				6F895BB113E643B5009C5853 /* sbjson-iosTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F895BBD13E6468D009C5853 /* Creature */ = {
+			isa = PBXGroup;
+			children = (
+				6F895BBE13E6472A009C5853 /* CreatureTests.h */,
+				6F895BBF13E6472A009C5853 /* CreatureTests.m */,
+			);
+			name = Creature;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -840,7 +840,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6050F43313DC4BB300BB8E82 /* PBXTargetDependency */,
 			);
 			name = "WibbleQuest-iOS";
 			productName = MyBoots;
@@ -876,8 +875,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6050F43713DC4BE100BB8E82 /* PBXTargetDependency */,
-				6050F43513DC4BDD00BB8E82 /* PBXTargetDependency */,
 			);
 			name = "Wibble Tests";
 			productName = MyBoots;
@@ -904,11 +901,11 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 6050F42B13DC493300BB8E82 /* Products */;
+					ProductGroup = 6F895B9C13E643A5009C5853 /* Products */;
 					ProjectRef = 6050F42A13DC493300BB8E82 /* KIF.xcodeproj */;
 				},
 				{
-					ProductGroup = 6050F41813DC483100BB8E82 /* Products */;
+					ProductGroup = 6F895BA413E643B5009C5853 /* Products */;
 					ProjectRef = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
 				},
 			);
@@ -922,39 +919,39 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6050F42213DC483100BB8E82 /* SBJson.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SBJson.framework;
-			remoteRef = 6050F42113DC483100BB8E82 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6050F42413DC483100BB8E82 /* SBJsonTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SBJsonTests.octest;
-			remoteRef = 6050F42313DC483100BB8E82 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6050F42613DC483100BB8E82 /* libsbjson-ios.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libsbjson-ios.a";
-			remoteRef = 6050F42513DC483100BB8E82 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6050F42813DC483100BB8E82 /* sbjson-iosTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "sbjson-iosTests.octest";
-			remoteRef = 6050F42713DC483100BB8E82 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6050F42F13DC493400BB8E82 /* libKIF.a */ = {
+		6F895BA013E643A5009C5853 /* libKIF.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libKIF.a;
-			remoteRef = 6050F42E13DC493400BB8E82 /* PBXContainerItemProxy */;
+			remoteRef = 6F895B9F13E643A5009C5853 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F895BAB13E643B5009C5853 /* SBJson.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SBJson.framework;
+			remoteRef = 6F895BAA13E643B5009C5853 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F895BAD13E643B5009C5853 /* SBJsonTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SBJsonTests.octest;
+			remoteRef = 6F895BAC13E643B5009C5853 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F895BAF13E643B5009C5853 /* libsbjson-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libsbjson-ios.a";
+			remoteRef = 6F895BAE13E643B5009C5853 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F895BB113E643B5009C5853 /* sbjson-iosTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "sbjson-iosTests.octest";
+			remoteRef = 6F895BB013E643B5009C5853 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1113,6 +1110,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F895BB313E644E6009C5853 /* KidB.m in Sources */,
+				6F895BB413E644E6009C5853 /* Flag.m in Sources */,
+				6F895BB513E644E6009C5853 /* FoamSword.m in Sources */,
+				6F895BB613E644E6009C5853 /* MegatronGame.m in Sources */,
+				6F895BB713E644E6009C5853 /* KidA.m in Sources */,
+				6F895BB813E644E6009C5853 /* Snake.m in Sources */,
+				6F895BB913E644E6009C5853 /* ExitRoom.m in Sources */,
+				6F895BBA13E644E6009C5853 /* OpeningRoom.m in Sources */,
+				6F895BBB13E644E6009C5853 /* OrtasRoom.m in Sources */,
+				6F895BBC13E644E7009C5853 /* SnakesRoom.m in Sources */,
 				60FEA19113D653F0006997B0 /* main.m in Sources */,
 				60FEA19213D653F0006997B0 /* MyBootsAppDelegate.m in Sources */,
 				60FEA19313D653F0006997B0 /* GameViewController.m in Sources */,
@@ -1149,28 +1156,12 @@
 				60BCD36F13DB4FAE00CBBB42 /* ShopTests.m in Sources */,
 				60114B3813E387AA007F97A5 /* jquery.js in Sources */,
 				60114B7A13E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m in Sources */,
+				6F895BB213E64499009C5853 /* Bubba.m in Sources */,
+				6F895BC013E6472A009C5853 /* CreatureTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6050F43313DC4BB300BB8E82 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "sbjson-ios";
-			targetProxy = 6050F43213DC4BB300BB8E82 /* PBXContainerItemProxy */;
-		};
-		6050F43513DC4BDD00BB8E82 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KIF;
-			targetProxy = 6050F43413DC4BDD00BB8E82 /* PBXContainerItemProxy */;
-		};
-		6050F43713DC4BE100BB8E82 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "sbjson-ios";
-			targetProxy = 6050F43613DC4BE100BB8E82 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		609B9FB513C901D400888A6E /* InfoPlist.strings */ = {
@@ -1378,7 +1369,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
+				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"RUN_KIF_TESTS=1",
 					"$(inherited)",
@@ -1387,8 +1378,8 @@
 					"$(inherited)",
 					"$(SRCROOT)/vendor/KIF/\"/**",
 				);
-				INFOPLIST_FILE = "KieronononGame/WibbleQuest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -1405,7 +1396,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KieronononGame/Wibble-Prefix.pch";
+				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"RUN_KIF_TESTS=1",
 					"$(inherited)",
@@ -1414,8 +1405,8 @@
 					"$(inherited)",
 					"$(SRCROOT)/vendor/KIF/\"/**",
 				);
-				INFOPLIST_FILE = "KieronononGame/WibbleQuest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",

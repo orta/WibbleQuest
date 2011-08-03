@@ -18,6 +18,7 @@
 //Damage Range says the max and the minimum range
 // of damage will be done to you, the player.
 @property () NSRange damageRange;
+@property () int turn;
 
 // internal, but lets you know if the Creature is mid
 // battle, or has been beaten.
@@ -37,6 +38,7 @@
 // by modifying the originalDamage and returning that, this is
 // used a lot after checking for items in the inventory.
 -(int)damageTakenModifier:(int)originalDamage;
+-(BOOL)randomAttackPhrase;
 
 // The method that actually does a fight turn
 -(void)fight;

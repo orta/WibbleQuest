@@ -16,7 +16,7 @@
 
 @implementation Creature
 
-  @synthesize  health, maxHealth, fighting, fightable, damageRange;
+  @synthesize  health, maxHealth, fighting, fightable, damageRange, turn;
 
 -(id)init{
   self = [super init];
@@ -24,7 +24,7 @@
   self.fightable = YES;
   self.damageRange = NSMakeRange(0, 1);
   self.health = [self maxHealth];
-  
+  self.turn=0;
   NSArray *phrases = [[self formattedAttackPhrases] arrayByAddingObjectsFromArray:[self formattedDefensePhrases]];
   for (NSString * phrase in phrases) {
     if ([phrase rangeOfString:@"%i"].location == NSNotFound ) {
@@ -42,6 +42,11 @@
 -(NSArray*)formattedDefensePhrases {
   NSLog(@"No formatted defense phrases created for Creature %@", self.name);
   return [NSArray arrayWithObject:@"You attack the creature for %i damage"];  
+}
+
+-(BOOL)randomAttackPhrase{
+  //Return YES if you want a random attack phrase picked each turn
+  return YES;
 }
 
 -(int)damageTakenModifier:(int)originalDamage {
@@ -90,6 +95,7 @@
   player.health -= damage2;
   
   [self afterTurn];
+  self.turn++;
   if(player.health < 1){
     [self afterFightWon];
     NSObject <WibbleQuestGameDelegate>* game = [[WibbleQuest sharedWibble] game];
@@ -101,13 +107,32 @@
 }
 
 -(void)takeDamage:(int)damage{
-  int index = arc4random() % [self.formattedAttackPhrases count];
-  [WQ print:[self.formattedDefensePhrases objectAtIndex:index], damage];
+  int index;
+  if([self randomAttackPhrase]){
+    index = arc4random() % [self.formattedAttackPhrases count];
+  }
+  else{
+    //Loops back to the first phrase when the turn is greater then the count
+    index = self.turn % [self.formattedAttackPhrases count];
+  }
+  [WQ print:[self.formattedAttackPhrases objectAtIndex:index], damage];
 }
 
 -(void)giveDamage:(int)damage{
-  int index = arc4random() % [self.formattedDefensePhrases count];
-  [WQ print:[self.formattedAttackPhrases objectAtIndex:index], damage];
+  int index;
+  if([self randomAttackPhrase]){
+    index = arc4random() % [self.formattedDefensePhrases count];
+  }
+  else{
+    //Loops back to the first phrase when the turn is greater then the count
+    index = self.turn % [self.formattedDefensePhrases count];
+  }  
+  if([self.formattedDefensePhrases contains:@"%i", nil]){
+    [WQ print:[self.formattedDefensePhrases objectAtIndex:index], damage];
+  }
+  else{
+    [WQ print:[self.formattedDefensePhrases objectAtIndex:index]];
+  }
 }
 
 

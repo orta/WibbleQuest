@@ -7,17 +7,37 @@
 //
 
 #import "CreatureTests.h"
+#import "ShopTests.h"
+#import "KIFTestStep.h"
+#import "RockShop.h"
+#import "KIFScenario-Helpers.h"
+#import "KidB.h"
 
-@implementation CreatureTests
+@implementation KIFTestScenario (ShopTests)
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
++ (id)creatureTests{
+  WibbleQuest * wq = [WibbleQuest sharedWibble];
+  
+  KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:@"Testing that you can fight an enemy"];
+  [scenario addStep:[KIFTestStep stepToWaitForTappableViewWithAccessibilityLabel:@"Text Input"]];
+
+  [scenario addStep:[KIFTestStep stepWithDescription:@"setup rooms" executionBlock:^(KIFTestStep *step, NSError **error) {
     
-    return self;
+    // setup block
+    
+    Room * r = [[Room alloc] init];
+    r.id = @"test";
+    
+    KidB *kb = [[KidB  alloc] init];
+    r.encounter=kb;
+    
+    wq.currentRoom = r;
+    
+    return KIFTestStepResultSuccess;
+  }]];
+  
+  return scenario;
 }
+
 
 @end
