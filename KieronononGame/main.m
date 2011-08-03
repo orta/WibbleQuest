@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MyBootsAppDelegate.h"
+#import "WQIOSAppDelegate.h"
 
 int main(int argc, char *argv[]) {
   NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-  int retVal = UIApplicationMain(argc, argv, nil, @"MyBootsAppDelegate");
+  int retVal = UIApplicationMain(argc, argv, nil, @"WQIOSAppDelegate");
   [pool release];
   return retVal;
 }

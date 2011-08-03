@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Person : WibbleObject
+@interface Person : WibbleObject {
+  BOOL _seenPlayer;
+}
 
 -(void)respondToSentenceArray:(NSArray*)sentence;
 -(void)playerEntersSameRoom;
-
+-(void)onFirstSeetingPlayer{};
 @end

@@ -6,14 +6,14 @@
 //  Copyright 2011 http://ortatherox.com. All rights reserved.
 //
 
-#import "MyBootsAppDelegate.h"
+#import "WQIOSAppDelegate.h"
 #import "GameViewController.h"
 
 #if RUN_KIF_TESTS
 #import "WBTestController.h"
 #endif
 
-@implementation MyBootsAppDelegate
+@implementation WQIOSAppDelegate
 
 @synthesize window = _window;
 @synthesize mainViewController = _mainViewController;

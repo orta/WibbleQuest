@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class Room, PlayerInventory, Player, Creature, CommandInterpreter;
+@class Room, PlayerInventory, Player, Creature, CommandInterpreter, Game;
 
 // delegate methods for the Game Object, these are functions that
 // the Game object needs to support so that the game will work correctly.
@@ -29,7 +29,7 @@
   IBOutlet UIWebView *_webView;
   IBOutlet UITextField  *_textField;
   IBOutlet UIView *view;
-  IBOutlet NSObject<WibbleQuestGameDelegate> * game;
+  IBOutlet Game<WibbleQuestGameDelegate> * game;
   
   CommandInterpreter *_commandInterpreter;
   
@@ -45,7 +45,7 @@
 @property (retain) UIView * view;
 @property (retain) NSMutableArray * rooms;
 @property (retain) Room * currentRoom;
-@property (retain) NSObject<WibbleQuestGameDelegate> * game;
+@property (retain) Game<WibbleQuestGameDelegate> * game;
 @property (retain) PlayerInventory *inventory;
 @property (retain) Player* player;
 

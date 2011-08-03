@@ -10,7 +10,7 @@
 
 @class GameViewController;
 
-@interface MyBootsAppDelegate : UIResponder <UIApplicationDelegate>
+@interface WQIOSAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (retain, nonatomic) UIWindow *window;
 @property (retain, nonatomic) GameViewController *mainViewController;

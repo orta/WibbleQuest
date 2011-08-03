@@ -17,6 +17,7 @@
   #import "WQ.h"
   #import "WibbleObject.h"
   
+  #import "Game.h"
   #import "Room.h"
   #import "Item.h"
   #import "Creature.h"

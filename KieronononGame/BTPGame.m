@@ -6,7 +6,7 @@
 //  Copyright 2011 http://ortatherox.com. All rights reserved.
 //
 
-#import "MyBootsGame.h"
+#import "BTPGame.h"
 
 #import "StartingRoom.h"
 #import "FinaleRoom.h"
@@ -17,9 +17,7 @@
 #import "FloatstarPX.h"
 #import "RockShop.h"
 
-#import "SBJson.h"
-
-@implementation MyBootsGame
+@implementation BTPGame
 @synthesize wq;
 
 -(NSString *) gameName{
@@ -31,8 +29,6 @@
 }
 
 -(void)ready {
-
-
 
 #if RUN_KIF_TESTS
   [wq start];
@@ -102,20 +98,7 @@
   alley.encounter = joe;
 
   wq.currentRoom = openingRoom;
-  
-  [wq art:@"12345678901234567890123456789012$"
-   "     ,--.            $"
-   "     ([ oo]          $"
-   "      `- ^\\         $"
-   "     _ I`-'          $"
-   "   ,o(`-V'           $"
-   "   |( `-H-'          $"
-   "   |(`--A-'          $"
-   "   |(`-/_\'\\        $"
-   "   O `'I ``\\\\      $"
-   "   (\\  I    |\\,    $ "
-   "   \\\\-T-'`,        "];  
-  
+
   [wq heading:@"Wibble Quest Example"];
   [wq wait:1];
   [wq print:@"You groggily wake up, the lights hurt your eyes as you adjust. There's a low grumble of bass which presumably is from someone's soundcheck and you remember that you arrived at the music venue a day early and slept over here."];

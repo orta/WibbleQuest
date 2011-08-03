@@ -48,8 +48,9 @@
 -(void)beforeTurn;
 -(void)afterTurn;
 -(void)beforeFight;
--(void)afterFightLost;
--(void)afterFightWon;
+
+-(void)afterCreatureLost;
+-(void)afterCreatureWon;
 
 // A creature can hold a conversation just like a person does if you'd 
 // like them to.
