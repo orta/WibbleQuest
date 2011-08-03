@@ -1,0 +1,47 @@
+---
+layout: page
+title: Learn iPhone from ~scratch
+---
+
+
+Tutorial for WibbleQuest
+
+. Installation of WibbleQuest
+  -Install from src
+  -Github Tag
+  
+. Folder Structure
+  -Game
+  -WibbleQuest
+  
+. Making my Own Game Object
+  -Subclassing Game
+  -Changing GameSelector
+  
+. Creating my First Room
+  
+. Connecting Rooms together
+
+. Reading the Docs
+  - Finding objects
+  - Reading Quickies
+  - 
+  
+. Creating an Item
+  
+. Adding an Item to a Room
+  
+. Using the Item
+  
+. Adding custom commands to the Item
+
+. Making a Custom Room 
+  - Examine
+  - Commands
+  - Entry In and Out
+
+. Adding a Person to a room
+
+. Restarting the Game
+
+. 
