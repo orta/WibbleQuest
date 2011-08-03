@@ -16,3 +16,4 @@ ordered attack / defense phrases
 webview scroll on keyboard movement
 parser return YES if recognised
 Prettyfy the settings page
+Make a generic on first sight method for person instead of coding it each time
