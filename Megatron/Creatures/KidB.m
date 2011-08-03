@@ -62,12 +62,15 @@
   [wq describeSurroundings];
 };
 
-
+-(BOOL)randomAttackPhrase{
+  return YES;
+}
 -(NSArray*)formattedAttackPhrases{
   return [NSArray arrayWithObjects:
           @"The kid deflects what you thought was a good blow and gives you a good whack on the side of the arm doing %i damage.",
           @"The kid dives at you, you attempt to deflect his swipe but it doesn't work, you take %i damage.",
-          @"The kid swings, he hits. Ouch! %i damage.", nil];
+          @"The kid swings, he hits. Ouch! %i damage.",
+          nil];
 }
 
 -(NSArray*)formattedDefensePhrases{
