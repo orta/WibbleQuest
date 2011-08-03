@@ -9,12 +9,20 @@ task :rocco do
   js = "var classes = [";
   
   #copy in Header files
-  Dir.foreach("../../iphone/WibbleQuest/WibbleQuest/") do |f| 
+  Dir.foreach("../../iphone/WibbleQuest/WibbleQuest/core/") do |f| 
       if f.end_with? ".h"
-        `cp ../../iphone/WibbleQuest/WibbleQuest/#{f} API`
+        `cp ../../iphone/WibbleQuest/WibbleQuest/core/#{f} API`
         js += '"' + f[0..-3] + '",'
       end
   end
+  
+  Dir.foreach("../../iphone/WibbleQuest/WibbleQuest/objects/") do |f| 
+      if f.end_with? ".h"
+        `cp ../../iphone/WibbleQuest/WibbleQuest/objects/#{f} API`
+        js += '"' + f[0..-3] + '",'
+      end
+  end
+  
   
   #put in a list of all classes
   js += "''];"
@@ -25,8 +33,9 @@ task :rocco do
   #copy in Header files
   Dir.foreach("API") do |f| 
     if f.end_with? ".h"
+  #    puts "rocco API/#{ f } -l objc -t _layouts/api.mustache"
       puts f
-      `rocco API/#{ f } -l objc -c "//"`
+      `rocco API/#{ f } -l objc -t _layouts/api.mustache`
     end
   end
   

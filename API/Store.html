@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/syntax.css">
   <link rel="stylesheet" href="../assets/css/api.css">
-  
 </head>
 <body>
 <div id='container'>
@@ -60,4 +59,25 @@
     </tr>
   </table>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+<script src="files.js"></script>
+<script src="../assets/js/overview.js"></script>
+<script async defer>    
+    // replace all mentions of the class with a link to the docs
+    // this makes the code a lot easier to read fomr this side.
+
+for (var i = classes.length - 1; i >= 0; i--){
+  var klass = classes[i]
+  $('body').highlightRegex(klass);      
+};
+
+
+// rewrite the URLs from /api/api/x to /api/x
+$(".api").each(function(index) {
+  var url = $(this).attr("href").replace("API/",'');
+   $(this).attr("href",  url );
+});
+
+</script>
+
 </body>

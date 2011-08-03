@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/syntax.css">
   <link rel="stylesheet" href="../assets/css/api.css">
-  
 </head>
 <body>
 <div id='container'>
@@ -34,7 +33,7 @@
       <td class=code>
         <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
 
-<span class="err">@</span><span class="n">class</span> <span class="n">Room</span><span class="p">,</span> <span class="n">PlayerInventory</span><span class="p">,</span> <span class="n">Player</span><span class="p">,</span> <span class="n">Creature</span><span class="p">,</span> <span class="n">CommandInterpreter</span><span class="p">;</span></pre></div>
+<span class="err">@</span><span class="n">class</span> <span class="n">Room</span><span class="p">,</span> <span class="n">PlayerInventory</span><span class="p">,</span> <span class="n">Player</span><span class="p">,</span> <span class="n">Creature</span><span class="p">,</span> <span class="n">CommandInterpreter</span><span class="p">,</span> <span class="n">Game</span><span class="p">;</span></pre></div>
       </td>
     </tr>
     <tr id='section-2'>
@@ -88,7 +87,7 @@ the Game object needs to support so that the game will work correctly.</p>
         <div class='highlight'><pre>  <span class="n">IBOutlet</span> <span class="n">UIWebView</span> <span class="o">*</span><span class="n">_webView</span><span class="p">;</span>
   <span class="n">IBOutlet</span> <span class="n">UITextField</span>  <span class="o">*</span><span class="n">_textField</span><span class="p">;</span>
   <span class="n">IBOutlet</span> <span class="n">UIView</span> <span class="o">*</span><span class="n">view</span><span class="p">;</span>
-  <span class="n">IBOutlet</span> <span class="n">NSObject</span><span class="o">&lt;</span><span class="n">WibbleQuestGameDelegate</span><span class="o">&gt;</span> <span class="o">*</span> <span class="n">game</span><span class="p">;</span>
+  <span class="n">IBOutlet</span> <span class="n">Game</span><span class="o">&lt;</span><span class="n">WibbleQuestGameDelegate</span><span class="o">&gt;</span> <span class="o">*</span> <span class="n">game</span><span class="p">;</span>
   
   <span class="n">CommandInterpreter</span> <span class="o">*</span><span class="n">_commandInterpreter</span><span class="p">;</span>
   </pre></div>
@@ -104,12 +103,33 @@ the Game object needs to support so that the game will work correctly.</p>
       <td class=code>
         <div class='highlight'><pre>  <span class="kt">float</span> <span class="n">movementDistance</span><span class="p">;</span>
   <span class="n">bool</span> <span class="n">animateMovement</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">UIView</span> <span class="o">*</span> <span class="n">view</span><span class="p">;</span>
+  </pre></div>
+      </td>
+    </tr>
+    <tr id='section-7'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-7">&#182;</a>
+        </div>
+        <p>for handling drag commands up and down on the text field</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>  <span class="kt">int</span> <span class="n">_commandIndex</span><span class="p">;</span>
+<span class="p">}</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-8'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-8">&#182;</a>
+        </div>
+        <p>Variables that are kept</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">UIView</span> <span class="o">*</span> <span class="n">view</span><span class="p">;</span>
 <span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">NSMutableArray</span> <span class="o">*</span> <span class="n">rooms</span><span class="p">;</span>
 <span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">Room</span> <span class="o">*</span> <span class="n">currentRoom</span><span class="p">;</span>
-<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">NSObject</span><span class="o">&lt;</span><span class="n">WibbleQuestGameDelegate</span><span class="o">&gt;</span> <span class="o">*</span> <span class="n">game</span><span class="p">;</span>
+<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">Game</span><span class="o">&lt;</span><span class="n">WibbleQuestGameDelegate</span><span class="o">&gt;</span> <span class="o">*</span> <span class="n">game</span><span class="p">;</span>
 <span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">PlayerInventory</span> <span class="o">*</span><span class="n">inventory</span><span class="p">;</span>
 <span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">Player</span><span class="o">*</span> <span class="n">player</span><span class="p">;</span>
 
@@ -120,40 +140,72 @@ the Game object needs to support so that the game will work correctly.</p>
 <span class="o">+</span><span class="p">(</span><span class="n">WibbleQuest</span> <span class="o">*</span><span class="p">)</span> <span class="n">sharedWibble</span><span class="p">;</span></pre></div>
       </td>
     </tr>
-    <tr id='section-7'>
+    <tr id='section-9'>
       <td class=docs>
         <div class="pilwrap">
-          <a class="pilcrow" href="#section-7">&#182;</a>
+          <a class="pilcrow" href="#section-9">&#182;</a>
         </div>
-        <p>API used when setting up your game </p>
+        <p>Add rooms to a global list of rooms, this means 
+you can get it by ID</p>
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">addRoom</span><span class="o">:</span><span class="p">(</span><span class="n">Room</span><span class="o">*</span><span class="p">)</span><span class="n">room</span><span class="p">;</span>
 <span class="o">-</span><span class="p">(</span><span class="n">Room</span> <span class="o">*</span><span class="p">)</span> <span class="n">getRoomByID</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">id</span><span class="p">;</span></pre></div>
       </td>
     </tr>
-    <tr id='section-8'>
+    <tr id='section-10'>
       <td class=docs>
         <div class="pilwrap">
-          <a class="pilcrow" href="#section-8">&#182;</a>
+          <a class="pilcrow" href="#section-10">&#182;</a>
         </div>
-        <p>launching</p>
+        <p>Start the game</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">start</span><span class="p">;</span>
-<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">describeSurroundings</span><span class="p">;</span>
-<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">movedRoom</span><span class="p">;</span>
-
-<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">restart</span><span class="p">;</span>
-<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">purge</span><span class="p">;</span>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">start</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-11'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-11">&#182;</a>
+        </div>
+        <p>This method describes the room and items in it,
+its called by moving rooms, or by teleporting.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">describeSurroundings</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">movedRoom</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-12'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-12">&#182;</a>
+        </div>
+        <p>Restart the game</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">restart</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-13'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-13">&#182;</a>
+        </div>
+        <p>Clears the resources like Rooms / Items etc, 
+it&rsquo;s rarely used in games but used in Testing quite a lot. </p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">purge</span><span class="p">;</span>
 
 <span class="err">@</span><span class="n">end</span></pre></div>
       </td>
     </tr>
-    <tr id='section-9'>
+    <tr id='section-14'>
       <td class=docs>
         <div class="pilwrap">
-          <a class="pilcrow" href="#section-9">&#182;</a>
+          <a class="pilcrow" href="#section-14">&#182;</a>
         </div>
         <p>putting these at the end means that all objects get access
 to methods that should be public inside categories</p>
@@ -161,9 +213,31 @@ to methods that should be public inside categories</p>
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="cp">#import &quot;WibbleQuestPrintingCategory.h&quot;</span>
-<span class="cp">#import &quot;WibbleQuestViewHandlingCategory.h&quot;</span></pre></div>
+<span class="cp">#import &quot;WibbleQuestViewHandlingCategory.h&quot;</span>
+<span class="cp">#import &quot;WibbleQuestSwipeHandlers.h&quot;</span></pre></div>
       </td>
     </tr>
   </table>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+<script src="files.js"></script>
+<script src="../assets/js/overview.js"></script>
+<script async defer>    
+    // replace all mentions of the class with a link to the docs
+    // this makes the code a lot easier to read fomr this side.
+
+for (var i = classes.length - 1; i >= 0; i--){
+  var klass = classes[i]
+  $('body').highlightRegex(klass);      
+};
+
+
+// rewrite the URLs from /api/api/x to /api/x
+$(".api").each(function(index) {
+  var url = $(this).attr("href").replace("API/",'');
+   $(this).attr("href",  url );
+});
+
+</script>
+
 </body>
