@@ -47,7 +47,7 @@
 }
 
 -(void)ready {  
-  Player * player =[Player sharedPlayer];
+  Player * player = [Player sharedPlayer];
   player.money = 0;
   player.health = 10;
   player.maxHealth = 10;
