@@ -96,7 +96,7 @@
         if ([self.flipsidePopoverController isPopoverVisible]) {
             [self.flipsidePopoverController dismissPopoverAnimated:YES];
         } else {
-            [self.flipsidePopoverController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+            [self.flipsidePopoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
         }
     }
 }
