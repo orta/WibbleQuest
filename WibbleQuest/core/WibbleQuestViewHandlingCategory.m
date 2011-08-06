@@ -28,10 +28,8 @@ static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
 static const CGFloat IPHONE_PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat IPHONE_LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
-static const CGFloat IPAD_PORTRAIT_KEYBOARD_HEIGHT = 270;
-static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 354;
-
-//TODO MAJOR REFACTORING
+static const CGFloat IPAD_PORTRAIT_KEYBOARD_HEIGHT = 264;
+static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 352;
 
 -(float)distanceForMovement {
   float distance;
@@ -167,8 +165,11 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 354;
   if ([_textField isFirstResponder]) {
     [_textField resignFirstResponder];
   }
-  
-  [_webView stringByEvaluatingJavaScriptFromString:@"rotate();scrollToBottom();"];  
+  NSString * resizeJS = [NSString stringWithFormat:@"$(html).css('width','%f');", [_webView frame].size.width];
+  [_webView stringByEvaluatingJavaScriptFromString:resizeJS];  
+  [self print:resizeJS];
+
+  [_webView stringByEvaluatingJavaScriptFromString:@"scrollToBottom();"];  
 
   animateMovement = NO;
 }
