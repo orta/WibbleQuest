@@ -10,7 +10,7 @@
 #import "PlayerInventory.h"
 
 @implementation Player
-@synthesize data = _data, health, maxHealth, damageRange, money,score;
+@synthesize data = _data, health, maxHealth, damageRange, money, score;
 
 //singleton
 static Player * sharedPlayer;

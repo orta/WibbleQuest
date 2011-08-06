@@ -40,6 +40,10 @@
       <script>
         // these functions are called from the UIWebView, they essentially are the public methods
         
+        function scrollToBottom(){
+          document.body.scrollTop += 10000000;
+        }
+        
         function wait(time){
           var date = new Date()
           date.setSeconds( date.getSeconds() + time )
@@ -122,11 +126,7 @@
         
         function createElementWithText(element, text){
           text = text.replace(/`/g, "'");
-
           $("body").append("<" + element +">" + text + "</" + element + ">")
-          
-          document.body.scrollTop += 10000000;
-          
           return "OK"
         }
                 
@@ -163,6 +163,7 @@
                   // caught error therefore
                   // not a time object, a function
                   next_function();
+                  scrollToBottom();
                   setTimeout("locked=false;executeQueue()", timeInterval);   
                   return
                 }
@@ -173,8 +174,8 @@
                 }else{
                   // if it's a date, then we unlock when it's ready 
                    // after throwing it back in the queue
-                   function_queue.unshift(next_function)
-                   setTimeout("locked=false;executeQueue()", timeInterval);   
+                  function_queue.unshift(next_function);
+                  setTimeout("locked=false;executeQueue()", timeInterval);   
                 }               
           }
         }

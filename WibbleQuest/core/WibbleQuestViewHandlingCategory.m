@@ -65,6 +65,8 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 354;
 
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
+  [_webView stringByEvaluatingJavaScriptFromString:@"scrollToBottom();"];  
+
   movementDistance = [self distanceForMovement];
   
   CGRect viewFrame = self.view.frame;  
@@ -166,7 +168,7 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 354;
     [_textField resignFirstResponder];
   }
   
-  [_webView stringByEvaluatingJavaScriptFromString:@"rotate()"];  
+  [_webView stringByEvaluatingJavaScriptFromString:@"rotate();scrollToBottom();"];  
 
   animateMovement = NO;
 }
