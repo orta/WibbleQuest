@@ -22,7 +22,7 @@
   self = [super init];
   self.fighting = NO;
   self.fightable = YES;
-  self.damageRange = NSMakeRange(0, 1);
+  self.damageRange = NSMakeRange(-1, -1);
   self.health = [self maxHealth];
   self.turn=0;
   NSArray *phrases = [[self formattedAttackPhrases] arrayByAddingObjectsFromArray:[self formattedDefensePhrases]];
@@ -69,6 +69,14 @@
     self.fighting = YES; 
   }
   //player attack 
+  if ( [player damageRange].location == -1 ) {
+    [WQ print:@"damageRange not set on Player class"];
+  }
+  if ( [self damageRange].location == -1 ) {
+    [WQ print:@"damageRange not set on Player class"];
+  }
+
+  
   int range = [player damageRange].length - [player damageRange].location;
   range = MAX(range, 1);
 
@@ -146,6 +154,5 @@
 
 
 -(void)respondToSentenceArray:(NSArray*)sentence{}
-
 
 @end

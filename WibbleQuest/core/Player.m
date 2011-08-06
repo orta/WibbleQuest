@@ -27,6 +27,7 @@ static Player * sharedPlayer;
   self.data = [NSMutableDictionary dictionary];
   sharedPlayer = self;
   health = maxHealth;
+  self.damageRange = NSMakeRange(-1, -1);
   return self;
 }
 

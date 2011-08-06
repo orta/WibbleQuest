@@ -3,12 +3,9 @@ add a ticking system so objects can do things
 on rotate make javascript to resize htmlview so it fits all text in again
 shop!
 add a way to customize colours?
-add a way to always do look, a setting?
 saving / loading state
 add a way to do images from resources
 BLOCKS
-toggle for look on each room
-warnings in fights if you haven't included a damageRange
 don't want to always create a custom Item subclass when I'm just doing simple text for stuff. 
 room id's should be automated, but overridable
 do not hide keyboard if command not recognised
