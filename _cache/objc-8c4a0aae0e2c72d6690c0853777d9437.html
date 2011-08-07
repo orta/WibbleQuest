@@ -1,0 +1,16 @@
+<div class="highlight"><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
+<span class="cp">#import &quot;GameSelector.h&quot;</span>
+<span class="cp">#import &quot;Brazil.h&quot;</span>
+
+<span class="k">@implementation</span> <span class="nc">GameSelector</span>
+<span class="k">@synthesize</span> <span class="n">wq</span><span class="p">;</span>
+
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">awakeFromNib</span> <span class="p">{</span>
+    <span class="n">Game</span><span class="o">&lt;</span><span class="n">WibbleQuestGameDelegate</span><span class="o">&gt;</span> <span class="o">*</span> <span class="n">game</span> <span class="o">=</span> <span class="p">[[</span><span class="n">BTPGame</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+    <span class="n">game</span><span class="p">.</span><span class="n">wq</span> <span class="o">=</span> <span class="n">wq</span><span class="p">;</span>
+    <span class="n">wq</span><span class="p">.</span><span class="n">game</span> <span class="o">=</span> <span class="n">game</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@end</span>  
+</pre>
+</div>

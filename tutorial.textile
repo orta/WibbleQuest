@@ -2,7 +2,20 @@
 layout: page
 title: Learn iPhone from ~scratch
 ---
-
+<link rel="stylesheet" href="assets/css/syntax.css">
+<style type="text/css" media="screen">
+  .split {
+    float: left;
+    width:350px;
+  }
+  .split p:first-child {
+    padding-top: 0;
+  }
+  .split p {
+    padding:10px;
+    font-size: 0.8em;
+  }
+</style>
 
 Tutorial for WibbleQuest
 
@@ -10,22 +23,120 @@ Tutorial for WibbleQuest
   -Install from src
   -Github Tag
   
-. Folder Structure
-  -Game
-  -WibbleQuest
+h2. Folder Structure
+
+The folder structure for WibbleQuest is pretty simple for someone making a game. The downloaded application has a .xcodeproj that you open and inside that there are 2 folders, WibbleQuest and Game. Inside Game are two example games, Kierononon and Megatron. Inside those folders are the game files. 
   
-. Making my Own Game Object
-  -Subclassing Game
-  -Changing GameSelector
+Each game folder has subfolders for Items, Creatures, People and Rooms. Ideally you should use these for putting your custom objects, but you don't have to. It's normal to put your Game subclass inside the Game folder for easy access.  
   
-. Creating my First Room
   
+So to start, right click on the Game Folder, and create a new Folder (XCode calls them groups) for your game, our one will be called Brazil. Inside the new folder make folders for Rooms, Items Creatures and Items like the other game folder have.
+
+  
+h2. Making my Own Game Object
+
+To create your own custom Game, you need to "create a Game subclass":#subclass, and make it respond to 3 methods: 
+
+{% highlight objc %}
+#import "Brazil.h"
+
+@implementation Brazil
+@synthesize wq;
+
+-(NSString *) gameName {
+  return @"The Train to Brazil";
+}
+
+-(NSString *) gameDescription {
+  return @"You're stuck on a long train down to Brazil, and you need to find a feather boa.";
+}
+
+-(void)ready {
+  // This is where your game code will go
+  
+}
+
+@end
+{% endhighlight %}
+
+h2. Make it my game please!
+
+So now we have our own Game subclass called Brazil, we need to edit the GameSelector object to make it load our game instead of one of the others. You can do this by editing GameSelector.m to import your brazil game ( _#import "Brazil.h"_ ) at the top of the file with the others, and then changing the Class that game is created from 
+( _it's the bit before the alloc_ )
+  
+{% highlight objc %}
+#import <Foundation/Foundation.h>
+#import "GameSelector.h"
+#import "Brazil.h"
+
+@implementation GameSelector
+@synthesize wq;
+
+- (void)awakeFromNib {
+    Game<WibbleQuestGameDelegate> * game = [[Brazil alloc] init];
+    game.wq = wq;
+    wq.game = game;
+}
+
+@end  
+{% endhighlight %}
+
+  
+h3. Creating my First Room
+
+Lets create the room that you wake up in, we don't want any funky room subclass for now so as we're working now on the game itself we want to set the game up inside the ready method from our Game subclass called Brazil.  
+
+{% highlight objc %}
+-(void)ready {
+  // This is where your game code will go
+  Room * beginning = [[Room alloc] init];
+  beginning.name = @"Your carriage";
+  beginning.description = @"Your room has your all you bags, and basically contains your life right now.";
+  beginning.id = @"myroom";
+  
+  
+  wq.currentRoom = beginning;
+  [wq start];
+}
+{% endhighlight %}
+
+So there's two chunks of code here. Let's look at them individually.
+
+<div class="split">
+{% highlight objc %}
+  Room * beginning = [[Room alloc] init];
+  openingRoom.name = @"Your carriage";
+  openingRoom.description = @"Your room has your all you bags, and basically contains your life right now.";
+  openingRoom.id = @"myroom";
+{% endhighlight %}
+</div>
+
+<div class="split">
+We are creating an instance of the Room class, and are giving it a name, a description and an id. id's ideally should always be lowercase and without spaces. 
+
+When you enter a room, it will put the title of the room, and then it will write the description and print out any items that are inside the room. 
+</div>
+
+<div class="split">
+{% highlight objc %}
+  wq.currentRoom = beginning;
+  [wq start];
+{% endhighlight %}
+</div>
+
+<div class="split">
+The first line here will set the initial room to be the beginning room we just created. Then we start up the game from the user's perspective.
+</div>
+
+You can now run the game and see your initial room, if you type help you can get a list of all the commands supported in the game ( you can override the help command if you want )
+
+
+
 . Connecting Rooms together
 
 . Reading the Docs
   - Finding objects
   - Reading Quickies
-  - 
   
 . Creating an Item
   
@@ -44,4 +155,15 @@ Tutorial for WibbleQuest
 
 . Restarting the Game
 
-. 
+--
+
+h3(#subclass). Creating an Item Subclass
+
+In XCode 3: Right click on the Folder that you want to add the subclass to, goto Add -> New File. In the New File window you want to be sure Cocoa Touch Class is selected on the left,, and then that Objective-C class is selected in the main section. When you hit next you'll be asked what the File name should be, this is your class name. _( Remember; classes alway start with a capital. )_ 
+
+Once you've put the class name in and pressed _Finish_ you need to change the subclass from *NSObject* to whatever you want, it's the bit after the colon in the .h file. 
+
+In XCode 4: Right click on the Folder that you want to add the subclass to, click New File. In the New File dropdown you want to be sure Cocoa Touch is selected on the left,, and then that Objective-C class is selected in the main section. Hitting Next will ask you what you want to subclass, this may be Item, Room, Person, Game, Creature, whatever. And then the next dropdown will ask you what you want to have your class called.
+
+Then you're done. Wherever you want to use that class now you just have to #import it on the top of the file you're looking for.
+
