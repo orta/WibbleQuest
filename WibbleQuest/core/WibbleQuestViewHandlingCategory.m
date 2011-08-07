@@ -190,5 +190,4 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 352;
   [_textField resignFirstResponder];
 }
 
-
 @end
