@@ -27,3 +27,4 @@ profile
 *.moved-aside
 
 *.zip
+_cache/
