@@ -150,19 +150,87 @@ H3. Creating an Item
 
 So, let's make an  item, we can't really just use the Item class because we want to override the methods for onUse, onPickup and onDrop. So create a "subclass of"#subclass Item called Book. We don't need to make any changes beyond changing the super class from NSObject to Item in the .h . In the .m file we want to start adding some code for the additional functionality, for now we'll just use the printing functions to describe the object.
 
--code-
+Book.h Interface File
+{% highlight objc %}
+@interface Book : Item
 
-I feel that this isn't enough for me though, I'd like to add another command to the ticket, such as 'read book' to the new subclass. To do those we want to override a method called didRespondToCommand and make it respond. By default it returns no, and we want to look for the word read, and then act on it. Then finally we want to return yes, thereby saying the book has responded to the command.
+@end
+{% endhighlight %}
+
+Book.m Implementation File
+{% highlight objc %}
+
+#import "Book.h"
+
+@implementation Book
+
+-(NSString*) description {
+  return @"The book barely fits in your pocket.";
+}
+
+-(NSString *)descriptionInRoom {
+ return @"There is a book on the floor."; 
+}
+
+-(NSString*)id {
+  return @"book";
+}
+
+-(void)onPickup {
+  [WQ print:@"You grab the book and stash it in your pocket"];
+}
+
+-(void)onDrop {
+  [WQ print:@"You drop the book to the floor with a thud."];
+}
+
+-(void)onUse {
+  [WQ print:@"You look at the book."];
+  [WQ wait:3];
+  [WQ print:@"Pretty book-like."];
+}
+
+@end
+{% endhighlight %}
+
+I feel that this isn't enough for me though, I'd like to add another command to the book, such as 'read book' to the new subclass. To do those we want to override a method called didRespondToCommand and make it respond. By default it returns no, and we want to look for the word read, and then act on it. Then finally we want to return yes, thereby saying the book has responded to the command.
+
+{% highlight objc %}
+-(BOOL)didRespondToCommand:(NSArray*)commandArray {
+  NSString * command = [commandArray first];
+  if ([@"read" isEqualToString:command]) {
+    
+    [WQ print:@"You sit down for a while and read some code "];
+    return YES;
+  }
+  return NO;
+}
+{% endhighlight %}
 
 Alright, so let's now look at making it possible to examine our bags, and the rest of the room, in order to do this we need to make a room subclass. We should also make it so that you cannot exit the room without the book in hand, wouldn't want to get bored elsewhere.
 
 First, lets make our subclass called PlayerCarriage. Again, the only change we need to doc to the .h file is to change the NSObject to a Room. In the .m file However we will add support for examine. Examine works by overriding a method and then returning an NSDictionary, you don't have to worry too much about what they do in particular, but they're objective-c's hash tables. How it works is that you give a description, and then a single word that the description applies to. You can do this for as many pairs as you would like, and in the end you have to include the word nil.
 
--code-
+{% highlight objc %}
+-(NSDictionary*)dictionaryForExamine {
+  return [NSDictionary dictionaryWithObjectsAndKeys:
+          @"Your clothes are on the floor", @"clothes",
+          nil];
+}
+{% endhighlight %}
 
 Next we'll make it so that you annoy exit the room without having picked up your book, to do this we override the function playerShouldLeave and find out if the Player has the item If so we let them leave, otherwise we tell them that they can't leave yet. Returning nil will not say anything to the user. So that's your responsibility..
 
--code-
+{% highlight objc %}
+-(BOOL)playerShouldLeaveRoom {
+  if ([Player has:@"book"]) {
+    return YES;
+  }
+  
+  [WQ print:@"You wouldn't want to leave without your book."];
+  return NO;
+}
+{% endhighlight %}
 
 Finally we'll add some additional commands to the room, this works exactly like how we add commands to the Book subclasses earlier by overriding didRespondToCommand and adding support for sleep and unpack
 
