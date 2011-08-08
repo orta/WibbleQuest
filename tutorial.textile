@@ -105,9 +105,9 @@ So there's two chunks of code here. Let's look at them individually.
 <div class="split">
 {% highlight objc %}
   Room * beginning = [[Room alloc] init];
-  openingRoom.name = @"Your carriage";
-  openingRoom.description = @"Your room has your all you bags, and basically contains your life right now.";
-  openingRoom.id = @"myroom";
+  beginning.name = @"Your carriage";
+  beginning.description = @"Your room has your all you bags, and basically contains your life right now.";
+  beginning.id = @"myroom";
 {% endhighlight %}
 </div>
 
@@ -128,25 +128,32 @@ When you enter a room, it will put the title of the room, and then it will write
 The first line here will set the initial room to be the beginning room we just created. Then we start up the game from the user's perspective.
 </div>
 
-You can now run the game and see your initial room, if you type help you can get a list of all the commands supported in the game ( you can override the help command if you want  to)
+You can now run the game and see your initial room, if you type help you can get a list of all the commands supported in the game ( you can override the help command if you want to)
 
 
-
-H3. Connecting Rooms together
+h3. Connecting Rooms together
 
 You're probably gonna want to connect rooms so that you can have more then one room in your game.  To do that we're about to make another instance of the room class and then connect the two. Here's a warning, you'll need to update the description of the room, because connecting the rooms will not add anything to the screen, it's your responsibility to say there is an exit to the east for example.
 
 
-- code -
+{% highlight objc %}
 
-H3. Reading the docs.
+Room * hallwayCenter = [[Room alloc] init];
+hallwayCenter.id = @"hallway";
+hallwayCenter.name = @"Hallway";
+hallwayCenter.description = @"The Hallway is long and stuff";
+[hallwayCenter connectSouth:beginning];
+
+{% endhighlight %}
+
+h3. Reading the docs.
 
 So now is a good time to explain how to find answers yourself, in simple, there is an overview of all the important classes that you'll use and a lot of quick answers at the bottom of this page, when you want to know a lot about any class you can go to the API page for it, for example this link to WibbleObject is a link to the API page. Any references to classes will be clickable.
 
 So, go through the "quickies":documentation#quickies now and see what they are, it might answer your  questions before you knew. And now we go back to the code
 
 
-H3. Creating an Item
+h2. Creating an Item
 
 So, let's make an  item, we can't really just use the Item class because we want to override the methods for onUse, onPickup and onDrop. So create a "subclass of"#subclass Item called Book. We don't need to make any changes beyond changing the super class from NSObject to Item in the .h . In the .m file we want to start adding some code for the additional functionality, for now we'll just use the printing functions to describe the object.
 
