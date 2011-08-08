@@ -28,7 +28,6 @@
 		60114B7913E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B7813E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m */; };
 		60114B7A13E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B7813E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m */; };
 		603B99C813D3C3F20001F9CD /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
-		6050F43013DC4B0300BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
 		6050F43113DC4B6700BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
 		6065BC9213D3619000F1F6D4 /* StartingRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6065BC9113D3619000F1F6D4 /* StartingRoom.m */; };
 		606B2B7513D4F5B000B90223 /* WibbleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B2B7413D4F5B000B90223 /* WibbleObject.m */; };
@@ -383,7 +382,6 @@
 				609B9FAD13C901D400888A6E /* UIKit.framework in Frameworks */,
 				609B9FAF13C901D400888A6E /* Foundation.framework in Frameworks */,
 				609B9FB113C901D400888A6E /* CoreGraphics.framework in Frameworks */,
-				6050F43013DC4B0300BB8E82 /* libsbjson-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
