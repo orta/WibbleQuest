@@ -85,7 +85,12 @@
 
     if([@"use" isEqualToString:command] || [@"u" isEqualToString:command]){
       Item *item = [wq.inventory getItem:[parameters second]];
-      [item onUse];
+      if(item){
+        [item onUse];   
+      }else{
+        [wq print:@"Could not find %@ in your inventory", [parameters second]];
+      }
+     
       return;
     }
 
