@@ -272,3 +272,24 @@ In XCode 4: Right click on the Folder that you want to add the subclass to, clic
 Then you're done. Wherever you want to use that class now you just have to #import it on the top of the file you're looking for.
 add support for the command book
 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+<script src="assets/js/jquery_scroll.js"></script>
+<script src="API/files.js"></script>
+<script src="assets/js/overview.js"></script>
+
+<script>
+    $('a').smoothScroll();
+</script>
+
+<script async defer>    
+    // replace all mentions of the class with a link to the docs
+    // this makes the code a lot easier to read fomr this side.
+
+for (var i = classes.length - 1; i >= 0; i--){
+  var klass = classes[i]
+  $('body').highlightRegex(klass);      
+};
+
+</script>
