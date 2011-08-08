@@ -35,7 +35,7 @@ So to start, right click on the Game Folder, and create a new Folder (XCode call
   
 h2. Making my Own Game Object
 
-To create your own custom Game, you need to "create a Game subclass":#subclass, and make it respond to 3 methods: 
+To create your own custom Game, you need to "create a Game subclass":., and make it respond to 3 methods: 
 
 {% highlight objc %}
 #import "Brazil.h"
@@ -128,42 +128,69 @@ When you enter a room, it will put the title of the room, and then it will write
 The first line here will set the initial room to be the beginning room we just created. Then we start up the game from the user's perspective.
 </div>
 
-You can now run the game and see your initial room, if you type help you can get a list of all the commands supported in the game ( you can override the help command if you want )
+You can now run the game and see your initial room, if you type help you can get a list of all the commands supported in the game ( you can override the help command if you want  to)
 
 
 
-. Connecting Rooms together
+H3. Connecting Rooms together
 
-. Reading the Docs
-  - Finding objects
-  - Reading Quickies
-  
-. Creating an Item
-  
-. Adding an Item to a Room
-  
-. Using the Item
-  
-. Adding custom commands to the Item
+You're probably gonna want to connect rooms so that you can have more then one room in your game.  To do that we're about to make another instance of the room class and then connect the two. Here's a warning, you'll need to update the description of the room, because connecting the rooms will not add anything to the screen, it's your responsibility to say there is an exit to the east for example.
 
-. Making a Custom Room 
-  - Examine
-  - Commands
-  - Entry In and Out
 
-. Adding a Person to a room
+- code -
 
-. Restarting the Game
+H3. Reading the docs.
+
+So now is a good time to explain how to find answers yourself, in simple, there is an overview of all the important classes that you'll use and a lot of quick answers at the bottom of this page, when you want to know a lot about any class you can go to the API page for it, for example this link to WibbleObject is a link to the API page. Any references to classes will be clickable.
+
+So, go through the "quickies":documentation#quickies now and see what they are, it might answer your  questions before you knew. And now we go back to the code
+
+
+H3. Creating an Item
+
+So, let's make an  item, we can't really just use the Item class because we want to override the methods for onUse, onPickup and onDrop. So create a "subclass of"#subclass Item called Book. We don't need to make any changes beyond changing the super class from NSObject to Item in the .h . In the .m file we want to start adding some code for the additional functionality, for now we'll just use the printing functions to describe the object.
+
+-code-
+
+I feel that this isn't enough for me though, I'd like to add another command to the ticket, such as 'read book' to the new subclass. To do those we want to override a method called didRespondToCommand and make it respond. By default it returns no, and we want to look for the word read, and then act on it. Then finally we want to return yes, thereby saying the book has responded to the command.
+
+Alright, so let's now look at making it possible to examine our bags, and the rest of the room, in order to do this we need to make a room subclass. We should also make it so that you cannot exit the room without the book in hand, wouldn't want to get bored elsewhere.
+
+First, lets make our subclass called PlayerCarriage. Again, the only change we need to doc to the .h file is to change the NSObject to a Room. In the .m file However we will add support for examine. Examine works by overriding a method and then returning an NSDictionary, you don't have to worry too much about what they do in particular, but they're objective-c's hash tables. How it works is that you give a description, and then a single word that the description applies to. You can do this for as many pairs as you would like, and in the end you have to include the word nil.
+
+-code-
+
+Next we'll make it so that you annoy exit the room without having picked up your book, to do this we override the function playerShouldLeave and find out if the Player has the item If so we let them leave, otherwise we tell them that they can't leave yet. Returning nil will not say anything to the user. So that's your responsibility..
+
+-code-
+
+Finally we'll add some additional commands to the room, this works exactly like how we add commands to the Book subclasses earlier by overriding didRespondToCommand and adding support for sleep and unpack
+
+-code-
+
+
+With our room subclass done, we've got to go back to the Game subclass and swap the original definition out with the new one. So find the line that says
+ 
+-code- 
+
+And replace it with 
+
+-code-
+
+Make sure you've got a #import at the top for the Room subclass and you're done.
+
+- to come, add support for adding people to your game, and add support for creatures to fight!
 
 --
 
 h3(#subclass). Creating an Item Subclass
-
-In XCode 3: Right click on the Folder that you want to add the subclass to, goto Add -> New File. In the New File window you want to be sure Cocoa Touch Class is selected on the left,, and then that Objective-C class is selected in the main section. When you hit next you'll be asked what the File name should be, this is your class name. _( Remember; classes alway start with a capital. )_ 
+ 
+In XCode 3: Right click on the Folder that you want to add the subclass to, goto Add -> New File. In the New File window you want to be sure Cocoa Touch Class is selected on the leftist,, and then that Objective-C class is selected in the main section. When you hit next you'll be asked what the File name should be, this is your class name. _( Remember; classes alway start with a capital. )_ 
 
 Once you've put the class name in and pressed _Finish_ you need to change the subclass from *NSObject* to whatever you want, it's the bit after the colon in the .h file. 
 
 In XCode 4: Right click on the Folder that you want to add the subclass to, click New File. In the New File dropdown you want to be sure Cocoa Touch is selected on the left,, and then that Objective-C class is selected in the main section. Hitting Next will ask you what you want to subclass, this may be Item, Room, Person, Game, Creature, whatever. And then the next dropdown will ask you what you want to have your class called.
 
 Then you're done. Wherever you want to use that class now you just have to #import it on the top of the file you're looking for.
+add support for the command book
 
