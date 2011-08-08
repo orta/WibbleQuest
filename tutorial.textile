@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Learn iPhone from ~scratch
 ---
+
 <link rel="stylesheet" href="assets/css/syntax.css">
 <style type="text/css" media="screen">
   .split {
@@ -151,15 +151,18 @@ H3. Creating an Item
 So, let's make an  item, we can't really just use the Item class because we want to override the methods for onUse, onPickup and onDrop. So create a "subclass of"#subclass Item called Book. We don't need to make any changes beyond changing the super class from NSObject to Item in the .h . In the .m file we want to start adding some code for the additional functionality, for now we'll just use the printing functions to describe the object.
 
 Book.h Interface File
+
+
 {% highlight objc %}
 @interface Book : Item
 
 @end
 {% endhighlight %}
 
-Book.m Implementation File
-{% highlight objc %}
 
+Book.m Implementation File
+
+{% highlight objc %}
 #import "Book.h"
 
 @implementation Book
