@@ -35,7 +35,7 @@ So to start, right click on the Game Folder, and create a new Folder (XCode call
   
 h2. Making my Own Game Object
 
-To create your own custom Game, you need to "create a Game subclass":., and make it respond to 3 methods: 
+To create your own custom Game, you need to "create a Game subclass":#subclass , and make it respond to 3 methods: 
 
 {% highlight objc %}
 #import "Brazil.h"
@@ -244,22 +244,44 @@ Next we'll make it so that you annoy exit the room without having picked up your
 
 Finally we'll add some additional commands to the room, this works exactly like how we add commands to the Book subclasses earlier by overriding didRespondToCommand and adding support for sleep and unpack
 
--code-
+{% highlight objc %}
+-(BOOL)didRespondToCommand:(NSArray*)commandArray {
+  NSString * command = [commandArray first];
+  if ([@"sleep" isEqualToString:command]) {
+    [WQ print:@"You snooze "];
+    return YES;
+  }
+  
+  if ([@"unpack" isEqualToString:command]) {
+    [WQ print:@"You unpack your stuff. nothing too important there."];
+    return YES;
+  }
+  
+  return NO;
+}
+{% endhighlight %}
 
 
-With our room subclass done, we've got to go back to the Game subclass and swap the original definition out with the new one. So find the line that says
- 
--code- 
+With our room subclass done, we've got to go back to the Game subclass and swap the original definition out with the new one. So find the line that says, and replace it with.
 
-And replace it with 
+<div class="split"> 
+{% highlight objc %}
+Room * beginning = [[Room alloc] init];
+{% endhighlight %}
+</div>
+
+<div class="split"> 
+{% highlight objc %}
+PlayerCarriage * beginning = [[PlayerCarriage alloc] init];
+{% endhighlight %}
+</div>
+
 
 -code-
 
 Make sure you've got a #import at the top for the Room subclass and you're done.
 
 - to come, add support for adding people to your game, and add support for creatures to fight!
-
---
 
 h3(#subclass). Creating an Item Subclass
  
@@ -289,7 +311,7 @@ add support for the command book
 
 for (var i = classes.length - 1; i >= 0; i--){
   var klass = classes[i]
-  $('body').highlightRegex(klass);      
+  $('body ').highlightRegex(klass);      
 };
 
 </script>
