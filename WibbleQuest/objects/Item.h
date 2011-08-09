@@ -25,6 +25,5 @@
 -(void)onUse;
 -(void)onDrop;
 
-//A method that gets called at an interval specified by the shared wibble
 
 @end

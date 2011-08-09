@@ -18,8 +18,11 @@
 
 -(BOOL)didRespondToCommand:(NSArray*)commandArray;
 
+//A method that gets called at an interval specified by the shared wibble
 -(void)tick;
 
+//Methods for the dynamic help system
+//Print help will only be called if it is in the current room or in the inventory
 -(void)addCommandToHelp:(NSString*)command withDescription:(NSString*)description;
 -(void)printHelp;
 

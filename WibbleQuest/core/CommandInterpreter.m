@@ -266,9 +266,14 @@
     [wq.currentRoom.encounter printHelp];
     [wq.currentRoom.person printHelp];
     
-    for (int x = 0; x<[wq.currentRoom.items count]; x++){
-      [[wq.currentRoom.items objectAtIndex:x] printHelp];
+    for (Item *i in wq.currentRoom.items){
+      [i printHelp];
     }
+    
+    for (Item *i in wq.inventory.items) {
+      [i printHelp];
+    }
+    
     
   }
 }
