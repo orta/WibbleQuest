@@ -15,6 +15,22 @@ player.health = 10;
 
 A fightable character is a subclass of a Creature, they have name, damageRange, and Max Health variables that are self explanatory. 
 
+These go inside the creature subclass .m file: 
+
+{% highlight objc %}
+- (NSString *) name {
+  return @"Massive Scarey thing";
+}
+
+-(int) maxHealth {
+  return 10;
+}
+
+-(NSRange)damageRange {
+  return NSMakeRange(2, 4);
+}
+{% endhighlight %}
+
 What is less obvious is that you can do lots with what the creature says and how you attack it. There is a handy method called damageModifier which allows you to modify the damage after it's been rolled. For example, in this case the damage is doubled if the user has picked up a keytar.
 
 {% highlight objc %}
@@ -32,14 +48,20 @@ The way that the battle is described is quite interesting too, you supply a coll
 {% highlight objc %}
 -(NSArray*)formattedAttackPhrases{
   return [NSArray arrayWithObjects:
-          @"The bodyguard looks at you grimly and causes %i ego damage.",
-          @"The bodyguard shakes his head and bruising your ego by %i.",
-          @"The bodyguard puts his earphone in hurting your ego by %i.",
+          @"The giant looks at you grimly and causes %i ego damage.",
+          @"The giant shakes his head and bruising your ego by %i.",
+          @"The giant puts his earphone in hurting your ego by %i.",
+         nil];
+}
+
+-(NSArray*)formattedDefensePhrases{
+  return [NSArray arrayWithObjects:
+          @"You strut your stuff dealing %i ego damage.",
+          @"The giant didnt know what hit him when you did a cool dace doing a whole %i damage.",
+          @"You showed the giant your new shoes, he's so impressed! %i damage.",
          nil];
 }
 {% endhighlight %}
-
-They should always contain a %i or you could have an application crash. 
 
 There is a lot of methods you can override in order to get your creatures to be realistic, override as many as you want.
 

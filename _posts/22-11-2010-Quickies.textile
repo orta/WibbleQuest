@@ -155,12 +155,15 @@ Make them respond to words that are said by using
 }
 {% endhighlight %}
 
+You can use the helpful method array contains to allow people to dig deeply into the conversation tree, or to allow them to react to multiple words with the same speech.
+
 
 h3. make a person give you something
 
 You can just add an item to the players inventory for example like below
 
 {% highlight objc %}
+
 if([sentence contains:@"mic", @"mics", @"microphone", nil] ){
   [WQ say:@"FloatstarPX" words:@"Ah yeah, the microphones, I spotted them earlier, here you go"];
   Microphone *mic = [[Microphone alloc] init];
@@ -207,17 +210,6 @@ override the method and that will be called when the player does "use [item]"
 {% highlight objc %}
 -(void)onUse{ }
 {% endhighlight %}
-
-
-h3(#talk). Make a person that you can talk to
-
-Create a subclass of Person, make them respond using the following method
-
-{% highlight objc %}
--(void)respondToSentenceArray:(NSArray*)sentence;
-{% endhighlight %}
-
-you can use the helpful method array contains to allow people to dig deeply into the conversation tree, or to allow them to react to multiple words with the same speech.
 
 
 h3(#hello). Make a person say Hello the first time you enter a room
