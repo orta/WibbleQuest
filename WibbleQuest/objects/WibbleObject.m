@@ -22,5 +22,6 @@
   return NO;
 }
 
+-(void)tick{}
 
 @end

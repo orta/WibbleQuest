@@ -16,4 +16,5 @@
 
 -(BOOL)didRespondToCommand:(NSArray*)commandArray;
 
+-(void)tick;
 @end

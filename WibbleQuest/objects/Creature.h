@@ -56,6 +56,5 @@
 // like them to.
 -(void)respondToSentenceArray:(NSArray*)sentence;
 
--(void)tick;
 
 @end
