@@ -16,4 +16,6 @@
 -(void)onDrop{}
 -(void)onUse{}
 
+-(void)tick{}
+
 @end

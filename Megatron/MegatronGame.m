@@ -97,6 +97,7 @@
   [nyansRoom connectSouth:exitRoom];
   
   wq.currentRoom = openingRoom;
+  wq.tickerInterval=1.0f;
   NSLog(@"OK");
   [wq start];
 }

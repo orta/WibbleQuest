@@ -21,6 +21,7 @@ static WibbleQuest *sharedWibble;
 
 @synthesize view, rooms, currentRoom, game, inventory, player;
 @synthesize lastPrinted, previousCommands;
+@synthesize tickerInterval, timer;
 
 + (WibbleQuest *)sharedWibble {
   return sharedWibble;
@@ -32,6 +33,8 @@ static WibbleQuest *sharedWibble;
   // rooms and other data
   
   sharedWibble = self;
+  
+  tickerInterval = 1.0f;
   
   [self setupGestureRecognisers];
   [self setupCommandSwipes];
@@ -58,6 +61,7 @@ static WibbleQuest *sharedWibble;
   // just a neat gap
   [self heading:@""];
   [self movedRoom];
+  self.timer = [NSTimer scheduledTimerWithTimeInterval:self.tickerInterval target:self selector:@selector(tick) userInfo:nil repeats:YES];
 }
 
 -(void)purge {
@@ -112,6 +116,14 @@ static WibbleQuest *sharedWibble;
     self.rooms = [NSMutableArray arrayWithObject:room];
   }else{
     [self.rooms addObject:room];  
+  }
+}
+
+-(void)tick{
+  for (Room *room in self.rooms) {
+    for (Item *item in room.items) {
+      [item tick];
+    }
   }
 }
 

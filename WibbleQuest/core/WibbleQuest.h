@@ -53,6 +53,9 @@
 
 @property (retain) NSString * lastPrinted;
 
+@property() float tickerInterval;
+@property(nonatomic, retain) NSTimer *timer;
+
 +(WibbleQuest *) sharedWibble;
 
 // Add rooms to a global list of rooms, this means 
@@ -76,6 +79,7 @@
 // it's rarely used in games but used in Testing quite a lot. 
 -(void) purge;
 
+-(void) tick;
 @end
 
 // putting these at the end means that all objects get access
