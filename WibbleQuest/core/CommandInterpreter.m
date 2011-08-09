@@ -261,6 +261,15 @@
     [wq print: @"buy [item] "];
     [wq command:@"Buy an item from a shop."];
     
+    
+    [wq.currentRoom printHelp];
+    [wq.currentRoom.encounter printHelp];
+    [wq.currentRoom.person printHelp];
+    
+    for (int x = 0; x<[wq.currentRoom.items count]; x++){
+      [[wq.currentRoom.items objectAtIndex:x] printHelp];
+    }
+    
   }
 }
 

@@ -13,8 +13,14 @@
 @property (retain, nonatomic) NSString* id;
 @property (retain, nonatomic) NSString* description;
 @property (retain, nonatomic) NSString* name;
+@property (retain, nonatomic) NSMutableDictionary *helpList;
+
 
 -(BOOL)didRespondToCommand:(NSArray*)commandArray;
 
 -(void)tick;
+
+-(void)addCommandToHelp:(NSString*)command withDescription:(NSString*)description;
+-(void)printHelp;
+
 @end
