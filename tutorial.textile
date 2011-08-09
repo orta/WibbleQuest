@@ -15,14 +15,13 @@ layout: page
     padding:10px;
     font-size: 0.8em;
   }
+  h1{
+    font-size: 2em;
+  }
 </style>
 
-Tutorial for WibbleQuest
+h1. Tutorial for WibbleQuest
 
-. Installation of WibbleQuest
-  -Install from src
-  -Github Tag
-  
 h2. Folder Structure
 
 The folder structure for WibbleQuest is pretty simple for someone making a game. The downloaded application has a .xcodeproj that you open and inside that there are 2 folders, WibbleQuest and Game. Inside Game are two example games, Kierononon and Megatron. Inside those folders are the game files. 
@@ -277,8 +276,6 @@ PlayerCarriage * beginning = [[PlayerCarriage alloc] init];
 </div>
 
 
--code-
-
 Make sure you've got a #import at the top for the Room subclass and you're done.
 
 - to come, add support for adding people to your game, and add support for creatures to fight!
@@ -311,7 +308,7 @@ add support for the command book
 
 for (var i = classes.length - 1; i >= 0; i--){
   var klass = classes[i]
-  $('body ').highlightRegex(klass);      
+  $('section').highlightRegex(klass);      
 };
 
 </script>

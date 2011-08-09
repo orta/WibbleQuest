@@ -19,7 +19,6 @@ layout: nil
   section {
     float:left;
     width: 450px;
-    text-align:center;
   }
   #description{
     margin-top: 20px;
@@ -40,29 +39,81 @@ layout: nil
     list-style: none;
 
   }
-  ul li a{
-    padding: 10px 0px;
-    display: block;
-    color: #94450B !important;
-  } 
-  ul li#download{
-    width: 400px;
-  }
-   ul li:hover {
-     background-color: #44250C;
+   
+   nav {
+     position: fixed;
+     width:200px;
+     float: left;
+     top: 40px;
+     left: 20px;
    }
-   p{
-     clear: both;
-     padding-top: 22px;
+   nav h1{
+     text-align: center;
+     padding-left: 30px;
+     font-weight: normal;
+     font-size: 3em;
+     letter-spacing: -0.1em;
+     margin-bottom: 6px;
    }
-   body{
-     width:700px;
+   nav h1 a {
+     text-decoration: none;
+     color: #E06F00 !important;
+   }
+
+   nav ul{
+     margin: 0;
+   }
+   nav li{
+     background-color: #110903;
+     list-style: none;
+   }
+   nav li:hover{
+     background-color: #231908;
+   }
+   nav li a{
+     display: block;
+     padding: 5px 5px 5px 20px;
+     color:#E06F00 !important;
+   }
+
+   nav li:first-child{
+     border-top-left-radius: 20px;
+     border-top-right-radius: 20px; 
+   }
+   nav li:last-child{
+     border-bottom-left-radius: 20px;
+     border-bottom-right-radius: 20px; 
+   }
+
+   section {
+     padding-left: 240px;
+     width: 600px;
+   }
+
+   h3{
+     font-weight: normal;
+     margin-top: 2em;
+     color:#D65B00;
+   }
+
+   section header{
+     margin-top: 2em;
+     background-color: #0D0903;
+     padding: 20px 0 20px 20px;
+     font-size: 2em;
+   }
+
+   section a{
+     color:#D6955E !important;
    }
   </style>
 
-  <body>
-
+<body>
+  <nav>
+    <h1><a href="index.html">WQ</a></h1>
+  </nav>
+  <section>
     {{content}}
-
+  </section>
   </body>
   </html>
