@@ -59,7 +59,9 @@ static Player * sharedPlayer;
   Room * room = [WQ getRoomByID:roomID];
   if (room) {
     WibbleQuest *wq = [WibbleQuest sharedWibble];
+    [wq.currentRoom playerDidLeaveRoom];
     wq.currentRoom = room;
+    [wq.currentRoom playerDidEnterRoom];
     [wq movedRoom];
   }else{
     NSLog(@"could not find room %@ for teleporting, are you sure it's got an id and has been added to WQ", roomID);
