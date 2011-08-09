@@ -124,6 +124,8 @@ static WibbleQuest *sharedWibble;
     for (Item *item in room.items) {
       [item tick];
     }
+    [room.encounter tick];
+    [room.person tick];
   }
 }
 

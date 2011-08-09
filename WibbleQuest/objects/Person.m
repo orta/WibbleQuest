@@ -13,4 +13,5 @@
 -(void)respondToSentenceArray:(NSArray*)sentence{}
 -(void)playerEntersSameRoom{}
 
+-(void)tick{}
 @end
