@@ -290,8 +290,13 @@
     }
     
     if([wq.currentRoom hasItem:objectID]){
-      Item* item = [wq.currentRoom takeItem:objectID];
-      [wq.inventory addItem:item];
+      if([[wq.currentRoom getItem:objectID] canPickup]){
+        Item* item = [wq.currentRoom takeItem:objectID];
+        [wq.inventory addItem:item];
+      }
+      else{
+        [wq print:@"You are unable to pickup %@" , objectID];
+      }
       
     }else{
       [wq print:@"Could not find a %@ in the room" , objectID];
@@ -311,9 +316,14 @@
     
     if([Player hasItemByID:objectID]){
       Item* item = [Player getItemByID:objectID];
-      [wq.currentRoom addItem:item];
-      [[Player getItemByID:objectID] onDrop];
-      [wq.inventory removeItemByID:objectID];
+      if ( [item canDrop] ){
+        [wq.currentRoom addItem:item];
+        [[Player getItemByID:objectID] onDrop];
+        [wq.inventory removeItemByID:objectID];
+      }
+      else{
+        [wq print:@"You are unable to drop %@" , objectID];
+      }
       
     }else{
       [wq print:@"Could not find a %@ in your inventory" , objectID];

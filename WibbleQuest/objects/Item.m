@@ -16,5 +16,8 @@
 -(void)onDrop{}
 -(void)onUse{}
 
+-(BOOL)canPickup{ return YES; }
+-(BOOL)canDrop{ return YES; }
+
 
 @end

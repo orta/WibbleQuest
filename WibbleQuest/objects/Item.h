@@ -18,12 +18,16 @@
 // examine [object id]
 @property (retain, nonatomic) NSString* examine;
 
+
 // Methods to override so that you can react to the players
 // interactions
 
 -(void)onPickup;
 -(void)onUse;
 -(void)onDrop;
+
+-(BOOL)canPickup;
+-(BOOL)canDrop;
 
 
 @end
