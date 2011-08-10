@@ -19,6 +19,27 @@
   return wq.currentRoom;
 }
 
++(void)connectRoomID:(NSString*)roomID1 connectNorthToRoomID:(NSString*)roomID2{
+  Room *room1=[[WibbleQuest sharedWibble] getRoomByID:roomID1];
+  Room *room2=[[WibbleQuest sharedWibble] getRoomByID:roomID2];
+  [room1 connectNorth:room2];
+}
++(void)connectRoomID:(NSString*)roomID1 connectSouthToRoomID:(NSString*)roomID2{
+  Room *room1=[[WibbleQuest sharedWibble] getRoomByID:roomID1];
+  Room *room2=[[WibbleQuest sharedWibble] getRoomByID:roomID2];
+  [room1 connectSouth:room2];
+}
++(void)connectRoomID:(NSString*)roomID1 connectWestToRoomID:(NSString*)roomID2{
+  Room *room1=[[WibbleQuest sharedWibble] getRoomByID:roomID1];
+  Room *room2=[[WibbleQuest sharedWibble] getRoomByID:roomID2];
+  [room1 connectWest:room2];
+}
++(void)connectRoomID:(NSString*)roomID1 connectEastToRoomID:(NSString*)roomID2{
+  Room *room1=[[WibbleQuest sharedWibble] getRoomByID:roomID1];
+  Room *room2=[[WibbleQuest sharedWibble] getRoomByID:roomID2];
+  [room1 connectEast:room2];
+}
+
 -(id)init{
   self = [super init];
   self.items = [NSArray array];
@@ -32,6 +53,7 @@
 -(void)addItem:(Item*) item {
   [item retain];
   self.items = [self.items arrayByAddingObject: item];
+  item.location=self;
 }
 
 -(void)describeInventory {
@@ -63,7 +85,7 @@
     if([item.id isEqualToString:itemID]){
       NSMutableArray *tempItems = [self.items mutableCopy];
       [tempItems removeObject:item];
-
+      item.location=nil;
       self.items = tempItems;
       [item release];
       return item;

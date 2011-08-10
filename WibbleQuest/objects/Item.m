@@ -10,7 +10,7 @@
 
 @implementation Item
 
-@synthesize examine, descriptionInRoom;
+@synthesize examine, descriptionInRoom, location;
 
 -(void)onPickup{}
 -(void)onDrop{}

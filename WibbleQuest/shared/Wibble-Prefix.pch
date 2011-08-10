@@ -26,5 +26,8 @@
   #import "Store.h"
   #import "NSArray-Contains.h"
   #import "NSArray-named-captures.h"
+
+  #import "Inventory.h"
+
 #endif
 

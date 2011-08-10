@@ -67,7 +67,9 @@
     
     for (int i = 0; i < [self.items count]; i++) {
       Item* item = [self.items objectAtIndex:i];
-      [WQ print: [NSString stringWithFormat:@"- %@", item.description ]];
+      if(item.description!=nil){
+        [WQ print: [NSString stringWithFormat:@"- %@", item.description ]];
+      }
     }
   }
 }

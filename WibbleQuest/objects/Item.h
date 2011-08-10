@@ -18,6 +18,9 @@
 // examine [object id]
 @property (retain, nonatomic) NSString* examine;
 
+//The room that the item is located in
+@property (retain, nonatomic) Room *location;
+
 
 // Methods to override so that you can react to the players
 // interactions
