@@ -10,11 +10,14 @@
 
 @implementation Item
 
-@synthesize examine, descriptionInRoom;
+@synthesize examine, descriptionInRoom, location;
 
 -(void)onPickup{}
 -(void)onDrop{}
 -(void)onUse{}
+
+-(BOOL)canPickup{ return YES; }
+-(BOOL)canDrop{ return YES; }
 
 
 @end

@@ -52,6 +52,12 @@
 - (void) connectWest:(Room*)room;
 - (void) connectEast:(Room*)room;
 
++(void)connectRoomID:(NSString*)roomID1 connectNorthToRoomID:(NSString*)roomID2;
++(void)connectRoomID:(NSString*)roomID1 connectSouthToRoomID:(NSString*)roomID2;
++(void)connectRoomID:(NSString*)roomID1 connectWestToRoomID:(NSString*)roomID2;
++(void)connectRoomID:(NSString*)roomID1 connectEastToRoomID:(NSString*)roomID2;
+
+
 // Provides a NSDictionary of keys and values that are 
 // acted upon when using the examine command inside a room.
 -(NSDictionary *)dictionaryForExamine;
