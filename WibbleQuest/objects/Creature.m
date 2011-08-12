@@ -10,13 +10,13 @@
 #import "Player.h"
 
 @interface Creature()
-  -(void)takeDamage:(int)damage;
-  -(void)giveDamage:(int)damage;
+-(void)takeDamage:(int)damage;
+-(void)giveDamage:(int)damage;
 @end
 
 @implementation Creature
 
-  @synthesize  health, maxHealth, fighting, fightable, damageRange, turn;
+@synthesize  health, maxHealth, fighting, fightable, damageRange, turn;
 
 -(id)init{
   self = [super init];
@@ -59,13 +59,13 @@
   if (!fightable) {
     return;
   }
-
+  
   Player * player = [Player sharedPlayer];
-  NSString *battleStatus = [NSString stringWithFormat:@"Player %i / %i, %@ %i / %i.", player.health, player.maxHealth, self.name, self.health, self.maxHealth];
-  [WQ command:battleStatus];
   
   if(self.fighting == NO){
     [self beforeFight];
+    NSString *battleStatus = [NSString stringWithFormat:@"Player %i / %i, %@ %i / %i.", player.health, player.maxHealth, self.name, self.health, self.maxHealth];
+    [WQ command:battleStatus];
     self.fighting = YES; 
   }
   //player attack 
@@ -75,35 +75,18 @@
   if ( [self damageRange].location == -1 ) {
     [WQ print:@"damageRange not set on Player class"];
   }
-
+  
   
   int range = [player damageRange].length - [player damageRange].location;
   range = MAX(range, 1);
-
+  
   int damage = ( arc4random() % range ) + [player damageRange].location;
   damage = [self damageTakenModifier:damage];
   [self takeDamage:damage];
-  self.health -= damage;
+  NSLog(@"damage1:%i",damage);
+  player.health -= damage;
   
-  //enemy health check
-  if(self.health < 1){
-    self.fightable = NO;
-    player.health = maxHealth;
-    [self afterCreatureLost];
-    return;
-  }
-  
-  [self beforeTurn];
-  //enemy health check
-  int range2 = self.damageRange.length - self.damageRange.location;
-  range2 = MAX(range2, 1);
-  
-  int damage2 = ( arc4random() % range2 ) + self.damageRange.location;
-  [self giveDamage:damage2];
-  player.health -= damage2;
-  
-  [self afterTurn];
-  self.turn++;
+  //player health check
   if(player.health < 1){
     [self afterCreatureWon];
     NSObject <WibbleQuestGameDelegate>* game = [[WibbleQuest sharedWibble] game];
@@ -112,10 +95,36 @@
     }
     return;
   }
+
+  
+  [self beforeTurn];
+  //enemy health check
+  int range2 = self.damageRange.length - self.damageRange.location;
+  range2 = MAX(range2, 1);
+  
+  int damage2 = ( arc4random() % range2 ) + self.damageRange.location;
+  [self giveDamage:damage2];
+  NSLog(@"damage2:%i",damage2);
+  self.health -= damage2;
+  
+  [self afterTurn];
+  
+  self.turn++;
+  if(self.health < 1){
+    self.fightable = NO;
+    player.health = maxHealth;
+    [self afterCreatureLost];
+    return;
+  }
+  
+  NSString *battleStatus = [NSString stringWithFormat:@"Player %i / %i, %@ %i / %i.", player.health, player.maxHealth, self.name, self.health, self.maxHealth];
+  [WQ command:battleStatus];
 }
 
 -(void)takeDamage:(int)damage{
   int index;
+  NSLog(@"takeDamage:%i",damage);
+  
   if([self randomAttackPhrase]){
     index = arc4random() % [self.formattedAttackPhrases count];
   }
@@ -123,11 +132,15 @@
     //Loops back to the first phrase when the turn is greater then the count
     index = self.turn % [self.formattedAttackPhrases count];
   }
+  NSLog(@"%i",index);
+  
   [WQ print:[self.formattedAttackPhrases objectAtIndex:index], damage];
 }
 
 -(void)giveDamage:(int)damage{
   int index;
+  NSLog(@"giveDamage:%i",damage);
+  
   if([self randomAttackPhrase]){
     index = arc4random() % [self.formattedDefensePhrases count];
   }
@@ -135,7 +148,11 @@
     //Loops back to the first phrase when the turn is greater then the count
     index = self.turn % [self.formattedDefensePhrases count];
   }  
-  if([self.formattedDefensePhrases contains:@"%i", nil]){
+  NSLog(@"%i",index);
+  NSRange textRange =[[self.formattedDefensePhrases objectAtIndex:index] rangeOfString:@"%i"];
+  
+  if(textRange.location != NSNotFound)
+  {
     [WQ print:[self.formattedDefensePhrases objectAtIndex:index], damage];
   }
   else{
