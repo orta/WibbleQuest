@@ -83,7 +83,6 @@
   int damage = ( arc4random() % range ) + [player damageRange].location;
   damage = [self damageTakenModifier:damage];
   [self takeDamage:damage];
-  NSLog(@"damage1:%i",damage);
   player.health -= damage;
   
   //player health check
@@ -104,7 +103,6 @@
   
   int damage2 = ( arc4random() % range2 ) + self.damageRange.location;
   [self giveDamage:damage2];
-  NSLog(@"damage2:%i",damage2);
   self.health -= damage2;
   
   [self afterTurn];
@@ -123,7 +121,6 @@
 
 -(void)takeDamage:(int)damage{
   int index;
-  NSLog(@"takeDamage:%i",damage);
   
   if([self randomAttackPhrase]){
     index = arc4random() % [self.formattedAttackPhrases count];
@@ -132,14 +129,19 @@
     //Loops back to the first phrase when the turn is greater then the count
     index = self.turn % [self.formattedAttackPhrases count];
   }
-  NSLog(@"%i",index);
+  NSRange textRange =[[self.formattedAttackPhrases objectAtIndex:index] rangeOfString:@"%i"];
   
-  [WQ print:[self.formattedAttackPhrases objectAtIndex:index], damage];
+  if(textRange.location != NSNotFound)
+  {
+    [WQ print:[self.formattedAttackPhrases objectAtIndex:index], damage];
+  }
+  else{
+    [WQ print:[self.formattedAttackPhrases objectAtIndex:index]];
+  }
 }
 
 -(void)giveDamage:(int)damage{
   int index;
-  NSLog(@"giveDamage:%i",damage);
   
   if([self randomAttackPhrase]){
     index = arc4random() % [self.formattedDefensePhrases count];
@@ -148,7 +150,6 @@
     //Loops back to the first phrase when the turn is greater then the count
     index = self.turn % [self.formattedDefensePhrases count];
   }  
-  NSLog(@"%i",index);
   NSRange textRange =[[self.formattedDefensePhrases objectAtIndex:index] rangeOfString:@"%i"];
   
   if(textRange.location != NSNotFound)
