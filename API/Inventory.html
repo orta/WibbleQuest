@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>Inventory.h</title>
+  <link rel="stylesheet" href="http://jashkenas.github.com/docco/resources/docco.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/syntax.css">
+  <link rel="stylesheet" href="../assets/css/api.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <table cellspacing=0 cellpadding=0>
+  <thead>
+    <tr>
+      <th class=docs><h1>Inventory.h</h1></th>
+      <th class=code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id='section-1'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-1">&#182;</a>
+        </div>
+        <p>Inventory.h
+ WibbleQuest</p>
+
+<p>Created by Michael Jaoudi on 8/9/11.
+ Copyright 2011 http://ortatherox.com. All rights reserved.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
+<span class="cp">#import &quot;PlayerInventory.h&quot;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-2'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-2">&#182;</a>
+        </div>
+        <p>A wrapper class that allows you to call class methods to access your inventory</p>
+
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">interface</span> <span class="n">Inventory</span> <span class="o">:</span> <span class="n">NSObject</span>
+<span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">describeInventory</span><span class="p">;</span>
+
+<span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">addItem</span><span class="o">:</span><span class="p">(</span><span class="n">Item</span><span class="o">*</span><span class="p">)</span> <span class="n">item</span><span class="p">;</span>
+<span class="o">+</span><span class="p">(</span><span class="n">Item</span> <span class="o">*</span><span class="p">)</span><span class="n">getItem</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span>
+
+<span class="o">+</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">hasItem</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span>
+
+<span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">removeItemByID</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span>
+<span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">removeItem</span><span class="o">:</span><span class="p">(</span><span class="n">Item</span><span class="o">*</span><span class="p">)</span> <span class="n">item</span><span class="p">;</span>
+
+<span class="o">+</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">didRespondToCommand</span><span class="o">:</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span> <span class="n">commands</span><span class="p">;</span>
+<span class="err">@</span><span class="n">end</span></pre></div>
+      </td>
+    </tr>
+  </table>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+<script src="files.js"></script>
+<script src="../assets/js/overview.js"></script>
+<script async defer>    
+    // replace all mentions of the class with a link to the docs
+    // this makes the code a lot easier to read fomr this side.
+
+for (var i = classes.length - 1; i >= 0; i--){
+  var klass = classes[i]
+  $('body').highlightRegex(klass);      
+};
+
+
+// rewrite the URLs from /api/api/x to /api/x
+$(".api").each(function(index) {
+  var url = $(this).attr("href").replace("API/",'');
+   $(this).attr("href",  url );
+});
+
+</script>
+
+</body>

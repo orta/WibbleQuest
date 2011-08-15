@@ -58,7 +58,8 @@ and a max health if you&rsquo;re going to fight them</p>
 of damage will be done to you, the player.</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">NSRange</span> <span class="n">damageRange</span><span class="p">;</span></pre></div>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="n">NSRange</span> <span class="n">damageRange</span><span class="p">;</span>
+<span class="err">@</span><span class="n">property</span> <span class="p">()</span> <span class="kt">int</span> <span class="n">turn</span><span class="p">;</span></pre></div>
       </td>
     </tr>
     <tr id='section-4'>
@@ -119,7 +120,8 @@ by modifying the originalDamage and returning that, this is
 used a lot after checking for items in the inventory.</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">damageTakenModifier</span><span class="o">:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">originalDamage</span><span class="p">;</span></pre></div>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">damageTakenModifier</span><span class="o">:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">originalDamage</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">randomAttackPhrase</span><span class="p">;</span></pre></div>
       </td>
     </tr>
     <tr id='section-9'>
@@ -161,6 +163,7 @@ like them to.</p>
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">respondToSentenceArray</span><span class="o">:</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">sentence</span><span class="p">;</span>
+
 
 <span class="err">@</span><span class="n">end</span></pre></div>
       </td>

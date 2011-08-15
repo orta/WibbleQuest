@@ -65,6 +65,17 @@ examine [object id]</p>
         <div class="pilwrap">
           <a class="pilcrow" href="#section-4">&#182;</a>
         </div>
+        <p>The room that the item is located in</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">Room</span> <span class="o">*</span><span class="n">location</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-5'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-5">&#182;</a>
+        </div>
         <p>Methods to override so that you can react to the players
 interactions</p>
 
@@ -73,6 +84,10 @@ interactions</p>
         <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">onPickup</span><span class="p">;</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">onUse</span><span class="p">;</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">onDrop</span><span class="p">;</span>
+
+<span class="o">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">canPickup</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">canDrop</span><span class="p">;</span>
+
 
 <span class="err">@</span><span class="n">end</span></pre></div>
       </td>

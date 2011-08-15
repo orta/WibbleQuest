@@ -1,1 +1,1 @@
-var classes = ["CommandInterpreter","Player","PlayerInventory","WibbleQuest","WibbleQuestAppDelegate","WibbleQuestPrintingCategory","WibbleQuestSwipeHandlers","WibbleQuestViewHandlingCategory","WQ","Creature","Game","Item","Person","Room","Store","WibbleObject",''];
+var classes = ["CommandInterpreter","Inventory","Player","PlayerInventory","WibbleQuest","WibbleQuestAppDelegate","WibbleQuestPrintingCategory","WibbleQuestSwipeHandlers","WibbleQuestViewHandlingCategory","WQ","Creature","Game","Item","Person","Room","Store","WibbleObject",''];

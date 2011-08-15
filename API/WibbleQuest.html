@@ -137,6 +137,9 @@ the Game object needs to support so that the game will work correctly.</p>
 
 <span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span> <span class="n">lastPrinted</span><span class="p">;</span>
 
+<span class="err">@</span><span class="n">property</span><span class="p">()</span> <span class="kt">float</span> <span class="n">tickerInterval</span><span class="p">;</span>
+<span class="err">@</span><span class="n">property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">retain</span><span class="p">)</span> <span class="n">NSTimer</span> <span class="o">*</span><span class="n">timer</span><span class="p">;</span>
+
 <span class="o">+</span><span class="p">(</span><span class="n">WibbleQuest</span> <span class="o">*</span><span class="p">)</span> <span class="n">sharedWibble</span><span class="p">;</span></pre></div>
       </td>
     </tr>
@@ -199,6 +202,7 @@ it&rsquo;s rarely used in games but used in Testing quite a lot. </p>
       <td class=code>
         <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">purge</span><span class="p">;</span>
 
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">tick</span><span class="p">;</span>
 <span class="err">@</span><span class="n">end</span></pre></div>
       </td>
     </tr>
