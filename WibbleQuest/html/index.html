@@ -163,7 +163,8 @@
                   // caught error therefore
                   // not a time object, a function
                   next_function();
-                  scrollToBottom();
+
+                  setTimeout(scrollToBottom, 0.5);   
                   setTimeout("locked=false;executeQueue()", timeInterval);   
                   return
                 }
