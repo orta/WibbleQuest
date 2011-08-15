@@ -22,15 +22,6 @@ static Player * sharedPlayer;
   return NO;
 }
 
--(id)init {
-  self = [super init];
-  self.data = [NSMutableDictionary dictionary];
-  sharedPlayer = self;
-  health = maxHealth;
-  self.damageRange = NSMakeRange(-1, -1);
-  return self;
-}
-
 +(BOOL)has:(NSString*)itemID{
   return [Player hasItemByID:itemID];
 }
@@ -68,20 +59,34 @@ static Player * sharedPlayer;
   }
 }
 
--(NSString*)getString:(NSString*)key {
-  return [self.data objectForKey:key];
+-(id)init {
+  self = [super init];
+  self.data = [NSMutableDictionary dictionary];
+  sharedPlayer = self;
+  health = maxHealth;
+  self.damageRange = NSMakeRange(-1, -1);
+  return self;
 }
 
--(void)setString:(NSString *)value forKey:(NSString *)key{
-  [self.data setValue:value forKey:key];
+
++ (NSString*)getString:(NSString*)key {
+  Player * player = [Player sharedPlayer];
+  return [player.data objectForKey:key];
 }
 
--(int)getInt:(NSString*)key {
-  return [[self.data objectForKey:key] intValue];
++ (void)setString:(NSString *)value forKey:(NSString *)key{
+  Player * player = [Player sharedPlayer];
+  return [player.data setValue:value forKey:key];
 }
 
--(void)setInt:(int)value forKey:(NSString *)key{
-  [self.data setValue:[NSString stringWithFormat:@"%d", value] forKey:key];
++ (int)getInt:(NSString*)key {
+  Player * player = [Player sharedPlayer];
+  return [[player.data objectForKey:key] intValue];
+}
+
++ (void)setInt:(int)value forKey:(NSString *)key{
+  Player * player = [Player sharedPlayer];
+  return [player.data setValue:[NSString stringWithFormat:@"%d", value] forKey:key];
 }
 
 @end

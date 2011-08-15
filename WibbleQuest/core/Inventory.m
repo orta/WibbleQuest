@@ -9,16 +9,17 @@
 #import "Inventory.h"
 
 @implementation Inventory
-+(void)describeInventory{
-  [[WibbleQuest sharedWibble].inventory describeInventory];
-}
 
 +(void)addItem:(Item*) item{
   [[WibbleQuest sharedWibble].inventory addItem:item];
-
 }
+
 +(Item *)getItem:(NSString*) itemID{
   return [[WibbleQuest sharedWibble].inventory getItem:itemID];
+}
+
++(BOOL)contains:(NSString*) itemID{
+  return [[WibbleQuest sharedWibble].inventory hasItem:itemID];
 }
 
 +(BOOL)hasItem:(NSString*) itemID{
@@ -27,11 +28,10 @@
 
 +(void)removeItemByID:(NSString*) itemID{
   [[WibbleQuest sharedWibble].inventory removeItemByID:itemID];
-
 }
+
 +(void)removeItem:(Item*) item{
   [[WibbleQuest sharedWibble].inventory removeItem:item];
-
 }
 
 +(BOOL)didRespondToCommand:(NSArray*) commands{

@@ -33,10 +33,16 @@
   NSArray * parameters = [string componentsSeparatedByString:@" "];
   if ([parameters count] > 0) {
     NSString * command = [parameters first];
-    
     if ([@"" isEqualToString:command]) {
       return;
     }
+    
+    if([wq.inventory didRespondToCommand:parameters]) return;
+    if([wq.currentRoom didRespondToCommand:parameters]) return;
+    if([wq.currentRoom.person didRespondToCommand:parameters]) return;
+    if([wq.currentRoom.encounter didRespondToCommand:parameters]) return;
+    if([wq.currentRoom.shop didRespondToCommand:parameters]) return;
+    
     if([@"help" isEqualToString:command]){
       [self help];
       return;
@@ -90,7 +96,6 @@
       }else{
         [wq print:@"Could not find %@ in your inventory", [parameters second]];
       }
-     
       return;
     }
 
@@ -161,13 +166,7 @@
         return;
       }
     }
-    
-    if([wq.inventory didRespondToCommand:parameters]) return;
-    if([wq.currentRoom didRespondToCommand:parameters]) return;
-    if([wq.currentRoom.person didRespondToCommand:parameters]) return;
-    if([wq.currentRoom.encounter didRespondToCommand:parameters]) return;
-    if([wq.currentRoom.shop didRespondToCommand:parameters]) return;
-    
+        
     if([wq.inventory hasItem:command]){
       Item * item = [wq.inventory getItem:command];
       [wq print: item.description];

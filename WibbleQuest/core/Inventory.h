@@ -9,15 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "PlayerInventory.h"
 
-
 //A wrapper class that allows you to call class methods to access your inventory
 @interface Inventory : NSObject
-+(void)describeInventory;
 
 +(void)addItem:(Item*) item;
 +(Item *)getItem:(NSString*) itemID;
 
 +(BOOL)hasItem:(NSString*) itemID;
++(BOOL)contains:(NSString*) itemID;
 
 +(void)removeItemByID:(NSString*) itemID;
 +(void)removeItem:(Item*) item;
