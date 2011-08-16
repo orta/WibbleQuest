@@ -31,7 +31,7 @@
 //    
 //    RockShop *shop = [[RockShop alloc] init];
 //    shop.description = @"1234 shop";
-//    r.shop = shop;
+//    r.store = shop;
 //    
 //        
 //    wq.currentRoom = r;

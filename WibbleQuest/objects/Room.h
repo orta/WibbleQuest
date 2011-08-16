@@ -19,7 +19,7 @@
 @property (retain) Room* west;
 
 //Hold an instance of a Store if the Room has one
-@property (retain) Store* shop;
+@property (retain) Store* store;
 
 @property (retain) NSArray* items;
 @property (retain) Creature* encounter;

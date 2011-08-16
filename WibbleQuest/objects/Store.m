@@ -63,7 +63,11 @@
     }
   }  
   if( found == NO ){
-    [WQ print:@"We don't sell %@'s here", itemName];
+    if (itemName) {
+      [WQ print:@"We don't sell %@'s here", itemName];
+    }else{
+      [WQ print:@"Buy what?"];
+    }
     return;
   }
 }

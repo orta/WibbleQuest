@@ -41,7 +41,7 @@
     if([wq.currentRoom didRespondToCommand:parameters]) return;
     if([wq.currentRoom.person didRespondToCommand:parameters]) return;
     if([wq.currentRoom.encounter didRespondToCommand:parameters]) return;
-    if([wq.currentRoom.shop didRespondToCommand:parameters]) return;
+    if([wq.currentRoom.store didRespondToCommand:parameters]) return;
     
     if([@"help" isEqualToString:command]){
       [self help];
@@ -121,8 +121,8 @@
 
     
     if([@"shop" isEqualToString:command] || [@"trade" isEqualToString:command]){
-      if (wq.currentRoom.shop) {
-        [wq.currentRoom.shop showInventory];
+      if (wq.currentRoom.store) {
+        [wq.currentRoom.store showInventory];
       }else{
         [wq print:@"There isn't a shop here."];
       }
@@ -131,8 +131,8 @@
     }
     
     if([@"buy" isEqualToString:command]){
-      if (wq.currentRoom.shop) {
-        [wq.currentRoom.shop buyItem:parameters];
+      if (wq.currentRoom.store) {
+        [wq.currentRoom.store buyItem:parameters];
       }else{
         [wq print:@"There isn't a shop here."];
       }

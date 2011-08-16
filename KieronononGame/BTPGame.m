@@ -47,7 +47,7 @@
   openingRoom.name = @"Backstage, at the venue.";
   openingRoom.description = @"There are clothes all over the floor, and you can hear people practicing through the northern.";
   RockShop *rockShop = [[RockShop alloc] init];
-  openingRoom.shop = rockShop;
+  openingRoom.store = rockShop;
   
   Room * hallwayCenter = [[Room alloc] init];
   hallwayCenter.id = @"hallway";
@@ -80,7 +80,7 @@
 
   RockShop *shop = [[RockShop alloc] init];
   shop.description = @"1234 shop";
-  openingRoom.shop = shop;
+  openingRoom.store = shop;
   
   Bubba *b2 = [[Bubba alloc] init];
   [openingRoom addItem:b2];

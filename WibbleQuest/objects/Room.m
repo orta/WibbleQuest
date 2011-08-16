@@ -10,7 +10,7 @@
 
 @implementation Room
 
-@synthesize  north, east, west, south, items = _items, encounter, person, visited, shop;
+@synthesize  north, east, west, south, items = _items, encounter, person, visited, store;
 
 #pragma mark class methods
 
