@@ -57,7 +57,7 @@
         NSLog(@"something went wrong with creating a copy of the class %@ - are you sure it's a subclass of Item?", itemName);
       }
       
-      [[WibbleQuest sharedWibble].inventory addItem:item];
+      [Inventory addItem:item];
       player.money -= cost;
       found = YES;
     }
