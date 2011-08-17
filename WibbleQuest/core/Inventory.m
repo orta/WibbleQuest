@@ -34,7 +34,4 @@
   [[WibbleQuest sharedWibble].inventory removeItem:item];
 }
 
-+(BOOL)didRespondToCommand:(NSArray*) commands{
-  return [[WibbleQuest sharedWibble].inventory didRespondToCommand:commands];
-}
 @end
