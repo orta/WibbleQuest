@@ -3,7 +3,7 @@
 //  WibbleQuest
 //
 //  Created by Michael Jaoudi on 8/9/11.
-//  Copyright 2011 http://ortatherox.com. All rights reserved.
+//  Copyright 2011 http://ortatherox.com. Licensed under Creative Commons
 //
 
 #import <Foundation/Foundation.h>

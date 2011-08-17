@@ -3,7 +3,7 @@
 //  WibbleQuest
 //
 //  Created by orta therox on 09/07/2011.
-//  Copyright 2011 http://ortatherox.com. All rights reserved.
+//  Copyright 2011 http://ortatherox.com. Licensed under Creative Commons
 //
 
 // see WibbleQuestViewHandlingCategory.m for more info
