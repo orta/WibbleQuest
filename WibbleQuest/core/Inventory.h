@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "PlayerInventory.h"
 
-//A wrapper class that allows you to call class methods to access your inventory.
+//A wrapper class that allows you to easily call class methods to access your inventory.
 @interface Inventory : NSObject
 
 // Add Item add's an Item into the Player's inventory.
