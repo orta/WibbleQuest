@@ -11,6 +11,7 @@
 @implementation Item
 
 @synthesize examine, descriptionInRoom, location;
+@synthesize onInlinePickup, onInlineDrop, onInlineUse;
 
 -(void)onPickup{}
 -(void)onDrop{}

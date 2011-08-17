@@ -83,6 +83,10 @@
   openingRoom.store = shop;
   
   Bubba *b2 = [[Bubba alloc] init];
+  b2.onInlineDrop = ^(){
+    [WQ print:@"wow you dropped bubba!"];
+  };
+  
   [openingRoom addItem:b2];
   
   Keytar *keytar = [[Keytar alloc] init];

@@ -47,7 +47,7 @@
   [WQ say:@"Kid" words:@"Wow, that was a fight and a half. "];
   [WQ print:@"You get the kid and put him in your inventory"];
   [Player sharedPlayer].money += 1;
-  Room* prog = [WQ getRoomByID:@"prog1"];
+  Room* prog = [Room getRoomByID:@"prog1"];
   prog.description = @"The room has paper scattered all over the floor. You can go east from here to get back to your office.";
 }
 

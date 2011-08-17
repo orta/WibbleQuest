@@ -46,7 +46,11 @@
 -(void)addItem:(Item*) item {
   [item retain];
   self.items = [self.items arrayByAddingObject:item];
-  [item onPickup];
+  if(item.onInlinePickup){
+    [item onInlinePickup]();
+  }else{
+    [item onPickup];
+  }
 }
 
 -(void)removeItemByID:(NSString*) itemID {

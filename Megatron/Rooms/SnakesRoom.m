@@ -12,7 +12,7 @@
 @implementation SnakesRoom
 
 -(BOOL)playerShouldLeaveRoom { 
-  KidA* kid = (KidA*)[WQ getRoomByID:@"video"].person;
+  KidA* kid = (KidA*)[Room getRoomByID:@"video"].person;
   
   if(kid.caught){
     return YES;

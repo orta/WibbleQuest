@@ -12,7 +12,7 @@
 @implementation OpeningRoom
 
 -(BOOL)playerShouldLeaveRoom { 
-  Snake*snake = (Snake*)[WQ getRoomByID:@"office"].person;
+  Snake*snake = (Snake*)[Room getRoomByID:@"office"].person;
   
   if(snake.allowsExit){
     return YES;  

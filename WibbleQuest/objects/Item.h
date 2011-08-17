@@ -29,6 +29,12 @@
 -(void)onUse;
 -(void)onDrop;
 
+// Block based versions of pickup/ use/ drop
+@property(copy) void (^onInlinePickup )();
+@property(copy) void (^onInlineDrop )();
+@property(copy) void (^onInlineUse )();
+
+
 -(BOOL)canPickup;
 -(BOOL)canDrop;
 

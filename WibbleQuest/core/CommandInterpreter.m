@@ -92,7 +92,11 @@
     if([@"use" isEqualToString:command] || [@"u" isEqualToString:command]){
       Item *item = [wq.inventory getItem:[parameters second]];
       if(item){
-        [item onUse];   
+        if(item.onInlineUse){
+          [item onInlineUse]();
+        }else{
+          [item onUse]; 
+        }
       }else{
         [wq print:@"Could not find %@ in your inventory", [parameters second]];
       }
@@ -317,7 +321,14 @@
       Item* item = [Player getItemByID:objectID];
       if ( [item canDrop] ){
         [wq.currentRoom addItem:item];
-        [[Player getItemByID:objectID] onDrop];
+        
+        // has a block been defined?
+        if(item.onInlineDrop){
+          [item onInlineDrop]();
+        }else{
+          [item onDrop];
+        }
+        
         [wq.inventory removeItemByID:objectID];
       }
       else{
