@@ -45,3 +45,48 @@ And in the implementation file
   }
 }
 {% endhighlight %}
+
+h2. Common Item use cases
+
+Here are some example onUse functions to help you get an idea of how to make Items do what you want.
+
+h3. Unlocking a door
+
+{% highlight objc %}
+-(void) onUse{
+  // Make sure we are in the right room.
+  if([Player isIn:@"cabin"]){
+    [Room connectRoomID:@"cabin" connectWestToRoomID:@"carriage"];
+    [Room current].description = @"Your room is untidy, to the west is the carriage.";
+    [WQ print:@"You put the key in the keyhole, and turn, unlocking the door."];
+  }
+}
+{% endhighlight %}
+
+h3. Teleporting a Player
+
+{% highlight objc %}
+-(void) onUse{
+    [WQ print:@"You use the turnkey, knowing full well what awaits you on the other side."];
+    [Player teleportToRoomWithID:@"voldemortscastle"];
+}
+{% endhighlight %}
+
+
+h3. Mixing two Items to make one
+
+{% highlight objc %}
+-(void) onUse {
+  if( [Inventory hasItem:@"candle"] ){
+    [WQ print:@"You set fire to the candle, turning it into a torch."];
+    
+    Torch * torch = [Torch alloc] init];
+    [Inventory addItem: torch];
+    
+    [Inventory removeItemByID:@"candle"];
+    [Inventory removeItemByID:@"lighter"];
+  }else{
+    [WQ print:@"You don't know what to use the Lighter with."];
+  }
+}
+{% endhighlight %}
