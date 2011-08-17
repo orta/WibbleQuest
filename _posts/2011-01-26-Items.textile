@@ -56,9 +56,10 @@ h3. Unlocking a door
 -(void) onUse{
   // Make sure we are in the right room.
   if([Player isIn:@"cabin"]){
+    
     [Room connectRoomID:@"cabin" connectWestToRoomID:@"carriage"];
-    [Room current].description = @"Your room is untidy, to the west is the carriage.";
-    [WQ print:@"You put the key in the keyhole, and turn, unlocking the door."];
+    [Room current].description = @"To the west is the carriage.";
+    [WQ print:@"You put the key in and turn, unlocking the door."];
   }
 }
 {% endhighlight %}
@@ -90,3 +91,21 @@ h3. Mixing two Items to make one
   }
 }
 {% endhighlight %}
+
+h3. Giving Items
+
+{% highlight objc %}
+-(BOOL)didRespondToCommand:(NSArray*)commandArray {
+  NSString * command = [commandArray first];
+  if ([@"give" isEqualToString:command]) {
+    
+    [WQ print:@"You offer the rose to the beautiful gaelic princess, and she looks at you."];
+    [WQ say:@"Princess" words:@"Aww thank you!"];
+    [WQ print:@"She seems happy."];
+    [Inventory removeItem:self];
+    return YES;
+  }
+  return NO;
+}
+{% endhighlight %}
+
