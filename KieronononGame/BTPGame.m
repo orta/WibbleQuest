@@ -93,6 +93,10 @@
   [bathroom addItem:keytar];  
   
   GoatBoy *gb = [[GoatBoy alloc] init];
+  [gb respondTo:@"slap goat" with:^{
+    [WQ print:@"Slappped!"];
+  }];
+  
   hallwayCenter.person = gb;
   
   FloatstarPX * px = [[FloatstarPX alloc] init];
@@ -100,6 +104,7 @@
   
   BodyGuard *joe = [[BodyGuard alloc] init];
   alley.encounter = joe;
+  
 
   wq.currentRoom = openingRoom;
 

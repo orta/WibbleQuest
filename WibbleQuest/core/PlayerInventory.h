@@ -24,7 +24,6 @@
 -(void)removeItemByID:(NSString*) itemID;
 -(void)removeItem:(Item*) item;
 
--(BOOL)didRespondToCommand:(NSArray*) commands;
-
+-(BOOL) _respond:(NSString *)command;
 
 @end

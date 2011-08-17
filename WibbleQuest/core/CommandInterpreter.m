@@ -37,11 +37,11 @@
       return;
     }
     
-    if([wq.inventory didRespondToCommand:parameters]) return;
-    if([wq.currentRoom didRespondToCommand:parameters]) return;
-    if([wq.currentRoom.person didRespondToCommand:parameters]) return;
-    if([wq.currentRoom.encounter didRespondToCommand:parameters]) return;
-    if([wq.currentRoom.store didRespondToCommand:parameters]) return;
+    if([wq.inventory _respond:string]) return;
+    if([wq.currentRoom _respond:string]) return;
+    if([wq.currentRoom.person _respond:string]) return;
+    if([wq.currentRoom.encounter _respond:string]) return;
+    if([wq.currentRoom.store _respond:string]) return;
     
     if([@"help" isEqualToString:command]){
       [self help];

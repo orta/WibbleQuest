@@ -17,11 +17,10 @@
   return self;
 }
 
--(BOOL) didRespondToCommand:(NSArray*) commands {
-  if ( [commands count] > 1 && [self hasItem: [commands second]] ) {
-    Item *item = [self getItem:[commands second]];
-    return [item didRespondToCommand:commands];
-  }  
+-(BOOL) _respond:(NSString *)command {
+  for (Item * i in self.items) {
+    [i _respond:command];
+  }
   return NO;
 }
 

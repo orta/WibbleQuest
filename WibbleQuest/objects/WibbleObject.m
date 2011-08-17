@@ -18,12 +18,34 @@
   _id = [id retain];
 }
 
+#pragma mark Deal with Responding to commands
+
+-(BOOL)_respond:(NSString *)commands {
+  if( [self didRespondToCommand:[commands componentsSeparatedByString:@" "]] ){
+    return YES;
+  }
+  for (NSString * key in _commandResponses) {
+    if ([commands hasPrefix:key]) {
+      void(^command)(void) = [_commandResponses objectForKey:key];
+      command();
+      return YES;
+    }
+  }
+  return NO;
+}
+
 -(BOOL)didRespondToCommand:(NSArray*)commandArray {
   return NO;
 }
 
--(void)tick{}
+-(void)respondTo:(NSString *) command with:(void (^) (void)) block{
+  if(_commandResponses == nil){
+    _commandResponses = [[NSMutableDictionary alloc] initWithCapacity:1];
+  }
+  [_commandResponses setObject:block forKey:command];
+}
 
+#pragma mark Help
 -(void)addCommandToHelp:(NSString*)command withDescription:(NSString*)info{
   if(_helpList == nil){
     _helpList = [[NSMutableDictionary alloc] initWithCapacity:3];
@@ -44,5 +66,8 @@
     [WQ command:[_helpList objectForKey:[keys objectAtIndex:x]]];
   }
 }
+
+#pragma mark Tick over time
+-(void)tick{}
 
 @end

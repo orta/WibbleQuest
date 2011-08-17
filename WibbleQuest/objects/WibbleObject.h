@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface WibbleObject : NSObject {
-  NSMutableDictionary * _helpList;  
+  NSMutableDictionary * _helpList;
+  NSMutableDictionary * _commandResponses;
 }
 
 @property (retain, nonatomic) NSString* id;
@@ -18,9 +19,13 @@
 
 // Let any subclass of WibbleObject respond to commands from the User.
 -(BOOL)didRespondToCommand:(NSArray*)commandArray;
+// Or use a block to do simpler string checks
+-(void)respondTo:(NSString *) command with:(void (^) (void)) block;
 
 // A method that gets called at an interval specified by the shared wibble
 -(void)tick;
+
+-(BOOL)_respond:(NSString *)commands;
 
 // Methods for the dynamic help system
 // Print help will only be called if it is in the current room or in the inventory.
