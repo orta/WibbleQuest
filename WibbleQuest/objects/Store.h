@@ -17,7 +17,7 @@
 -(void)beforeTrading;
 -(void)afterTrading;
 
--(void)showInventory;
+-(void)showStoreInventory;
 -(void)buyItem:(NSArray*)conditions;
 
 -(void)addItemOfClass:(Class)class withValue:(int) value;

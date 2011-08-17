@@ -122,7 +122,7 @@
     
     if([@"shop" isEqualToString:command] || [@"trade" isEqualToString:command]){
       if (wq.currentRoom.store) {
-        [wq.currentRoom.store showInventory];
+        [wq.currentRoom.store showStoreInventory];
       }else{
         [wq print:@"There isn't a shop here."];
       }

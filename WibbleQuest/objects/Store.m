@@ -28,7 +28,7 @@
   [self.items addObject:[NSNumber numberWithInt:value]];
 }
 
--(void)showInventory {
+-(void)showStoreInventory {
   [WQ print:@"%@", self.description];
   for (int i = 0; i < [self.items count] ; i += 2) {
     [WQ print:@"%@ - £%@", NSStringFromClass([self.items objectAtIndex:i]), [self.items objectAtIndex: i+1 ]];    
