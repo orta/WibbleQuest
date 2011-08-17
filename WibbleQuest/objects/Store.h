@@ -14,8 +14,8 @@
 
 @property (retain) NSMutableArray* items;
 
--(void) beforeTrading;
--(void) afterTrading;
+-(void)beforeTrading;
+-(void)afterTrading;
 
 -(void)showInventory;
 -(void)buyItem:(NSArray*)conditions;

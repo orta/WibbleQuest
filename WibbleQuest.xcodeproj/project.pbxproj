@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6001B3EC13FC0DB200839F51 /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38AAC13F230530062D3FA /* Inventory.m */; };
 		6002DC4613E7861F003A5D70 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002DC4513E7861F003A5D70 /* Game.m */; };
 		6002DC4713E7861F003A5D70 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002DC4513E7861F003A5D70 /* Game.m */; };
 		6002DC4813E7861F003A5D70 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002DC4513E7861F003A5D70 /* Game.m */; };
@@ -931,8 +932,8 @@
 			projectRoot = "";
 			targets = (
 				609B9FA713C901D400888A6E /* WibbleQuest-iOS */,
-				60C021CC13E5D280009251C3 /* WibbleQuest-Mac */,
 				60FEA18F13D653F0006997B0 /* Wibble Tests */,
+				60C021CC13E5D280009251C3 /* WibbleQuest-Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -1131,6 +1132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6001B3EC13FC0DB200839F51 /* Inventory.m in Sources */,
 				60FEA19113D653F0006997B0 /* main.m in Sources */,
 				60FEA19213D653F0006997B0 /* WQIOSAppDelegate.m in Sources */,
 				60FEA19313D653F0006997B0 /* GameViewController.m in Sources */,
