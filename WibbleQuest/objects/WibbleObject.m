@@ -10,7 +10,7 @@
 
 @implementation WibbleObject
 
-@synthesize name, description, id = _id, helpList;
+@synthesize name, description, id = _id;
 
 -(void) setId:(NSString *)id {
   [_id release];
@@ -25,19 +25,23 @@
 -(void)tick{}
 
 -(void)addCommandToHelp:(NSString*)command withDescription:(NSString*)info{
-  if(self.helpList == nil){
-    self.helpList= [[NSMutableDictionary alloc] initWithCapacity:3];
+  if(_helpList == nil){
+    _helpList = [[NSMutableDictionary alloc] initWithCapacity:3];
   }
-  [self.helpList setObject:info forKey:command];
+  [_helpList setObject:info forKey:command];
+}
+
+-(void)removeCommandFromHelp:(NSString*)command {
+  [_helpList removeObjectForKey:command];
 }
 
 -(void)printHelp{
-  if ([self.helpList count] == 0 ) return;
+  if ([_helpList count] == 0 ) return;
   
-  NSArray *keys=[self.helpList allKeys];
-  for (int x = 0; x < [self.helpList count]; x++){
+  NSArray *keys=[_helpList allKeys];
+  for (int x = 0; x < [_helpList count]; x++){
     [WQ print:[keys objectAtIndex:x]];
-    [WQ command:[self.helpList objectForKey:[keys objectAtIndex:x]]];
+    [WQ command:[_helpList objectForKey:[keys objectAtIndex:x]]];
   }
 }
 

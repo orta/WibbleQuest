@@ -181,9 +181,9 @@
       [self getCommand:parameters];
       return;
     }
-    if (madeFirstMistake == NO) {
+    if (_madeFirstMistake == NO) {
       [wq print:@"Command not understood, type help if you want to see the help file."];
-      madeFirstMistake = YES;
+      _madeFirstMistake = YES;
     }else{
       [wq print:@"Command not recognised"];
     }

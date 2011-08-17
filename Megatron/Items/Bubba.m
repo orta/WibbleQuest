@@ -24,10 +24,13 @@
 
 -(void)onPickup {
   [WQ print:@"Bubba sloshes around as you pick him up"];
+  [self addCommandToHelp:@"use bubba" withDescription:@"Take a swig from your Bubba"];
 }
 
 -(void)onDrop {
   [WQ print:@"You drop bubba onto the floor and he rolls casually onto his side."];
+  [self removeCommandFromHelp:@"use bubba"];
+
 }
 
 -(void)onUse {

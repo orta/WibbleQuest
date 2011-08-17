@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface CommandInterpreter : NSObject{
-  BOOL madeFirstMistake;
+  BOOL _madeFirstMistake;
 }
 
   @property (retain, nonatomic) IBOutlet WibbleQuest *wq;

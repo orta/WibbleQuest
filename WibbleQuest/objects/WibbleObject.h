@@ -8,22 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WibbleObject : NSObject
+@interface WibbleObject : NSObject {
+  NSMutableDictionary * _helpList;  
+}
 
 @property (retain, nonatomic) NSString* id;
 @property (retain, nonatomic) NSString* description;
 @property (retain, nonatomic) NSString* name;
-@property (retain, nonatomic) NSMutableDictionary *helpList;
 
-
+// Let any subclass of WibbleObject respond to commands from the User.
 -(BOOL)didRespondToCommand:(NSArray*)commandArray;
 
-//A method that gets called at an interval specified by the shared wibble
+// A method that gets called at an interval specified by the shared wibble
 -(void)tick;
 
-//Methods for the dynamic help system
-//Print help will only be called if it is in the current room or in the inventory
+// Methods for the dynamic help system
+// Print help will only be called if it is in the current room or in the inventory.
 -(void)addCommandToHelp:(NSString*)command withDescription:(NSString*)description;
+-(void)removeCommandFromHelp:(NSString*)command;
+
 -(void)printHelp;
 
 @end
