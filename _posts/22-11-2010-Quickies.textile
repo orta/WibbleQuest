@@ -193,12 +193,12 @@ h3(#pickup). Make an item do something when picked up or dropped
 override onPickup in your class
 
 {% highlight objc %}
--(void) onPickup{
+-(void)onPickup {
   [WQ print:@"Bubba sloshes as you pick up his weighty self"];
 }
 
--(void) onDrop{
-  [WQ print:@"You politely return to the floor"];
+-(void)onDrop {
+  [WQ print:@"You politely return Bubba to the floor"];
 }
 {% endhighlight %}
 
@@ -214,12 +214,26 @@ override the method and that will be called when the player does "use [item]"
 
 h3(#hello). Make a person say Hello the first time you enter a room
 
-In your person subclass override 
+In your Person subclass override respondToPlayerForTheFirstTime and this will only be called once
 
 {% highlight objc %}
-
--(void)playerEntersSameRoom {}
-
+-(void)respondToPlayerForTheFirstTime {
+  [WQ say:@"FloatstarPX" words:@"Oh hey orta."];
+}
 {% endhighlight %}
 
-and make it say something
+h3(#hello). Add a Help command from an object in your inventory 
+
+You want to make it pretty obvious what is possible with the objects you have (right?!?) so it's possible to dynamically add and remove text to the help system based on what Item's are inside your Inventory. This is done by adding and removing commands when you pick up, or drop the object.
+
+{% highlight objc %}
+-(void)onPickup {
+  [WQ print:@"Bubba sloshes around as you pick him up"];
+  [self addCommandToHelp:@"use bubba" withDescription:@"Take a swig from your Bubba"];
+}
+
+-(void)onDrop {
+  [WQ print:@"You drop bubba onto the floor and he rolls casually onto his side."];
+  [self removeCommandFromHelp:@"use bubba"];
+}
+{% endhighlight %}

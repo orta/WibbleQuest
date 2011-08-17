@@ -40,22 +40,78 @@
         <div class="pilwrap">
           <a class="pilcrow" href="#section-2">&#182;</a>
         </div>
-        <p>A wrapper class that allows you to call class methods to access your inventory</p>
+        <p>A wrapper class that allows you to easily call class methods to access your inventory.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">interface</span> <span class="n">Inventory</span> <span class="o">:</span> <span class="n">NSObject</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-3'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-3">&#182;</a>
+        </div>
+        <p>Add Item add&rsquo;s an Item into the Player&rsquo;s inventory.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">addItem</span><span class="o">:</span><span class="p">(</span><span class="n">Item</span><span class="o">*</span><span class="p">)</span> <span class="n">item</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-4'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-4">&#182;</a>
+        </div>
+        <p>Has Item checks to see if there is an Item with the same ID in the inventory.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">+</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">hasItem</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-5'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-5">&#182;</a>
+        </div>
+        <p>Contains does the same thing, but might make for more readable code for some.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">+</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">contains</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-6'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-6">&#182;</a>
+        </div>
+        <p>Get Item removes the item with the ID from the Inventory and returns it.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">+</span><span class="p">(</span><span class="n">Item</span> <span class="o">*</span><span class="p">)</span><span class="n">getItem</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-7'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-7">&#182;</a>
+        </div>
+        <p>Remove an Item by it&rsquo;s ID.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">removeItemByID</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-8'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-8">&#182;</a>
+        </div>
+        <p>Remove an Item when you have a reference to the object.</p>
 
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="err">@</span><span class="n">interface</span> <span class="n">Inventory</span> <span class="o">:</span> <span class="n">NSObject</span>
-<span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">describeInventory</span><span class="p">;</span>
+        <div class='highlight'><pre><span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">removeItem</span><span class="o">:</span><span class="p">(</span><span class="n">Item</span><span class="o">*</span><span class="p">)</span> <span class="n">item</span><span class="p">;</span>
 
-<span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">addItem</span><span class="o">:</span><span class="p">(</span><span class="n">Item</span><span class="o">*</span><span class="p">)</span> <span class="n">item</span><span class="p">;</span>
-<span class="o">+</span><span class="p">(</span><span class="n">Item</span> <span class="o">*</span><span class="p">)</span><span class="n">getItem</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span>
-
-<span class="o">+</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">hasItem</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span>
-
-<span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">removeItemByID</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span> <span class="n">itemID</span><span class="p">;</span>
-<span class="o">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">removeItem</span><span class="o">:</span><span class="p">(</span><span class="n">Item</span><span class="o">*</span><span class="p">)</span> <span class="n">item</span><span class="p">;</span>
-
-<span class="o">+</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">didRespondToCommand</span><span class="o">:</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span> <span class="n">commands</span><span class="p">;</span>
 <span class="err">@</span><span class="n">end</span></pre></div>
       </td>
     </tr>

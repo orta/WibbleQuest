@@ -29,18 +29,48 @@
 
 <p>Created by orta therox on 15/07/2011.
  Copyright 2011 http://ortatherox.com. All rights reserved.</p>
-
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
 
-<span class="err">@</span><span class="n">interface</span> <span class="n">Person</span> <span class="o">:</span> <span class="n">WibbleObject</span> <span class="p">{</span>
-  <span class="n">BOOL</span> <span class="n">_seenPlayer</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="err">@</span><span class="n">interface</span> <span class="n">Person</span> <span class="o">:</span> <span class="n">WibbleObject</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-2'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-2">&#182;</a>
+        </div>
+        <p>Deal specifically with the say command, which is passed in
+as an array of words, with question marks removed.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">respondToSentenceArray</span><span class="o">:</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">sentence</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-3'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-3">&#182;</a>
+        </div>
+        <p>Called whenever the player enters the room that the 
+person subclass is inside.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerEntersSameRoom</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-4'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-4">&#182;</a>
+        </div>
+        <p>Called the first time that a player enters the room
+with this person subclass inside.</p>
 
-<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">respondToSentenceArray</span><span class="o">:</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">sentence</span><span class="p">;</span>
-<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerEntersSameRoom</span><span class="p">;</span>
-
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">respondToPlayerForTheFirstTime</span><span class="p">;</span>
 
 <span class="err">@</span><span class="n">end</span></pre></div>
       </td>
