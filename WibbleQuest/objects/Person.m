@@ -12,5 +12,6 @@
 
 -(void)respondToSentenceArray:(NSArray*)sentence{}
 -(void)playerEntersSameRoom{}
+-(void)respondToPlayerForTheFirstTime{}
 
 @end

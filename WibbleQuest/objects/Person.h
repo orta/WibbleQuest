@@ -8,12 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Person : WibbleObject {
-  BOOL _seenPlayer;
-}
+@interface Person : WibbleObject
 
+// Deal specifically with the say command, which is passed in
+// as an array of words, with question marks removed.
 -(void)respondToSentenceArray:(NSArray*)sentence;
+
+// Called whenever the player enters the room that the 
+// person subclass is inside.
 -(void)playerEntersSameRoom;
 
+// Called the first time that a player enters the room
+// with this person subclass inside.
+-(void)respondToPlayerForTheFirstTime;
 
 @end

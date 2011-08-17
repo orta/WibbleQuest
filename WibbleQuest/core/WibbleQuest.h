@@ -41,7 +41,7 @@
   int _commandIndex;
 }
 
-// Variables that are kept
+// Variables
 @property (retain) UIView * view;
 @property (retain) NSMutableArray * rooms;
 @property (retain) Room * currentRoom;

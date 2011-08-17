@@ -10,6 +10,10 @@
 
 @implementation GoatBoy
 
+-(void)respondToPlayerForTheFirstTime {
+    [WQ say:@"Goat Boy" words:@"Ah hello there."];  
+}
+
 -(void)playerEntersSameRoom {
   if ([Player has:@"keytar"] && !saidKeytar) {
     [WQ say:@"Goat Boy" words:@"Great you have your Keytar! We only need mics now. Go and talk to PX about the microphones."];

@@ -85,11 +85,17 @@ static WibbleQuest *sharedWibble;
 -(void) movedRoom {
   [self title:currentRoom.name];
   bool alwaysLook = [[NSUserDefaults standardUserDefaults] boolForKey:@"performLookOnNewRoom"];
-  if(currentRoom.visited == FALSE || alwaysLook ){
+
+  if (currentRoom.visited == NO) {
+    [currentRoom.person respondToPlayerForTheFirstTime];
+  }
+  
+  if(currentRoom.visited == NO || alwaysLook ){
     [self print:@"%@", currentRoom.description];
     [self.currentRoom describeInventory];
     currentRoom.visited = YES;
   }  
+  
   if(currentRoom.person){
     [currentRoom.person playerEntersSameRoom];
   }
