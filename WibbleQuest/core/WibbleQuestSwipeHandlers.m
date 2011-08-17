@@ -30,7 +30,7 @@
 }
 
 -(void)commandSwipeUp:(id)sender{
-  if (_commandIndex == [[self previousCommands] count] ) return;
+  if (_commandIndex == [[self previousCommands] count] - 1 ) return;
   _commandIndex++;
   _textField.text = [[self previousCommands ] objectAtIndex:_commandIndex];
 }

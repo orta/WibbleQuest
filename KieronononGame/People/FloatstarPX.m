@@ -10,11 +10,9 @@
 #import "Microphone.h"
 
 @implementation FloatstarPX
--(void)playerEntersSameRoom {
-  if ( !saidHello ) {
-    [WQ say:@"FloatstarPX" words:@"Oh hey orta."];
-    saidHello = YES;
-  }
+
+-(void)respondToPlayerForTheFirstTime {
+  [WQ say:@"FloatstarPX" words:@"Oh hey orta."];
 }
 
 -(void)respondToSentenceArray:(NSArray*)sentence {

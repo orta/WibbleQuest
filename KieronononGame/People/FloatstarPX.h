@@ -8,8 +8,5 @@
 
 #import "Person.h"
 
-@interface FloatstarPX : Person{
-  BOOL saidHello;
-}
-
+@interface FloatstarPX : Person
 @end
