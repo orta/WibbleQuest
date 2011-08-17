@@ -20,6 +20,7 @@
 -(void) title:(NSString*)string;
 -(void) say:(NSString*)name words:(NSString*)words;
 -(void) art:(NSString*)art;
+-(void) image:(NSString*)image;
 
 // private, but whatever
 -(void) execJS:(NSString*) js;

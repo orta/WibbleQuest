@@ -55,4 +55,9 @@
   [wibble art:string];
 }
 
++(void) image:(NSString*)string{
+    WibbleQuest *wibble=[WibbleQuest sharedWibble];
+    [wibble image:string];
+}
+
 @end

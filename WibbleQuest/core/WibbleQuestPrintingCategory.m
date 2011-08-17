@@ -57,6 +57,12 @@
   [self execJS:function];
 }
 
+-(void) image:(NSString*)image{
+    image = [self sanitize:image];
+    NSString *function = [NSString stringWithFormat:@"addImage('%@')",image];
+    [self execJS:function];
+}
+
 -(NSString *) sanitize:(NSString*) string {
   string = [string stringByReplacingOccurrencesOfString:@"'" withString:@"`"];
   return string;
