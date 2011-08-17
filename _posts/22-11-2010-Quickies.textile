@@ -149,7 +149,7 @@ Make them respond to words that are said by using
 {% highlight objc %}
 -(void)respondToSentenceArray:(NSArray*)sentence {
   if([sentence contains:@"hi", @"hello", nil] ){
-    [WQ print:@"Doc says, Oh wow, glad you've arrived!"];
+    [WQ say:@"Doc" words:@"Why hello there good sir, how are you on this fine day?"];
     return;
   }
 }

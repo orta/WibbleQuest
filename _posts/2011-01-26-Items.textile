@@ -94,12 +94,14 @@ h3. Mixing two Items to make one
 
 h3. Giving Items
 
+To do this we have to use didRespondToCommand, in this example I get the first word from the command array and check if that is give. Then I narrate, and remove the Item from their inventory.
+
 {% highlight objc %}
 -(BOOL)didRespondToCommand:(NSArray*)commandArray {
   NSString * command = [commandArray first];
   if ([@"give" isEqualToString:command]) {
     
-    [WQ print:@"You offer the rose to the beautiful gaelic princess, and she looks at you."];
+    [WQ print:@"You offer the rose to the beautiful gaelic princess."];
     [WQ say:@"Princess" words:@"Aww thank you!"];
     [WQ print:@"She seems happy."];
     [Inventory removeItem:self];
