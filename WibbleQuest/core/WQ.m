@@ -55,9 +55,4 @@
   [wibble art:string];
 }
 
-+ (Room *) getRoomByID:(NSString*)id{
-  WibbleQuest *wibble = [WibbleQuest sharedWibble];
-  return [wibble getRoomByID:id];
-}
-
 @end

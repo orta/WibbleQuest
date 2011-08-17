@@ -14,30 +14,35 @@
 
 #pragma mark class methods
 
-+ (Room*) current {
++(Room*)current {
   WibbleQuest * wq = [WibbleQuest sharedWibble];
   return wq.currentRoom;
 }
 
-+(void)connectRoomID:(NSString*)roomID1 connectNorthToRoomID:(NSString*)roomID2{
++(void)connectRoomID:(NSString*)roomID1 connectNorthToRoomID:(NSString*)roomID2 {
   Room *room1=[[WibbleQuest sharedWibble] getRoomByID:roomID1];
   Room *room2=[[WibbleQuest sharedWibble] getRoomByID:roomID2];
   [room1 connectNorth:room2];
 }
-+(void)connectRoomID:(NSString*)roomID1 connectSouthToRoomID:(NSString*)roomID2{
++(void)connectRoomID:(NSString*)roomID1 connectSouthToRoomID:(NSString*)roomID2 {
   Room *room1=[[WibbleQuest sharedWibble] getRoomByID:roomID1];
   Room *room2=[[WibbleQuest sharedWibble] getRoomByID:roomID2];
   [room1 connectSouth:room2];
 }
-+(void)connectRoomID:(NSString*)roomID1 connectWestToRoomID:(NSString*)roomID2{
++(void)connectRoomID:(NSString*)roomID1 connectWestToRoomID:(NSString*)roomID2 {
   Room *room1=[[WibbleQuest sharedWibble] getRoomByID:roomID1];
   Room *room2=[[WibbleQuest sharedWibble] getRoomByID:roomID2];
   [room1 connectWest:room2];
 }
-+(void)connectRoomID:(NSString*)roomID1 connectEastToRoomID:(NSString*)roomID2{
++(void)connectRoomID:(NSString*)roomID1 connectEastToRoomID:(NSString*)roomID2 {
   Room *room1=[[WibbleQuest sharedWibble] getRoomByID:roomID1];
   Room *room2=[[WibbleQuest sharedWibble] getRoomByID:roomID2];
   [room1 connectEast:room2];
+}
+
++(Room *) getRoomByID:(NSString*)id {
+  WibbleQuest *wibble = [WibbleQuest sharedWibble];
+  return [wibble getRoomByID:id];
 }
 
 -(id)init{
@@ -94,27 +99,27 @@
   return nil;
 }
 
-- (void) connectNorth:(Room*)room{
+-(void)connectNorth:(Room*)room {
   self.north = room;
   room.south = self;
 }
 
-- (void) connectSouth:(Room*)room{
+-(void)connectSouth:(Room*)room {
   self.south = room;
   room.north = self;
 }
 
-- (void) connectWest:(Room*)room{
+-(void)connectWest:(Room*)room {
   self.west = room;
   room.east = self;  
 }
 
-- (void) connectEast:(Room*)room{
+-(void)connectEast:(Room*)room {
   self.east = room;
   room.west = self;
 }
 
--(void)examineWithInput:(NSString*)input{
+-(void)examineWithInput:(NSString*)input {
   NSArray * commands = [input componentsSeparatedByString:@" "];
   if ([commands count] > 1) {
     NSString * key = [commands second];    

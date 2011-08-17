@@ -21,6 +21,4 @@
 +(void) title:(NSString*)string;
 +(void) art:(NSString*)string;
 
-+ (Room *) getRoomByID:(NSString*)id;
-
 @end

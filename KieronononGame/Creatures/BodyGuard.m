@@ -43,8 +43,8 @@
 
 
 -(void)afterCreatureLost{
-  Room* outside = [WQ getRoomByID:@"alley"];
-  Room* finale = [WQ getRoomByID:@"finale"];
+  Room* outside = [Room getRoomByID:@"alley"];
+  Room* finale = [Room getRoomByID:@"finale"];
 
   [outside connectWest:finale];
   outside.description = @"The alley seems a lot lighter since the bodyguard went away, you can go north back into the bar, or west to the main stage";

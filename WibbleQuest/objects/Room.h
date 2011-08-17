@@ -57,6 +57,8 @@
 +(void)connectRoomID:(NSString*)roomID1 connectWestToRoomID:(NSString*)roomID2;
 +(void)connectRoomID:(NSString*)roomID1 connectEastToRoomID:(NSString*)roomID2;
 
+// Get a room by an ID
++ (Room *) getRoomByID:(NSString*)id;
 
 // Provides a NSDictionary of keys and values that are 
 // acted upon when using the examine command inside a room.

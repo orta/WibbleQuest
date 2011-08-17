@@ -14,7 +14,7 @@
 -(void)checkRoomIsID:(NSString *)string because:(NSString*) because{
   [self addStep:[KIFTestStep stepWithDescription: because executionBlock:^(KIFTestStep *step, NSError **error) {
     BOOL successfulReset = NO;
-    if ([WibbleQuest sharedWibble].currentRoom == [WQ getRoomByID:string]) {
+    if ([WibbleQuest sharedWibble].currentRoom == [Room getRoomByID:string]) {
       successfulReset = YES;
     }
     if(successfulReset == NO){

@@ -30,7 +30,6 @@
 -(void)onDrop {
   [WQ print:@"You drop bubba onto the floor and he rolls casually onto his side."];
   [self removeCommandFromHelp:@"use bubba"];
-
 }
 
 -(void)onUse {

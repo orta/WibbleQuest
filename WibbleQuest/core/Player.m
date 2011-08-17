@@ -47,7 +47,7 @@ static Player * sharedPlayer;
 }
 
 +(void)teleportToRoomWithID:(NSString*)roomID {
-  Room * room = [WQ getRoomByID:roomID];
+  Room * room = [Room getRoomByID:roomID];
   if (room) {
     WibbleQuest *wq = [WibbleQuest sharedWibble];
     [wq.currentRoom playerDidLeaveRoom];
