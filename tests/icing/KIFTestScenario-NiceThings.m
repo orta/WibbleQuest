@@ -31,5 +31,26 @@
   }]];
 }
 
+-(void)checkInt:(NSString*) because block:(int (^)()) block {
+  [self addStep:[KIFTestStep stepWithDescription: because executionBlock:^(KIFTestStep *step, NSError **error) {
+    int returned = block();
+    if ( returned != 0) {
+      return KIFTestStepResultSuccess;
+    }
+    KIFTestCondition(FALSE, error, because);
+    return KIFTestStepResultFailure;
+  }]];
+}
+-(void)checkBool:(NSString*) because block:(BOOL (^)()) block {
+  [self addStep:[KIFTestStep stepWithDescription: because executionBlock:^(KIFTestStep *step, NSError **error) {
+    if ( block() ) {
+      return KIFTestStepResultSuccess;
+    }
+    KIFTestCondition(FALSE, error, because);
+    return KIFTestStepResultFailure;
+  }]];
+}
+
+
 
 @end

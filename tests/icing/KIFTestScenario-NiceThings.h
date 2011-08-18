@@ -12,4 +12,7 @@
 
 -(void)checkLastThingSaidWas:(NSString *)string because:(NSString*) because;
 -(void)checkLastThingSaidWasnt:(NSString *)string because:(NSString*) because;
+-(void)checkInt:(NSString*) because block:(int (^)()) block;
+-(void)checkBool:(NSString*) because block:(BOOL (^)()) block;
+
 @end

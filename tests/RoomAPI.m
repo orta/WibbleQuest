@@ -34,12 +34,12 @@
     [wq addRoom:r];
     
     Room * rNorth = [[Room alloc] init];
-    rNorth.id = @"testNorth";
+    rNorth.id = @"testnorth";
     [r connectNorth:rNorth];
     [wq addRoom:rNorth];
     
     Room * rWest = [[Room alloc] init];
-    rWest.id = @"testWest";
+    rWest.id = @"testwest";
     [r connectWest:rWest];
     [wq addRoom:rWest];
 

@@ -12,6 +12,11 @@
 
 @synthesize name, description, id = _id;
 
+-(NSString *) id {
+  if(_id) return _id;
+  return [NSStringFromClass([self class]) lowercaseString];
+}
+
 -(void) setId:(NSString *)id {
   [_id release];
   id = [id lowercaseString];

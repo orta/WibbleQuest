@@ -14,43 +14,54 @@
 @implementation KIFTestScenario (ShopTests)
 
 + (id)shopTests {
-//  WibbleQuest * wq = [WibbleQuest sharedWibble];
-//
   KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:@"Testing Shop Commands ."];
-//  [scenario addStep:[KIFTestStep stepToWaitForTappableViewWithAccessibilityLabel:@"Text Input"]];
-//
-//  [scenario addStep:[KIFTestStep stepWithDescription:@"Setup" executionBlock:^(KIFTestStep *step, NSError **error) {
-//    
-//    // setup block
-//    WibbleQuest *wq = [WibbleQuest sharedWibble];
-//    [wq purge];
-//    
-//    Room * r = [[Room alloc] init];
-//    r.id = @"test";
-//    [wq addRoom:r];
-//    
-//    RockShop *shop = [[RockShop alloc] init];
-//    shop.description = @"1234 shop";
-//    r.store = shop;
-//    
-//        
-//    wq.currentRoom = r;
-//    
-//    return KIFTestStepResultSuccess;
-//  }]];
-//
-//  [scenario runCommand:@"shop"];
-//  [scenario addStep:[KIFTestStep stepWithDescription:@"command shop lists items" executionBlock:^(KIFTestStep *step, NSError **error) {
-//    
-//    if([@"1234 shop" isEqualToString: wq.lastPrinted]){
-//      return KIFTestStepResultSuccess;
-//    }
-//    return KIFTestStepResultFailure;
-//    
-//  }]];
+  [scenario addStep:[KIFTestStep stepToWaitForTappableViewWithAccessibilityLabel:@"Text Input"]];
+
+  [scenario addStep:[KIFTestStep stepWithDescription:@"Setup" executionBlock:^(KIFTestStep *step, NSError **error) {
+    
+    // setup block
+    WibbleQuest *wq = [WibbleQuest sharedWibble];
+    [wq purge];
+    
+    Player* p = [Player sharedPlayer];
+    p.money = 20;
+    
+    Room * r = [[Room alloc] init];
+    r.id = @"test";
+    [wq addRoom:r];
+    
+    RockShop *shop = [[RockShop alloc] init];
+    shop.description = @"1234 shop";
+    [shop addItemOfClass: [Item class] withValue:10];
+
+    r.store = shop;
+        
+    wq.currentRoom = r;
+    
+    return KIFTestStepResultSuccess;
+  }]];
+
+  [scenario runCommand:@"shop"];
+  [scenario checkLastThingSaidWas:@"Item - £10" because:@"testing shop command lists items in shop"];
+  
+  [scenario checkInt:@"player has £20"  block:^{
+    Player * player = [Player sharedPlayer];
+    return player.money == 20;
+  }];
+  
+  [scenario runCommand:@"buy item"];
+
+  [scenario checkInt:@"player has £10"  block:^{
+    Player * player = [Player sharedPlayer];
+    return player.money == 10;
+  }];
+  
+  [scenario checkBool:@"player has the Item"  block:^{
+    return [Inventory hasItem:@"item"];
+  }];
+
+  
   
   return scenario;
 }
-
-
 @end
