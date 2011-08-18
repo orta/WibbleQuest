@@ -21,4 +21,15 @@
   }]];
 }
 
+-(void)checkLastThingSaidWasnt:(NSString *)string because:(NSString*) because {
+  [self addStep:[KIFTestStep stepWithDescription: because executionBlock:^(KIFTestStep *step, NSError **error) {
+    if ( [[WibbleQuest sharedWibble].lastPrinted isEqualToString:string]) {
+      KIFTestCondition(FALSE, error, because);
+      return KIFTestStepResultFailure;
+    }
+    return KIFTestStepResultSuccess;
+  }]];
+}
+
+
 @end

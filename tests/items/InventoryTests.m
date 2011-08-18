@@ -71,6 +71,9 @@
     return KIFTestStepResultSuccess;
     
   }]];
+  
+  [scenario runCommand:@"itemtesting"];
+  [scenario checkLastThingSaidWasnt:@"YES" because:@"testing inline commands not working without item"];
 
   [scenario addStep:[KIFTestStep stepWithDescription:@"Check room gains item" executionBlock:^(KIFTestStep *step, NSError **error) {
     

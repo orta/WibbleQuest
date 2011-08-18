@@ -11,8 +11,7 @@
 #import "KIFTestScenario+EXAdditions.h"
 #import "KIFTestStep.h"
 #import "KIFTestStep+EXAdditions.h"
-#import "KIFTestScenario-RunCommand.h"
-#import "KIFTestScenario-RoomCommands.h"
+#import "KIFScenario-Helpers.h"
 
 @implementation KIFTestScenario (RoomAPI)
 
@@ -29,6 +28,9 @@
     
     Room * r = [[Room alloc] init];
     r.id = @"test";
+    [r respondTo:@"testroom" with:^{
+      [WQ print:@"YES"];
+    }];
     [wq addRoom:r];
     
     Room * rNorth = [[Room alloc] init];
@@ -46,8 +48,14 @@
     return KIFTestStepResultSuccess;
   }]];
   
+  [scenario runCommand:@"testroom"];
+  [scenario checkLastThingSaidWas:@"YES" because:@"test inline commands on room"];
+  
   [scenario runCommand:@"north"];
   [scenario checkRoomIsID:@"testnorth" because:@"testing moving north"];
+
+  [scenario runCommand:@"testroom"];
+  [scenario checkLastThingSaidWasnt:@"YES" because:@"test inline commands not staying on current room"];
   
   [scenario runCommand:@"south"];
   [scenario checkRoomIsID:@"test" because:@"testing moving south"];

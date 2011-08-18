@@ -11,5 +11,5 @@
 @interface KIFTestScenario (KIFTestScenario_NiceThings)
 
 -(void)checkLastThingSaidWas:(NSString *)string because:(NSString*) because;
-
+-(void)checkLastThingSaidWasnt:(NSString *)string because:(NSString*) because;
 @end
