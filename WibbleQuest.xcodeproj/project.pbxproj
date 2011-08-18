@@ -12,8 +12,6 @@
 		6002DC4613E7861F003A5D70 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002DC4513E7861F003A5D70 /* Game.m */; };
 		6002DC4713E7861F003A5D70 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002DC4513E7861F003A5D70 /* Game.m */; };
 		6002DC4813E7861F003A5D70 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002DC4513E7861F003A5D70 /* Game.m */; };
-		60114B3713E387AA007F97A5 /* jquery.js in Sources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
-		60114B3813E387AA007F97A5 /* jquery.js in Sources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
 		60114B3913E390F7007F97A5 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
 		60114B3E13E44998007F97A5 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
 		60114B6B13E4C481007F97A5 /* KidB.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B5313E4C480007F97A5 /* KidB.m */; };
@@ -673,7 +671,6 @@
 				60FEA1C313D65598006997B0 /* Tests */,
 				6050F41513DC480100BB8E82 /* Vendor */,
 				606B2B7613D4F8F100B90223 /* TODO */,
-				60F5129E13D1C7D300978EC0 /* Niceities */,
 				60F5129D13D1C7BE00978EC0 /* Core */,
 				60F5129C13D1C79B00978EC0 /* Root Objects */,
 				60F5129013D11FDA00978EC0 /* Categories */,
@@ -795,13 +792,6 @@
 			);
 			name = Core;
 			path = core;
-			sourceTree = "<group>";
-		};
-		60F5129E13D1C7D300978EC0 /* Niceities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Niceities;
 			sourceTree = "<group>";
 		};
 		60FEA1C313D65598006997B0 /* Tests */ = {
@@ -1066,7 +1056,6 @@
 				6F36C4E613D3D079003387F7 /* RockShop.m in Sources */,
 				606B2B7513D4F5B000B90223 /* WibbleObject.m in Sources */,
 				607CB92C13D9070600A72FD2 /* FinaleRoom.m in Sources */,
-				60114B3713E387AA007F97A5 /* jquery.js in Sources */,
 				60114B6B13E4C481007F97A5 /* KidB.m in Sources */,
 				60114B6C13E4C481007F97A5 /* ExitRoom.m in Sources */,
 				60114B6D13E4C481007F97A5 /* Bubba.m in Sources */,
@@ -1175,7 +1164,6 @@
 				607CB92913D8EE4100A72FD2 /* InventoryTests.m in Sources */,
 				607CB92D13D9070600A72FD2 /* FinaleRoom.m in Sources */,
 				60BCD36F13DB4FAE00CBBB42 /* ShopTests.m in Sources */,
-				60114B3813E387AA007F97A5 /* jquery.js in Sources */,
 				60114B7A13E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m in Sources */,
 				60ED579913E7748B006E4D27 /* GameSelector.m in Sources */,
 				6002DC4813E7861F003A5D70 /* Game.m in Sources */,
