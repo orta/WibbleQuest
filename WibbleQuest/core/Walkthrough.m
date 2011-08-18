@@ -15,7 +15,9 @@
 // to allow you to watch the game being ran and to look
 // over the results, saves a lot of keybindings.
 
-// to use it you must have KIF installed.
+// to use it you must have the KIF files, if this isn't the case
+// you need to use the terminal command "git submodule init; git submodule update"
+// from inside the main directory. 
 
 - (void)initializeScenarios {
   // generic setup

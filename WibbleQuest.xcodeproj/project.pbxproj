@@ -669,10 +669,8 @@
 			children = (
 				60114B7613E4C491007F97A5 /* Kieronononon */,
 				60114B5013E4C480007F97A5 /* Megatron */,
-				6070A20B13FD77A6001D4B0B /* Walkthrough.h */,
 				6070A20C13FD77A6001D4B0B /* Walkthrough.m */,
 				60ED579613E7748A006E4D27 /* GameSelector.m */,
-				6002DC4313E78386003A5D70 /* GameSelector.h */,
 				60CFABF613FD5F9600A2D5B0 /* style.css */,
 				606B2B7A13D5282A00B90223 /* icon.png */,
 			);
@@ -683,6 +681,8 @@
 		609B9FB313C901D400888A6E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6070A20B13FD77A6001D4B0B /* Walkthrough.h */,
+				6002DC4313E78386003A5D70 /* GameSelector.h */,
 				609B9FB413C901D400888A6E /* Wibble-Prefix.pch */,
 				609B9FB813C901D400888A6E /* main.m */,
 				609B9FBA13C901D400888A6E /* WibbleQuest-Info.plist */,
