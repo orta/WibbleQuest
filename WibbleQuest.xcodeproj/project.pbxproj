@@ -32,7 +32,7 @@
 		6065BC9213D3619000F1F6D4 /* StartingRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6065BC9113D3619000F1F6D4 /* StartingRoom.m */; };
 		606B2B7513D4F5B000B90223 /* WibbleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B2B7413D4F5B000B90223 /* WibbleObject.m */; };
 		606B2B7713D4F8F100B90223 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7613D4F8F100B90223 /* TODO */; };
-		606B2B7B13D5282B00B90223 /* initialIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* initialIcon.png */; };
+		606B2B7B13D5282B00B90223 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* icon.png */; };
 		607CB92913D8EE4100A72FD2 /* InventoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 607CB92813D8EE4100A72FD2 /* InventoryTests.m */; };
 		607CB92C13D9070600A72FD2 /* FinaleRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 607CB92B13D9070600A72FD2 /* FinaleRoom.m */; };
 		607CB92D13D9070600A72FD2 /* FinaleRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 607CB92B13D9070600A72FD2 /* FinaleRoom.m */; };
@@ -118,7 +118,7 @@
 		60ED574813E5E913006E4D27 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60ED574713E5E913006E4D27 /* Quartz.framework */; };
 		60ED574913E5EB54006E4D27 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
 		60ED574A13E5EB54006E4D27 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
-		60ED574B13E5EB54006E4D27 /* initialIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* initialIcon.png */; };
+		60ED574B13E5EB54006E4D27 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* icon.png */; };
 		60ED574C13E5EB54006E4D27 /* Wibble-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FB413C901D400888A6E /* Wibble-Prefix.pch */; };
 		60ED579713E7748B006E4D27 /* GameSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED579613E7748A006E4D27 /* GameSelector.m */; };
 		60ED579813E7748B006E4D27 /* GameSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED579613E7748A006E4D27 /* GameSelector.m */; };
@@ -164,7 +164,7 @@
 		60FEA1B613D653F0006997B0 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
 		60FEA1B713D653F0006997B0 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
 		60FEA1B913D653F0006997B0 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7613D4F8F100B90223 /* TODO */; };
-		60FEA1BA13D653F0006997B0 /* initialIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* initialIcon.png */; };
+		60FEA1BA13D653F0006997B0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* icon.png */; };
 		60FEA1C213D6541D006997B0 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FEA1C113D6541D006997B0 /* libKIF.a */; };
 		60FEA1CA13D65800006997B0 /* RoomAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1C813D65800006997B0 /* RoomAPI.m */; };
 		60FEA1CB13D65867006997B0 /* WBTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1C513D6566B006997B0 /* WBTestController.m */; };
@@ -282,7 +282,7 @@
 		606B2B7313D4F5AF00B90223 /* WibbleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WibbleObject.h; sourceTree = "<group>"; };
 		606B2B7413D4F5B000B90223 /* WibbleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleObject.m; sourceTree = "<group>"; };
 		606B2B7613D4F8F100B90223 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
-		606B2B7A13D5282A00B90223 /* initialIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = initialIcon.png; path = ../WibbleQuest/shared/initialIcon.png; sourceTree = "<group>"; };
+		606B2B7A13D5282A00B90223 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../WibbleQuest/shared/icon.png; sourceTree = "<group>"; };
 		607CB92713D8EE4100A72FD2 /* InventoryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InventoryTests.h; path = tests/items/InventoryTests.h; sourceTree = "<group>"; };
 		607CB92813D8EE4100A72FD2 /* InventoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InventoryTests.m; path = tests/items/InventoryTests.m; sourceTree = "<group>"; };
 		607CB92A13D9070600A72FD2 /* FinaleRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FinaleRoom.h; path = Rooms/FinaleRoom.h; sourceTree = "<group>"; };
@@ -589,7 +589,7 @@
 				60ED579613E7748A006E4D27 /* GameSelector.m */,
 				6002DC4313E78386003A5D70 /* GameSelector.h */,
 				60CFABF613FD5F9600A2D5B0 /* style.css */,
-				606B2B7A13D5282A00B90223 /* initialIcon.png */,
+				606B2B7A13D5282A00B90223 /* icon.png */,
 			);
 			name = Game;
 			path = KieronononGame;
@@ -995,7 +995,7 @@
 				60CC9F1113C9E40D006D116C /* index.html in Resources */,
 				606B2B7713D4F8F100B90223 /* TODO in Resources */,
 				60114B3913E390F7007F97A5 /* jquery.js in Resources */,
-				606B2B7B13D5282B00B90223 /* initialIcon.png in Resources */,
+				606B2B7B13D5282B00B90223 /* icon.png in Resources */,
 				60CFABF713FD5F9600A2D5B0 /* style.css in Resources */,
 				60CFABF913FD640000A2D5B0 /* Wibble.license in Resources */,
 			);
@@ -1007,7 +1007,7 @@
 			files = (
 				60ED574913E5EB54006E4D27 /* index.html in Resources */,
 				60ED574A13E5EB54006E4D27 /* jquery.js in Resources */,
-				60ED574B13E5EB54006E4D27 /* initialIcon.png in Resources */,
+				60ED574B13E5EB54006E4D27 /* icon.png in Resources */,
 				60ED574C13E5EB54006E4D27 /* Wibble-Prefix.pch in Resources */,
 				60C0220F13E5E4A8009251C3 /* MainViewController_iPhone.xib in Resources */,
 				60C0221013E5E4A8009251C3 /* MainViewController_iPad.xib in Resources */,
@@ -1029,7 +1029,7 @@
 				60FEA1B613D653F0006997B0 /* SettingsViewController.xib in Resources */,
 				60FEA1B713D653F0006997B0 /* index.html in Resources */,
 				60FEA1B913D653F0006997B0 /* TODO in Resources */,
-				60FEA1BA13D653F0006997B0 /* initialIcon.png in Resources */,
+				60FEA1BA13D653F0006997B0 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

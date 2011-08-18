@@ -12,7 +12,7 @@
 	<string></string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>initialIcon.png</string>
+		<string>icon.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.ortatherox.${PRODUCT_NAME:rfc1034identifier}</string>

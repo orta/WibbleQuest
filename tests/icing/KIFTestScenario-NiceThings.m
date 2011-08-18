@@ -41,6 +41,7 @@
     return KIFTestStepResultFailure;
   }]];
 }
+
 -(void)checkBool:(NSString*) because block:(BOOL (^)()) block {
   [self addStep:[KIFTestStep stepWithDescription: because executionBlock:^(KIFTestStep *step, NSError **error) {
     if ( block() ) {
