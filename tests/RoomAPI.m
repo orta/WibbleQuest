@@ -47,13 +47,13 @@
   }]];
   
   [scenario runCommand:@"north"];
-  [scenario checkRoomIsID:@"testNorth" because:@"testing moving north"];
+  [scenario checkRoomIsID:@"testnorth" because:@"testing moving north"];
   
   [scenario runCommand:@"south"];
   [scenario checkRoomIsID:@"test" because:@"testing moving south"];
 
   [scenario runCommand:@"west"];
-  [scenario checkRoomIsID:@"testWest" because:@"testing moving west"];
+  [scenario checkRoomIsID:@"testwest" because:@"testing moving west"];
 
   [scenario runCommand:@"east"];
   [scenario checkRoomIsID:@"test" because:@"testing moving east"];
@@ -76,7 +76,7 @@
     return KIFTestStepResultFailure;
   }]];
   
-  [scenario addStep:[KIFTestStep stepWithDescription:@"Player isIn API test" executionBlock:^(KIFTestStep *step, NSError **error) {
+  [scenario addStep:[KIFTestStep stepWithDescription:@"Player is In API test" executionBlock:^(KIFTestStep *step, NSError **error) {
     
     if ([Player isIn:@"testNorth"]) {
       return KIFTestStepResultSuccess;
