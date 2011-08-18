@@ -7,7 +7,6 @@
 //
 
 #import "Creature.h"
-#import "Player.h"
 
 @interface Creature()
 -(void)takeDamage:(int)damage;
@@ -169,9 +168,5 @@
 
 -(void)afterCreatureLost{};
 -(void)afterCreatureWon{};
-
-
--(void)respondToSentenceArray:(NSArray*)sentence{}
-
 
 @end

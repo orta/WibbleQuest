@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Person.h"
 
-@interface Creature : WibbleObject
+@interface Creature : Person
 
 // You need a creature to have health 
 // and a max health if you're going to fight them
@@ -51,10 +52,5 @@
 
 -(void)afterCreatureLost;
 -(void)afterCreatureWon;
-
-// A creature can hold a conversation just like a person does if you'd 
-// like them to.
--(void)respondToSentenceArray:(NSArray*)sentence;
-
 
 @end
