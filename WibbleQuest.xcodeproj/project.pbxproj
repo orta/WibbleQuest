@@ -1388,7 +1388,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/vendor/KIF/\"/**",
 				);
-				INFOPLIST_FILE = "WibbleQuest/WibbleQuest-Info.plist";
+				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -1415,7 +1415,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/vendor/KIF/\"/**",
 				);
-				INFOPLIST_FILE = "WibbleQuest/WibbleQuest-Info.plist";
+				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-all_load",
