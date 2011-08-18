@@ -20,5 +20,6 @@
 +(void) command:(NSString*)string;
 +(void) title:(NSString*)string;
 +(void) art:(NSString*)string;
++(void) image:(NSString*)string;
 
 @end

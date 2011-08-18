@@ -35,7 +35,9 @@
             -webkit-animation-name: fade;
             -webkit-animation-duration: 1s;
         }
-        
+        img{
+          max-width: 100%;
+        }
         </style>
       <script>
         // these functions are called from the UIWebView, they essentially are the public methods
@@ -77,10 +79,14 @@
         }
         
         function addArt(text){
-
           function_queue.push( wrapFunction(_addArt, this, [text]) );
           executeQueue();
         }
+          
+          function addImage(text){
+              function_queue.push(wrapFunction(_addImage, this, [text]));
+              executeQueue();
+          }
 
 
         // these babies actually do the work through, and they're the ones chucked in the processing queue
@@ -114,8 +120,11 @@
           createElementWithText("h4", name);
           return createElementWithText("blockquote", text);
         }
-
-
+          
+        function _addImage(text){
+          $("body").append("<img src="+ text + ">")
+            return "OK"
+         }
         
         function rotate(){
           document.body.width = window.innerwidth;
@@ -129,6 +138,8 @@
           $("body").append("<" + element +">" + text + "</" + element + ">")
           return "OK"
         }
+          
+
                 
         // Javascript Queuing system
         // http://stackoverflow.com/questions/899102/how-do-i-store-javascript-functions-in-a-queue-for-them-to-be-executed-eventually
