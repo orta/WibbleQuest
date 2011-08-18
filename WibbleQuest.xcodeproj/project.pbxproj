@@ -113,6 +113,7 @@
 		60CC9F2113CA0B6B006D116C /* CommandInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */; };
 		60CFABAC13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CFABAB13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.m */; };
 		60CFABF713FD5F9600A2D5B0 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 60CFABF613FD5F9600A2D5B0 /* style.css */; };
+		60CFABF913FD640000A2D5B0 /* Wibble.license in Resources */ = {isa = PBXBuildFile; fileRef = 60CFABF813FD640000A2D5B0 /* Wibble.license */; };
 		60ED574813E5E913006E4D27 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60ED574713E5E913006E4D27 /* Quartz.framework */; };
 		60ED574913E5EB54006E4D27 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
 		60ED574A13E5EB54006E4D27 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
@@ -344,6 +345,7 @@
 		60CFABAA13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KIFTestScenario-NiceThings.h"; path = "tests/icing/KIFTestScenario-NiceThings.h"; sourceTree = "<group>"; };
 		60CFABAB13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "KIFTestScenario-NiceThings.m"; path = "tests/icing/KIFTestScenario-NiceThings.m"; sourceTree = "<group>"; };
 		60CFABF613FD5F9600A2D5B0 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = style.css; path = WibbleQuest/html/style.css; sourceTree = SOURCE_ROOT; };
+		60CFABF813FD640000A2D5B0 /* Wibble.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Wibble.license; path = WibbleQuest/shared/Wibble.license; sourceTree = SOURCE_ROOT; };
 		60ED574713E5E913006E4D27 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Quartz.framework; sourceTree = DEVELOPER_DIR; };
 		60ED578E13E76FD0006E4D27 /* WQIOSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQIOSAppDelegate.h; sourceTree = "<group>"; };
 		60ED579613E7748A006E4D27 /* GameSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameSelector.m; path = WibbleQuest/GameSelector.m; sourceTree = SOURCE_ROOT; };
@@ -668,6 +670,7 @@
 		60CC9EF713C9D5C0006D116C /* WibbleQuest */ = {
 			isa = PBXGroup;
 			children = (
+				60CFABF813FD640000A2D5B0 /* Wibble.license */,
 				609B9FD213C901E200888A6E /* WibbleQuestiOS */,
 				60C021D613E5D280009251C3 /* WibbleQuestOSX */,
 				609B9FB313C901D400888A6E /* Supporting Files */,
@@ -990,6 +993,7 @@
 				60114B3913E390F7007F97A5 /* jquery.js in Resources */,
 				606B2B7B13D5282B00B90223 /* initialIcon.png in Resources */,
 				60CFABF713FD5F9600A2D5B0 /* style.css in Resources */,
+				60CFABF913FD640000A2D5B0 /* Wibble.license in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
