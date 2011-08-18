@@ -171,6 +171,9 @@
 		60FEA1E113D66E1F006997B0 /* KIFTestScenario-RoomCommands.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1DF13D66E0F006997B0 /* KIFTestScenario-RoomCommands.m */; };
 		6F36C4E113D3D03F003387F7 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C4E013D3D03F003387F7 /* Store.m */; };
 		6F36C4E613D3D079003387F7 /* RockShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C4E513D3D079003387F7 /* RockShop.m */; };
+		6F51B3D413FCC1A10089E1AC /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F51B3D313FCC1A10089E1AC /* Sound.m */; };
+		6F51B3D513FCC1A10089E1AC /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F51B3D313FCC1A10089E1AC /* Sound.m */; };
+		6F51B3D813FCC1AE0089E1AC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F51B3D713FCC1AE0089E1AC /* AVFoundation.framework */; };
 		6FD38AAD13F230540062D3FA /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38AAC13F230530062D3FA /* Inventory.m */; };
 /* End PBXBuildFile section */
 
@@ -370,6 +373,9 @@
 		6F36C4E013D3D03F003387F7 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		6F36C4E413D3D079003387F7 /* RockShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RockShop.h; sourceTree = "<group>"; };
 		6F36C4E513D3D079003387F7 /* RockShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RockShop.m; sourceTree = "<group>"; };
+		6F51B3D213FCC1A10089E1AC /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
+		6F51B3D313FCC1A10089E1AC /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
+		6F51B3D713FCC1AE0089E1AC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6FD38AAB13F230520062D3FA /* Inventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inventory.h; sourceTree = "<group>"; };
 		6FD38AAC13F230530062D3FA /* Inventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inventory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -379,6 +385,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F51B3D813FCC1AE0089E1AC /* AVFoundation.framework in Frameworks */,
 				609B9FAD13C901D400888A6E /* UIKit.framework in Frameworks */,
 				609B9FAF13C901D400888A6E /* Foundation.framework in Frameworks */,
 				609B9FB113C901D400888A6E /* CoreGraphics.framework in Frameworks */,
@@ -560,6 +567,7 @@
 		609B9FAB13C901D400888A6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F51B3D713FCC1AE0089E1AC /* AVFoundation.framework */,
 				609B9FAC13C901D400888A6E /* UIKit.framework */,
 				609B9FAE13C901D400888A6E /* Foundation.framework */,
 				609B9FB013C901D400888A6E /* CoreGraphics.framework */,
@@ -782,6 +790,8 @@
 				60F49DD513CBD42C00BDB07C /* PlayerInventory.m */,
 				60F5128413D1112300978EC0 /* Player.h */,
 				60F5128513D1112300978EC0 /* Player.m */,
+				6F51B3D213FCC1A10089E1AC /* Sound.h */,
+				6F51B3D313FCC1A10089E1AC /* Sound.m */,
 			);
 			name = Core;
 			path = core;
@@ -1072,6 +1082,7 @@
 				60ED579713E7748B006E4D27 /* GameSelector.m in Sources */,
 				6002DC4613E7861F003A5D70 /* Game.m in Sources */,
 				6FD38AAD13F230540062D3FA /* Inventory.m in Sources */,
+				6F51B3D413FCC1A10089E1AC /* Sound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1169,6 +1180,7 @@
 				60ED579913E7748B006E4D27 /* GameSelector.m in Sources */,
 				6002DC4813E7861F003A5D70 /* Game.m in Sources */,
 				60CFABAC13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.m in Sources */,
+				6F51B3D513FCC1A10089E1AC /* Sound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

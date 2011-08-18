@@ -16,18 +16,18 @@
   #import "WibbleQuest.h"
   #import "WQ.h"
   #import "WibbleObject.h"
-  
-  #import "Game.h"
-  #import "Room.h"
-  #import "Item.h"
+
   #import "Creature.h"
-  #import "Person.h"
-  #import "Player.h"
-  #import "Store.h"
+  #import "Game.h"
+  #import "Inventory.h"
+  #import "Item.h"
   #import "NSArray-Contains.h"
   #import "NSArray-named-captures.h"
-
-  #import "Inventory.h"
+  #import "Person.h"
+  #import "Player.h"
+  #import "Room.h"
+  #import "Store.h"
+  #import "Sound.h"
 
 #endif
 
