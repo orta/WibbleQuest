@@ -553,7 +553,6 @@
 		609B9F9D13C901D400888A6E = {
 			isa = PBXGroup;
 			children = (
-				60CFABFF13FD714800A2D5B0 /* AVFoundation.framework */,
 				609B9FB213C901D400888A6E /* Game */,
 				60CC9EF713C9D5C0006D116C /* WibbleQuest */,
 				609B9FA913C901D400888A6E /* Products */,
@@ -631,6 +630,7 @@
 		60C021CF13E5D280009251C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60CFABFF13FD714800A2D5B0 /* AVFoundation.framework */,
 				60ED574713E5E913006E4D27 /* Quartz.framework */,
 				60C021ED13E5D2C5009251C3 /* Cocoa.framework */,
 				60C021D213E5D280009251C3 /* Other Frameworks */,
