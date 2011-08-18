@@ -19,7 +19,10 @@
 
 -(BOOL) _respond:(NSString *)command {
   for (Item * i in self.items) {
-    [i _respond:command];
+    if ([i _respond:command]) {
+      return YES;
+    }
+  
   }
   return NO;
 }

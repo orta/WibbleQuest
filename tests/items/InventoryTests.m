@@ -8,7 +8,7 @@
 
 #import "InventoryTests.h"
 #import "KIFTestStep.h"
-#import "KIFTestScenario-RunCommand.h"
+#import "KIFScenario-Helpers.h"
 
 @implementation KIFTestScenario (InventoryTests)
 
@@ -30,7 +30,11 @@
     
     Item *i = [[Item alloc] init];
     i.id = @"test_item";
+    [i respondTo:@"itemtesting" with:^{
+      [WQ print:@"YES"];
+    }];
     [r addItem:i];
+    
     
     wq.currentRoom = r;
     
@@ -47,13 +51,14 @@
     
   }]];
   
+  [scenario runCommand:@"itemtesting"];
+  [scenario checkLastThingSaidWas:@"YES" because:@"testing inline commands on items"];
+  
   [scenario addStep:[KIFTestStep stepWithDescription:@"Check room loses item" executionBlock:^(KIFTestStep *step, NSError **error) {
-    
     if([wq.currentRoom hasItem:@"test_item"]){
       return KIFTestStepResultFailure;
     }
     return KIFTestStepResultSuccess;
-    
   }]];
   
 
@@ -73,10 +78,7 @@
       return KIFTestStepResultSuccess;
     }
     return KIFTestStepResultFailure;
-    
   }]];
-  
-
   
   return scenario;
 }

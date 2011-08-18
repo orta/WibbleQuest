@@ -8,3 +8,4 @@
 
 #import "KIFTestScenario-RoomCommands.h"
 #import "KIFTestScenario-RunCommand.h"
+#import "KIFTestScenario-NiceThings.h"

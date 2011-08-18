@@ -113,6 +113,7 @@
 		60CC9F1113C9E40D006D116C /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
 		60CC9F1B13C9F3CC006D116C /* WibbleQuestPrintingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F1A13C9F3CB006D116C /* WibbleQuestPrintingCategory.m */; };
 		60CC9F2113CA0B6B006D116C /* CommandInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */; };
+		60CFABAC13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CFABAB13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.m */; };
 		60ED574813E5E913006E4D27 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60ED574713E5E913006E4D27 /* Quartz.framework */; };
 		60ED574913E5EB54006E4D27 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
 		60ED574A13E5EB54006E4D27 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
@@ -338,6 +339,8 @@
 		60CC9F1A13C9F3CB006D116C /* WibbleQuestPrintingCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleQuestPrintingCategory.m; sourceTree = "<group>"; };
 		60CC9F1F13CA0B6B006D116C /* CommandInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CommandInterpreter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CommandInterpreter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		60CFABAA13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KIFTestScenario-NiceThings.h"; path = "tests/icing/KIFTestScenario-NiceThings.h"; sourceTree = "<group>"; };
+		60CFABAB13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "KIFTestScenario-NiceThings.m"; path = "tests/icing/KIFTestScenario-NiceThings.m"; sourceTree = "<group>"; };
 		60ED574713E5E913006E4D27 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Quartz.framework; sourceTree = DEVELOPER_DIR; };
 		60ED578E13E76FD0006E4D27 /* WQIOSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQIOSAppDelegate.h; sourceTree = "<group>"; };
 		60ED579613E7748A006E4D27 /* GameSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameSelector.m; path = WibbleQuest/GameSelector.m; sourceTree = SOURCE_ROOT; };
@@ -808,6 +811,8 @@
 		60FEA1DB13D66C79006997B0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				60CFABAA13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.h */,
+				60CFABAB13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.m */,
 				60FEA1D813D66C44006997B0 /* KIFTestScenario-RunCommand.h */,
 				60FEA1D913D66C44006997B0 /* KIFTestScenario-RunCommand.m */,
 				6050F3E213DB868100BB8E82 /* KIFScenario-Helpers.h */,
@@ -1163,6 +1168,7 @@
 				60114B7A13E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m in Sources */,
 				60ED579913E7748B006E4D27 /* GameSelector.m in Sources */,
 				6002DC4813E7861F003A5D70 /* Game.m in Sources */,
+				60CFABAC13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
