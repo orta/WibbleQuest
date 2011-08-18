@@ -11,15 +11,17 @@ code {
   display:block;
 }
 
+/* ASCII Art */
 pre {
   font-family: 'Courier';          
 }
 
-h4{
+h4 {
   margin-bottom:2px;
 }
 
-blockquote{
+/* Say command */
+blockquote {
   background-color:#FBEBBD;
   margin: 0;
   padding: 12px;
@@ -30,11 +32,11 @@ blockquote{
   100% { opacity: 1; }
 }
 
-p, h4, blockquote,code{
+p, h4, blockquote, code {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1s;
 }
 
-img{
+img {
   max-width: 100%;
 }
