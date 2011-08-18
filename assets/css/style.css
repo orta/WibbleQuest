@@ -9,7 +9,33 @@ body {
   font-family: 'American Typewriter','Century Schoolbook', 'consolas', 'gill sans';
 }
 
+h3 {
+  clear: both;
+}
+
+section > p{
+  clear: both;
+}
+
 a.api {
   color:#CB7A1F !important;
   text-decoration: none;
+}
+
+.split {
+  float: left;
+  width: 430px;
+  padding:10px;
+}
+
+.col1 {
+  clear: both;
+}
+
+.split p:first-child {
+  padding-top: 0;
+}
+
+.split p {
+  font-size: 0.8em;
 }

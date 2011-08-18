@@ -1,0 +1,91 @@
+---
+layout: page
+---
+
+<link rel="stylesheet" href="assets/css/syntax.css">
+<style type="text/css" media="screen">
+  h1{
+    font-size: 2em;
+  }
+  section{
+    width:900px;
+    padding-left: 100px;
+  }
+</style>
+
+h1. More Advanced WibbleQuesting
+
+h2. Walkthrough
+
+Admit it, you're lazy. I'm really lazy, that's why I wrote all this documentation, I only want mind-bendingly hard questions sent my way. So here's how I make sure that I don't have to type my way though an adventure game every time I want to test something. And to make sure it all works.
+
+WibbleQuest uses an amazing test system called KIF (Thanks "@squareup":http://twitter.com/squareup ) to emulate touching the screen and pressing buttons. I've worked on this to create a smaller DSL that allows you to run through commands one by one in the order that you want. 
+
+There is a file called Walkthrough.m inside your Game folder, this comes with a run through of one of my example games included. To run it just change your scheme to Game Walkthrough, it's the big button in the top left.
+
+<center>!/assets/images/walkthrough.png(Walkthrough XCode)!</center>
+
+h2. Block based programming
+
+Ok ok ok, so I'm even lazier than I thought, a lot of the times I think that it just takes too damn long to create new Item subclasses, and add tiny amounts of custom code to them. So congratulations everyone else. It's made in a way so you don't have to do that.
+
+Every major object inside WibbleQuest can dynamically add commands without resorting to callbacks using the function respondTo. It's limitation is that it only does simple string matching, so you cannot do command aliases ( have two responses do the same action ) but it gives you a nice way to quickly add a custom command. Because the more of the the richer your game will feel.
+
+These commands have a higher precedence than almost all other commands. You can use these to override core commands like north, or say. So be careful.
+
+{% highlight objc %}
+Item *bubba = [[Item alloc] init];
+[bubba respondTo:@"drink bubba" with:^{
+  [WQ print:@"Slurp!"];
+}];
+{% endhighlight %}
+
+
+You can use it on rooms to add really quick descriptions or actions.
+
+{% highlight objc %}
+Room * bathroom = [[Room alloc] init];
+bathroom.id = @"bathroom";
+bathroom.name = @"Bathroom";
+bathroom.description = @"Dingy bathroom, nothing particularly out of the ordinary, bits of terrible graffitti and the smell of sweat.";
+[bathroom respondTo:@"examine graffitti" with:^{
+  [WQ print:@"It's colourful, you're not really that interested though"];
+}];
+[bathroom respondTo:@"smell" with:^{
+  [WQ print:@"It smells of booze and sweat. Appealing."];
+}];
+[bathroom respondTo:@"use bathroom" with:^{
+  [WQ print:@"You figure that you could do with a pee-break."];
+  [WQ wait:1];
+  [WQ print:@"Perfect."];
+}];
+[bathroom connectEast:hallwayCenter];
+{% endhighlight %}
+
+h2. I dislike your colour scheme!
+
+Err, okay there, no need to be confrontational. It's easy, you just have to edit style.css. If you don't know CSS, don't worry, you'll only have to know a bit about hex numbers to edit the existing one.
+
+h2. I dislike your icon
+
+Yeah me too -to be honest, so, why not just overwrite the one that's in there. Want to do all the other bazillion icons too? Then go do that in your project settings. You just drag the files into the summary tab and it's done.
+
+
+h2. I don't see any documentation for the Store class, you suck.
+
+I felt that the Store class was a bit too small to really give a lot of visual retail space in the docs, so here's how it works.
+
+A Store is an object that natively supports buying Item subclasses by trading currency. By default we give you a money property on the Player instance, so you can add money by adding to or removing from that. 
+
+You add a store to a room in the same way as you do an encounter or as a person, and they are first class citizens in responding to commands. The way you add items to the shop is by passing in a class and a value.
+
+{% highlight objc %}
+  [store addItemOfClass: [Microphone class] withValue:45];
+{% endhighlight %}
+
+You can do this as you create it in your Game file, or in the Store subclass if you choose. When a player does the shop / trade command it will list the inventory of your Store to the screen. From there they need to use the command buy to purchase an object. There's quite a few hooks in so that you can narrate all you need to with the following commands.
+
+{% highlight objc %}
+  -(void)beforeTrading;
+  -(void)afterTrading;
+{% endhighlight %}

@@ -4,19 +4,12 @@ layout: page
 
 <link rel="stylesheet" href="assets/css/syntax.css">
 <style type="text/css" media="screen">
-  .split {
-    float: left;
-    width:350px;
-  }
-  .split p:first-child {
-    padding-top: 0;
-  }
-  .split p {
-    padding:10px;
-    font-size: 0.8em;
-  }
   h1{
     font-size: 2em;
+  }
+  section{
+    width:900px;
+    padding-left: 100px;
   }
 </style>
 
@@ -101,7 +94,7 @@ Lets create the room that you wake up in, we don't want any funky room subclass 
 
 So there's two chunks of code here. Let's look at them individually.
 
-<div class="split">
+<div class="split col1">
 {% highlight objc %}
   Room * beginning = [[Room alloc] init];
   beginning.name = @"Your carriage";
@@ -110,13 +103,13 @@ So there's two chunks of code here. Let's look at them individually.
 {% endhighlight %}
 </div>
 
-<div class="split">
+<div class="split ">
 We are creating an instance of the Room class, and are giving it a name, a description and an id. id's ideally should always be lowercase and without spaces. 
 
 When you enter a room, it will put the title of the room, and then it will write the description and print out any items that are inside the room. 
 </div>
 
-<div class="split">
+<div class="split col1">
 {% highlight objc %}
   wq.currentRoom = beginning;
   [wq start];
@@ -126,6 +119,7 @@ When you enter a room, it will put the title of the room, and then it will write
 <div class="split">
 The first line here will set the initial room to be the beginning room we just created. Then we start up the game from the user's perspective.
 </div>
+
 
 You can now run the game and see your initial room, if you type help you can get a list of all the commands supported in the game ( you can override the help command if you want to)
 
