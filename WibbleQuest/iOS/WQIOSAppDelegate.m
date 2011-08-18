@@ -13,6 +13,10 @@
 #import "WBTestController.h"
 #endif
 
+#if RUN_WALKTHROUGH
+#import "Walkthrough.h"
+#endif
+
 @implementation WQIOSAppDelegate
 
 @synthesize window = _window;
@@ -31,6 +35,13 @@
 
   self.window.rootViewController = self.mainViewController;
     [self.window makeKeyAndVisible];
+  
+#if RUN_WALKTHROUGH
+  [[Walkthrough sharedInstance] startTestingWithCompletionBlock:^{
+    [WQ print:@"Walkthrough Over"];
+  }];
+  return YES;
+#endif
   
 #if RUN_KIF_TESTS
   [[WBTestController sharedInstance] startTestingWithCompletionBlock:^{
