@@ -167,8 +167,6 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 352;
   }
   NSString * resizeJS = [NSString stringWithFormat:@"$(html).css('width','%f');", [_webView frame].size.width];
   [_webView stringByEvaluatingJavaScriptFromString:resizeJS];  
-  [self print:resizeJS];
-
   [_webView stringByEvaluatingJavaScriptFromString:@"scrollToBottom();"];  
 
   animateMovement = NO;
