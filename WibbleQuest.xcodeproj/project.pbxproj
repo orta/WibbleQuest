@@ -584,6 +584,7 @@
 				60ED579613E7748A006E4D27 /* GameSelector.m */,
 				6002DC4313E78386003A5D70 /* GameSelector.h */,
 				60CFABF613FD5F9600A2D5B0 /* style.css */,
+				606B2B7A13D5282A00B90223 /* initialIcon.png */,
 			);
 			name = Game;
 			path = KieronononGame;
@@ -592,7 +593,6 @@
 		609B9FB313C901D400888A6E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				606B2B7A13D5282A00B90223 /* initialIcon.png */,
 				609B9FB413C901D400888A6E /* Wibble-Prefix.pch */,
 				609B9FB813C901D400888A6E /* main.m */,
 				609B9FBA13C901D400888A6E /* WibbleQuest-Info.plist */,

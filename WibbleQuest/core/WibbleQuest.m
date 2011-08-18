@@ -136,9 +136,6 @@ static WibbleQuest *sharedWibble;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)inTextField {
-  if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hideTextFieldAfterCommand"] == FALSE) {
-    [inTextField resignFirstResponder];
-  }
   NSString * command = inTextField.text;
   [previousCommands addObject:command];
   _commandIndex++;
@@ -146,7 +143,12 @@ static WibbleQuest *sharedWibble;
   [self command:[@"> " stringByAppendingString: command]];
   NSArray * commands = [command componentsSeparatedByString:@";"];
   for (NSString *command in commands) {
-    [_commandInterpreter parse:command];
+   BOOL acted =  [_commandInterpreter parse:command];
+    if (acted) {
+      if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hideTextFieldAfterCommand"] == FALSE) {
+        [inTextField resignFirstResponder];
+      }
+    }
   }
 
   

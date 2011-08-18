@@ -13,6 +13,6 @@
 }
 
   @property (retain, nonatomic) IBOutlet WibbleQuest *wq;
-  -(void) parse:(NSString*) string;
+  -(BOOL) parse:(NSString*) string;
 
 @end

@@ -28,24 +28,24 @@
 @implementation CommandInterpreter
 @synthesize wq;
 
--(void)parse:(NSString*) string {
+-(BOOL)parse:(NSString*) string {
   string = [string lowercaseString];
   NSArray * parameters = [string componentsSeparatedByString:@" "];
   if ([parameters count] > 0) {
     NSString * command = [parameters first];
     if ([@"" isEqualToString:command]) {
-      return;
+      return NO;
     }
     
-    if([wq.inventory _respond:string]) return;
-    if([wq.currentRoom _respond:string]) return;
-    if([wq.currentRoom.person _respond:string]) return;
-    if([wq.currentRoom.encounter _respond:string]) return;
-    if([wq.currentRoom.store _respond:string]) return;
+    if([wq.inventory _respond:string]) return YES;
+    if([wq.currentRoom _respond:string]) return YES;
+    if([wq.currentRoom.person _respond:string]) return YES;
+    if([wq.currentRoom.encounter _respond:string]) return YES;
+    if([wq.currentRoom.store _respond:string]) return YES;
     
     if([@"help" isEqualToString:command]){
       [self help];
-      return;
+      return YES;
     }
     
     // support 'go north'
@@ -61,32 +61,32 @@
     
     if([@"north" isEqualToString:command] || [@"n" isEqualToString:command]){
       [self north];
-      return;
+      return YES;
     }
     
     if([@"west" isEqualToString:command] || [@"w" isEqualToString:command]){
       [self west];
-      return;
+      return YES;
     }
     
     if([@"east" isEqualToString:command] || [@"e" isEqualToString:command]){
       [self east];
-      return;
+      return YES;
     }
 
     if([@"south" isEqualToString:command] || [@"s" isEqualToString:command]){
       [self south];
-      return;
+      return YES;
     }
     
     if([@"look" isEqualToString:command] || [@"l" isEqualToString:command]){
       [wq describeSurroundings];
-      return;
+      return YES;
     }
     
     if([@"inventory" isEqualToString:command] || [@"i" isEqualToString:command]){
       [wq.inventory describeInventory];
-      return;
+      return YES;
     }
 
     if([@"use" isEqualToString:command] || [@"u" isEqualToString:command]){
@@ -97,102 +97,107 @@
         }else{
           [item onUse]; 
         }
+        return YES;
+
       }else{
         [wq print:@"Could not find %@ in your inventory", [parameters second]];
+        return NO;
       }
-      return;
     }
 
     if([@"drop" isEqualToString:command] || [@"d" isEqualToString:command]){
       [self dropCommand:parameters];
-      return;
+      return YES;
     }
     
     if([@"examine" isEqualToString:command] || [@"x" isEqualToString:command]){
       if([parameters count] == 1){
         [wq print:@"Examine what?"];
-        return;
+        return NO;
       }
 
       if([@"room" isEqualToString:[parameters second]]){
         [wq describeSurroundings];
-        return;
+        return YES;
       }
 
       [wq.currentRoom examineWithInput:string];
-      return;
+      return YES;
     }
 
     
     if([@"shop" isEqualToString:command] || [@"trade" isEqualToString:command]){
       if (wq.currentRoom.store) {
         [wq.currentRoom.store showStoreInventory];
+        return YES;
       }else{
         [wq print:@"There isn't a shop here."];
+        return NO;
       }
-
-      return;
     }
     
     if([@"buy" isEqualToString:command]){
       if (wq.currentRoom.store) {
         [wq.currentRoom.store buyItem:parameters];
+        return YES;
       }else{
         [wq print:@"There isn't a shop here."];
+        return NO;
       }
-      return;
     }
     
     if([@"fight" isEqualToString:command] || [@"f" isEqualToString:command]||
        [@"attack" isEqualToString:command] || [@"a" isEqualToString:command]){
       if (wq.currentRoom.encounter == nil) {
         [wq print:@"There is no-one here to fight."];
-        return;
+        return NO;
       }
-      [wq.currentRoom.encounter fight];
       
-      return;
+      [wq.currentRoom.encounter fight];
+      return YES;
     }
     
     if([@"say" isEqualToString:command] || [@"ask" isEqualToString:command] || [@"talk" isEqualToString:command]){
       if([parameters count] == 1){
         [wq print:@"What do you want to say?"];
-        return;
+        return NO;
       }
       
       parameters = [self removeQuestionMarks:parameters];
       if (wq.currentRoom.person) {
         [wq.currentRoom.person respondToSentenceArray:parameters];
-        return;
       }
       if(wq.currentRoom.encounter){
         [wq.currentRoom.encounter respondToSentenceArray:parameters];
-        return;
       }
+      return YES;
     }
         
     if([wq.inventory hasItem:command]){
       Item * item = [wq.inventory getItem:command];
       [wq print: item.description];
+      return YES;
     }
 
     if([wq.currentRoom hasItem:command]){
       Item * item = [wq.currentRoom getItem:command];
       [wq print: item.description];
+      return YES;
     }
     
     if([@"get" isEqualToString:command] || [@"g" isEqualToString:command]){
       [self getCommand:parameters];
-      return;
+      return YES;
     }
+    
     if (_madeFirstMistake == NO) {
-      [wq print:@"Command not understood, type help if you want to see the help file."];
+      [wq print:@"Command not understood, type <em>help</em> if you want to see the help file."];
       _madeFirstMistake = YES;
     }else{
       [wq print:@"Command not recognised"];
     }
-    
   }
+  return NO;
 }
 
 -(void)north {
