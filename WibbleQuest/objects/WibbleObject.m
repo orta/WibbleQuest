@@ -14,6 +14,7 @@
 
 -(NSString *) id {
   if(_id) return _id;
+  if(self.name) return [[self.name lowercaseString] stringByReplacingOccurrencesOfString:@" " withString:@""];
   return [NSStringFromClass([self class]) lowercaseString];
 }
 

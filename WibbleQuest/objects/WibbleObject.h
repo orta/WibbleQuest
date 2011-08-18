@@ -13,6 +13,8 @@
   NSMutableDictionary * _commandResponses;
 }
 
+// if no id is set, it will try to use a lowercase name without spaces, 
+// if no name is used it will use the lowerclass class name for the id
 @property (retain, nonatomic) NSString* id;
 @property (retain, nonatomic) NSString* description;
 @property (retain, nonatomic) NSString* name;
