@@ -2,7 +2,7 @@
 title: "Creatures"
 ---
 
-Creatures are things you want to fight. The act like People but have additional functions like responding to commands like fight.
+Creatures are things you want to fight. The are a subclass of People but have additional functions like responding to commands like fight.
 
 To use them you need to have your player have some health, and a damageRange. Usually this is added in the "_ready_":#ready function.
 
@@ -13,7 +13,7 @@ player.maxHealth = 10;
 player.health = 10;
 {% endhighlight %}
 
-A fightable character is a subclass of a Creature, they have name, damageRange, and Max Health variables that are self explanatory. 
+A fightable character is an instance or subclass of a Creature, they have name, damageRange, and Max Health variables that are self explanatory. 
 
 These go inside the creature subclass .m file: 
 
@@ -46,7 +46,7 @@ What is less obvious is that you can do lots with what the creature says and how
 The way that the battle is described is quite interesting too, you supply a collection of strings in the form of an array that lets you describe each attack given and received, this means you don't have to have generic "you hit the hippogruff for 5 damage" messages, you can make your own up. Like below.
 
 {% highlight objc %}
--(NSArray*)formattedAttackPhrases{
+-(NSArray*)creatureAttackPhrases{
   return [NSArray arrayWithObjects:
           @"The giant looks at you grimly and causes %i ego damage.",
           @"The giant shakes his head and bruising your ego by %i.",
@@ -54,7 +54,7 @@ The way that the battle is described is quite interesting too, you supply a coll
          nil];
 }
 
--(NSArray*)formattedDefensePhrases{
+-(NSArray*)playerAttackPhrases{
   return [NSArray arrayWithObjects:
           @"You strut your stuff dealing %i ego damage.",
           @"The giant didnt know what hit him when you did a cool dace doing a whole %i damage.",

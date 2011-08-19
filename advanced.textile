@@ -75,9 +75,9 @@ h2. I don't see any documentation for the Store class, you suck.
 
 I felt that the Store class was a bit too small to really give a lot of visual retail space in the docs, so here's how it works.
 
-A Store is an object that natively supports buying Item subclasses by trading currency. By default we give you a money property on the Player instance, so you can add money by adding to or removing from that. 
+A Store is an Person subclass that natively supports buying Item subclasses by trading currency. By default we give you a money property on the Player instance, so you can add money by adding to or removing from that.
 
-You add a store to a room in the same way as you do an encounter or as a person, and they are first class citizens in responding to commands. The way you add items to the shop is by passing in a class and a value.
+You add a store to a room in the same way as you do an encounter or as a person, it's just called store, and they are first class citizens in responding to commands. The way you add items to the shop is by passing in a class and a value.
 
 {% highlight objc %}
   [store addItemOfClass: [Microphone class] withValue:45];
@@ -89,3 +89,8 @@ You can do this as you create it in your Game file, or in the Store subclass if 
   -(void)beforeTrading;
   -(void)afterTrading;
 {% endhighlight %}
+
+
+h2. I want my text to really *pop*
+
+Hrm, well ok... I guess I'll tell you a secret then. All this stuff is just HTML, if you so choose ( though I try to avoid it ) you can put HTML inline, say for example you could use <em>word</em> on a word to emphasise a point. Or you can use span's and style to completely change the colour and size of the text.
