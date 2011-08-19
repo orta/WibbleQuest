@@ -41,6 +41,8 @@
   [game runCommand:@"fight"];
   [game runCommand:@"fight"];  
   [game runCommand:@"fight"];  
+  [game runCommand:@"fight"];
+  [game runCommand:@"west"];
   [self addScenario:game];
 }
 
