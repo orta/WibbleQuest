@@ -35,7 +35,6 @@
 		606B2B7513D4F5B000B90223 /* WibbleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B2B7413D4F5B000B90223 /* WibbleObject.m */; };
 		606B2B7713D4F8F100B90223 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7613D4F8F100B90223 /* TODO */; };
 		606B2B7B13D5282B00B90223 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* icon.png */; };
-		6070A20D13FD77A6001D4B0B /* Walkthrough.m in Sources */ = {isa = PBXBuildFile; fileRef = 6070A20C13FD77A6001D4B0B /* Walkthrough.m */; };
 		607CB92913D8EE4100A72FD2 /* InventoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 607CB92813D8EE4100A72FD2 /* InventoryTests.m */; };
 		607CB92C13D9070600A72FD2 /* FinaleRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 607CB92B13D9070600A72FD2 /* FinaleRoom.m */; };
 		607CB92D13D9070600A72FD2 /* FinaleRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 607CB92B13D9070600A72FD2 /* FinaleRoom.m */; };
@@ -1205,7 +1204,6 @@
 				6002DC4613E7861F003A5D70 /* Game.m in Sources */,
 				6FD38AAD13F230540062D3FA /* Inventory.m in Sources */,
 				6F51B3D413FCC1A10089E1AC /* Sound.m in Sources */,
-				6070A20D13FD77A6001D4B0B /* Walkthrough.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

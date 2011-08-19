@@ -19,6 +19,10 @@
 // you need to use the terminal command "git submodule init; git submodule update"
 // from inside the main directory. 
 
+// Also you have to enable the Accessability Inspector, it's a beautiful popup,
+// to do that go to Settings -> Accessability and toggle it on. If it's closed, it doesn't
+// really get in the way that much.
+
 - (void)initializeScenarios {
   // generic setup
   KIFTestScenario *game = [KIFTestScenario scenarioWithDescription:@"Walking through Game."];
