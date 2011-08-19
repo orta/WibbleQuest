@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6000216613FDDFE000DC0791 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 60CFABF613FD5F9600A2D5B0 /* style.css */; };
+		6000216713FDDFE000DC0791 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 60CFABF613FD5F9600A2D5B0 /* style.css */; };
 		6001B3EC13FC0DB200839F51 /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38AAC13F230530062D3FA /* Inventory.m */; };
 		6001B3ED13FC0E2300839F51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FB813C901D400888A6E /* main.m */; };
 		6002DC4613E7861F003A5D70 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002DC4513E7861F003A5D70 /* Game.m */; };
@@ -1115,6 +1117,7 @@
 				60BBA05613FD78BB00966586 /* index.html in Resources */,
 				60BBA05713FD78BB00966586 /* TODO in Resources */,
 				60BBA05813FD78BB00966586 /* icon.png in Resources */,
+				6000216613FDDFE000DC0791 /* style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1147,6 +1150,7 @@
 				60FEA1B713D653F0006997B0 /* index.html in Resources */,
 				60FEA1B913D653F0006997B0 /* TODO in Resources */,
 				60FEA1BA13D653F0006997B0 /* icon.png in Resources */,
+				6000216713FDDFE000DC0791 /* style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,10 +30,11 @@
 
 // An array of strings that are grabbed randomly when the
 // Creature takes a turn in battle
--(NSArray*)formattedAttackPhrases;
+-(NSArray*) creatureAttackPhrases;
+
 // An array of strings that are grabbed randomly when the
 // Player takes a turn in battle.
--(NSArray*)formattedDefensePhrases;
+-(NSArray*) playerAttackPhrases;
 
 // You can modify the damage the player does to the Creature
 // by modifying the originalDamage and returning that, this is

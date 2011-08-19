@@ -242,13 +242,13 @@
     [wq print:@"north, east, south, west"];
     [wq command:@"move in a direction."];
     
-    [wq print:@"get [item]"];
+    [wq print:@"get <em>item</em>"];
     [wq command:@"get an item from the current room."];
 
-    [wq print:@"drop [item]"];
+    [wq print:@"drop <em>item</em>"];
     [wq command:@"drop an item into the current room."];
     
-    [wq print: @"examine [item]"];
+    [wq print: @"examine <em>item</em>"];
     [wq command:@"examine an item in the room."];
 
     [wq print: @"look"];
@@ -260,13 +260,13 @@
     [wq print: @"fight"];
     [wq command:@"Start a fight with something hostile."];
     
-    [wq print: @"say [words]"];
+    [wq print: @"say <em>words</em>"];
     [wq command:@"Talk to something or somebody."];
 
     [wq print: @"shop "];
     [wq command:@"Talk to a shop owner."];
 
-    [wq print: @"buy [item] "];
+    [wq print: @"buy <em>item</em> "];
     [wq command:@"Buy an item from a shop."];
     
     

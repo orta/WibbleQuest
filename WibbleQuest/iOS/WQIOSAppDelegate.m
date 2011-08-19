@@ -38,7 +38,7 @@
   
 #if RUN_WALKTHROUGH
   [[Walkthrough sharedInstance] startTestingWithCompletionBlock:^{
-    [WQ print:@"Walkthrough Over"];
+    [WQ print:@"</p><h1 class='gameover'>Walkthrough Over</h1><p>"];
   }];
   return YES;
 #endif

@@ -52,6 +52,16 @@
   }]];
 }
 
+-(void)checkInventoryHas:(NSString*)item {
+  NSString * because = [NSString stringWithFormat:@"Checking if %@ is in inventory", item];
+  [self addStep:[KIFTestStep stepWithDescription: because executionBlock:^(KIFTestStep *step, NSError **error) {
+    if ( [Player has:item] ) {
+      return KIFTestStepResultSuccess;
+    }
+    KIFTestCondition(FALSE, error, because);
+    return KIFTestStepResultFailure;
+  }]];
+}
 
 
 @end

@@ -21,17 +21,27 @@
 
 - (void)initializeScenarios {
   // generic setup
-  KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:@"Walking through Game."];
-  [scenario addStep:[KIFTestStep stepToWaitForTappableViewWithAccessibilityLabel:@"Text Input"]];
+  KIFTestScenario *game = [KIFTestScenario scenarioWithDescription:@"Walking through Game."];
+  [game addStep:[KIFTestStep stepToWaitForTappableViewWithAccessibilityLabel:@"Text Input"]];
   
   //now comes your code
-  [scenario runCommand:@"north"];
-  [scenario runCommand:@"say hello"];
-  [scenario runCommand:@"say keytar"];
-  [scenario runCommand:@"west"];
-  [scenario runCommand:@"get keytar"];
-
-  [self addScenario:scenario];
+  [game runCommand:@"north"];
+  [game runCommand:@"say hello"];
+  [game runCommand:@"say keytar"];
+  
+  [game runCommand:@"west"];
+  [game runCommand:@"get keytar"];
+  [game checkInventoryHas:@"keytar"];
+  [game runCommand:@"east"];
+  [game runCommand:@"east"];
+  [game runCommand:@"say hi"];
+  [game runCommand:@"say mics"];
+  [game checkInventoryHas:@"microphone"];
+  [game runCommand:@"south"];
+  [game runCommand:@"fight"];
+  [game runCommand:@"fight"];  
+  [game runCommand:@"fight"];  
+  [self addScenario:game];
 }
 
 @end

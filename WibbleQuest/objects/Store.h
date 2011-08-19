@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Person.h"
 
 // Warnings, this object is still untested in the real world
 
-@interface Store : WibbleObject {}
+@interface Store : Person {}
 
 @property (retain) NSMutableArray* items;
 

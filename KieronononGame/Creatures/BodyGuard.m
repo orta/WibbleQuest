@@ -25,7 +25,7 @@
 -(int)damageTakenModifier:(int)originalDamage {
   // if the player has a keytar, then double the damage
   if([Player has:@"keytar"]){
-    return originalDamage * 2;
+    return originalDamage * 3;
   }
   return originalDamage;
 }
@@ -52,15 +52,14 @@
   [WQ print:@"With a bow to your skill the Body Guard stands out of the way and you can now west onto the stage."];
 };
 
-
--(NSArray*)formattedAttackPhrases{
+-(NSArray*)creatureAttackPhrases{
   return [NSArray arrayWithObjects:
           @"The bodyguard looks at you grimly and causes %i ego damage.",
-          @"The bodyguard shakes his head and bruising yourego by %i.",
+          @"The bodyguard shakes his head and bruising your ego by %i.",
           @"The bodyguard puts his earphone in and ignores you hurting your ego by %i.", nil];
 }
 
--(NSArray*)formattedDefensePhrases{
+-(NSArray*)playerAttackPhrases{
   return [NSArray arrayWithObjects:
           @"You do a great impression of an air keytar impressing the bodyguard for %i ego boost",
           @"You scream, loudly, impressing the bodyguard by %i damage",
