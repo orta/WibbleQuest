@@ -28,7 +28,6 @@
   [game runCommand:@"north"];
   [game runCommand:@"say hello"];
   [game runCommand:@"say keytar"];
-  
   [game runCommand:@"west"];
   [game runCommand:@"get keytar"];
   [game checkInventoryHas:@"keytar"];
