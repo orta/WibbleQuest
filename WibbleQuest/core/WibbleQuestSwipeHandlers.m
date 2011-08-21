@@ -26,12 +26,14 @@
 -(void)commandSwipeDown:(id)sender{
   if (_commandIndex == 0 ) return;
   _commandIndex--;
+    NSLog(@"%i - index", _commandIndex);
   _textField.text = [[self previousCommands] objectAtIndex:_commandIndex];
 }
 
 -(void)commandSwipeUp:(id)sender{
-  if (_commandIndex == [[self previousCommands] count] - 1 ) return;
+  if (_commandIndex == [[self previousCommands] count] ) return;
   _commandIndex++;
+    NSLog(@"%i - index", _commandIndex);
   _textField.text = [[self previousCommands ] objectAtIndex:_commandIndex];
 }
 
