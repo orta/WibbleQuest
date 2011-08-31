@@ -7,8 +7,58 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/syntax.css">
   <link rel="stylesheet" href="../assets/css/api.css">
+  <style type="text/css" media="screen">
+    #fadeout{
+      width:525px;
+      z-index: 49;
+    }
+    nav{
+      width: 440px;
+      z-index: 50;
+    }
+    
+    nav li#logo{
+      top:0px;
+    }
+    table{
+      padding-top:40px;
+    }
+    nav li#api #dropdown {
+      margin-left: -114px;
+      width: 436px;
+    }
+    nav li#api #dropdown ul {
+      width:150px;
+    }
+    nav li#api #dropdown li {
+      width: 150px;
+    }
+    #dropdown h3 {
+      width: 160px;
+    }
+    </style>
 </head>
 <body>
+  <div id="fadeout"></div>
+  <nav>
+    <ul>
+      <li id="logo"><a href="index.html">WQ</a></li>
+      <li id="api"><a href="#">API</a>
+        <div id="dropdown">
+          <h3>Objects</h3>
+          <h3>Core Files</h3>
+          <ul id="objects">
+          </ul>
+          <ul id="core">
+          </ul>
+        </div>
+      </li>
+      <li><a href="docs">Overview</a></li>
+      <li><a href="tutorial">Beginner</a></li>
+      <li><a href="advanced">Advanced</a></li>
+    </ul>
+  </nav>
+  
 <div id='container'>
   <div id="background"></div>
   <table cellspacing=0 cellpadding=0>
@@ -166,25 +216,51 @@ class to add your own vars to the player.</p>
     </tr>
   </table>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
-<script src="files.js"></script>
+<script src="../assets/js/files.js"></script>
 <script src="../assets/js/overview.js"></script>
 <script async defer>    
     // replace all mentions of the class with a link to the docs
     // this makes the code a lot easier to read fomr this side.
+    function performTask(items, numToProcess, processItem) {
+        var pos = 0;
+        // This is run once for every numToProcess items.
+        function iteration() {
+            // Calculate last position.
+            var j = Math.min(pos + numToProcess, items.length);
+            // Start at current position and loop to last position.
+            for (var i = pos; i < j; i++) {
+                processItem(items, i);
+            }
+            // Increment current position.
+            pos += numToProcess;
+            // Only continue if there are more items to process.
+            if (pos < items.length)
+                setTimeout(iteration, 50); // Wait 10 ms to let the UI update.
+        }
+        iteration();
+    }
 
-for (var i = classes.length - 1; i >= 0; i--){
-  var klass = classes[i]
-  $('body').highlightRegex(klass);      
-};
-
-
-// rewrite the URLs from /api/api/x to /api/x
-$(".api").each(function(index) {
-  var url = $(this).attr("href").replace("API/",'');
-   $(this).attr("href",  url );
-});
-
+$(function() {
+  performTask( classes, 1,
+    function (items, index) {
+      var klass = items[index];
+      $('section').highlightRegex(klass);
+      $('#api ul#objects').append("<li><a href = '" + klass + "'>" + klass + "</a></li>");
+    }
+  );
+  
+  for (var i = core_classes.length - 1; i >= 0; i--){
+    $('#api ul#core').append("<li><a href = '" + core_classes[i] + "'>" + core_classes[i] + "</a></li>");          
+  }
+  
+  // rewrite the URLs from /api/api/x to /api/x
+  $(".api").each(function(index) {
+    var url = $(this).attr("href").replace("API/",'');
+     $(this).attr("href",  url );
+  });
+});      
 </script>
 
 </body>

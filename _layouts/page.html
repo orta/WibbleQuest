@@ -43,7 +43,7 @@ layout: nil
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
   <script src="assets/js/jquery_scroll.js"></script>
-  <script src="API/files.js"></script>
+  <script src="assets/js/files.js"></script>
   <script src="assets/js/overview.js"></script>
   
   <script>
@@ -51,21 +51,37 @@ layout: nil
   </script>
   
   <script async defer>    
-      // replace all mentions of the class with a link to the docs
-      // this makes the code a lot easier to read from this side.\
-      $(function() {
-        setTimeout(processFiles, 100);
-        function processFiles(){
-          for (var i = classes.length - 1; i >= 0; i--){
-            var klass = classes[i]
-            $('section').highlightRegex(klass);
-            $('#api ul#objects').append("<li><a href = 'API/" + klass + "'>" + klass + "</a></li>");
-          };
-          for (var i = core_classes.length - 1; i >= 0; i--){
-            $('#api ul#core').append("<li><a href = 'API/" + core_classes[i] + "'>" + core_classes[i] + "</a></li>");          
-          };
-        };
-      });
+  function performTask(items, numToProcess, processItem) {
+      var pos = 0;
+      // This is run once for every numToProcess items.
+      function iteration() {
+          // Calculate last position.
+          var j = Math.min(pos + numToProcess, items.length);
+          // Start at current position and loop to last position.
+          for (var i = pos; i < j; i++) {
+              processItem(items, i);
+          }
+          // Increment current position.
+          pos += numToProcess;
+          // Only continue if there are more items to process.
+          if (pos < items.length)
+              setTimeout(iteration, 50); // Wait 10 ms to let the UI update.
+      }
+      iteration();
+  }
+  
+  $(function() {
+    performTask( classes, 1,
+      function (items, index) {
+        var klass = items[index];
+        $('section').highlightRegex(klass);
+        $('#api ul#objects').append("<li><a href = 'API/" + klass + "'>" + klass + "</a></li>");
+      }
+    );
+    for (var i = core_classes.length - 1; i >= 0; i--){
+      $('#api ul#core').append("<li><a href = 'API/" + core_classes[i] + "'>" + core_classes[i] + "</a></li>");          
+    }
+  });      
   </script>
   </body>
 </html>  
