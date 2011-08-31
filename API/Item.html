@@ -28,7 +28,7 @@
  WibbleQuest</p>
 
 <p>Created by orta therox on 09/07/2011.
- Copyright 2011 http://ortatherox.com. All rights reserved.</p>
+ Copyright 2011 http://ortatherox.com. Licensed under Creative Commons</p>
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
@@ -78,12 +78,26 @@ examine [object id]</p>
         </div>
         <p>Methods to override so that you can react to the players
 interactions</p>
-
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">onPickup</span><span class="p">;</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">onUse</span><span class="p">;</span>
-<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">onDrop</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">onDrop</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-6'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-6">&#182;</a>
+        </div>
+        <p>Block based versions of pickup/ use/ drop</p>
+
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span><span class="p">(</span><span class="n">copy</span><span class="p">)</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">onInlinePickup</span> <span class="p">)();</span>
+<span class="err">@</span><span class="n">property</span><span class="p">(</span><span class="n">copy</span><span class="p">)</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">onInlineDrop</span> <span class="p">)();</span>
+<span class="err">@</span><span class="n">property</span><span class="p">(</span><span class="n">copy</span><span class="p">)</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">onInlineUse</span> <span class="p">)();</span>
+
 
 <span class="o">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">canPickup</span><span class="p">;</span>
 <span class="o">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">canDrop</span><span class="p">;</span>

@@ -28,18 +28,15 @@
  WibbleQuest</p>
 
 <p>Created by orta therox on 18/07/2011.
- Copyright 2011 http://ortatherox.com. All rights reserved.</p>
+ Copyright 2011 http://ortatherox.com. Licensed under Creative Commons</p>
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
 
 <span class="err">@</span><span class="n">interface</span> <span class="n">WibbleObject</span> <span class="o">:</span> <span class="n">NSObject</span> <span class="p">{</span>
-  <span class="n">NSMutableDictionary</span> <span class="o">*</span> <span class="n">_helpList</span><span class="p">;</span>  
-<span class="p">}</span>
-
-<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">id</span><span class="p">;</span>
-<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">description</span><span class="p">;</span>
-<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">name</span><span class="p">;</span></pre></div>
+  <span class="n">NSMutableDictionary</span> <span class="o">*</span> <span class="n">_helpList</span><span class="p">;</span>
+  <span class="n">NSMutableDictionary</span> <span class="o">*</span> <span class="n">_commandResponses</span><span class="p">;</span>
+<span class="p">}</span></pre></div>
       </td>
     </tr>
     <tr id='section-2'>
@@ -47,10 +44,13 @@
         <div class="pilwrap">
           <a class="pilcrow" href="#section-2">&#182;</a>
         </div>
-        <p>Let any subclass of WibbleObject respond to commands from the User.</p>
+        <p>if no id is set, it will try to use a lowercase name without spaces, 
+if no name is used it will use the lowerclass class name for the id</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">didRespondToCommand</span><span class="o">:</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">commandArray</span><span class="p">;</span></pre></div>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">id</span><span class="p">;</span>
+<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">description</span><span class="p">;</span>
+<span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">name</span><span class="p">;</span></pre></div>
       </td>
     </tr>
     <tr id='section-3'>
@@ -58,16 +58,40 @@
         <div class="pilwrap">
           <a class="pilcrow" href="#section-3">&#182;</a>
         </div>
-        <p>A method that gets called at an interval specified by the shared wibble</p>
+        <p>Let any subclass of WibbleObject respond to commands from the User.</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">tick</span><span class="p">;</span></pre></div>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">didRespondToCommand</span><span class="o">:</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">commandArray</span><span class="p">;</span></pre></div>
       </td>
     </tr>
     <tr id='section-4'>
       <td class=docs>
         <div class="pilwrap">
           <a class="pilcrow" href="#section-4">&#182;</a>
+        </div>
+        <p>Or use a block to do simpler string checks</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">respondTo</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span> <span class="n">command</span> <span class="n">with</span><span class="o">:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)</span> <span class="p">(</span><span class="kt">void</span><span class="p">))</span> <span class="n">block</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-5'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-5">&#182;</a>
+        </div>
+        <p>A method that gets called at an interval specified by the shared wibble</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">tick</span><span class="p">;</span>
+
+<span class="o">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">_respond</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">commands</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-6'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-6">&#182;</a>
         </div>
         <p>Methods for the dynamic help system
 Print help will only be called if it is in the current room or in the inventory.</p>

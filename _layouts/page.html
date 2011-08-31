@@ -6,114 +6,66 @@ layout: nil
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <title>Wibble Quest Tutorial</title>
-  <meta name="generator" content="Sublime Editor 2" />
+  <title>Wibble Quest</title>
   <meta name="author" content="orta therox" />
   <meta name="company" content="http://ortatherox.com" />
   <meta name="email" content="orta.therox@gmail.com" />
   <meta name="date" content="Fri 22 Jul 2011 18:54:20 EDT" />
   <meta name="venue" content="The Internets" />
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <style>
-  section {
-    float:left;
-    width: 450px;
-  }
-  #description{
-    margin-top: 20px;
-  }
-  h1{
-    font-weight: normal;
-    font-size: 10em;
-    margin: 10px;
-  }
-  h2{
-    font-weight: normal;
-    font-size: 1.4em;
-  }
-  ul li{
-    float:left;
-    width: 200px;
-    text-align: center;
-    list-style: none;
-
-  }
-   
-   nav {
-     position: fixed;
-     width:200px;
-     float: left;
-     top: 40px;
-     left: 20px;
-   }
-   nav h1{
-     text-align: center;
-     padding-left: 30px;
-     font-weight: normal;
-     font-size: 3em;
-     letter-spacing: -0.1em;
-     margin-bottom: 6px;
-   }
-   nav h1 a {
-     text-decoration: none;
-     color: #E06F00 !important;
-   }
-
-   nav ul{
-     margin: 0;
-   }
-   nav li{
-     background-color: #110903;
-     list-style: none;
-   }
-   nav li:hover{
-     background-color: #231908;
-   }
-   nav li a{
-     display: block;
-     padding: 5px 5px 5px 20px;
-     color:#E06F00 !important;
-   }
-
-   nav li:first-child{
-     border-top-left-radius: 20px;
-     border-top-right-radius: 20px; 
-   }
-   nav li:last-child{
-     border-bottom-left-radius: 20px;
-     border-bottom-right-radius: 20px; 
-   }
-
-   section {
-     padding-left: 240px;
-     width: 600px;
-   }
-
-   h3{
-     font-weight: normal;
-     margin-top: 2em;
-     color:#D65B00;
-   }
-
-   section header{
-     margin-top: 2em;
-     background-color: #0D0903;
-     padding: 20px 0 20px 20px;
-     font-size: 2em;
-   }
-
-   section a{
-     color:#D6955E !important;
-   }
-  </style>
+  <link rel="stylesheet" href="assets/css/syntax.css">
 
 <body>
+  <div id="fadeout"></div>
   <nav>
-    <h1><a href="index.html">WQ</a></h1>
+    <ul>
+      <li id="logo"><a href="index.html">WQ</a></li>
+      <li id="api"><a href="#">API</a>
+        <div id="dropdown">
+          <h3>Objects</h3>
+          <h3>Core Files</h3>
+          <ul id="objects">
+          </ul>
+          <ul id="core">
+          </ul>
+        </div>
+      </li>
+      <li><a href="docs">Overview</a></li>
+      <li><a href="tutorial">Beginner</a></li>
+      <li><a href="advanced">Advanced</a></li>
+      <li><a href="http://twitter.com/WibbleQuest">@WibbleQuest</a></li>
+    </ul>
   </nav>
   <section>
     {{content}}
   </section>
+  <!--  <script src="../assets/js/jquery-1.5.min.js"></script> -->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+  <script src="assets/js/jquery_scroll.js"></script>
+  <script src="API/files.js"></script>
+  <script src="assets/js/overview.js"></script>
+  
+  <script>
+      $('a').smoothScroll();
+  </script>
+  
+  <script async defer>    
+      // replace all mentions of the class with a link to the docs
+      // this makes the code a lot easier to read from this side.\
+      $(function() {
+        setTimeout(processFiles, 100);
+        function processFiles(){
+          for (var i = classes.length - 1; i >= 0; i--){
+            var klass = classes[i]
+            $('section').highlightRegex(klass);
+            $('#api ul#objects').append("<li><a href = 'API/" + klass + "'>" + klass + "</a></li>");
+          };
+          for (var i = core_classes.length - 1; i >= 0; i--){
+            $('#api ul#core').append("<li><a href = 'API/" + core_classes[i] + "'>" + core_classes[i] + "</a></li>");          
+          };
+        };
+      });
+  </script>
   </body>
-  </html>
+</html>  

@@ -1,15 +1,9 @@
 ---
 layout: page
 ---
-
-<link rel="stylesheet" href="assets/css/syntax.css">
 <style type="text/css" media="screen">
   h1{
     font-size: 2em;
-  }
-  section{
-    width:900px;
-    padding-left: 100px;
   }
 </style>
 

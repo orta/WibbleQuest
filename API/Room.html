@@ -28,7 +28,7 @@
  WibbleQuest</p>
 
 <p>Created by orta therox on 09/07/2011.
- Copyright 2011 http://ortatherox.com. All rights reserved.</p>
+ Copyright 2011 http://ortatherox.com. Licensed under Creative Commons</p>
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
@@ -162,6 +162,17 @@ y.south = x.</p>
         <div class="pilwrap">
           <a class="pilcrow" href="#section-11">&#182;</a>
         </div>
+        <p>Get a room by an ID</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="o">+</span> <span class="p">(</span><span class="n">Room</span> <span class="o">*</span><span class="p">)</span> <span class="n">getRoomByID</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">id</span><span class="p">;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-12'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-12">&#182;</a>
+        </div>
         <p>Provides a NSDictionary of keys and values that are 
 acted upon when using the examine command inside a room.</p>
       </td>
@@ -171,10 +182,10 @@ acted upon when using the examine command inside a room.</p>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">examineWithInput</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">input</span><span class="p">;</span></pre></div>
       </td>
     </tr>
-    <tr id='section-12'>
+    <tr id='section-13'>
       <td class=docs>
         <div class="pilwrap">
-          <a class="pilcrow" href="#section-12">&#182;</a>
+          <a class="pilcrow" href="#section-13">&#182;</a>
         </div>
         <p>By overriding these methonds you can narrate the story 
 dealing when a player enters or leaves a room.</p>
@@ -184,10 +195,10 @@ dealing when a player enters or leaves a room.</p>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerDidLeaveRoom</span><span class="p">;</span></pre></div>
       </td>
     </tr>
-    <tr id='section-13'>
+    <tr id='section-14'>
       <td class=docs>
         <div class="pilwrap">
-          <a class="pilcrow" href="#section-13">&#182;</a>
+          <a class="pilcrow" href="#section-14">&#182;</a>
         </div>
         <p>By overriding these methods in your subclass you can force a 
 player to either not get into a room or to be stuck in a room, you do this

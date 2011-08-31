@@ -28,12 +28,13 @@
  WibbleQuest</p>
 
 <p>Created by orta therox on 09/07/2011.
- Copyright 2011 http://ortatherox.com. All rights reserved.</p>
+ Copyright 2011 http://ortatherox.com. Licensed under Creative Commons</p>
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
+<span class="cp">#import &quot;Person.h&quot;</span>
 
-<span class="err">@</span><span class="n">interface</span> <span class="n">Creature</span> <span class="o">:</span> <span class="n">WibbleObject</span></pre></div>
+<span class="err">@</span><span class="n">interface</span> <span class="n">Creature</span> <span class="o">:</span> <span class="n">Person</span></pre></div>
       </td>
     </tr>
     <tr id='section-2'>
@@ -95,7 +96,7 @@ battle, or has been beaten.</p>
 Creature takes a turn in battle</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">formattedAttackPhrases</span><span class="p">;</span></pre></div>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span> <span class="n">creatureAttackPhrases</span><span class="p">;</span></pre></div>
       </td>
     </tr>
     <tr id='section-7'>
@@ -107,7 +108,7 @@ Creature takes a turn in battle</p>
 Player takes a turn in battle.</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">formattedDefensePhrases</span><span class="p">;</span></pre></div>
+        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span> <span class="n">playerAttackPhrases</span><span class="p">;</span></pre></div>
       </td>
     </tr>
     <tr id='section-8'>
@@ -142,6 +143,7 @@ used a lot after checking for items in the inventory.</p>
         </div>
         <p>Callbacks for fight interactions so you can add narrative to the
 combat.</p>
+
       </td>
       <td class=code>
         <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">beforeTurn</span><span class="p">;</span>
@@ -149,21 +151,7 @@ combat.</p>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">beforeFight</span><span class="p">;</span>
 
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">afterCreatureLost</span><span class="p">;</span>
-<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">afterCreatureWon</span><span class="p">;</span></pre></div>
-      </td>
-    </tr>
-    <tr id='section-11'>
-      <td class=docs>
-        <div class="pilwrap">
-          <a class="pilcrow" href="#section-11">&#182;</a>
-        </div>
-        <p>A creature can hold a conversation just like a person does if you&rsquo;d 
-like them to.</p>
-
-      </td>
-      <td class=code>
-        <div class='highlight'><pre><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">respondToSentenceArray</span><span class="o">:</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">sentence</span><span class="p">;</span>
-
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">afterCreatureWon</span><span class="p">;</span>
 
 <span class="err">@</span><span class="n">end</span></pre></div>
       </td>

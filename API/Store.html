@@ -28,10 +28,11 @@
  WibbleQuest</p>
 
 <p>Created by pH on 7/17/11.
- Copyright 2011 http://ortatherox.com. All rights reserved.</p>
+ Copyright 2011 http://ortatherox.com. Licensed under Creative Commons</p>
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span></pre></div>
+        <div class='highlight'><pre><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
+<span class="cp">#import &quot;Person.h&quot;</span></pre></div>
       </td>
     </tr>
     <tr id='section-2'>
@@ -43,14 +44,14 @@
 
       </td>
       <td class=code>
-        <div class='highlight'><pre><span class="err">@</span><span class="n">interface</span> <span class="n">Store</span> <span class="o">:</span> <span class="n">WibbleObject</span> <span class="p">{}</span>
+        <div class='highlight'><pre><span class="err">@</span><span class="n">interface</span> <span class="n">Store</span> <span class="o">:</span> <span class="n">Person</span> <span class="p">{}</span>
 
 <span class="err">@</span><span class="n">property</span> <span class="p">(</span><span class="n">retain</span><span class="p">)</span> <span class="n">NSMutableArray</span><span class="o">*</span> <span class="n">items</span><span class="p">;</span>
 
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">beforeTrading</span><span class="p">;</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">afterTrading</span><span class="p">;</span>
 
-<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">showInventory</span><span class="p">;</span>
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">showStoreInventory</span><span class="p">;</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">buyItem</span><span class="o">:</span><span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span><span class="n">conditions</span><span class="p">;</span>
 
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">addItemOfClass</span><span class="o">:</span><span class="p">(</span><span class="n">Class</span><span class="p">)</span><span class="n">class</span> <span class="n">withValue</span><span class="o">:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">value</span><span class="p">;</span>

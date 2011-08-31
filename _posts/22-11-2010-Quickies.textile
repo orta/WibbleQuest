@@ -41,14 +41,26 @@ Awesome, you can do that by using the art function on WQ, this will give you mon
  "   |(`--A-'          $"
  "   |(`-/_\'\\        $"
  "   O `'I ``\\\\      $"
- "   (\\  I    |\\,    $ "
+ "   (\\  I    |\\,    $"
  "   \\\\-T-'`,        "];  
  {% endhighlight %}
 
 
 h3(#id). What is the id property on all these objects for?
 
-You use the object.id whenever you are trying to find a specific object like [Player has:@"itemID"] or [WQ findRoomByID:@"roomID"]. TLDR; always add one.
+You use the object.id whenever you are trying to find a specific object like 
+
+{% highlight objc %}
+[Player has:@"itemID"];
+{% endhighlight %}
+
+or 
+
+{% highlight objc %}
+[WQ findRoomByID:@"roomID"]
+{% endhighlight %}
+
+TLDR; always add one.
 
 h3(#command). Make any object do a custom command
 

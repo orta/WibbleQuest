@@ -1,15 +1,9 @@
 ---
 layout: page
 ---
-
-<link rel="stylesheet" href="assets/css/syntax.css">
 <style type="text/css" media="screen">
   h1{
     font-size: 2em;
-  }
-  section{
-    width:900px;
-    padding-left: 100px;
   }
 </style>
 
@@ -276,6 +270,7 @@ Make sure you've got a #import at the top for the Room subclass and you're done.
 
 h3(#subclass). Creating an Item Subclass
  
+
 In XCode 3: Right click on the Folder that you want to add the subclass to, goto Add -> New File. In the New File window you want to be sure Cocoa Touch Class is selected on the leftist,, and then that Objective-C class is selected in the main section. When you hit next you'll be asked what the File name should be, this is your class name. _( Remember; classes alway start with a capital. )_ 
 
 Once you've put the class name in and pressed _Finish_ you need to change the subclass from *NSObject* to whatever you want, it's the bit after the colon in the .h file. 
@@ -283,26 +278,3 @@ Once you've put the class name in and pressed _Finish_ you need to change the su
 In XCode 4: Right click on the Folder that you want to add the subclass to, click New File. In the New File dropdown you want to be sure Cocoa Touch is selected on the left,, and then that Objective-C class is selected in the main section. Hitting Next will ask you what you want to subclass, this may be Item, Room, Person, Game, Creature, whatever. And then the next dropdown will ask you what you want to have your class called.
 
 Then you're done. Wherever you want to use that class now you just have to #import it on the top of the file you're looking for.
-add support for the command book
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
-<script src="assets/js/jquery_scroll.js"></script>
-<script src="API/files.js"></script>
-<script src="assets/js/overview.js"></script>
-
-<script>
-    $('a').smoothScroll();
-</script>
-
-<script async defer>    
-    // replace all mentions of the class with a link to the docs
-    // this makes the code a lot easier to read fomr this side.
-
-for (var i = classes.length - 1; i >= 0; i--){
-  var klass = classes[i]
-  $('section').highlightRegex(klass);      
-};
-
-</script>
