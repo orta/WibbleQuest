@@ -56,6 +56,24 @@ bathroom.description = @"Dingy bathroom, nothing particularly out of the ordinar
 [bathroom connectEast:hallwayCenter];
 {% endhighlight %}
 
+h2. I want to change the help system
+
+The help system is pretty dynamic, much like how you can add commands from any Item, Room or Person, you can do the same thing with help commands. Items can add descriptions to the help system pretty simply using addCommandToHelp and removeCommandFromHelp.
+
+{% highlight objc %}
+-(void)onPickup {
+  [WQ print:@"Bubba sloshes around as you pick him up"];
+  [self addCommandToHelp:@"use bubba" withDescription:@"Take a swig from your Bubba"];
+}
+
+-(void)onDrop {
+  [WQ print:@"You drop bubba onto the floor and he rolls casually onto his side."];
+  [self removeCommandFromHelp:@"use bubba"];
+}
+{% endhighlight %}
+
+
+
 h2. I dislike your colour scheme!
 
 Err, okay there, no need to be confrontational. It's easy, you just have to edit style.css. If you don't know CSS, don't worry, you'll only have to know a bit about hex numbers to edit the existing one.

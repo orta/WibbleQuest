@@ -48,6 +48,9 @@ layout: nil
     display: block;
     color: #94450B !important;
   } 
+  ul.three li {
+    width: 120px;
+  }
   ul li.full{
     width: 400px;
   }
@@ -57,6 +60,12 @@ layout: nil
    p{
      clear: both;
      padding-top: 22px;
+   }
+   code{
+     font-size: 10px;
+     background-color: #44250C;
+     color: #E06F00;
+     padding: 20px;
    }
    
   </style>
@@ -80,7 +89,7 @@ layout: nil
     <section id="description">
       <h1>WQ</h1>
       <h2>A iOS Text Adventure Game Framework with a simple object oriented API for:</h2>
-      <ul>
+      <ul class="three">
         
         {% for post in site.posts %}
               <li><a href="docs.html#{{ post.title | downcase }}">{{ post.title }}</a></li>
@@ -90,7 +99,6 @@ layout: nil
       <p>
         Wibble Quest will help you make a Text Adventure game very very quickly, and will help you scale to a complex game with ease. 
       </p>
-
       <ul>
         <li><a href="docs">Docs</a></li>
         <li><a href="tutorial">Tutorial</a></li>
@@ -98,6 +106,8 @@ layout: nil
         <li><a href="http://twitter.com/wibblequest">@WibbleQuest</a></li>
         <li class="full"><a href="https://github.com/orta/WibbleQuest/archives/master">Download</a></li>
       </ul>
+      <p>One Line Install</p>
+      <code>/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/1197277)"</code>
     </section>
 
     <section id="calltoaction">
