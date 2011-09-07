@@ -19,7 +19,6 @@
 #import "ExitRoom.h"
 
 @implementation MegatronGame
-@synthesize wq;
 
 -(NSString *) gameName{  
   return @"The Megatron Marches";
@@ -27,10 +26,6 @@
 
 -(NSString *) gameDescription{
   return @"The kids are escaping, you've gotta catch them before you get enough calls from camper parents that you lose your job. (ps type help if you don't know what to do )";
-}
-
--(NSString *)devString{
-  return @"";
 }
 
 -(void)directorCall {

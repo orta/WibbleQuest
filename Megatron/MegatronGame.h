@@ -8,8 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MegatronGame : Game <WibbleQuestGameDelegate>
-
--(void)ready;
-
+@interface MegatronGame : Game
 @end

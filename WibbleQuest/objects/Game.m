@@ -10,4 +10,10 @@
 
 @implementation Game
 @synthesize wq;
+
+-(NSString *)gameDescription{ return @"No gameDescription set"; }
+-(NSString *)gameName{return @"No gameName set"; }
+-(void)ready{ [wq start]; }
+-(void)playerWasBeatenBy:(Creature*)creature{}
+
 @end

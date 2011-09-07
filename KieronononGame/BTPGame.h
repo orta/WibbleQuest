@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BTPGame : Game <WibbleQuestGameDelegate>
+@interface BTPGame : Game 
 
 -(void)ready;
 

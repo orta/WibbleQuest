@@ -231,10 +231,6 @@
 }
 
 -(void)help {
-  if([wq.game respondsToSelector:@selector(help)]){
-    [wq.game help];
-    
-  }else{
     [wq title:@"Help File"];
     [wq command:@"most commands work with typing the first letter."];
     [wq command:@""];
@@ -281,9 +277,6 @@
     for (Item *i in wq.inventory.items) {
       [i printHelp];
     }
-    
-    
-  }
 }
 
 // when get is called
