@@ -13,16 +13,8 @@ A iOS Text Adventure Game Framework with a simple object oriented API for:
 Wibble Quest will help you make a Text Adventure game very very quickly, and will help you scale to a complex game with ease, to do this you're gonna want to clone this repository and ensure the submodules are included.
 
 
-to install with Tests
+to create your own game project
 
-git clone git://github.com/orta/WibbleQuest.git
-cd WibbleQuest
-git submodule init
-git submodule update
-
-or 
-
-git clone git://github.com/orta/WibbleQuest.git
-cd WibbleQuest
+pre. /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/1197277)"
 
 then open the WibbleQuest.xcodeproj
