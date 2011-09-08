@@ -29,7 +29,6 @@
 		60114B7913E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B7813E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m */; };
 		60114B7A13E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B7813E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m */; };
 		603B99C813D3C3F20001F9CD /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
-		6050F43113DC4B6700BB8E82 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
 		6065BC9213D3619000F1F6D4 /* StartingRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6065BC9113D3619000F1F6D4 /* StartingRoom.m */; };
 		606B2B7513D4F5B000B90223 /* WibbleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B2B7413D4F5B000B90223 /* WibbleObject.m */; };
 		606B2B7713D4F8F100B90223 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7613D4F8F100B90223 /* TODO */; };
@@ -93,7 +92,6 @@
 		60BBA04713FD78BB00966586 /* KIFTestScenario-NiceThings.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CFABAB13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.m */; };
 		60BBA04813FD78BB00966586 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F51B3D313FCC1A10089E1AC /* Sound.m */; };
 		60BBA04A13FD78BB00966586 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CFABFF13FD714800A2D5B0 /* AVFoundation.framework */; };
-		60BBA04B13FD78BB00966586 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6050F42613DC483100BB8E82 /* libsbjson-ios.a */; };
 		60BBA04C13FD78BB00966586 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FEA1C113D6541D006997B0 /* libKIF.a */; };
 		60BBA04D13FD78BB00966586 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAC13C901D400888A6E /* UIKit.framework */; };
 		60BBA04E13FD78BB00966586 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAE13C901D400888A6E /* Foundation.framework */; };
@@ -180,47 +178,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6050F42113DC483100BB8E82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BC12323D1391D5CC00131607;
-			remoteInfo = SBJson;
-		};
-		6050F42313DC483100BB8E82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BC1232521391D5CC00131607;
-			remoteInfo = SBJsonTests;
-		};
-		6050F42513DC483100BB8E82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCC2626913920FC7003D9994;
-			remoteInfo = "sbjson-ios";
-		};
-		6050F42713DC483100BB8E82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCC2627313920FC7003D9994;
-			remoteInfo = "sbjson-iosTests";
-		};
 		6050F42E13DC493400BB8E82 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6050F42A13DC493300BB8E82 /* KIF.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = AAB07268139719AC008AF393;
 			remoteInfo = KIF;
-		};
-		6050F43213DC4BB300BB8E82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BCC2626813920FC7003D9994;
-			remoteInfo = "sbjson-ios";
 		};
 		6050F43413DC4BDD00BB8E82 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -270,7 +233,6 @@
 		603B99C613D3C3F20001F9CD /* NSArray-named-captures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray-named-captures.h"; path = "Categories/NSArray-named-captures.h"; sourceTree = "<group>"; };
 		603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray-named-captures.m"; path = "Categories/NSArray-named-captures.m"; sourceTree = "<group>"; };
 		6050F3E213DB868100BB8E82 /* KIFScenario-Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KIFScenario-Helpers.h"; path = "tests/KIFScenario-Helpers.h"; sourceTree = "<group>"; };
-		6050F41713DC483100BB8E82 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = vendor/json/SBJson.xcodeproj; sourceTree = "<group>"; };
 		6050F42A13DC493300BB8E82 /* KIF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KIF.xcodeproj; path = vendor/KIF/KIF.xcodeproj; sourceTree = "<group>"; };
 		6065BC9013D3619000F1F6D4 /* StartingRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartingRoom.h; path = Rooms/StartingRoom.h; sourceTree = "<group>"; };
 		6065BC9113D3619000F1F6D4 /* StartingRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartingRoom.m; path = Rooms/StartingRoom.m; sourceTree = "<group>"; };
@@ -313,7 +275,6 @@
 		60C021D313E5D280009251C3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		60C021D413E5D280009251C3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		60C021D513E5D280009251C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		60C021EB13E5D2A6009251C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UIKit.framework; sourceTree = "<group>"; };
 		60C021ED13E5D2C5009251C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		60CC9EF813C9D5C0006D116C /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Creature.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		60CC9EF913C9D5C0006D116C /* Creature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Creature.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -390,7 +351,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				60BBA04A13FD78BB00966586 /* AVFoundation.framework in Frameworks */,
-				60BBA04B13FD78BB00966586 /* libsbjson-ios.a in Frameworks */,
 				60BBA04C13FD78BB00966586 /* libKIF.a in Frameworks */,
 				60BBA04D13FD78BB00966586 /* UIKit.framework in Frameworks */,
 				60BBA04E13FD78BB00966586 /* Foundation.framework in Frameworks */,
@@ -403,7 +363,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				60CFAC0013FD714800A2D5B0 /* AVFoundation.framework in Frameworks */,
-				6050F43113DC4B6700BB8E82 /* libsbjson-ios.a in Frameworks */,
 				60FEA1C213D6541D006997B0 /* libKIF.a in Frameworks */,
 				60FEA1AE13D653F0006997B0 /* UIKit.framework in Frameworks */,
 				60FEA1AF13D653F0006997B0 /* Foundation.framework in Frameworks */,
@@ -494,24 +453,11 @@
 			isa = PBXGroup;
 			children = (
 				60C021CF13E5D280009251C3 /* Frameworks */,
-				60C021EB13E5D2A6009251C3 /* UIKit.framework */,
 				6050F42A13DC493300BB8E82 /* KIF.xcodeproj */,
 				60FEA1C113D6541D006997B0 /* libKIF.a */,
-				6050F41713DC483100BB8E82 /* SBJson.xcodeproj */,
 			);
 			name = Vendor;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		6050F41813DC483100BB8E82 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6050F42213DC483100BB8E82 /* SBJson.framework */,
-				6050F42413DC483100BB8E82 /* SBJsonTests.octest */,
-				6050F42613DC483100BB8E82 /* libsbjson-ios.a */,
-				6050F42813DC483100BB8E82 /* sbjson-iosTests.octest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6050F42B13DC493300BB8E82 /* Products */ = {
@@ -834,7 +780,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6050F43313DC4BB300BB8E82 /* PBXTargetDependency */,
 			);
 			name = "WibbleQuest-iOS";
 			productName = MyBoots;
@@ -901,10 +846,6 @@
 					ProductGroup = 6050F42B13DC493300BB8E82 /* Products */;
 					ProjectRef = 6050F42A13DC493300BB8E82 /* KIF.xcodeproj */;
 				},
-				{
-					ProductGroup = 6050F41813DC483100BB8E82 /* Products */;
-					ProjectRef = 6050F41713DC483100BB8E82 /* SBJson.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -916,34 +857,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6050F42213DC483100BB8E82 /* SBJson.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SBJson.framework;
-			remoteRef = 6050F42113DC483100BB8E82 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6050F42413DC483100BB8E82 /* SBJsonTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SBJsonTests.octest;
-			remoteRef = 6050F42313DC483100BB8E82 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6050F42613DC483100BB8E82 /* libsbjson-ios.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libsbjson-ios.a";
-			remoteRef = 6050F42513DC483100BB8E82 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6050F42813DC483100BB8E82 /* sbjson-iosTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "sbjson-iosTests.octest";
-			remoteRef = 6050F42713DC483100BB8E82 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		6050F42F13DC493400BB8E82 /* libKIF.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1156,11 +1069,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6050F43313DC4BB300BB8E82 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "sbjson-ios";
-			targetProxy = 6050F43213DC4BB300BB8E82 /* PBXContainerItemProxy */;
-		};
 		6050F43513DC4BDD00BB8E82 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KIF;
