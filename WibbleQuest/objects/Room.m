@@ -139,6 +139,16 @@
   return [NSDictionary dictionary];
 }
 
+-(BOOL)_respond:(NSString *)commands {
+  if( [super _respond:commands] ) return YES;
+  for (Item * item in self.items) {
+    if ([item _respond:commands]) {
+      return YES;
+    }
+  }
+  return NO;
+}
+
 -(void)playerDidEnterRoom { }
 -(BOOL)playerShouldEnterRoom { return YES; }
 
