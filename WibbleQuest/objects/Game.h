@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+@class WibbleQuest, Creature;
 
-@class WibbleQuest;
-@interface Game : NSObject
+@interface Game : NSObject {
+    IBOutlet WibbleQuest *wq;
+}
 
 @property (retain, nonatomic) IBOutlet WibbleQuest *wq;
-
+-(NSString *)gameDescription;
+-(NSString *)gameName;
+-(void)ready;
+-(void)playerWasBeatenBy:(Creature*)creature;
 @end

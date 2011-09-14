@@ -15,7 +15,7 @@
 @synthesize wq;
 
 - (void)awakeFromNib {
-  Game<WibbleQuestGameDelegate> * game = [[BTPGame alloc] init];
+  Game * game = [[BTPGame alloc] init];
   game.wq = wq;
   wq.game = game;
 }

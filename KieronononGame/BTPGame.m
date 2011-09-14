@@ -18,7 +18,6 @@
 #import "RockShop.h"
 
 @implementation BTPGame
-@synthesize wq;
 
 -(NSString *) gameName{
   return @"Brutal Techno Punk On";

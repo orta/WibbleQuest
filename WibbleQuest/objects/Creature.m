@@ -102,7 +102,7 @@
   // player health check
   if(player.health < 1){
     [self afterCreatureWon];
-    NSObject <WibbleQuestGameDelegate>* game = [[WibbleQuest sharedWibble] game];
+    Game * game = [[WibbleQuest sharedWibble] game];
     if([game respondsToSelector:@selector(playerWasBeatenBy:)]){
       [game playerWasBeatenBy:self];
     }

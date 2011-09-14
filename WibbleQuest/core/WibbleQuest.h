@@ -10,18 +10,6 @@
 
 @class Room, PlayerInventory, Player, Creature, CommandInterpreter, Game;
 
-// delegate methods for the Game Object, these are functions that
-// the Game object needs to support so that the game will work correctly.
-@protocol WibbleQuestGameDelegate
-  - (void) ready;
-  -(NSString *) gameName;
-  -(NSString *) gameDescription;
-@optional
-// These methods are optional, for example you can use the original help file, or completely overwrite it with your own version. 
-  -(void) help;
-  -(void) playerWasBeatenBy:(Creature *)creature;
-@end
-
 // WibbleQuest is the delegate for quite a few objects.
 @interface WibbleQuest : NSObject <UIWebViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate> {
 
@@ -29,7 +17,7 @@
   IBOutlet UIWebView *_webView;
   IBOutlet UITextField  *_textField;
   IBOutlet UIView *view;
-  IBOutlet Game<WibbleQuestGameDelegate> * game;
+  IBOutlet Game * game;
   
   CommandInterpreter *_commandInterpreter;
   
@@ -45,7 +33,7 @@
 @property (retain) UIView * view;
 @property (retain) NSMutableArray * rooms;
 @property (retain) Room * currentRoom;
-@property (retain) Game<WibbleQuestGameDelegate> * game;
+@property (retain) Game * game;
 @property (retain) PlayerInventory *inventory;
 @property (retain) Player* player;
 
