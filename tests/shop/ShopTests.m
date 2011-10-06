@@ -8,7 +8,6 @@
 
 #import "ShopTests.h"
 #import "KIFTestStep.h"
-#import "RockShop.h"
 #import "KIFScenario-Helpers.h"
 
 @implementation KIFTestScenario (ShopTests)
@@ -30,7 +29,7 @@
     r.id = @"test";
     [wq addRoom:r];
     
-    RockShop *shop = [[RockShop alloc] init];
+    Store *shop = [[Store alloc] init];
     shop.description = @"1234 shop";
     [shop addItemOfClass: [Item class] withValue:10];
 
