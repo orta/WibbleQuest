@@ -254,7 +254,7 @@
 		6081AB2513D249D6007C5545 /* FloatstarPX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FloatstarPX.m; path = People/FloatstarPX.m; sourceTree = "<group>"; };
 		6081AB2713D24B87007C5545 /* Microphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Microphone.h; path = Items/Microphone.h; sourceTree = "<group>"; };
 		6081AB2813D24B87007C5545 /* Microphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Microphone.m; path = Items/Microphone.m; sourceTree = "<group>"; };
-		609B9FA813C901D400888A6E /* WibbleQuest-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WibbleQuest-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		609B9FA813C901D400888A6E /* WibbleQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WibbleQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		609B9FAC13C901D400888A6E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		609B9FAE13C901D400888A6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		609B9FB013C901D400888A6E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -500,7 +500,7 @@
 		609B9FA913C901D400888A6E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				609B9FA813C901D400888A6E /* WibbleQuest-iOS.app */,
+				609B9FA813C901D400888A6E /* WibbleQuest.app */,
 				60FEA1BE13D653F0006997B0 /* WibbleTests.app */,
 				60BBA05C13FD78BB00966586 /* Wibble Tests copy.app */,
 			);
@@ -769,9 +769,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		609B9FA713C901D400888A6E /* WibbleQuest-iOS */ = {
+		609B9FA713C901D400888A6E /* WibbleQuest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 609B9FCF13C901D400888A6E /* Build configuration list for PBXNativeTarget "WibbleQuest-iOS" */;
+			buildConfigurationList = 609B9FCF13C901D400888A6E /* Build configuration list for PBXNativeTarget "WibbleQuest" */;
 			buildPhases = (
 				609B9FA413C901D400888A6E /* Sources */,
 				609B9FA513C901D400888A6E /* Frameworks */,
@@ -781,9 +781,9 @@
 			);
 			dependencies = (
 			);
-			name = "WibbleQuest-iOS";
+			name = WibbleQuest;
 			productName = MyBoots;
-			productReference = 609B9FA813C901D400888A6E /* WibbleQuest-iOS.app */;
+			productReference = 609B9FA813C901D400888A6E /* WibbleQuest.app */;
 			productType = "com.apple.product-type.application";
 		};
 		60BBA01D13FD78BB00966586 /* Runthrough */ = {
@@ -849,7 +849,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				609B9FA713C901D400888A6E /* WibbleQuest-iOS */,
+				609B9FA713C901D400888A6E /* WibbleQuest */,
 				60BBA01D13FD78BB00966586 /* Runthrough */,
 				60FEA18F13D653F0006997B0 /* Wibble Tests */,
 			);
@@ -1324,7 +1324,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		609B9FCF13C901D400888A6E /* Build configuration list for PBXNativeTarget "WibbleQuest-iOS" */ = {
+		609B9FCF13C901D400888A6E /* Build configuration list for PBXNativeTarget "WibbleQuest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				609B9FD013C901D400888A6E /* Debug */,

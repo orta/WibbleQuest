@@ -57,7 +57,7 @@
   [self execJS:function];
 }
 
--(void) image:(NSString*)image{
+-(void) image:(NSString*)image {
     image = [self sanitize:image];
     NSString *function = [NSString stringWithFormat:@"addImage('%@')",image];
     [self execJS:function];
@@ -71,6 +71,11 @@
 -(void) execJS:(NSString*) js {
   //remove chars that break stuff
  [_webView stringByEvaluatingJavaScriptFromString:js];  
+}
+
+-(void) applyStylesheet:(NSString*)sheet {
+  NSString * js = [NSString stringWithFormat:@"$('head').append(\"<link rel='stylesheet' href='%@.css' type='text/css' />\");", sheet];
+  [_webView stringByEvaluatingJavaScriptFromString:js];
 }
 
 @end

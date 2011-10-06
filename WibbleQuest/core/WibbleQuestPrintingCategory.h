@@ -21,6 +21,7 @@
 -(void) say:(NSString*)name words:(NSString*)words;
 -(void) art:(NSString*)art;
 -(void) image:(NSString*)image;
+-(void) applyStylesheet:(NSString*)sheet;
 
 // private, but whatever
 -(void) execJS:(NSString*) js;
