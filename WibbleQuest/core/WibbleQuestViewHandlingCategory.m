@@ -20,7 +20,7 @@
 #import "WibbleQuestViewHandlingCategory.h"
 
 @implementation WibbleQuest (WibbleQuestViewHandlingCategory)
-  
+
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
 static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
@@ -63,8 +63,7 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 352;
 
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-  [_webView stringByEvaluatingJavaScriptFromString:@"scrollToBottom();"];  
-
+  
   movementDistance = [self distanceForMovement];
   
   CGRect viewFrame = self.view.frame;  
@@ -77,8 +76,8 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 352;
       webViewFrame.size.height -= movementDistance;
       webViewFrame.origin.y += movementDistance;
       viewFrame.origin.x += movementDistance;
-
-
+      
+      
     }else{
       webViewFrame.size.height -= movementDistance;
       webViewFrame.origin.y += movementDistance;
@@ -98,16 +97,20 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 352;
       viewFrame.origin.y += movementDistance;
     }
   }
-
+  
   [UIView beginAnimations:nil context:NULL];
   [UIView setAnimationBeginsFromCurrentState:YES];
   [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
   
   [self.view setFrame:viewFrame];
   [_webView setFrame:webViewFrame];
-
+  
   [UIView commitAnimations];
+  
+  [_webView stringByEvaluatingJavaScriptFromString:@"scrollToBottom();"]; 
 }
+
+
 
 
 
@@ -145,18 +148,15 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 352;
     }
   }
   
-  if(animateMovement){
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationBeginsFromCurrentState:YES];
-    [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
-  }
+  [UIView beginAnimations:nil context:NULL];
+  [UIView setAnimationBeginsFromCurrentState:YES];
+  [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
   
   [self.view setFrame:viewFrame];
   [_webView setFrame:webViewFrame];
   
-  if(animateMovement){
-    [UIView commitAnimations];
-  }
+  [UIView commitAnimations];
+  
 }
 
 -(void)rotatedToUInterfaceIdiom:(UIInterfaceOrientation) orientation{
@@ -168,7 +168,7 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 352;
   NSString * resizeJS = [NSString stringWithFormat:@"$(html).css('width','%f');", [_webView frame].size.width];
   [_webView stringByEvaluatingJavaScriptFromString:resizeJS];  
   [_webView stringByEvaluatingJavaScriptFromString:@"scrollToBottom();"];  
-
+  
   animateMovement = NO;
 }
 
