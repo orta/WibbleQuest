@@ -148,7 +148,6 @@
     
     if([@"money" isEqualToString:command]||[@"coins" isEqualToString:command]){
       [wq print:@"You have £%i",[Player sharedPlayer].money];
-
       return YES;
     }
     
