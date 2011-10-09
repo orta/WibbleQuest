@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class Room, PlayerInventory, Player, Creature, CommandInterpreter, Game;
+@class Room, PlayerInventory, Creature, CommandInterpreter, Game;
 
 // WibbleQuest is the delegate for quite a few objects.
 @interface WibbleQuest : NSObject <UIWebViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate> {
@@ -35,7 +35,6 @@
 @property (retain) Room * currentRoom;
 @property (retain) Game * game;
 @property (retain) PlayerInventory *inventory;
-@property (retain) Player* player;
 
 @property (retain) NSMutableArray* previousCommands;
 

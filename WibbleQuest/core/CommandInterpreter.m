@@ -146,6 +146,12 @@
       }
     }
     
+    if([@"money" isEqualToString:command]||[@"coins" isEqualToString:command]){
+      [wq print:@"You have £%i",[Player sharedPlayer].money];
+
+      return YES;
+    }
+    
     if([@"fight" isEqualToString:command] || [@"f" isEqualToString:command]||
        [@"attack" isEqualToString:command] || [@"a" isEqualToString:command]){
       if (wq.currentRoom.encounter == nil) {
