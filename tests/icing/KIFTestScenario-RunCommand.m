@@ -6,8 +6,8 @@
 //  Copyright 2011 http://ortatherox.com. Licensed under Creative Commons
 //
 
-#import "KIFTestScenario-RunCommand.h"
 #import "KIFTestStep.h"
+#import "KIFScenario-Helpers.h"
 
 @implementation KIFTestScenario (KIFTestScenario_RunCommand)
 

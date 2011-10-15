@@ -6,8 +6,8 @@
 //  Copyright 2011 http://ortatherox.com. All rights reserved.
 //
 
-#import "KIFTestScenario-NiceThings.h"
 #import "KIFTestStep.h"
+#import "KIFScenario-Helpers.h"
 
 @implementation KIFTestScenario (KIFTestScenario_NiceThings)
 
