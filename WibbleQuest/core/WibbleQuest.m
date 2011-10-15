@@ -19,7 +19,7 @@ static WibbleQuest *sharedWibble;
 
 @implementation WibbleQuest
 
-@synthesize view, rooms, currentRoom, game, inventory, player;
+@synthesize view, rooms, currentRoom, game, inventory;
 @synthesize lastPrinted, previousCommands;
 @synthesize tickerInterval, timer;
 
