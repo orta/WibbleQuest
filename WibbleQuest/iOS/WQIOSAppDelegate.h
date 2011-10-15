@@ -12,7 +12,7 @@
 
 @interface WQIOSAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (retain, nonatomic) UIWindow *window;
-@property (retain, nonatomic) GameViewController *mainViewController;
+@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) GameViewController *mainViewController;
 
 @end

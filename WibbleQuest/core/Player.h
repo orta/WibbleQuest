@@ -45,7 +45,7 @@
 +(void)teleportToRoomWithID:(NSString *)roomID;
 
 // Key Value store used  in get/set String or Int below
-@property (retain) NSMutableDictionary *data;
+@property (strong) NSMutableDictionary *data;
 
 // These provide a Kev Value Store on the player so you can save any 
 // details on the player object so you don't have to extend the 

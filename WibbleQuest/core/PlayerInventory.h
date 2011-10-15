@@ -12,7 +12,7 @@
 
 @interface PlayerInventory : NSObject
 
-@property (retain) NSArray * items;
+@property (strong) NSArray * items;
 
 -(void)describeInventory;
 

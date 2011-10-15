@@ -56,7 +56,6 @@
 }
 
 -(void)addItem:(Item*) item {
-  [item retain];
   self.items = [self.items arrayByAddingObject: item];
   item.location=self;
 }
@@ -92,7 +91,6 @@
       [tempItems removeObject:item];
       item.location=nil;
       self.items = tempItems;
-      [item release];
       return item;
     }
   }  

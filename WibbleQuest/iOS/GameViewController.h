@@ -14,7 +14,7 @@
   IBOutlet WibbleQuest *wq;
 }
 
-@property (retain, nonatomic) UIPopoverController *flipsidePopoverController;
+@property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
 
 
 - (IBAction)showInfo:(id)sender;

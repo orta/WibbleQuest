@@ -19,9 +19,8 @@
 }
 
 -(void) setId:(NSString *)id {
-  [_id release];
   id = [id lowercaseString];
-  _id = [id retain];
+  _id = id;
 }
 
 #pragma mark Deal with Responding to commands

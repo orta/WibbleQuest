@@ -46,7 +46,6 @@
 }
 
 -(void)addItem:(Item*) item {
-  [item retain];
   self.items = [self.items arrayByAddingObject:item];
   if(item.onInlinePickup){
     [item onInlinePickup]();

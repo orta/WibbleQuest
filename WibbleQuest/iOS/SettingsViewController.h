@@ -20,10 +20,10 @@
 
 }
 
-@property (nonatomic, retain) IBOutlet UISwitch *hideTextFieldSwitch;
-@property (nonatomic, retain) IBOutlet UISwitch *showLookSwitch;
+@property (nonatomic, strong) IBOutlet UISwitch *hideTextFieldSwitch;
+@property (nonatomic, strong) IBOutlet UISwitch *showLookSwitch;
 
-@property (retain, nonatomic) IBOutlet id <SettingsViewControllerDelegate> delegate;
+@property (strong, nonatomic) IBOutlet id <SettingsViewControllerDelegate> delegate;
 
 - (IBAction)done:(id)sender;
 - (IBAction)hideTextfieldAfterCommand:(id)sender;

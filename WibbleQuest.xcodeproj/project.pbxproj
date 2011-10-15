@@ -1169,7 +1169,8 @@
 		609B9FD013C901D400888A6E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
@@ -1188,7 +1189,8 @@
 		609B9FD113C901D400888A6E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
@@ -1207,7 +1209,7 @@
 		60BBA05A13FD78BB00966586 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1234,7 +1236,7 @@
 		60BBA05B13FD78BB00966586 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1261,7 +1263,8 @@
 		60FEA1BC13D653F0006997B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1288,7 +1291,8 @@
 		60FEA1BD13D653F0006997B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (

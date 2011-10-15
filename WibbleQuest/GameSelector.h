@@ -10,6 +10,6 @@
 
 @interface GameSelector : NSObject
 
-@property (retain, nonatomic) IBOutlet WibbleQuest *wq;
+@property (strong, nonatomic) IBOutlet WibbleQuest *wq;
 
 @end

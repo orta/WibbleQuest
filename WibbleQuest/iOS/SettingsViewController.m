@@ -95,9 +95,4 @@
   [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-
-- (void)dealloc {
-  [_hideTextFieldSwitch release];
-  [super dealloc];
-}
 @end

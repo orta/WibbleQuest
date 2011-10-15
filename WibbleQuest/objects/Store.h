@@ -13,7 +13,7 @@
 
 @interface Store : Person {}
 
-@property (retain) NSMutableArray* items;
+@property (strong) NSMutableArray* items;
 
 -(void)beforeTrading;
 -(void)afterTrading;

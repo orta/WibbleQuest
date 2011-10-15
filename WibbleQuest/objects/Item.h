@@ -12,14 +12,14 @@
 
 // Description of the object when before it's been 'get'ed,
 // or after it has been 'drop'ed
-@property (retain, nonatomic) NSString* descriptionInRoom;
+@property (strong, nonatomic) NSString* descriptionInRoom;
 
 // A String that is used when someone does a command like
 // examine [object id]
-@property (retain, nonatomic) NSString* examine;
+@property (strong, nonatomic) NSString* examine;
 
 //The room that the item is located in
-@property (retain, nonatomic) Room *location;
+@property (strong, nonatomic) Room *location;
 
 
 // Methods to override so that you can react to the players

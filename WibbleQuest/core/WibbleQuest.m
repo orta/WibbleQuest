@@ -46,7 +46,7 @@ static WibbleQuest *sharedWibble;
   // we do this last, as it has a delegate method when it's ready
   [self loadPageForShowingGame];
   _textField.clearsOnBeginEditing = YES;
-  self.inventory = [[[PlayerInventory alloc] init] retain];
+  self.inventory = [[PlayerInventory alloc] init];
   self.previousCommands = [NSMutableArray array];
 }
 
@@ -65,14 +65,7 @@ static WibbleQuest *sharedWibble;
 }
 
 -(void)purge {
-  for (Room*room in self.rooms) {
-    [room release];
-  }
   self.rooms = [NSMutableArray array];
-  
-  for (Item *item in self.inventory.items) {
-    [item release];
-  }
   self.inventory = [[PlayerInventory alloc] init];
 }
 
@@ -117,7 +110,6 @@ static WibbleQuest *sharedWibble;
 
 -(void)addRoom:(Room*)room {
   // custom adding room, this allows some error handling
-  [room retain];
   if (self.rooms == nil) {
     self.rooms = [NSMutableArray arrayWithObject:room];
   }else{
@@ -189,11 +181,4 @@ static WibbleQuest *sharedWibble;
     [NSException raise:@"Web View not hooked up to WibbleQuest Object in Nib" format:@"Web View not hooked up to WibbleQuest Object in Nib"];
   }
 }
-
--(void) dealloc {
-  [super release];
-  [inventory release];
-  [currentRoom release];
-}
-
 @end

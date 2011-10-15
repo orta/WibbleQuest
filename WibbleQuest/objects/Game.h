@@ -13,7 +13,7 @@
     IBOutlet WibbleQuest *wq;
 }
 
-@property (retain, nonatomic) IBOutlet WibbleQuest *wq;
+@property (strong, nonatomic) IBOutlet WibbleQuest *wq;
 -(NSString *)gameDescription;
 -(NSString *)gameName;
 -(void)ready;

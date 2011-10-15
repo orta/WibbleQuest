@@ -13,17 +13,17 @@
 @interface Room : WibbleObject
 
 //Keep references to all rooms in the 4 directions
-@property (retain) Room* north;
-@property (retain) Room* east;
-@property (retain) Room* south;
-@property (retain) Room* west;
+@property (strong) Room* north;
+@property (strong) Room* east;
+@property (strong) Room* south;
+@property (strong) Room* west;
 
 //Hold an instance of a Store if the Room has one
-@property (retain) Store* store;
+@property (strong) Store* store;
 
-@property (retain) NSArray* items;
-@property (retain) Creature* encounter;
-@property (retain) Person* person;
+@property (strong) NSArray* items;
+@property (strong) Creature* encounter;
+@property (strong) Person* person;
 
 @property () BOOL visited;
 

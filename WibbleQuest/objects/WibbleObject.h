@@ -15,9 +15,9 @@
 
 // if no id is set, it will try to use a lowercase name without spaces, 
 // if no name is used it will use the lowerclass class name for the id
-@property (retain, nonatomic) NSString* id;
-@property (retain, nonatomic) NSString* description;
-@property (retain, nonatomic) NSString* name;
+@property (strong, nonatomic) NSString* id;
+@property (strong, nonatomic) NSString* description;
+@property (strong, nonatomic) NSString* name;
 
 // Let any subclass of WibbleObject respond to commands from the User.
 -(BOOL)didRespondToCommand:(NSArray*)commandArray;

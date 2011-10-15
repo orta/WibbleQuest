@@ -12,7 +12,7 @@
   BOOL _madeFirstMistake;
 }
 
-  @property (retain, nonatomic) IBOutlet WibbleQuest *wq;
+  @property (strong, nonatomic) IBOutlet WibbleQuest *wq;
   -(BOOL) parse:(NSString*) string;
 
 @end

@@ -30,18 +30,18 @@
 }
 
 // Variables
-@property (retain) UIView * view;
-@property (retain) NSMutableArray * rooms;
-@property (retain) Room * currentRoom;
-@property (retain) Game * game;
-@property (retain) PlayerInventory *inventory;
+@property (strong) UIView * view;
+@property (strong) NSMutableArray * rooms;
+@property (strong) Room * currentRoom;
+@property (strong) Game * game;
+@property (strong) PlayerInventory *inventory;
 
-@property (retain) NSMutableArray* previousCommands;
+@property (strong) NSMutableArray* previousCommands;
 
-@property (retain) NSString * lastPrinted;
+@property (strong) NSString * lastPrinted;
 
 @property() float tickerInterval;
-@property(nonatomic, retain) NSTimer *timer;
+@property(nonatomic, strong) NSTimer *timer;
 
 +(WibbleQuest *) sharedWibble;
 
