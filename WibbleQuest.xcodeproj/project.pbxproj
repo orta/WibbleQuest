@@ -177,6 +177,7 @@
 		60EFEA6514C34D710085DA80 /* KIFTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 60EFEA6214C34D710085DA80 /* KIFTestController.h */; };
 		60EFEA6614C34D710085DA80 /* KIFTestScenario.h in Headers */ = {isa = PBXBuildFile; fileRef = 60EFEA6314C34D710085DA80 /* KIFTestScenario.h */; };
 		60EFEA6714C34D710085DA80 /* KIFTestStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 60EFEA6414C34D710085DA80 /* KIFTestStep.h */; };
+		60EFEAAC14C36F2F0085DA80 /* LibWibble.h in Headers */ = {isa = PBXBuildFile; fileRef = 60EFEAAB14C36F2F0085DA80 /* LibWibble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60F49DD613CBD42C00BDB07C /* PlayerInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD513CBD42C00BDB07C /* PlayerInventory.m */; };
 		60F49DDD13CBD76300BDB07C /* WQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DDC13CBD76300BDB07C /* WQ.m */; };
 		60F5128613D1112300978EC0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128513D1112300978EC0 /* Player.m */; };
@@ -335,6 +336,7 @@
 		60EFEA6214C34D710085DA80 /* KIFTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIFTestController.h; sourceTree = "<group>"; };
 		60EFEA6314C34D710085DA80 /* KIFTestScenario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIFTestScenario.h; sourceTree = "<group>"; };
 		60EFEA6414C34D710085DA80 /* KIFTestStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIFTestStep.h; sourceTree = "<group>"; };
+		60EFEAAB14C36F2F0085DA80 /* LibWibble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibWibble.h; sourceTree = "<group>"; };
 		60F49DD413CBD42C00BDB07C /* PlayerInventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInventory.h; sourceTree = "<group>"; };
 		60F49DD513CBD42C00BDB07C /* PlayerInventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInventory.m; sourceTree = "<group>"; };
 		60F49DDB13CBD76300BDB07C /* WQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQ.h; sourceTree = "<group>"; };
@@ -767,6 +769,7 @@
 				60F5128513D1112300978EC0 /* Player.m */,
 				6F51B3D213FCC1A10089E1AC /* Sound.h */,
 				6F51B3D313FCC1A10089E1AC /* Sound.m */,
+				60EFEAAB14C36F2F0085DA80 /* LibWibble.h */,
 			);
 			name = Core;
 			path = core;
@@ -825,6 +828,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60EFEAAC14C36F2F0085DA80 /* LibWibble.h in Headers */,
 				606B45BA14C34153007011C3 /* GameViewController.h in Headers */,
 				606B45BB14C34153007011C3 /* SettingsViewController.h in Headers */,
 				606B45BC14C34153007011C3 /* WQ.h in Headers */,
@@ -855,9 +859,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		606B458914C34065007011C3 /* libWibble */ = {
+		606B458914C34065007011C3 /* LibWibble */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 606B459214C34065007011C3 /* Build configuration list for PBXNativeTarget "libWibble" */;
+			buildConfigurationList = 606B459214C34065007011C3 /* Build configuration list for PBXNativeTarget "LibWibble" */;
 			buildPhases = (
 				606B458314C34065007011C3 /* ShellScript */,
 				606B458414C34065007011C3 /* Sources */,
@@ -870,7 +874,7 @@
 			);
 			dependencies = (
 			);
-			name = libWibble;
+			name = LibWibble;
 			productName = libWibble;
 			productReference = 606B458A14C34065007011C3 /* libWibble.framework */;
 			productType = "com.apple.product-type.bundle";
@@ -950,7 +954,7 @@
 				609B9FA713C901D400888A6E /* WibbleQuest */,
 				60BBA01D13FD78BB00966586 /* Runthrough */,
 				60FEA18F13D653F0006997B0 /* Wibble Tests */,
-				606B458914C34065007011C3 /* libWibble */,
+				606B458914C34065007011C3 /* LibWibble */,
 			);
 		};
 /* End PBXProject section */
@@ -1556,7 +1560,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		606B459214C34065007011C3 /* Build configuration list for PBXNativeTarget "libWibble" */ = {
+		606B459214C34065007011C3 /* Build configuration list for PBXNativeTarget "LibWibble" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				606B459314C34065007011C3 /* Debug */,
