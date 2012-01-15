@@ -33,6 +33,57 @@
 		606B2B7513D4F5B000B90223 /* WibbleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B2B7413D4F5B000B90223 /* WibbleObject.m */; };
 		606B2B7713D4F8F100B90223 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7613D4F8F100B90223 /* TODO */; };
 		606B2B7B13D5282B00B90223 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* icon.png */; };
+		606B459014C34065007011C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 606B458E14C34065007011C3 /* InfoPlist.strings */; };
+		606B459514C340A2007011C3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBF13C901D400888A6E /* GameViewController.m */; };
+		606B459614C340A2007011C3 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FC213C901D400888A6E /* SettingsViewController.m */; };
+		606B459714C340A2007011C3 /* WQIOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBC13C901D400888A6E /* WQIOSAppDelegate.m */; };
+		606B45A014C340A2007011C3 /* WQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DDC13CBD76300BDB07C /* WQ.m */; };
+		606B45A114C340A2007011C3 /* WibbleQuest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFF13C9D5C0006D116C /* WibbleQuest.m */; };
+		606B45A214C340A2007011C3 /* WibbleQuestPrintingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F1A13C9F3CB006D116C /* WibbleQuestPrintingCategory.m */; };
+		606B45A314C340A2007011C3 /* WibbleQuestViewHandlingCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F0113C9D5C0006D116C /* WibbleQuestViewHandlingCategory.m */; };
+		606B45A414C340A2007011C3 /* WibbleQuestSwipeHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 60114B7813E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.m */; };
+		606B45A514C340A2007011C3 /* CommandInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9F2013CA0B6B006D116C /* CommandInterpreter.m */; };
+		606B45A614C340A2007011C3 /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38AAC13F230530062D3FA /* Inventory.m */; };
+		606B45A714C340A2007011C3 /* PlayerInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD513CBD42C00BDB07C /* PlayerInventory.m */; };
+		606B45A814C340A2007011C3 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128513D1112300978EC0 /* Player.m */; };
+		606B45A914C340A2007011C3 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F51B3D313FCC1A10089E1AC /* Sound.m */; };
+		606B45AA14C340A2007011C3 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F36C4E013D3D03F003387F7 /* Store.m */; };
+		606B45AB14C340A2007011C3 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128E13D11E7D00978EC0 /* Person.m */; };
+		606B45AC14C340A2007011C3 /* Creature.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EF913C9D5C0006D116C /* Creature.m */; };
+		606B45AD14C340A2007011C3 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFB13C9D5C0006D116C /* Item.m */; };
+		606B45AE14C340A2007011C3 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CC9EFD13C9D5C0006D116C /* Room.m */; };
+		606B45AF14C340A2007011C3 /* WibbleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B2B7413D4F5B000B90223 /* WibbleObject.m */; };
+		606B45B014C340A2007011C3 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002DC4513E7861F003A5D70 /* Game.m */; };
+		606B45B114C340A2007011C3 /* NSArray-Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5129213D1200700978EC0 /* NSArray-Contains.m */; };
+		606B45B214C340A2007011C3 /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
+		606B45B314C340FB007011C3 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 60CFABF613FD5F9600A2D5B0 /* style.css */; };
+		606B45B414C340FB007011C3 /* Wibble.license in Resources */ = {isa = PBXBuildFile; fileRef = 60CFABF813FD640000A2D5B0 /* Wibble.license */; };
+		606B45B514C340FB007011C3 /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */; };
+		606B45B614C340FB007011C3 /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC713C901D400888A6E /* MainViewController_iPad.xib */; };
+		606B45B714C340FB007011C3 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
+		606B45B814C340FB007011C3 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
+		606B45B914C340FB007011C3 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
+		606B45BA14C34153007011C3 /* GameViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 609B9FBE13C901D400888A6E /* GameViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45BB14C34153007011C3 /* SettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 609B9FC113C901D400888A6E /* SettingsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45BC14C34153007011C3 /* WQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F49DDB13CBD76300BDB07C /* WQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45BD14C34153007011C3 /* WibbleQuest.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CC9EFE13C9D5C0006D116C /* WibbleQuest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45BE14C34153007011C3 /* WibbleQuestPrintingCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CC9F1913C9F3CA006D116C /* WibbleQuestPrintingCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45BF14C34153007011C3 /* WibbleQuestViewHandlingCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CC9F0013C9D5C0006D116C /* WibbleQuestViewHandlingCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45C014C34153007011C3 /* WibbleQuestSwipeHandlers.h in Headers */ = {isa = PBXBuildFile; fileRef = 60114B7713E5AF8F007F97A5 /* WibbleQuestSwipeHandlers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45C114C34153007011C3 /* CommandInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CC9F1F13CA0B6B006D116C /* CommandInterpreter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45C214C34153007011C3 /* Inventory.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38AAB13F230520062D3FA /* Inventory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45C314C34153007011C3 /* PlayerInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F49DD413CBD42C00BDB07C /* PlayerInventory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45C414C34153007011C3 /* Player.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F5128413D1112300978EC0 /* Player.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45C514C34153007011C3 /* Sound.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F51B3D213FCC1A10089E1AC /* Sound.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45C614C34153007011C3 /* Store.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F36C4DF13D3D03F003387F7 /* Store.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45C714C34153007011C3 /* Person.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F5128D13D11E7D00978EC0 /* Person.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45C814C34153007011C3 /* Creature.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CC9EF813C9D5C0006D116C /* Creature.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45C914C34153007011C3 /* Item.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CC9EFA13C9D5C0006D116C /* Item.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45CA14C34153007011C3 /* Room.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CC9EFC13C9D5C0006D116C /* Room.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45CB14C34153007011C3 /* WibbleObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 606B2B7313D4F5AF00B90223 /* WibbleObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45CC14C34153007011C3 /* Game.h in Headers */ = {isa = PBXBuildFile; fileRef = 6002DC4413E7861F003A5D70 /* Game.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		606B45CD14C34153007011C3 /* NSArray-Contains.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F5129113D1200700978EC0 /* NSArray-Contains.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		606B45CE14C34153007011C3 /* NSArray-named-captures.h in Headers */ = {isa = PBXBuildFile; fileRef = 603B99C613D3C3F20001F9CD /* NSArray-named-captures.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		607CB92913D8EE4100A72FD2 /* InventoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 607CB92813D8EE4100A72FD2 /* InventoryTests.m */; };
 		607CB92C13D9070600A72FD2 /* FinaleRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 607CB92B13D9070600A72FD2 /* FinaleRoom.m */; };
 		607CB92D13D9070600A72FD2 /* FinaleRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 607CB92B13D9070600A72FD2 /* FinaleRoom.m */; };
@@ -205,6 +256,7 @@
 		6002DC4313E78386003A5D70 /* GameSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameSelector.h; path = WibbleQuest/GameSelector.h; sourceTree = SOURCE_ROOT; };
 		6002DC4413E7861F003A5D70 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		6002DC4513E7861F003A5D70 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		600A909614C2127B00DCDB6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		60114B3613E387AA007F97A5 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.js; path = html/jquery.js; sourceTree = "<group>"; };
 		60114B5213E4C480007F97A5 /* KidB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidB.h; sourceTree = "<group>"; };
 		60114B5313E4C480007F97A5 /* KidB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KidB.m; sourceTree = "<group>"; };
@@ -240,6 +292,9 @@
 		606B2B7413D4F5B000B90223 /* WibbleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleObject.m; sourceTree = "<group>"; };
 		606B2B7613D4F8F100B90223 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		606B2B7A13D5282A00B90223 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../WibbleQuest/shared/icon.png; sourceTree = "<group>"; };
+		606B458A14C34065007011C3 /* libWibble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libWibble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		606B458D14C34065007011C3 /* libWibble-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "libWibble-Info.plist"; sourceTree = "<group>"; };
+		606B458F14C34065007011C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6070A20B13FD77A6001D4B0B /* Walkthrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Walkthrough.h; path = ../WibbleQuest/core/Walkthrough.h; sourceTree = "<group>"; };
 		6070A20C13FD77A6001D4B0B /* Walkthrough.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Walkthrough.m; path = ../WibbleQuest/core/Walkthrough.m; sourceTree = "<group>"; };
 		607CB92713D8EE4100A72FD2 /* InventoryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InventoryTests.h; path = tests/items/InventoryTests.h; sourceTree = "<group>"; };
@@ -335,6 +390,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		606B458514C34065007011C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		609B9FA513C901D400888A6E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -373,6 +435,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		600A909514C2127B00DCDB6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				600A909614C2127B00DCDB6A /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		60114B5013E4C480007F97A5 /* Megatron */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +549,23 @@
 			name = Rooms;
 			sourceTree = "<group>";
 		};
+		606B458B14C34065007011C3 /* libWibble */ = {
+			isa = PBXGroup;
+			children = (
+				606B458C14C34065007011C3 /* Supporting Files */,
+			);
+			path = libWibble;
+			sourceTree = "<group>";
+		};
+		606B458C14C34065007011C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				606B458D14C34065007011C3 /* libWibble-Info.plist */,
+				606B458E14C34065007011C3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		607CB92513D8EDE800A72FD2 /* Items / Inventory */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +580,8 @@
 			children = (
 				609B9FB213C901D400888A6E /* Game */,
 				60CC9EF713C9D5C0006D116C /* WibbleQuest */,
+				606B458B14C34065007011C3 /* libWibble */,
+				600A909514C2127B00DCDB6A /* Frameworks */,
 				609B9FA913C901D400888A6E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -503,6 +592,7 @@
 				609B9FA813C901D400888A6E /* WibbleQuest.app */,
 				60FEA1BE13D653F0006997B0 /* WibbleTests.app */,
 				60BBA05C13FD78BB00966586 /* Wibble Tests copy.app */,
+				606B458A14C34065007011C3 /* libWibble.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -768,7 +858,58 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		606B458614C34065007011C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				606B45BA14C34153007011C3 /* GameViewController.h in Headers */,
+				606B45BB14C34153007011C3 /* SettingsViewController.h in Headers */,
+				606B45BC14C34153007011C3 /* WQ.h in Headers */,
+				606B45BD14C34153007011C3 /* WibbleQuest.h in Headers */,
+				606B45BE14C34153007011C3 /* WibbleQuestPrintingCategory.h in Headers */,
+				606B45BF14C34153007011C3 /* WibbleQuestViewHandlingCategory.h in Headers */,
+				606B45C014C34153007011C3 /* WibbleQuestSwipeHandlers.h in Headers */,
+				606B45C114C34153007011C3 /* CommandInterpreter.h in Headers */,
+				606B45C214C34153007011C3 /* Inventory.h in Headers */,
+				606B45C314C34153007011C3 /* PlayerInventory.h in Headers */,
+				606B45C414C34153007011C3 /* Player.h in Headers */,
+				606B45C514C34153007011C3 /* Sound.h in Headers */,
+				606B45C614C34153007011C3 /* Store.h in Headers */,
+				606B45C714C34153007011C3 /* Person.h in Headers */,
+				606B45C814C34153007011C3 /* Creature.h in Headers */,
+				606B45C914C34153007011C3 /* Item.h in Headers */,
+				606B45CA14C34153007011C3 /* Room.h in Headers */,
+				606B45CB14C34153007011C3 /* WibbleObject.h in Headers */,
+				606B45CC14C34153007011C3 /* Game.h in Headers */,
+				606B45CD14C34153007011C3 /* NSArray-Contains.h in Headers */,
+				606B45CE14C34153007011C3 /* NSArray-named-captures.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		606B458914C34065007011C3 /* libWibble */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 606B459214C34065007011C3 /* Build configuration list for PBXNativeTarget "libWibble" */;
+			buildPhases = (
+				606B458314C34065007011C3 /* ShellScript */,
+				606B458414C34065007011C3 /* Sources */,
+				606B458514C34065007011C3 /* Frameworks */,
+				606B458614C34065007011C3 /* Headers */,
+				606B458714C34065007011C3 /* Resources */,
+				606B458814C34065007011C3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libWibble;
+			productName = libWibble;
+			productReference = 606B458A14C34065007011C3 /* libWibble.framework */;
+			productType = "com.apple.product-type.bundle";
+		};
 		609B9FA713C901D400888A6E /* WibbleQuest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 609B9FCF13C901D400888A6E /* Build configuration list for PBXNativeTarget "WibbleQuest" */;
@@ -852,6 +993,7 @@
 				609B9FA713C901D400888A6E /* WibbleQuest */,
 				60BBA01D13FD78BB00966586 /* Runthrough */,
 				60FEA18F13D653F0006997B0 /* Wibble Tests */,
+				606B458914C34065007011C3 /* libWibble */,
 			);
 		};
 /* End PBXProject section */
@@ -867,6 +1009,21 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		606B458714C34065007011C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				606B45B314C340FB007011C3 /* style.css in Resources */,
+				606B45B414C340FB007011C3 /* Wibble.license in Resources */,
+				606B45B514C340FB007011C3 /* MainViewController_iPhone.xib in Resources */,
+				606B45B614C340FB007011C3 /* MainViewController_iPad.xib in Resources */,
+				606B45B714C340FB007011C3 /* SettingsViewController.xib in Resources */,
+				606B45B814C340FB007011C3 /* index.html in Resources */,
+				606B45B914C340FB007011C3 /* jquery.js in Resources */,
+				606B459014C34065007011C3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		609B9FA613C901D400888A6E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -918,7 +1075,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		606B458314C34065007011C3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n";
+		};
+		606B458814C34065007011C3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\necho \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build framework structure\n\necho \"Build symlinks\"\n\necho ln -sf A \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\nln -sf A \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\necho ln -sf Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\nln -sf Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\necho ln -sf Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\nln -sf Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\necho ln -sf \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\nln -sf \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\n\n\n# Link to binary for unit tests\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework\"\nln -sf \"../${WRAPPER_NAME}/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework/.fake_fw_testing\"\n\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		606B458414C34065007011C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				606B459514C340A2007011C3 /* GameViewController.m in Sources */,
+				606B459614C340A2007011C3 /* SettingsViewController.m in Sources */,
+				606B459714C340A2007011C3 /* WQIOSAppDelegate.m in Sources */,
+				606B45A014C340A2007011C3 /* WQ.m in Sources */,
+				606B45A114C340A2007011C3 /* WibbleQuest.m in Sources */,
+				606B45A214C340A2007011C3 /* WibbleQuestPrintingCategory.m in Sources */,
+				606B45A314C340A2007011C3 /* WibbleQuestViewHandlingCategory.m in Sources */,
+				606B45A414C340A2007011C3 /* WibbleQuestSwipeHandlers.m in Sources */,
+				606B45A514C340A2007011C3 /* CommandInterpreter.m in Sources */,
+				606B45A614C340A2007011C3 /* Inventory.m in Sources */,
+				606B45A714C340A2007011C3 /* PlayerInventory.m in Sources */,
+				606B45A814C340A2007011C3 /* Player.m in Sources */,
+				606B45A914C340A2007011C3 /* Sound.m in Sources */,
+				606B45AA14C340A2007011C3 /* Store.m in Sources */,
+				606B45AB14C340A2007011C3 /* Person.m in Sources */,
+				606B45AC14C340A2007011C3 /* Creature.m in Sources */,
+				606B45AD14C340A2007011C3 /* Item.m in Sources */,
+				606B45AE14C340A2007011C3 /* Room.m in Sources */,
+				606B45AF14C340A2007011C3 /* WibbleObject.m in Sources */,
+				606B45B014C340A2007011C3 /* Game.m in Sources */,
+				606B45B114C340A2007011C3 /* NSArray-Contains.m in Sources */,
+				606B45B214C340A2007011C3 /* NSArray-named-captures.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		609B9FA413C901D400888A6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1082,6 +1297,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		606B458E14C34065007011C3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				606B458F14C34065007011C3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1117,6 +1340,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		606B459314C34065007011C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
+				DEAD_CODE_STRIPPING = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
+				INFOPLIST_FILE = "libWibble/libWibble-Info.plist";
+				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		606B459414C34065007011C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
+				DEAD_CODE_STRIPPING = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
+				INFOPLIST_FILE = "libWibble/libWibble-Info.plist";
+				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 		609B9FCD13C901D400888A6E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1319,6 +1590,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		606B459214C34065007011C3 /* Build configuration list for PBXNativeTarget "libWibble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				606B459314C34065007011C3 /* Debug */,
+				606B459414C34065007011C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		609B9FA213C901D400888A6E /* Build configuration list for PBXProject "WibbleQuest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
