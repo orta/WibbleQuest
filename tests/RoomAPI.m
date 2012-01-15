@@ -8,9 +8,7 @@
 
 #import "RoomAPI.h"
 
-#import "KIFTestScenario+EXAdditions.h"
 #import "KIFTestStep.h"
-#import "KIFTestStep+EXAdditions.h"
 #import "KIFScenario-Helpers.h"
 
 @implementation KIFTestScenario (RoomAPI)

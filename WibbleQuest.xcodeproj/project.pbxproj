@@ -143,7 +143,6 @@
 		60BBA04713FD78BB00966586 /* KIFTestScenario-NiceThings.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CFABAB13FC9FF500A2D5B0 /* KIFTestScenario-NiceThings.m */; };
 		60BBA04813FD78BB00966586 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F51B3D313FCC1A10089E1AC /* Sound.m */; };
 		60BBA04A13FD78BB00966586 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CFABFF13FD714800A2D5B0 /* AVFoundation.framework */; };
-		60BBA04C13FD78BB00966586 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FEA1C113D6541D006997B0 /* libKIF.a */; };
 		60BBA04D13FD78BB00966586 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAC13C901D400888A6E /* UIKit.framework */; };
 		60BBA04E13FD78BB00966586 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAE13C901D400888A6E /* Foundation.framework */; };
 		60BBA04F13FD78BB00966586 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FB013C901D400888A6E /* CoreGraphics.framework */; };
@@ -173,6 +172,11 @@
 		60CFAC0013FD714800A2D5B0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CFABFF13FD714800A2D5B0 /* AVFoundation.framework */; };
 		60ED579713E7748B006E4D27 /* GameSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED579613E7748A006E4D27 /* GameSelector.m */; };
 		60ED579913E7748B006E4D27 /* GameSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED579613E7748A006E4D27 /* GameSelector.m */; };
+		60EFEA5B14C34C880085DA80 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EFEA5914C34C880085DA80 /* libKIF.a */; };
+		60EFEA5C14C34C880085DA80 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EFEA5914C34C880085DA80 /* libKIF.a */; };
+		60EFEA6514C34D710085DA80 /* KIFTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 60EFEA6214C34D710085DA80 /* KIFTestController.h */; };
+		60EFEA6614C34D710085DA80 /* KIFTestScenario.h in Headers */ = {isa = PBXBuildFile; fileRef = 60EFEA6314C34D710085DA80 /* KIFTestScenario.h */; };
+		60EFEA6714C34D710085DA80 /* KIFTestStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 60EFEA6414C34D710085DA80 /* KIFTestStep.h */; };
 		60F49DD613CBD42C00BDB07C /* PlayerInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DD513CBD42C00BDB07C /* PlayerInventory.m */; };
 		60F49DDD13CBD76300BDB07C /* WQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F49DDC13CBD76300BDB07C /* WQ.m */; };
 		60F5128613D1112300978EC0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5128513D1112300978EC0 /* Player.m */; };
@@ -215,7 +219,6 @@
 		60FEA1B713D653F0006997B0 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
 		60FEA1B913D653F0006997B0 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7613D4F8F100B90223 /* TODO */; };
 		60FEA1BA13D653F0006997B0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 606B2B7A13D5282A00B90223 /* icon.png */; };
-		60FEA1C213D6541D006997B0 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FEA1C113D6541D006997B0 /* libKIF.a */; };
 		60FEA1CA13D65800006997B0 /* RoomAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1C813D65800006997B0 /* RoomAPI.m */; };
 		60FEA1CB13D65867006997B0 /* WBTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1C513D6566B006997B0 /* WBTestController.m */; };
 		60FEA1DC13D66D8E006997B0 /* KIFTestScenario-RunCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEA1D913D66C44006997B0 /* KIFTestScenario-RunCommand.m */; };
@@ -227,30 +230,6 @@
 		6F51B3D813FCC1AE0089E1AC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F51B3D713FCC1AE0089E1AC /* AVFoundation.framework */; };
 		6FD38AAD13F230540062D3FA /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38AAC13F230530062D3FA /* Inventory.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6050F42E13DC493400BB8E82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6050F42A13DC493300BB8E82 /* KIF.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AAB07268139719AC008AF393;
-			remoteInfo = KIF;
-		};
-		6050F43413DC4BDD00BB8E82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6050F42A13DC493300BB8E82 /* KIF.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AAB07267139719AC008AF393;
-			remoteInfo = KIF;
-		};
-		60BBA01F13FD78BB00966586 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6050F42A13DC493300BB8E82 /* KIF.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AAB07267139719AC008AF393;
-			remoteInfo = KIF;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6002DC4313E78386003A5D70 /* GameSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameSelector.h; path = WibbleQuest/GameSelector.h; sourceTree = SOURCE_ROOT; };
@@ -285,7 +264,6 @@
 		603B99C613D3C3F20001F9CD /* NSArray-named-captures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray-named-captures.h"; path = "Categories/NSArray-named-captures.h"; sourceTree = "<group>"; };
 		603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray-named-captures.m"; path = "Categories/NSArray-named-captures.m"; sourceTree = "<group>"; };
 		6050F3E213DB868100BB8E82 /* KIFScenario-Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KIFScenario-Helpers.h"; path = "tests/KIFScenario-Helpers.h"; sourceTree = "<group>"; };
-		6050F42A13DC493300BB8E82 /* KIF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KIF.xcodeproj; path = vendor/KIF/KIF.xcodeproj; sourceTree = "<group>"; };
 		6065BC9013D3619000F1F6D4 /* StartingRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartingRoom.h; path = Rooms/StartingRoom.h; sourceTree = "<group>"; };
 		6065BC9113D3619000F1F6D4 /* StartingRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartingRoom.m; path = Rooms/StartingRoom.m; sourceTree = "<group>"; };
 		606B2B7313D4F5AF00B90223 /* WibbleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WibbleObject.h; sourceTree = "<group>"; };
@@ -327,9 +305,6 @@
 		60BBA05C13FD78BB00966586 /* Wibble Tests copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wibble Tests copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BCD36D13DB4FAE00CBBB42 /* ShopTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopTests.h; path = tests/shop/ShopTests.h; sourceTree = "<group>"; };
 		60BCD36E13DB4FAE00CBBB42 /* ShopTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShopTests.m; path = tests/shop/ShopTests.m; sourceTree = "<group>"; };
-		60C021D313E5D280009251C3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		60C021D413E5D280009251C3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		60C021D513E5D280009251C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		60C021ED13E5D2C5009251C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		60CC9EF813C9D5C0006D116C /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Creature.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		60CC9EF913C9D5C0006D116C /* Creature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Creature.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -356,6 +331,10 @@
 		60ED574713E5E913006E4D27 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Quartz.framework; sourceTree = DEVELOPER_DIR; };
 		60ED578E13E76FD0006E4D27 /* WQIOSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQIOSAppDelegate.h; sourceTree = "<group>"; };
 		60ED579613E7748A006E4D27 /* GameSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameSelector.m; path = WibbleQuest/GameSelector.m; sourceTree = SOURCE_ROOT; };
+		60EFEA5914C34C880085DA80 /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libKIF.a; sourceTree = "<group>"; };
+		60EFEA6214C34D710085DA80 /* KIFTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIFTestController.h; sourceTree = "<group>"; };
+		60EFEA6314C34D710085DA80 /* KIFTestScenario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIFTestScenario.h; sourceTree = "<group>"; };
+		60EFEA6414C34D710085DA80 /* KIFTestStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIFTestStep.h; sourceTree = "<group>"; };
 		60F49DD413CBD42C00BDB07C /* PlayerInventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInventory.h; sourceTree = "<group>"; };
 		60F49DD513CBD42C00BDB07C /* PlayerInventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInventory.m; sourceTree = "<group>"; };
 		60F49DDB13CBD76300BDB07C /* WQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQ.h; sourceTree = "<group>"; };
@@ -369,7 +348,6 @@
 		60F512A013D1E59800978EC0 /* BodyGuard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = BodyGuard.h; path = Creatures/BodyGuard.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		60F512A113D1E59800978EC0 /* BodyGuard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = BodyGuard.m; path = Creatures/BodyGuard.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		60FEA1BE13D653F0006997B0 /* WibbleTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WibbleTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		60FEA1C113D6541D006997B0 /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "vendor/KIF/build/Release-iphoneos/libKIF.a"; sourceTree = "<group>"; };
 		60FEA1C413D6566B006997B0 /* WBTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBTestController.h; path = tests/WBTestController.h; sourceTree = "<group>"; };
 		60FEA1C513D6566B006997B0 /* WBTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBTestController.m; path = tests/WBTestController.m; sourceTree = "<group>"; };
 		60FEA1C713D65800006997B0 /* RoomAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoomAPI.h; path = tests/RoomAPI.h; sourceTree = "<group>"; };
@@ -413,10 +391,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				60BBA04A13FD78BB00966586 /* AVFoundation.framework in Frameworks */,
-				60BBA04C13FD78BB00966586 /* libKIF.a in Frameworks */,
 				60BBA04D13FD78BB00966586 /* UIKit.framework in Frameworks */,
 				60BBA04E13FD78BB00966586 /* Foundation.framework in Frameworks */,
 				60BBA04F13FD78BB00966586 /* CoreGraphics.framework in Frameworks */,
+				60EFEA5B14C34C880085DA80 /* libKIF.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,24 +403,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				60CFAC0013FD714800A2D5B0 /* AVFoundation.framework in Frameworks */,
-				60FEA1C213D6541D006997B0 /* libKIF.a in Frameworks */,
 				60FEA1AE13D653F0006997B0 /* UIKit.framework in Frameworks */,
 				60FEA1AF13D653F0006997B0 /* Foundation.framework in Frameworks */,
 				60FEA1B013D653F0006997B0 /* CoreGraphics.framework in Frameworks */,
+				60EFEA5C14C34C880085DA80 /* libKIF.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		600A909514C2127B00DCDB6A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				600A909614C2127B00DCDB6A /* Foundation.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		60114B5013E4C480007F97A5 /* Megatron */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,19 +493,9 @@
 			isa = PBXGroup;
 			children = (
 				60C021CF13E5D280009251C3 /* Frameworks */,
-				6050F42A13DC493300BB8E82 /* KIF.xcodeproj */,
-				60FEA1C113D6541D006997B0 /* libKIF.a */,
 			);
 			name = Vendor;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		6050F42B13DC493300BB8E82 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6050F42F13DC493400BB8E82 /* libKIF.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6065BC8E13D3616F00F1F6D4 /* Rooms */ = {
@@ -581,7 +541,6 @@
 				609B9FB213C901D400888A6E /* Game */,
 				60CC9EF713C9D5C0006D116C /* WibbleQuest */,
 				606B458B14C34065007011C3 /* libWibble */,
-				600A909514C2127B00DCDB6A /* Frameworks */,
 				609B9FA913C901D400888A6E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -660,22 +619,13 @@
 		60C021CF13E5D280009251C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60EFEA6114C34D5F0085DA80 /* KIF */,
+				600A909614C2127B00DCDB6A /* Foundation.framework */,
 				60CFABFF13FD714800A2D5B0 /* AVFoundation.framework */,
 				60ED574713E5E913006E4D27 /* Quartz.framework */,
 				60C021ED13E5D2C5009251C3 /* Cocoa.framework */,
-				60C021D213E5D280009251C3 /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		60C021D213E5D280009251C3 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				60C021D313E5D280009251C3 /* AppKit.framework */,
-				60C021D413E5D280009251C3 /* CoreData.framework */,
-				60C021D513E5D280009251C3 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		60CC9EF713C9D5C0006D116C /* WibbleQuest */ = {
@@ -716,6 +666,17 @@
 				60114B3613E387AA007F97A5 /* jquery.js */,
 			);
 			name = html;
+			sourceTree = "<group>";
+		};
+		60EFEA6114C34D5F0085DA80 /* KIF */ = {
+			isa = PBXGroup;
+			children = (
+				60EFEA6214C34D710085DA80 /* KIFTestController.h */,
+				60EFEA6314C34D710085DA80 /* KIFTestScenario.h */,
+				60EFEA6414C34D710085DA80 /* KIFTestStep.h */,
+				60EFEA5914C34C880085DA80 /* libKIF.a */,
+			);
+			name = KIF;
 			sourceTree = "<group>";
 		};
 		60F49DD013CBD33E00BDB07C /* Items */ = {
@@ -884,6 +845,9 @@
 				606B45CC14C34153007011C3 /* Game.h in Headers */,
 				606B45CD14C34153007011C3 /* NSArray-Contains.h in Headers */,
 				606B45CE14C34153007011C3 /* NSArray-named-captures.h in Headers */,
+				60EFEA6514C34D710085DA80 /* KIFTestController.h in Headers */,
+				60EFEA6614C34D710085DA80 /* KIFTestScenario.h in Headers */,
+				60EFEA6714C34D710085DA80 /* KIFTestStep.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -938,7 +902,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				60BBA01E13FD78BB00966586 /* PBXTargetDependency */,
 			);
 			name = Runthrough;
 			productName = MyBoots;
@@ -956,7 +919,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6050F43513DC4BDD00BB8E82 /* PBXTargetDependency */,
 			);
 			name = "Wibble Tests";
 			productName = MyBoots;
@@ -982,12 +944,6 @@
 			mainGroup = 609B9F9D13C901D400888A6E;
 			productRefGroup = 609B9FA913C901D400888A6E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 6050F42B13DC493300BB8E82 /* Products */;
-					ProjectRef = 6050F42A13DC493300BB8E82 /* KIF.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				609B9FA713C901D400888A6E /* WibbleQuest */,
@@ -997,16 +953,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		6050F42F13DC493400BB8E82 /* libKIF.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libKIF.a;
-			remoteRef = 6050F42E13DC493400BB8E82 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		606B458714C34065007011C3 /* Resources */ = {
@@ -1283,19 +1229,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		6050F43513DC4BDD00BB8E82 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KIF;
-			targetProxy = 6050F43413DC4BDD00BB8E82 /* PBXContainerItemProxy */;
-		};
-		60BBA01E13FD78BB00966586 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KIF;
-			targetProxy = 60BBA01F13FD78BB00966586 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		606B458E14C34065007011C3 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -1355,6 +1288,10 @@
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1379,6 +1316,10 @@
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1446,6 +1387,10 @@
 				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1466,6 +1411,10 @@
 				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1493,6 +1442,10 @@
 				);
 				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -1520,6 +1473,10 @@
 				);
 				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -1548,6 +1505,10 @@
 				);
 				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -1576,6 +1537,10 @@
 				);
 				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
