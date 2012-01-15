@@ -416,6 +416,7 @@
 		60114B5013E4C480007F97A5 /* Megatron */ = {
 			isa = PBXGroup;
 			children = (
+				6070A20C13FD77A6001D4B0B /* Walkthrough.m */,
 				60114B6313E4C480007F97A5 /* People */,
 				60114B6813E4C480007F97A5 /* Rooms */,
 				60114B5113E4C480007F97A5 /* Creatures */,
@@ -573,7 +574,6 @@
 			children = (
 				60114B7613E4C491007F97A5 /* Kieronononon */,
 				60114B5013E4C480007F97A5 /* Megatron */,
-				6070A20C13FD77A6001D4B0B /* Walkthrough.m */,
 				60ED579613E7748A006E4D27 /* GameSelector.m */,
 				60CFABF613FD5F9600A2D5B0 /* style.css */,
 				606B2B7A13D5282A00B90223 /* icon.png */,
@@ -677,6 +677,7 @@
 				60EFEA5914C34C880085DA80 /* libKIF.a */,
 			);
 			name = KIF;
+			path = tests/KIF;
 			sourceTree = "<group>";
 		};
 		60F49DD013CBD33E00BDB07C /* Items */ = {
