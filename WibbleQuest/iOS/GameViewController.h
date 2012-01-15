@@ -16,7 +16,7 @@
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
 
-
++ (GameViewController *)viewController;
 - (IBAction)showInfo:(id)sender;
 
 @end
