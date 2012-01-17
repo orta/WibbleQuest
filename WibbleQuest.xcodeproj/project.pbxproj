@@ -271,7 +271,7 @@
 		606B2B7413D4F5B000B90223 /* WibbleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleObject.m; sourceTree = "<group>"; };
 		606B2B7613D4F8F100B90223 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		606B2B7A13D5282A00B90223 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../WibbleQuest/shared/icon.png; sourceTree = "<group>"; };
-		606B458A14C34065007011C3 /* libWibble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libWibble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		606B458A14C34065007011C3 /* libWibble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = libWibble.framework; path = LibWibble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		606B458D14C34065007011C3 /* libWibble-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "libWibble-Info.plist"; sourceTree = "<group>"; };
 		606B458F14C34065007011C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6070A20B13FD77A6001D4B0B /* Walkthrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Walkthrough.h; path = ../WibbleQuest/core/Walkthrough.h; sourceTree = "<group>"; };
@@ -303,7 +303,7 @@
 		609B9FC513C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPhone.xib; sourceTree = "<group>"; };
 		609B9FC813C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPad.xib; sourceTree = "<group>"; };
 		609B9FDF13C9059100888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
-		60BBA05C13FD78BB00966586 /* Wibble Tests copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wibble Tests copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60BBA05C13FD78BB00966586 /* Runthrough.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runthrough.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BCD36D13DB4FAE00CBBB42 /* ShopTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopTests.h; path = tests/shop/ShopTests.h; sourceTree = "<group>"; };
 		60BCD36E13DB4FAE00CBBB42 /* ShopTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShopTests.m; path = tests/shop/ShopTests.m; sourceTree = "<group>"; };
 		60C021ED13E5D2C5009251C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
@@ -553,7 +553,7 @@
 			children = (
 				609B9FA813C901D400888A6E /* WibbleQuest.app */,
 				60FEA1BE13D653F0006997B0 /* WibbleTests.app */,
-				60BBA05C13FD78BB00966586 /* Wibble Tests copy.app */,
+				60BBA05C13FD78BB00966586 /* Runthrough.app */,
 				606B458A14C34065007011C3 /* libWibble.framework */,
 			);
 			name = Products;
@@ -910,7 +910,7 @@
 			);
 			name = Runthrough;
 			productName = MyBoots;
-			productReference = 60BBA05C13FD78BB00966586 /* Wibble Tests copy.app */;
+			productReference = 60BBA05C13FD78BB00966586 /* Runthrough.app */;
 			productType = "com.apple.product-type.application";
 		};
 		60FEA18F13D653F0006997B0 /* Wibble Tests */ = {
@@ -1456,7 +1456,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_NAME = "Wibble Tests copy";
+				PRODUCT_NAME = Runthrough;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1487,7 +1487,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_NAME = "Wibble Tests copy";
+				PRODUCT_NAME = Runthrough;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
