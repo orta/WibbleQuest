@@ -50,13 +50,13 @@
     
     // support 'go north'
     if ([@"go" isEqualToString:command]) {
-        command = [parameters second];
-        
+      command = [parameters second];
+      
       // support 'go to north'
-        if ([@"to" isEqualToString:command]) {
-          command = [parameters third]; 
-        }
+      if ([@"to" isEqualToString:command]) {
+        command = [parameters third]; 
       }
+    }
     
     
     if([@"north" isEqualToString:command] || [@"n" isEqualToString:command]){
@@ -73,7 +73,7 @@
       [self east];
       return YES;
     }
-
+    
     if([@"south" isEqualToString:command] || [@"s" isEqualToString:command]){
       [self south];
       return YES;
@@ -88,7 +88,7 @@
       [wq.inventory describeInventory];
       return YES;
     }
-
+    
     if([@"use" isEqualToString:command] || [@"u" isEqualToString:command]){
       Item *item = [wq.inventory getItem:[parameters second]];
       if(item){
@@ -98,13 +98,13 @@
           [item onUse]; 
         }
         return YES;
-
+        
       }else{
         [wq print:@"Could not find %@ in your inventory", [parameters second]];
         return NO;
       }
     }
-
+    
     if([@"drop" isEqualToString:command] || [@"d" isEqualToString:command]){
       [self dropCommand:parameters];
       return YES;
@@ -115,16 +115,16 @@
         [wq print:@"Examine what?"];
         return NO;
       }
-
+      
       if([@"room" isEqualToString:[parameters second]]){
         [wq describeSurroundings];
         return YES;
       }
-
+      
       [wq.currentRoom examineWithInput:string];
       return YES;
     }
-
+    
     
     if([@"shop" isEqualToString:command] || [@"trade" isEqualToString:command]){
       if (wq.currentRoom.store) {
@@ -177,13 +177,19 @@
       }
       return YES;
     }
-        
+    
+    if ([@"money" isEqualToString:command]) {
+      Player *player = [Player sharedPlayer];
+      [wq print: [NSString stringWithFormat: @"You have %i money.", player.money]];
+      return YES;
+    }
+    
     if([wq.inventory hasItem:command]){
       Item * item = [wq.inventory getItem:command];
       [wq print: item.description];
       return YES;
     }
-
+    
     if([wq.currentRoom hasItem:command]){
       Item * item = [wq.currentRoom getItem:command];
       [wq print: item.description];
@@ -236,52 +242,54 @@
 }
 
 -(void)help {
-    [wq title:@"Help File"];
-    [wq command:@"most commands work with typing the first letter."];
-    [wq command:@""];
-    
-    [wq print:@"north, east, south, west"];
-    [wq command:@"move in a direction."];
-    
-    [wq print:@"get <em>item</em>"];
-    [wq command:@"get an item from the current room."];
-
-    [wq print:@"drop <em>item</em>"];
-    [wq command:@"drop an item into the current room."];
-    
-    [wq print: @"examine <em>item</em>"];
-    [wq command:@"examine an item in the room."];
-
-    [wq print: @"look"];
-    [wq command:@"look at your surroundings."];
-    
-    [wq print: @"inventory"];
-    [wq command:@"Look at the items inside your inventory."];
-
-    [wq print: @"fight"];
-    [wq command:@"Start a fight with something hostile."];
-    
-    [wq print: @"say <em>words</em>"];
-    [wq command:@"Talk to something or somebody."];
-
-    [wq print: @"shop "];
-    [wq command:@"Talk to a shop owner."];
-
-    [wq print: @"buy <em>item</em> "];
-    [wq command:@"Buy an item from a shop."];
-    
-    
-    [wq.currentRoom printHelp];
-    [wq.currentRoom.encounter printHelp];
-    [wq.currentRoom.person printHelp];
-    
-    for (Item *i in wq.currentRoom.items){
-      [i printHelp];
-    }
-    
-    for (Item *i in wq.inventory.items) {
-      [i printHelp];
-    }
+  [wq title:@"Help File"];
+  [wq command:@"most commands work with typing the first letter."];
+  [wq command:@""];
+  
+  [wq print:@"north, east, south, west"];
+  [wq command:@"move in a direction."];
+  
+  [wq print:@"get <em>item</em>"];
+  [wq command:@"get an item from the current room."];
+  
+  [wq print:@"drop <em>item</em>"];
+  [wq command:@"drop an item into the current room."];
+  
+  [wq print: @"examine <em>item</em>"];
+  [wq command:@"examine an item in the room."];
+  
+  [wq print: @"look"];
+  [wq command:@"look at your surroundings."];
+  
+  [wq print: @"inventory"];
+  [wq command:@"Look at the items inside your inventory."];
+  
+  [wq print: @"fight"];
+  [wq command:@"Start a fight with something hostile."];
+  
+  [wq print: @"say <em>words</em>"];
+  [wq command:@"Talk to something or somebody."];
+  
+  [wq print: @"shop "];
+  [wq command:@"Talk to a shop owner."];
+  
+  [wq print: @"buy <em>item</em>"];
+  [wq command:@"Buy an item from a shop."];
+  
+  [wq print: @"money"];
+  [wq command:@"Shows how much money you have."];
+  
+  [wq.currentRoom printHelp];
+  [wq.currentRoom.encounter printHelp];
+  [wq.currentRoom.person printHelp];
+  
+  for (Item *i in wq.currentRoom.items){
+    [i printHelp];
+  }
+  
+  for (Item *i in wq.inventory.items) {
+    [i printHelp];
+  }
 }
 
 // when get is called
