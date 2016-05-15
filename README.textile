@@ -1,6 +1,6 @@
 h1. Wibble Quest
 
-h2. A Text Adventure Game Framework for iOS.
+h2. A Text Adventure Game Framework for iOS.(iOS9 updated by abbychau)
 
 A iOS Text Adventure Game Framework with a simple object oriented API for:
 
@@ -18,3 +18,4 @@ to create your own game project
 pre. /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/1197277)"
 
 then open the WibbleQuest.xcodeproj
+
