@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameViewController">
+            <connections>
+                <outlet property="view" destination="34" id="35"/>
+                <outlet property="wq" destination="46" id="63"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="34">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36">
+                    <rect key="frame" x="568" y="568" width="22" height="22"/>
+                    <accessibility key="accessibilityConfiguration" label="Settings"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showInfo:" destination="-1" eventType="touchUpInside" id="38"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51">
+                    <rect key="frame" x="5" y="565" width="550" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="Text Input"/>
+                    <gestureRecognizers/>
+                    <fontDescription key="fontDescription" type="system" size="system"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                    <connections>
+                        <outlet property="delegate" destination="46" id="53"/>
+                    </connections>
+                </textField>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <gestureRecognizers/>
+                    <dataDetectorType key="dataDetectorTypes"/>
+                    <connections>
+                        <outlet property="delegate" destination="46" id="62"/>
+                    </connections>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="56" firstAttribute="top" secondItem="34" secondAttribute="top" id="4bS-ou-ajb"/>
+                <constraint firstItem="56" firstAttribute="width" secondItem="34" secondAttribute="width" id="KGr-Or-D0W"/>
+                <constraint firstAttribute="trailing" secondItem="36" secondAttribute="trailing" constant="10" id="YOQ-sH-KGy"/>
+                <constraint firstItem="51" firstAttribute="width" secondItem="34" secondAttribute="width" constant="-50" id="ZI4-AK-I7t"/>
+                <constraint firstItem="56" firstAttribute="leading" secondItem="34" secondAttribute="leading" id="dAL-Sx-xYv"/>
+                <constraint firstAttribute="bottom" secondItem="36" secondAttribute="bottom" constant="10" id="deI-Ib-CVJ"/>
+                <constraint firstItem="51" firstAttribute="leading" secondItem="34" secondAttribute="leading" constant="5" id="itA-8f-wFL"/>
+                <constraint firstItem="51" firstAttribute="bottom" secondItem="34" secondAttribute="bottom" constant="-5" id="m7h-Xg-cgw"/>
+                <constraint firstItem="56" firstAttribute="height" secondItem="34" secondAttribute="height" constant="-50" id="ypZ-x5-UVB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="280" y="337"/>
+        </view>
+        <customObject id="46" userLabel="WibbleQ" customClass="WibbleQuest">
+            <connections>
+                <outlet property="_textField" destination="51" id="55"/>
+                <outlet property="_webView" destination="56" id="57"/>
+                <outlet property="view" destination="34" id="54"/>
+            </connections>
+        </customObject>
+        <customObject id="58" customClass="GameSelector">
+            <connections>
+                <outlet property="wq" destination="46" id="59"/>
+            </connections>
+        </customObject>
+    </objects>
+</document>
