@@ -27,11 +27,7 @@
   
     // Override point for customization after application launch.
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-      self.mainViewController = [[GameViewController alloc] initWithNibName:@"MainViewController_iPhone" bundle:nil]; 
-  } else {
-      self.mainViewController = [[GameViewController alloc] initWithNibName:@"MainViewController_iPad" bundle:nil]; 
-  }
+self.mainViewController = [[GameViewController alloc] initWithNibName:@"MainViewController" bundle:nil]; 
 
   self.window.rootViewController = self.mainViewController;
     [self.window makeKeyAndVisible];

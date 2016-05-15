@@ -15,11 +15,7 @@
 
 + (GameViewController *)viewController {
     GameViewController *controller = nil;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        controller = [[GameViewController alloc] initWithNibName:@"MainViewController_iPhone" bundle:nil]; 
-    } else {
-        controller = [[GameViewController alloc] initWithNibName:@"MainViewController_iPad" bundle:nil]; 
-    }
+controller = [[GameViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     return controller;
 }
 
@@ -38,21 +34,13 @@
 
 - (void)SettingsViewControllerDidFinish:(SettingsViewController *)controller
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        [self dismissModalViewControllerAnimated:YES];
-    } else {
+
         [self.flipsidePopoverController dismissPopoverAnimated:YES];
-    }
 }
 
 - (IBAction)showInfo:(id)sender
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        SettingsViewController *controller = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
-        controller.delegate = self;
-        controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        [self presentModalViewController:controller animated:YES];
-    } else {
+
         if (!self.flipsidePopoverController) {
             SettingsViewController *controller = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
             controller.delegate = self;
@@ -64,6 +52,5 @@
         } else {
             [self.flipsidePopoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
         }
-    }
 }
 @end

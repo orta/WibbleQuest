@@ -22,8 +22,6 @@
 @implementation WibbleQuest (WibbleQuestViewHandlingCategory)
   
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
-static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
-static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
 
 static const CGFloat IPHONE_PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat IPHONE_LANDSCAPE_KEYBOARD_HEIGHT = 162;
@@ -72,7 +70,7 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 352;
   
   UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
   
-  if( UIDeviceOrientationIsLandscape( orientation ) ){
+  if( UIInterfaceOrientationIsLandscape( orientation ) ){
     if (orientation == UIInterfaceOrientationLandscapeRight) {
       webViewFrame.size.height -= movementDistance;
       webViewFrame.origin.y += movementDistance;
@@ -118,7 +116,7 @@ static const CGFloat IPAD_LANDSCAPE_KEYBOARD_HEIGHT = 352;
   CGRect webViewFrame = _webView.frame;
   movementDistance *= -1;
   
-  if( UIDeviceOrientationIsLandscape( orientation ) ){
+  if( UIInterfaceOrientationIsLandscape( orientation ) ){
     if (orientation == UIInterfaceOrientationLandscapeRight) {
       webViewFrame.size.height -= movementDistance;
       webViewFrame.origin.y += movementDistance;

@@ -58,8 +58,7 @@
 		606B45B214C340A2007011C3 /* NSArray-named-captures.m in Sources */ = {isa = PBXBuildFile; fileRef = 603B99C713D3C3F20001F9CD /* NSArray-named-captures.m */; };
 		606B45B314C340FB007011C3 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 60CFABF613FD5F9600A2D5B0 /* style.css */; };
 		606B45B414C340FB007011C3 /* Wibble.license in Resources */ = {isa = PBXBuildFile; fileRef = 60CFABF813FD640000A2D5B0 /* Wibble.license */; };
-		606B45B514C340FB007011C3 /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */; };
-		606B45B614C340FB007011C3 /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC713C901D400888A6E /* MainViewController_iPad.xib */; };
+		606B45B514C340FB007011C3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController.xib */; };
 		606B45B714C340FB007011C3 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
 		606B45B814C340FB007011C3 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
 		606B45B914C340FB007011C3 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
@@ -98,8 +97,7 @@
 		609B9FBD13C901D400888A6E /* WQIOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBC13C901D400888A6E /* WQIOSAppDelegate.m */; };
 		609B9FC013C901D400888A6E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBF13C901D400888A6E /* GameViewController.m */; };
 		609B9FC313C901D400888A6E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FC213C901D400888A6E /* SettingsViewController.m */; };
-		609B9FC613C901D400888A6E /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */; };
-		609B9FC913C901D400888A6E /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC713C901D400888A6E /* MainViewController_iPad.xib */; };
+		609B9FC613C901D400888A6E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController.xib */; };
 		609B9FCC13C901D400888A6E /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FCA13C901D400888A6E /* FlipsideViewController.xib */; };
 		609B9FE013C9059100888A6E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
 		60BBA02113FD78BB00966586 /* WQIOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B9FBC13C901D400888A6E /* WQIOSAppDelegate.m */; };
@@ -146,8 +144,7 @@
 		60BBA04D13FD78BB00966586 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAC13C901D400888A6E /* UIKit.framework */; };
 		60BBA04E13FD78BB00966586 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAE13C901D400888A6E /* Foundation.framework */; };
 		60BBA04F13FD78BB00966586 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FB013C901D400888A6E /* CoreGraphics.framework */; };
-		60BBA05113FD78BB00966586 /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */; };
-		60BBA05213FD78BB00966586 /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC713C901D400888A6E /* MainViewController_iPad.xib */; };
+		60BBA05113FD78BB00966586 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController.xib */; };
 		60BBA05313FD78BB00966586 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 60114B3613E387AA007F97A5 /* jquery.js */; };
 		60BBA05413FD78BB00966586 /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FCA13C901D400888A6E /* FlipsideViewController.xib */; };
 		60BBA05513FD78BB00966586 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
@@ -213,8 +210,7 @@
 		60FEA1AE13D653F0006997B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAC13C901D400888A6E /* UIKit.framework */; };
 		60FEA1AF13D653F0006997B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FAE13C901D400888A6E /* Foundation.framework */; };
 		60FEA1B013D653F0006997B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609B9FB013C901D400888A6E /* CoreGraphics.framework */; };
-		60FEA1B313D653F0006997B0 /* MainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */; };
-		60FEA1B413D653F0006997B0 /* MainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC713C901D400888A6E /* MainViewController_iPad.xib */; };
+		60FEA1B313D653F0006997B0 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FC413C901D400888A6E /* MainViewController.xib */; };
 		60FEA1B513D653F0006997B0 /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FCA13C901D400888A6E /* FlipsideViewController.xib */; };
 		60FEA1B613D653F0006997B0 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B9FDE13C9059100888A6E /* SettingsViewController.xib */; };
 		60FEA1B713D653F0006997B0 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 60CC9F1013C9E40D006D116C /* index.html */; };
@@ -230,6 +226,7 @@
 		6F51B3D513FCC1A10089E1AC /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F51B3D313FCC1A10089E1AC /* Sound.m */; };
 		6F51B3D813FCC1AE0089E1AC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F51B3D713FCC1AE0089E1AC /* AVFoundation.framework */; };
 		6FD38AAD13F230540062D3FA /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38AAC13F230530062D3FA /* Inventory.m */; };
+		A644BA181CE7A2040059DBD0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A644BA171CE7A2040059DBD0 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -271,7 +268,7 @@
 		606B2B7413D4F5B000B90223 /* WibbleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WibbleObject.m; sourceTree = "<group>"; };
 		606B2B7613D4F8F100B90223 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		606B2B7A13D5282A00B90223 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../WibbleQuest/shared/icon.png; sourceTree = "<group>"; };
-		606B458A14C34065007011C3 /* libWibble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = libWibble.framework; path = LibWibble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		606B458A14C34065007011C3 /* LibWibble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibWibble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		606B458D14C34065007011C3 /* libWibble-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "libWibble-Info.plist"; sourceTree = "<group>"; };
 		606B458F14C34065007011C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6070A20B13FD77A6001D4B0B /* Walkthrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Walkthrough.h; path = ../WibbleQuest/core/Walkthrough.h; sourceTree = "<group>"; };
@@ -300,8 +297,7 @@
 		609B9FBF13C901D400888A6E /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		609B9FC113C901D400888A6E /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		609B9FC213C901D400888A6E /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		609B9FC513C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPhone.xib; sourceTree = "<group>"; };
-		609B9FC813C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPad.xib; sourceTree = "<group>"; };
+		609B9FC513C901D400888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
 		609B9FDF13C9059100888A6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
 		60BBA05C13FD78BB00966586 /* Runthrough.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runthrough.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BCD36D13DB4FAE00CBBB42 /* ShopTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopTests.h; path = tests/shop/ShopTests.h; sourceTree = "<group>"; };
@@ -367,6 +363,7 @@
 		6F51B3D713FCC1AE0089E1AC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6FD38AAB13F230520062D3FA /* Inventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inventory.h; sourceTree = "<group>"; };
 		6FD38AAC13F230530062D3FA /* Inventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inventory.m; sourceTree = "<group>"; };
+		A644BA171CE7A2040059DBD0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -541,6 +538,7 @@
 		609B9F9D13C901D400888A6E = {
 			isa = PBXGroup;
 			children = (
+				A644BA171CE7A2040059DBD0 /* Default-568h@2x.png */,
 				609B9FB213C901D400888A6E /* Game */,
 				60CC9EF713C9D5C0006D116C /* WibbleQuest */,
 				606B458B14C34065007011C3 /* libWibble */,
@@ -554,7 +552,7 @@
 				609B9FA813C901D400888A6E /* WibbleQuest.app */,
 				60FEA1BE13D653F0006997B0 /* WibbleTests.app */,
 				60BBA05C13FD78BB00966586 /* Runthrough.app */,
-				606B458A14C34065007011C3 /* libWibble.framework */,
+				606B458A14C34065007011C3 /* LibWibble.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -652,8 +650,7 @@
 			children = (
 				609B9FBE13C901D400888A6E /* GameViewController.h */,
 				609B9FBF13C901D400888A6E /* GameViewController.m */,
-				609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */,
-				609B9FC713C901D400888A6E /* MainViewController_iPad.xib */,
+				609B9FC413C901D400888A6E /* MainViewController.xib */,
 				609B9FC113C901D400888A6E /* SettingsViewController.h */,
 				609B9FC213C901D400888A6E /* SettingsViewController.m */,
 				609B9FDE13C9059100888A6E /* SettingsViewController.xib */,
@@ -876,7 +873,7 @@
 			);
 			name = LibWibble;
 			productName = libWibble;
-			productReference = 606B458A14C34065007011C3 /* libWibble.framework */;
+			productReference = 606B458A14C34065007011C3 /* LibWibble.framework */;
 			productType = "com.apple.product-type.bundle";
 		};
 		609B9FA713C901D400888A6E /* WibbleQuest */ = {
@@ -936,8 +933,13 @@
 		609B9F9F13C901D400888A6E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "http://ortatherox.com";
+				TargetAttributes = {
+					609B9FA713C901D400888A6E = {
+						DevelopmentTeam = 777QAMM5D2;
+					};
+				};
 			};
 			buildConfigurationList = 609B9FA213C901D400888A6E /* Build configuration list for PBXProject "WibbleQuest" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -966,8 +968,7 @@
 			files = (
 				606B45B314C340FB007011C3 /* style.css in Resources */,
 				606B45B414C340FB007011C3 /* Wibble.license in Resources */,
-				606B45B514C340FB007011C3 /* MainViewController_iPhone.xib in Resources */,
-				606B45B614C340FB007011C3 /* MainViewController_iPad.xib in Resources */,
+				606B45B514C340FB007011C3 /* MainViewController.xib in Resources */,
 				606B45B714C340FB007011C3 /* SettingsViewController.xib in Resources */,
 				606B45B814C340FB007011C3 /* index.html in Resources */,
 				606B45B914C340FB007011C3 /* jquery.js in Resources */,
@@ -979,10 +980,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				609B9FC613C901D400888A6E /* MainViewController_iPhone.xib in Resources */,
-				609B9FC913C901D400888A6E /* MainViewController_iPad.xib in Resources */,
+				609B9FC613C901D400888A6E /* MainViewController.xib in Resources */,
 				609B9FCC13C901D400888A6E /* FlipsideViewController.xib in Resources */,
 				609B9FE013C9059100888A6E /* SettingsViewController.xib in Resources */,
+				A644BA181CE7A2040059DBD0 /* Default-568h@2x.png in Resources */,
 				60CC9F1113C9E40D006D116C /* index.html in Resources */,
 				606B2B7713D4F8F100B90223 /* TODO in Resources */,
 				60114B3913E390F7007F97A5 /* jquery.js in Resources */,
@@ -996,8 +997,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60BBA05113FD78BB00966586 /* MainViewController_iPhone.xib in Resources */,
-				60BBA05213FD78BB00966586 /* MainViewController_iPad.xib in Resources */,
+				60BBA05113FD78BB00966586 /* MainViewController.xib in Resources */,
 				60BBA05313FD78BB00966586 /* jquery.js in Resources */,
 				60BBA05413FD78BB00966586 /* FlipsideViewController.xib in Resources */,
 				60BBA05513FD78BB00966586 /* SettingsViewController.xib in Resources */,
@@ -1012,8 +1012,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60FEA1B313D653F0006997B0 /* MainViewController_iPhone.xib in Resources */,
-				60FEA1B413D653F0006997B0 /* MainViewController_iPad.xib in Resources */,
+				60FEA1B313D653F0006997B0 /* MainViewController.xib in Resources */,
 				60114B3E13E44998007F97A5 /* jquery.js in Resources */,
 				60FEA1B513D653F0006997B0 /* FlipsideViewController.xib in Resources */,
 				60FEA1B613D653F0006997B0 /* SettingsViewController.xib in Resources */,
@@ -1243,20 +1242,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		609B9FC413C901D400888A6E /* MainViewController_iPhone.xib */ = {
+		609B9FC413C901D400888A6E /* MainViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				609B9FC513C901D400888A6E /* en */,
 			);
-			name = MainViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		609B9FC713C901D400888A6E /* MainViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				609B9FC813C901D400888A6E /* en */,
-			);
-			name = MainViewController_iPad.xib;
+			name = MainViewController.xib;
 			sourceTree = "<group>";
 		};
 		609B9FCA13C901D400888A6E /* FlipsideViewController.xib */ = {
@@ -1299,6 +1290,7 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.orta.github.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
@@ -1327,6 +1319,7 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.orta.github.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
@@ -1338,12 +1331,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1351,11 +1353,16 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "vendor/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1365,14 +1372,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "vendor/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
@@ -1388,10 +1407,12 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1401,7 +1422,9 @@
 					"-ObjC",
 					"-all_load",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = md.abby.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1412,10 +1435,12 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WibbleQuest/shared/Wibble-Prefix.pch";
 				INFOPLIST_FILE = "WibbleQuest/shared/WibbleQuest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1425,7 +1450,9 @@
 					"-ObjC",
 					"-all_load",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = md.abby.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
